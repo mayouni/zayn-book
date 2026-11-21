@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""Run every Zayn declaration of every chapter through the reference verifier, and judge each against its promise.
+
+Lineage: adapted from the Softanza book's tools/book_run.py (softanza-book a9e3812). Kept: one record per block in book
+order, a verdict per block, nothing a block prints stored in a source file (the answers go to data/book-run.json and the
+page shows them from there), an `exercise` fence recorded as the reader's to run, exit status 1 when a chapter's blocks
+do not all keep their promise. Changed: a block is a .zayn file, and the runtime is the reference verifier of the pinned
+snapshot, `node <snapshot>/tools/zayn/cli.js check <file> --level N`, run twice: with --json for the findings that are
+judged, and without for the report a person reads, which the page prints as the run printed it.
+
+The chapter's court is run too: each fixture a chapter names in its front matter is checked in the snapshot against the
+verdict the suite's manifest expects for it (the set of diagnostic ids, compared exactly).
+
+    python tools/book_run.py                 # Zayn at the pin
+    python tools/book_run.py --commit <sha>  # Zayn at a named commit, to see what moving the pin would do
+"""
+import json, shutil, subprocess, sys
+from book_common import (sources, code_blocks, block_hash, snapshot, law_data, law_facts, now, stamp, save_json,
+                         CACHE, PIN)
+from book_judge import parse, verdict
+
+NODE = shutil.which("node") or "node"
+
+
+def check(cli, cwd, name, level, as_json, symbols=None):
+    cmd = [NODE, str(cli), "check", name, "--level", str(level)]
+    if as_json:
+        cmd.append("--json")
+    if symbols:
+        cmd += ["--symbols", symbols]
+    p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=120)
+    return p.returncode, (p.stdout or "").replace("\r", ""), (p.stderr or "").replace("\r", "")
+
+
+def run_block(cli, work, k, b):
+    promises, stated = parse(b["text"])
+    rec = {"hash": block_hash(b["text"]), "name": b["name"] or f"declaration-{k + 1}.zayn", "level": b["level"],
+           "flags": b["flags"], "promise": [list(p) for p in promises], "stated": stated}
+    if "exercise" in b["flags"]:
+        rec.update(verdict="exercise", report="", diagnostics=[])
+        return rec
+    d = work / f"{k + 1:02d}"
+    d.mkdir(parents=True)
+    (d / rec["name"]).write_text(b["text"] + "\n", encoding="utf-8", newline="\n")
+    code, out, err = check(cli, d, rec["name"], b["level"], True)
+    try:
+        env = json.loads(out)
+    except json.JSONDecodeError:
+        rec.update(verdict="not-run", why="the verifier did not answer in its machine form", report=(out + err).strip()[-2000:],
+                   diagnostics=[], exit=code)
+        return rec
+    diags = [{"code": x.get("code"), "severity": x.get("severity"), "subject": x.get("subject"),
+              "line": (x.get("span") or {}).get("line"), "cites": x.get("cites") or [], "level": x.get("level"),
+              "message": x.get("message")} for x in env.get("diagnostics", [])]
+    code2, report, _ = check(cli, d, rec["name"], b["level"], False)
+    if not stated:
+        v = "unpromised"
+    else:
+        v = "kept" if verdict(promises, diags) else "differs"
+    rec.update(verdict=v, exit=code2, report=report.rstrip(), diagnostics=diags, envelope=out.rstrip(),
+               contract=env.get("contract"))
+    return rec
+
+
+def run_court(cli, snap, law, names, work):
+    """Each named fixture, checked in the snapshot against the manifest's expected ids."""
+    out = []
+    for name in names or []:
+        file = name if name.endswith(".zayn") else name + ".zayn"
+        fx = law["fixtures"].get(file)
+        if not fx or not (snap / "conformance" / "fixtures" / file).exists():
+            out.append({"file": file, "exists": False})
+            continue
+        symbols = None
+        if fx.get("symbols"):
+            work.mkdir(parents=True, exist_ok=True)
+            sp = work / (file + ".symbols.json")
+            sp.write_text(json.dumps(fx["symbols"]), encoding="utf-8")
+            symbols = str(sp)
+        _, raw, _ = check(cli, snap, f"conformance/fixtures/{file}", 4, True, symbols)
+        try:
+            got = sorted({x.get("code") for x in json.loads(raw).get("diagnostics", [])})
+        except json.JSONDecodeError:
+            got = None
+        want = sorted(set(fx.get("expect_ids", [])))
+        out.append({"file": file, "exists": True, "level": fx.get("level"), "expect_ids": want, "got_ids": got,
+                    "pass": got == want})
+    return out
+
+
+def main():
+    commit = sys.argv[sys.argv.index("--commit") + 1] if "--commit" in sys.argv else PIN
+    snap, prov = snapshot(commit)
+    cli = snap / "tools" / "zayn" / "cli.js"
+    law = law_data(snap)
+    node_v = subprocess.run([NODE, "--version"], capture_output=True, text=True).stdout.strip() or None
+    started = now()
+    result = {"run": {"date": stamp(started), "zayn": prov, "law": law_facts(snap), "node": node_v,
+                      "verifier": "tools/zayn/cli.js, the reference verifier, in the snapshot"}, "chapters": {}}
+    failed = []
+    work_root = CACHE / "run"
+    shutil.rmtree(work_root, ignore_errors=True)
+    for path, meta, body in sources("en"):
+        key = f"en/{path.stem}"
+        work = work_root / path.stem
+        t0 = now()
+        records = [run_block(cli, work, k, b) for k, b in enumerate(code_blocks(body))]
+        court = run_court(cli, snap, law, meta.get("fixtures"), work / "court")
+        runnable = [r for r in records if r["verdict"] != "exercise"]
+        kept = sum(1 for r in runnable if r["verdict"] == "kept")
+        ch = {"id": meta["id"], "blocks": records, "kept": kept, "runnable": len(runnable),
+              "exercises": len(records) - len(runnable), "court": court, "ran": stamp(t0)}
+        result["chapters"][key] = ch
+        line = f"{key}: {kept} of {len(runnable)} declarations kept their promise"
+        bad_court = [c["file"] for c in court if not c.get("exists") or not c.get("pass")]
+        if court:
+            line += f"; court: {len(court) - len(bad_court)} of {len(court)} fixtures answer as the manifest expects"
+        if (runnable and kept < len(runnable)) or bad_court:
+            failed.append(key)
+            line += "  <- FAILS: " + ", ".join(sorted({r["verdict"] for r in runnable if r["verdict"] != "kept"}) + bad_court)
+        print(line, flush=True)
+    result["run"]["failed"] = failed
+    save_json("book-run.json", result)
+    shutil.rmtree(work_root, ignore_errors=True)
+    print(f"Zayn at {prov['short']} ({prov.get('tag') or 'no tag'}), law {result['run']['law']['law.version']}, "
+          f"Node {node_v} -> data/book-run.json")
+    if failed:
+        print(f"FAILED: {len(failed)} chapter(s) did not keep all their promises")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

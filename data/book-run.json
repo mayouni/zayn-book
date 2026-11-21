@@ -1,0 +1,460 @@
+{
+ "run": {
+  "date": "2026-11-22 00:21 UTC+01:00",
+  "zayn": {
+   "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
+   "short": "adaecc271",
+   "tag": "v0.2.0",
+   "commit_date": "2026-11-17 02:27:21 +0100",
+   "exported": "2026-11-21 22:42 UTC+01:00",
+   "how": "git archive of the commit into .cache/; nothing is run from the Zayn working tree"
+  },
+  "law": {
+   "law.version": "3.17",
+   "law.rules": 123,
+   "law.sets": 31,
+   "law.articles": 7,
+   "law.rights": 6,
+   "law.forbidden": 17,
+   "law.highest": 130,
+   "law.tier.machine": 11,
+   "law.tier.tool": 7,
+   "law.tier.machine-later": 25,
+   "law.tier.judgment": 80,
+   "law.verbs": 22,
+   "law.families": 6,
+   "diag.total": 40,
+   "diag.errors": 35,
+   "diag.warnings": 5,
+   "diag.cite_rule": 20,
+   "diag.cite_article": 8,
+   "diag.cite_none": 12,
+   "diag.level2": 25,
+   "contract.version": "1.11",
+   "fix.total": 77,
+   "fix.level1": 12,
+   "fix.level2": 60,
+   "fix.level3": 5,
+   "fix.clean": 28,
+   "law.family.action": 4,
+   "lang.version": "1.7",
+   "lang.kinds": 10,
+   "release.version": "0.2.0",
+   "pin.tag": "v0.2.0"
+  },
+  "node": "v22.20.0",
+  "verifier": "tools/zayn/cli.js, the reference verifier, in the snapshot",
+  "failed": []
+ },
+ "chapters": {
+  "en/08-the-refusal": {
+   "id": "the-refusal",
+   "blocks": [
+    {
+     "hash": "877fb08d468c",
+     "name": "payments.zayn",
+     "level": 2,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_CANCEL",
+       "approve_payment"
+      ],
+      [
+       "MISSING_UNDO",
+       "approve_payment"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "payments.zayn:1  error  MISSING_UNDO  approve_payment\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\npayments.zayn:1  error  MISSING_CANCEL  approve_payment\n    A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL.\n    Rule 26 · The Back Button is Holy · Article IV · the right to leave\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "approve_payment",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "MISSING_CANCEL",
+       "severity": "error",
+       "subject": "approve_payment",
+       "line": 1,
+       "cites": [
+        "rule:26",
+        "article:reversibility",
+        "right:leave"
+       ],
+       "level": 2,
+       "message": "A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"payments.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"approve_payment\"\n    },\n    {\n      \"code\": \"MISSING_CANCEL\",\n      \"severity\": \"error\",\n      \"message\": \"A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL.\",\n      \"span\": {\n        \"file\": \"payments.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:26\",\n        \"article:reversibility\",\n        \"right:leave\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"approve_payment\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "de2cc199c610",
+     "name": "payments.zayn",
+     "level": 2,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3c76e5d6e191",
+     "name": "ledger.zayn",
+     "level": 2,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "delete_flourish"
+      ],
+      [
+       "MISSING_UNDO",
+       "bulk_delete"
+      ],
+      [
+       "SELECT_ACT_COLLAPSE",
+       "bulk_delete"
+      ],
+      [
+       "TRAPPED_FLOW",
+       "bulk_delete"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "ledger.zayn:1  error  SELECT_ACT_COLLAPSE  bulk_delete\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\nledger.zayn:1  error  MISSING_UNDO  bulk_delete\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\nledger.zayn:1  error  TRAPPED_FLOW  bulk_delete\n    A multi-step flow has no reachable EXIT.\n    Rule 51 · The Cognitive Tunnel · Rule 53 · Interaction Lockdown · Article II · the right to leave\nledger.zayn:8  error  DECORATIVE_ANIMATION  delete_flourish\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n4 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "bulk_delete",
+       "line": 1,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      },
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "bulk_delete",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "TRAPPED_FLOW",
+       "severity": "error",
+       "subject": "bulk_delete",
+       "line": 1,
+       "cites": [
+        "rule:51",
+        "rule:53",
+        "article:intent",
+        "right:leave"
+       ],
+       "level": 2,
+       "message": "A multi-step flow has no reachable EXIT."
+      },
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "delete_flourish",
+       "line": 8,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 4,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"bulk_delete\"\n    },\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"bulk_delete\"\n    },\n    {\n      \"code\": \"TRAPPED_FLOW\",\n      \"severity\": \"error\",\n      \"message\": \"A multi-step flow has no reachable EXIT.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:51\",\n        \"rule:53\",\n        \"article:intent\",\n        \"right:leave\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"bulk_delete\"\n    },\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 8\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"delete_flourish\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8ce1b35b2f62",
+     "name": "ledger.zayn",
+     "level": 2,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "24a6cdc4c731",
+     "name": "archive.zayn",
+     "level": 2,
+     "flags": [
+      "envelope"
+     ],
+     "promise": [
+      [
+       "IRREVERSIBLE_CLAIMS_UNDO",
+       "purge_archive"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "archive.zayn:4  error  IRREVERSIBLE_CLAIMS_UNDO  irreversible purge_archive declares UNDO\n    An irreversible control declares an UNDO it cannot honour.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "IRREVERSIBLE_CLAIMS_UNDO",
+       "severity": "error",
+       "subject": "irreversible purge_archive declares UNDO",
+       "line": 4,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An irreversible control declares an UNDO it cannot honour."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"archive.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"IRREVERSIBLE_CLAIMS_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An irreversible control declares an UNDO it cannot honour.\",\n      \"span\": {\n        \"file\": \"archive.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"irreversible purge_archive declares UNDO\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "ac39b6a2e6ea",
+     "name": "archive.zayn",
+     "level": 2,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"archive.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8a7a41b61c0d",
+     "name": "close-account.zayn",
+     "level": 2,
+     "flags": [
+      "exercise"
+     ],
+     "promise": [],
+     "stated": false,
+     "verdict": "exercise",
+     "report": "",
+     "diagnostics": []
+    },
+    {
+     "hash": "2d292ebc50fd",
+     "name": "close-account.zayn",
+     "level": 2,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"close-account.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 1,
+   "court": [
+    {
+     "file": "missing-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_CANCEL"
+     ],
+     "got_ids": [
+      "MISSING_CANCEL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "select-act-collapse.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "select-act-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "trapped-flow.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "TRAPPED_FLOW"
+     ],
+     "got_ids": [
+      "TRAPPED_FLOW"
+     ],
+     "pass": true
+    },
+    {
+     "file": "trapped-flow-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "decorative-animation.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "decorative-animation-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "multiple-violations.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION",
+      "MISSING_UNDO",
+      "SELECT_ACT_COLLAPSE",
+      "TRAPPED_FLOW"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION",
+      "MISSING_UNDO",
+      "SELECT_ACT_COLLAPSE",
+      "TRAPPED_FLOW"
+     ],
+     "pass": true
+    },
+    {
+     "file": "irreversible-claims-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "IRREVERSIBLE_CLAIMS_UNDO"
+     ],
+     "got_ids": [
+      "IRREVERSIBLE_CLAIMS_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "irreversible-claims-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-22 00:21 UTC+01:00"
+  }
+ }
+}

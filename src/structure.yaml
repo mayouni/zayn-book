@@ -1,0 +1,90 @@
+# The book's contents. The builder reads this file for the cover, the contents page, the navigation and the spine.
+#
+# What the author ruled on 2026-11-21 ("yes to all three, start phase 1"; DECISIONS.md TITLE-01, READER-01, OUTLINE-01):
+#   - the title block below;
+#   - the ten parts, his of August 2026 (Zayn doc/THE-SECOND-FOUNDING.md section 12), in his order, about 26 chapters,
+#     Part IV telling what a declaration cannot see and the audit that measures it.
+# What is a working proposal until he rules: every chapter title (a title is the author's call), the chapters' order inside
+# a part, and the spine. A chapter with a source file in src/en/ is drafted; the others are listed as in writing.
+
+title: Zayn
+subtitle: UI Governance in the Agentic Era
+tagline: Declare what a user is doing. The law refuses the rest.
+author: Mansour Ayouni
+series: Third of the AYOUNI books
+
+# The back cover: its two lines are the author's to give (contract K-1); its description is made of the book's own
+# sentences, taken once the chapters are read. Nothing is written here before then.
+back_cover: []
+
+# The spine: one chapter from each of Parts I, III, VII, IX and X, readable alone (proposed).
+spine: [1, 8, 17, 22, 26]
+
+parts:
+  - number: 1
+    title: The Deterioration
+    chapters:
+      - [1, What UI governance is]
+      - [2, What the corrections show]
+  - number: 2
+    title: The Heritage
+    chapters:
+      - [3, What the field wrote]
+      - [4, The instruments of the field]
+      - [5, The road sign]
+  - number: 3
+    title: The Inversion
+    chapters:
+      - [6, Intent first]
+      - [7, "Ten declarations, one grammar"]
+      - [8, The refusal]
+      - [9, "One verdict, two verifiers"]
+  - number: 4
+    title: The Expression
+    chapters:
+      - [10, What a declaration cannot see]
+      - [11, The strata of expression]
+  - number: 5
+    title: The Senses
+    chapters:
+      - [12, "One declaration, ten channels"]
+      - [13, The grid]
+  - number: 6
+    title: The Readers
+    chapters:
+      - [14, "Two cultures, one law"]
+      - [15, Culture as an axis]
+  - number: 7
+    title: The Law
+    chapters:
+      - [16, "The constitution, part by part"]
+      - [17, The enforcement ladder]
+      - [18, Amendment from evidence]
+      - [19, How to write a rule]
+  - number: 8
+    title: The Commons
+    chapters:
+      - [20, From a remark to a rule]
+      - [21, "Core, commons, local"]
+  - number: 9
+    title: Under Generation
+    chapters:
+      - [22, The AI agent under the law]
+      - [23, The AI agent as a user]
+      - [24, A grammar for generation]
+  - number: 10
+    title: In Practice
+    chapters:
+      - [25, The command and the gate]
+      - [26, A site under its own law]
+
+# The appendices, all generated at build from the data at the pin (the contract's section C).
+appendices:
+  - [A, The Constitution in full]
+  - [B, The grammar and the ten declarations]
+  - [C, The forty diagnostics]
+  - [D, The checks of the painted page]
+  - [E, The grid as data]
+  - [F, The sources and the date each was read]
+  - [G, Glossary]
+  - [H, The book as data]
