@@ -70,7 +70,7 @@ DEFINE WIZARD onboarding (
 In words: An approver selects a payment, confirms, and it is sent, with undo and cancel within reach. A form serves that flow. A newcomer is taken through three steps, identity, contact and review, and can cancel or leave at each one.
 :::
 
-An `INTENT_FLOW` is a named sequence of intents. A `FORM` is a surface where a user enters something, and it points at the flow it serves in place of saying the flow again. A `WIZARD` is a flow with named steps in order.
+An `INTENT_FLOW` is a flow: the intents a user goes through, under one name. The verifier reads the list as a set: which verbs it holds. A `FORM` is a surface where a user enters something, and it points at the flow it serves in place of saying the flow again. A `WIZARD` is a flow with named steps in order.
 
 Four kinds say where a user is.
 
@@ -100,7 +100,7 @@ DEFINE WORLD_VIEW branch_map (
 In words: On the home of payments a user discovers, locates and scans. A part of it shows the balance, which a user reads. A menu entry labelled Payments leads there. A map shows branches and payments from above, for a user who discovers and locates.
 :::
 
-A `SCREEN` is a place a user can be. A `COMPONENT` is a part of a surface with a meaning of its own: it says what a user does with it, and never what it looks like. A `NAV_GRAPH` says how surfaces connect, and one of them is one entry of a menu. A `WORLD_VIEW` is a space with things in it, seen from a stated point.
+A `SCREEN` is a place a user can be. A `COMPONENT` is a part of a surface with a meaning of its own: it says what a user does with it, and never what it looks like. A `NAV_GRAPH` says how surfaces connect. In a menu, each entry is one `NAV_GRAPH`, and chapter 26 declares a whole menu. A `WORLD_VIEW` is a space with things in it, seen from a stated point.
 
 The last three kinds are a control, a message and a culture.
 
@@ -232,7 +232,20 @@ DEFINE VIBE lobby_kiosk (
 In words: The culture of the lobby is drawn on a kiosk, with no motion.
 :::
 
-Refused. A kiosk is a screen that its user did not choose to stand in front of. That is a property of a surface, and the list holds media. The repair names one of the media of the list.
+Refused. A kiosk is a screen that its user did not choose to stand in front of. That is a property of a surface, and the list holds media. The repair names a medium of the list.
+
+::: plate The kiosk, as a visual surface
+```zayn lobby.zayn
+DEFINE VIBE lobby_kiosk (
+  SURFACE_AS visual,
+  MOTION none
+)
+//--> clean
+```
+In words: The culture of the lobby is drawn on a visual surface, with no motion.
+:::
+
+Clean.
 
 Two of the lists look alike, and they are kept apart on purpose.
 

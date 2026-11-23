@@ -126,11 +126,11 @@ The first lines of the gate's file also say what it proves, and I keep the sente
 
 ## A third evaluator, and its differences
 
-Two verifiers that share a design can share a blind spot. So Zayn was also declared a second time, in Haro, the language of this series' first book, which is a language for declaring languages. The declaration was written from the contract's data and the tables of the declarations. An evaluator is forged from that declaration, which means that a program makes it from the declaration with no hand in between, and it shares no code with the verifier. The record calls it the forged court.
+Two verifiers that share a design can share a blind spot. So the language itself was also written down a second time, in Haro, the language of this series' first book, which is a language for declaring languages. The declaration was written from the contract's data and the tables of the declarations. An evaluator is forged from that declaration, which means that a program makes it from the declaration with no hand in between, and it shares no code with the verifier.
 
-It does not agree everywhere, and that is its use. Its judge, the script that compares the two, ran it against the reference on {{n:haro.judged}} fixtures. The list of its differences holds {{n:haro.rows}} rows, four of them added on 8 November 2026 for the menu fixtures and written by expectation: from what the evaluator is expected to say, ahead of the run that confirms it. Each row names the fixture, what each of the two says, and the class of the difference. In {{n:haro.other_code}} rows both refuse and speak different codes. In {{n:haro.court_only}} rows the forged evaluator refuses a file the verifier accepts. In {{n:haro.not_refused}} rows the verifier refuses or warns and the forged evaluator says clean, and the {{n:fix.level3}} fixtures of level 3 are among them. The judge counts a fixture as agreed when the forged evaluator's first code is one of the codes expected: it speaks one refusal for a file, where the verifier reports them all.
+It does not agree everywhere, and that is its use. A script compares the two. It ran the forged evaluator against the reference on {{n:haro.judged}} fixtures. The list of its differences holds {{n:haro.rows}} rows, four of them added on 8 November 2026 for the menu fixtures and written by expectation: from what the evaluator is expected to say, ahead of the run that confirms it. Each row names the fixture, what each of the two says, and the class of the difference. In {{n:haro.other_code}} rows both refuse and speak different codes. In {{n:haro.court_only}} rows the forged evaluator refuses a file the verifier accepts. In {{n:haro.not_refused}} rows the verifier refuses or warns and the forged evaluator says clean, and the {{n:fix.level3}} fixtures of level 3 are among them. The script counts a fixture as agreed when the forged evaluator's first code is one of the codes expected: it speaks one refusal for a file, where the verifier reports them all.
 
-The list is a ratchet, a list that may only shrink. The judge fails when a difference appears that is not on it, when a listed row changes, and when a listed difference now agrees and is still listed. A difference can leave the list only by being repaired and removed.
+The list is a ratchet, a list that may only shrink. The script fails when a difference appears that is not on it, when a listed row changes, and when a listed difference now agrees and is still listed. A difference can leave the list only by being repaired and removed.
 
 ## What I refused
 
@@ -148,7 +148,7 @@ The court of this chapter is the suite itself, and the box below holds the fixtu
 
 ## Where the field leads
 
-The field leads in the number of hands. The web's suite is written to run in all browsers, and the results of an array of them are archived. Zayn's record holds one reference, one port of it in two builds, and one evaluator made another way, whose judge runs where the Haro forge is installed. The direction is the field's: more verifiers, written by other hands, each stating its level and listing its differences.
+The field leads in the number of hands. The web's suite is written to run in all browsers, and the results of an array of them are archived. Zayn's record holds one reference, one port of it in two builds, and one evaluator made another way, whose comparing script runs where the Haro forge is installed. The direction is the field's: more verifiers, written by other hands, each stating its level and listing its differences.
 
 The field also has a third outcome beside passed and failed: inapplicable, the nearest thing to this suite's skip.
 
@@ -209,6 +209,25 @@ DEFINE INTENT_FLOW issue_refund (
 In words: At the refund desk, a user reads the refunds and filters them, and the screen shows which refunds are open and which filter is active. To issue a refund, a cashier selects one, confirms, and the refund is issued, with undo and cancel within reach at every step.
 :::
 
-It is clean. Now write `ACTOR intern`, a name the table does not hold, and run it again. The verifier asked that an actor be named. Should the actor also be one the system knows?
+It is clean. Now write `ACTOR intern`, a name the table does not hold, and say what you expect.
+
+::: plate An actor the system does not know
+```zayn refunds.zayn level=3 symbols=desk.json
+DEFINE SCREEN refund_desk (
+  SATISFIES [READ, FILTER],
+  VISIBLE_STATE [open_refunds, active_filter]
+)
+
+DEFINE INTENT_FLOW issue_refund (
+  SATISFIES [SELECT, CONFIRM, ACT],
+  ALWAYS_REACHABLE [UNDO, CANCEL],
+  ACTOR intern
+)
+//--> clean
+```
+In words: The same desk and the same flow, and the refund is issued by an intern, a name the table of the system does not hold.
+:::
+
+Clean. The verifier asked that an actor be named. Should the actor also be one the system knows?
 
 Every level so far reads a declaration or a table. Level 4 reads a painted page, and a declaration does not hold one. Part IV begins there, with what a declaration cannot see.

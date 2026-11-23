@@ -147,7 +147,7 @@ In words: The amount due is something a user reads. The inventory says that the 
 ```
 :::
 
-Refused, and this time the third line cites a rule: Rule 130. The first line has no line number, because the element is in the inventory and not in the file.
+Refused, and this time the third line cites a rule: Rule 130. The first line has no line number, because the element is in the inventory and not in the file. The report's sentence says "a declared element": it means an element that the inventory says exists.
 
 {{rule:130}}
 
@@ -213,7 +213,7 @@ One pair stands in the box, `expression-orphan` and the same file repaired: the 
 
 ## Where the field leads
 
-The field leads in what a task model can say. The W3C note describes tasks with the order between them and their decomposition into subtasks: one task enables another, two tasks are a choice, one suspends another. A declaration of Zayn lists the intents of a surface and names a wizard's steps. The order between intents is what the task model adds.
+The field leads in what a task model can say. The W3C note describes tasks with the order between them and their decomposition into subtasks: one task enables another, two tasks are a choice, one suspends another. A declaration of Zayn lists the intents of a surface and names a wizard's steps. The operators between tasks, a choice, an interruption, are what the task model adds.
 
 And a framework builds the screen. A declaration builds none: a team still draws its interface with the framework it has, and Zayn checks what was declared before the drawing begins.
 

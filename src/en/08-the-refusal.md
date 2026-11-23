@@ -254,7 +254,22 @@ In words: In three steps, a user selects an account and it is closed, with cance
 
 Cover the report under the declaration, write the codes you expect, then compare.
 
-Now repair it. Adding `UNDO` silences `MISSING_UNDO` and makes the declaration untrue: nothing reopens the account. The true word is `irreversible`. Write it on the wizard, and read the refusal you get. Then go on until the verifier answers clean and every line of your file is true. Try before you read on.
+Now repair it. Adding `UNDO` silences `MISSING_UNDO` and makes the declaration untrue: nothing reopens the account. The true word is `irreversible`. Write it on the wizard, and say what you expect.
+
+::: plate The true word, written on the wizard
+```zayn close-account.zayn
+DEFINE WIZARD close_account (
+  SATISFIES [SELECT, CONFIRM, ACT],
+  ALWAYS_REACHABLE [CANCEL, EXIT],
+  STEPS [choose, review, close],
+  ROLE irreversible
+)
+//--> ROLE_MISPLACED close_account
+```
+In words: In three steps, a user selects an account, confirms, and it is closed, with cancel and exit within reach. The wizard says that this cannot be taken back.
+:::
+
+Refused, for the place of the word: a role belongs to an interaction. Go on until the verifier answers clean and every line of your file is true. Try before you read on.
 
 Here is a form the verifier accepts.
 

@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 10:10 UTC+01:00",
+  "date": "2026-11-23 10:25 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -544,7 +544,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:10 UTC+01:00"
+   "ran": "2026-11-23 10:25 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -774,6 +774,24 @@
      }
     },
     {
+     "hash": "0734fc5a1521",
+     "name": "lobby.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"lobby.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
      "hash": "637d613f35f5",
      "name": "invoices.zayn",
      "level": 2,
@@ -894,8 +912,8 @@
      }
     }
    ],
-   "kept": 13,
-   "runnable": 13,
+   "kept": 14,
+   "runnable": 14,
    "exercises": 0,
    "court": [
     {
@@ -1071,7 +1089,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:10 UTC+01:00"
+   "ran": "2026-11-23 10:25 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1385,6 +1403,41 @@
      }
     },
     {
+     "hash": "37f86a2335b2",
+     "name": "close-account.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_MISPLACED",
+       "close_account"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "close-account.zayn:5  error  ROLE_MISPLACED  ROLE on WIZARD close_account; a role belongs to an INTERACTION\n    ROLE is declared on a kind that is not an INTERACTION.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_MISPLACED",
+       "severity": "error",
+       "subject": "ROLE on WIZARD close_account; a role belongs to an INTERACTION",
+       "line": 5,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "ROLE is declared on a kind that is not an INTERACTION."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"close-account.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_MISPLACED\",\n      \"severity\": \"error\",\n      \"message\": \"ROLE is declared on a kind that is not an INTERACTION.\",\n      \"span\": {\n        \"file\": \"close-account.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"ROLE on WIZARD close_account; a role belongs to an INTERACTION\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
      "hash": "2d292ebc50fd",
      "name": "close-account.zayn",
      "level": 2,
@@ -1403,8 +1456,8 @@
      }
     }
    ],
-   "kept": 8,
-   "runnable": 8,
+   "kept": 9,
+   "runnable": 9,
    "exercises": 0,
    "court": [
     {
@@ -1546,7 +1599,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:10 UTC+01:00"
+   "ran": "2026-11-23 10:25 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1694,10 +1747,28 @@
       "version": "1.11",
       "constitution": "3.17"
      }
+    },
+    {
+     "hash": "e35cb1df80d1",
+     "name": "refunds.zayn",
+     "level": 3,
+     "symbols": "desk.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"refunds.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
     }
    ],
-   "kept": 5,
-   "runnable": 5,
+   "kept": 6,
+   "runnable": 6,
    "exercises": 0,
    "court": [
     {
@@ -1843,7 +1914,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:10 UTC+01:00"
+   "ran": "2026-11-23 10:25 UTC+01:00"
   }
  }
 }
