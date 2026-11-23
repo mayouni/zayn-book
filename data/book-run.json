@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 14:31 UTC+01:00",
+  "date": "2026-11-23 15:36 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -55,6 +55,22 @@
    "proof.fixtures": 77,
    "proof.answers": 308,
    "wasm.bytes": 134584,
+   "law.lineage": 32,
+   "law.retired": 5,
+   "law.burned": 2,
+   "law.unused": 7,
+   "rule.evidence": 123,
+   "rule.derived": 123,
+   "rule.invariant": 47,
+   "rule.lint": 18,
+   "rule.vibes": 14,
+   "rule.see_also": 7,
+   "rule.absorbs": 5,
+   "pin.files": 6,
+   "pin.agree": 6,
+   "pack.files": 12,
+   "cite.rules": 14,
+   "cite.declaration": 13,
    "suite.1.pass": 12,
    "suite.1.fail": 0,
    "suite.1.skipped": 65,
@@ -544,7 +560,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 14:31 UTC+01:00"
+   "ran": "2026-11-23 15:36 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1089,7 +1105,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 14:31 UTC+01:00"
+   "ran": "2026-11-23 15:36 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1599,7 +1615,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 14:31 UTC+01:00"
+   "ran": "2026-11-23 15:36 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1914,7 +1930,382 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 14:31 UTC+01:00"
+   "ran": "2026-11-23 15:36 UTC+01:00"
+  },
+  "en/18-amendment-from-evidence": {
+   "id": "amendment-from-evidence",
+   "blocks": [
+    {
+     "hash": "6160d9ed1d53",
+     "name": "limits.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_SIGNAL",
+       "credit_limits"
+      ],
+      [
+       "UNKNOWN_SIGNAL",
+       "credit_limits"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "limits.zayn:3  error  UNKNOWN_SIGNAL  neutral in SIGNALS of credit_limits\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\nlimits.zayn:3  error  UNKNOWN_SIGNAL  accent in SIGNALS of credit_limits\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "neutral in SIGNALS of credit_limits",
+       "line": 3,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      },
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "accent in SIGNALS of credit_limits",
+       "line": 3,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"limits.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"limits.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"neutral in SIGNALS of credit_limits\"\n    },\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"limits.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"accent in SIGNALS of credit_limits\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d5d13fd3074d",
+     "name": "limits.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"limits.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "c745f02a31e5",
+     "name": "balance.zayn",
+     "level": 3,
+     "symbols": "screen.json",
+     "flags": [],
+     "promise": [
+      [
+       "INTENT_ORPHAN",
+       "export_button"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "balance.zayn  error  INTENT_ORPHAN  export_button\n    A declared element traces to no intent.\n    Rule 130 · Every Element Serves an Intent · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INTENT_ORPHAN",
+       "severity": "error",
+       "subject": "export_button",
+       "line": 0,
+       "cites": [
+        "rule:130",
+        "article:intent"
+       ],
+       "level": 3,
+       "message": "A declared element traces to no intent."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"balance.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INTENT_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"A declared element traces to no intent.\",\n      \"span\": {\n        \"file\": \"balance.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:130\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"export_button\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "a4155cc2e098",
+     "name": "balance.zayn",
+     "level": 3,
+     "symbols": "screen.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"balance.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8772a31a7b3f",
+     "name": "menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LANDING_NOT_FIRST",
+       "billing"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "menu.zayn:9  error  MENU_LANDING_NOT_FIRST  no entry of billing leads to billing_home, its TARGET\n    A section with children does not list its landing surface first among them.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LANDING_NOT_FIRST",
+       "severity": "error",
+       "subject": "no entry of billing leads to billing_home, its TARGET",
+       "line": 9,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A section with children does not list its landing surface first among them."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LANDING_NOT_FIRST\",\n      \"severity\": \"error\",\n      \"message\": \"A section with children does not list its landing surface first among them.\",\n      \"span\": {\n        \"file\": \"menu.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"no entry of billing leads to billing_home, its TARGET\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "37ab304f0ce2",
+     "name": "menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LABEL_REPEATS_PARENT",
+       "billing_page"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "menu.zayn:13  error  MENU_LABEL_REPEATS_PARENT  \"Billing\" of billing_page repeats \"Billing\" of billing\n    A menu entry's label repeats the label of the entry it sits under.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LABEL_REPEATS_PARENT",
+       "severity": "error",
+       "subject": "\"Billing\" of billing_page repeats \"Billing\" of billing",
+       "line": 13,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A menu entry's label repeats the label of the entry it sits under."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LABEL_REPEATS_PARENT\",\n      \"severity\": \"error\",\n      \"message\": \"A menu entry's label repeats the label of the entry it sits under.\",\n      \"span\": {\n        \"file\": \"menu.zayn\",\n        \"line\": 13\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"\\\"Billing\\\" of billing_page repeats \\\"Billing\\\" of billing\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "0a66d6becd0c",
+     "name": "menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LANDING_NOT_FIRST",
+       "billing"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "menu.zayn:9  error  MENU_LANDING_NOT_FIRST  billing_page leads to billing_home, the TARGET of billing, and is entry 3 of 3\n    A section with children does not list its landing surface first among them.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LANDING_NOT_FIRST",
+       "severity": "error",
+       "subject": "billing_page leads to billing_home, the TARGET of billing, and is entry 3 of 3",
+       "line": 9,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A section with children does not list its landing surface first among them."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LANDING_NOT_FIRST\",\n      \"severity\": \"error\",\n      \"message\": \"A section with children does not list its landing surface first among them.\",\n      \"span\": {\n        \"file\": \"menu.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"billing_page leads to billing_home, the TARGET of billing, and is entry 3 of 3\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3e9280166764",
+     "name": "menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "9586482156f0",
+     "name": "menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 9,
+   "runnable": 9,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "unknown-signal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "got_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "intent-orphan.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "got_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "got_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "menu-landing-not-first.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "got_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-label-repeats-parent.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "got_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-label-duplicate.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LABEL_DUPLICATE"
+     ],
+     "got_ids": [
+      "MENU_LABEL_DUPLICATE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 15:36 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -1923,7 +2314,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 14:31 UTC+01:00"
+   "ran": "2026-11-23 15:36 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -1932,7 +2323,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 14:31 UTC+01:00"
+   "ran": "2026-11-23 15:36 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -1941,7 +2332,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 14:31 UTC+01:00"
+   "ran": "2026-11-23 15:36 UTC+01:00"
   }
  }
 }

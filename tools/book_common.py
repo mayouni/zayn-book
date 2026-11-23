@@ -243,7 +243,59 @@ def law_facts(snap):
         "pin.tag": PIN_TAG,
     }
     facts.update(_record_facts(snap))
+    facts.update(_history_facts(snap, law, rules, diags))
     return facts
+
+
+def _history_facts(snap, law, rules, diags):
+    """The law's history and anatomy as its own file holds them, and what pins it. Counted, never typed."""
+    meta = law.get("metadata", {})
+    lineage = meta.get("lineage") or ""
+    entries = re.findall(r"v\d+\.\d+(?:\.\d+)?\s*\(\d{4}-\d{2}-\d{2}\)", lineage)
+
+    def carry(field):
+        return sum(1 for r in rules if r.get(field) not in (None, "", [], {}))
+
+    out = {
+        "law.lineage": len(entries) or None,
+        "law.retired": len(law.get("retired") or {}) or None,
+        "law.burned": len(law.get("burned") or {}) or None,
+        "law.unused": (len(law.get("retired") or {}) + len(law.get("burned") or {})) or None,
+        "rule.evidence": carry("evidence") or None,
+        "rule.derived": carry("derived_from") or None,
+        "rule.invariant": carry("invariant") or None,
+        "rule.lint": carry("lint") or None,
+        "rule.vibes": carry("vibes") or None,
+        "rule.see_also": carry("see_also") or None,
+        "rule.absorbs": carry("absorbs") or None,
+    }
+    # the files that record which version of the law they were checked against (metadata.constitution)
+    pins = []
+    for folder in ("conformance", "protocol"):
+        for p in sorted((snap / folder).rglob("*.json")):
+            try:
+                doc = json.loads(p.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            if not isinstance(doc, dict):
+                continue
+            for holder in (doc.get("metadata"), doc.get("versions")):
+                if isinstance(holder, dict) and holder.get("constitution"):
+                    pins.append(str(holder["constitution"]))
+                    break
+    out["pin.files"] = len(pins) or None
+    out["pin.agree"] = sum(1 for v in pins if v == str(meta.get("version")))
+    pack = snap / "protocol" / "MANIFEST.json"
+    out["pack.files"] = None
+    if pack.exists():
+        out["pack.files"] = len(json.loads(pack.read_text(encoding="utf-8")).get("pinned") or []) or None
+    # the rules that a diagnostic of the contract cites, and the rules of the two instrument tiers that none cites
+    cited = {str(n) for d in diags for n in (d.get("rules") or [])}
+    out["cite.rules"] = len(cited) or None
+    # ... and those cited by a diagnostic that a verifier decides from a declaration (levels 1 to 3 of the contract)
+    declared = {str(n) for d in diags if int(d.get("level") or 0) <= 3 for n in (d.get("rules") or [])}
+    out["cite.declaration"] = len(declared) or None
+    return out
 
 
 def _record_facts(snap):
