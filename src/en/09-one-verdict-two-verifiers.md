@@ -36,7 +36,7 @@ A verifier decides only what it is given enough to see. The contract files every
 
 {{levels}}
 
-Levels 1 and 2 need the file alone. Every plate of chapter 8 was decided there. Level 3 needs something a declaration cannot hold: what the system around it contains. Here is a flow that posts an entry to a ledger, at level 2.
+Levels 1 and 2 need the file alone. The table's sentence for level 2 says "a single declaration"; its checks read the whole file, and some compare one declaration with another. Every plate of chapter 8 was decided there, and level 2 is the level the verifier runs at when none is asked. Level 3 needs something a declaration cannot hold: what the system around it contains. Here is a flow that posts an entry to a ledger, at level 2.
 
 ::: plate A flow that acts, seen from the file alone
 ```zayn ledger.zayn
@@ -70,7 +70,7 @@ In words: The same flow, word for word. The table beside it says that the system
 ```
 :::
 
-Refused! The same file, the same verifier, and one more input. The finding cites Rule 83 and Article V: an act with consequences names who performs it. The repair is one field.
+Refused! The same file, the same verifier, and one more input. The finding cites Rule 83 and Article V: an act with consequences names who performs it. The verifier's test is plain: a declaration whose `SATISFIES` holds `ACT`. The repair is one field.
 
 ::: plate The same flow, naming its actor
 ```zayn ledger.zayn level=3 symbols=actors.json
@@ -128,7 +128,7 @@ The first lines of the gate's file also say what it proves, and I keep the sente
 
 Two verifiers that share a design can share a blind spot. So the language itself was also written down a second time, in Haro, the language of this series' first book, which is a language for declaring languages. The declaration was written from the contract's data and the tables of the declarations. An evaluator is forged from that declaration, which means that a program makes it from the declaration with no hand in between, and it shares no code with the verifier.
 
-It does not agree everywhere, and that is its use. A script compares the two. It ran the forged evaluator against the reference on {{n:haro.judged}} fixtures. The list of its differences holds {{n:haro.rows}} rows, four of them added on 8 November 2026 for the menu fixtures and written by expectation: from what the evaluator is expected to say, ahead of the run that confirms it. Each row names the fixture, what each of the two says, and the class of the difference. In {{n:haro.other_code}} rows both refuse and speak different codes. In {{n:haro.court_only}} rows the forged evaluator refuses a file the verifier accepts. In {{n:haro.not_refused}} rows the verifier refuses or warns and the forged evaluator says clean, and the {{n:fix.level3}} fixtures of level 3 are among them. The script counts a fixture as agreed when the forged evaluator's first code is one of the codes expected: it speaks one refusal for a file, where the verifier reports them all.
+It does not agree everywhere, and that is its use. A script compares the two. It ran the forged evaluator against the reference on {{n:haro.judged}} fixtures. The list of its differences holds {{n:haro.rows}} rows, four of them added on 8 November 2026 for the menu fixtures and written by expectation: from what the evaluator is expected to say, ahead of the run that confirms it. Each row names the fixture, what each of the two says, and the class of the difference. In {{n:haro.other_code}} rows both refuse and speak different codes. In {{n:haro.court_only}} rows the forged evaluator refuses a file the verifier accepts. In {{n:haro.not_refused}} rows the verifier refuses or warns and the forged evaluator says clean, and the {{n:fix.level3}} fixtures of level 3 are among them. The script counts a fixture as agreed when the forged evaluator's first code is one of the codes expected: it speaks one refusal for a file, where the verifier reports them all. It also refuses the kinds of other languages, which the verifier passes over: the difference that chapter 7's exercise met.
 
 The list is a ratchet, a list that may only shrink. The script fails when a difference appears that is not on it, when a listed row changes, and when a listed difference now agrees and is still listed. A difference can leave the list only by being repaired and removed.
 
@@ -162,7 +162,7 @@ Two things ran on this page: the reference verifier and the suite's runner, both
 
 ## In your hands
 
-Here is a refund desk: a screen and a flow. From the file alone it is clean. Beside it is the table of the system around it. One field is new: `VISIBLE_STATE` lists the state a surface shows, and the table's `state` list says what state the system holds.
+Here is a refund desk: a screen and a flow. From the file alone it is clean. Beside it is the table of the system around it. One field is new: `VISIBLE_STATE` lists the state a surface shows, and the table's `state` list says what state the system holds. Chapter 7's table files the field under `NAV_GRAPH`, and the verifier reads it on any kind: here a screen states it.
 
 ::: plate For you: a refund desk, and the system around it
 ```zayn refunds.zayn level=3 symbols=desk.json
@@ -228,6 +228,6 @@ DEFINE INTENT_FLOW issue_refund (
 In words: The same desk and the same flow, and the refund is issued by an intern, a name the table of the system does not hold.
 :::
 
-Clean. The verifier asked that an actor be named. Should the actor also be one the system knows?
+Clean. The table's list of actors switches the check on, and the check asks one thing: that the act names an actor. It does not look the name up in the list. Should the actor also be one the system knows?
 
 Every level so far reads a declaration or a table. Level 4 reads a painted page, and a declaration does not hold one. Part IV begins there, with what a declaration cannot see.

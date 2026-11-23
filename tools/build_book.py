@@ -57,6 +57,8 @@ UI = {
     "court_head": "Run in the Zayn snapshot at commit {sha} on {d}. Each fixture is a declaration of the conformance suite; the suite's manifest states the findings it must get, and the run compares the two sets.",
     "court_ok": "answers as the manifest expects", "court_bad": "answers otherwise", "court_missing": "this fixture is not in the suite at the pin",
     "court_clean": "no finding",
+    "court_codes": "The codes above, in the words of the verifier's contract",
+    "court_level": "level", "court_error": "error", "court_warning": "warning",
     "stage": {"built": "built", "designed": "designed", "next": "next"},
     "plate": "Plate", "illustration": "Illustration", "symbols": "Symbol table", "run_label": "Run",
     "families_h": ["Family", "Its verbs", "What its verbs keep true"],
@@ -332,6 +334,8 @@ pre .c-verb{color:var(--code-verb);font-weight:600;}
 .court .g-name a:hover{border-bottom-color:var(--ink);}
 .court .g-count{font-weight:700;color:var(--ink);}
 .court .g-path{color:var(--soft);}
+.court .g-what{flex-basis:100%;color:var(--ink);}
+.chapter-page .court p.court-codes{margin:16px 0 6px;padding-top:10px;border-top:1px solid var(--rule);}
 .court .g-ok{color:var(--ok);font-weight:600;}
 .court .g-missing{color:var(--bad);font-weight:600;}
 
@@ -806,7 +810,7 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
         nonlocal decision_open
         flush()
         if current == "The court":
-            out.append(court_box(meta, ui, run_rec))
+            out.append(court_box(meta, ui, run_rec, law))
         if decision_open:
             out.append("</section>"); decision_open = False
 
@@ -943,7 +947,7 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
     return "\n".join(out)
 
 
-def court_box(meta, ui, run_rec):
+def court_box(meta, ui, run_rec, law=None):
     court = (run_rec or {}).get("court") or []
     if not court:
         return ""
@@ -959,7 +963,21 @@ def court_box(meta, ui, run_rec):
                    else f'<span class="g-missing">{ui["court_bad"]}: {html.escape(", ".join(c.get("got_ids") or []) or ui["court_clean"])}</span>')
         items.append(f'<li><span class="g-name"><a href="{url}" target="_blank" rel="noopener"><code>{html.escape(name)}</code></a></span>'
                      f'<span class="g-count">{html.escape(want)}</span>{verdict}</li>')
-    return f'<div class="court"><p class="court-head">{{COURT_HEAD}}</p><ul>{"".join(items)}</ul></div>'
+    # each code the fixtures expect, once, with its level and the contract's own sentence (violations.json, "summary")
+    seen, glosses = [], []
+    diags = (law or {}).get("diagnostics", {})
+    for c in court:
+        for code in c.get("expect_ids") or []:
+            if code in seen or code not in diags:
+                continue
+            seen.append(code)
+            d = diags[code]
+            sev = ui["court_error"] if d.get("severity") == "error" else ui["court_warning"]
+            glosses.append(f'<li class="g-gloss"><span class="g-count">{html.escape(code)}</span>'
+                           f'<span class="g-path">{ui["court_level"]} {html.escape(str(d.get("level", "")))}, {sev}</span>'
+                           f'<span class="g-what">{html.escape(d.get("summary", ""))}</span></li>')
+    gloss = (f'<p class="court-head court-codes">{ui["court_codes"]}</p><ul>{"".join(glosses)}</ul>' if glosses else "")
+    return f'<div class="court"><p class="court-head">{{COURT_HEAD}}</p><ul>{"".join(items)}</ul>{gloss}</div>'
 
 
 def words_of(body):

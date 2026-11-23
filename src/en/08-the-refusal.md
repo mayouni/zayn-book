@@ -12,7 +12,7 @@ research: research/ch08.md
 fixtures: [missing-undo, missing-undo-lawful, missing-cancel, missing-cancel-lawful, select-act-collapse, select-act-lawful, trapped-flow, trapped-flow-lawful, decorative-animation, decorative-animation-lawful, multiple-violations, irreversible-claims-undo, irreversible-claims-undo-lawful]
 ---
 
-A refusal is the verifier's answer to a declaration that breaks the law. In this chapter I make the verifier refuse. I give it a declaration, I print its answer as the run gave it, and I read that answer one line at a time: what it found and where, why, and under which law. Then I repair the declaration and run it again.
+A refusal is the verifier's answer to a declaration it does not accept: a finding that is an error. Chapter 7's refusals were for the grammar. In this chapter I make the verifier refuse for the law. I give it a declaration, I print its answer as the run gave it, and I read that answer one line at a time: what it found and where, why, and under which law. Then I repair the declaration and run it again.
 
 If you open the book here, three words are enough to follow. A **declaration** is a few lines that say what a user is doing on a surface, with {{n:law.verbs}} verbs and no others, and that say nothing of how the surface is drawn. The **law** is Zayn's constitution for interfaces: {{n:law.rules}} numbered rules, kept as data, under {{n:law.articles}} articles and {{n:law.rights}} rights of the user. The **verifier** is the program that reads a declaration and checks it against the law. Chapter 6 gives the verbs, chapter 7 the {{n:lang.kinds}} kinds of declaration, and Part VII the law.
 
@@ -32,9 +32,9 @@ So the field refuses code by a name and an exit code. For the interface it advis
 
 ## The principle
 
-**A refusal names what it refuses, in which declaration, and under which law: a code, a name, and every rule, article and right the law holds for that code.**
+**A refusal names what it refuses and in which declaration, and it cites every rule, article and right that the law holds for its code.**
 
-It does not say that something is bad practice. It points at a sentence of the law. So a refusal that cites the law has two answers and no third: repair the declaration, or amend the law with evidence.
+It does not say that something is bad practice. Where the law speaks of the defect, the refusal points at its sentence. So a refusal that cites the law has two answers and no third: repair the declaration, or amend the law with evidence. A refusal for the grammar alone, like chapter 7's unknown field, cites nothing and has one answer: the repair.
 
 The specification of the language says why this matters: an opinion, in its words, gets "negotiated in the hallway". A finding that cites a numbered rule is settled where it can be checked: in the declaration, or in the law.
 
@@ -66,7 +66,7 @@ Two refusals, and the exit code is 1! That number is what the command hands back
 
 Read the first refusal one line at a time.
 
-**The first line** is made to be scanned. It gives the file and the line, `payments.zayn:1`; the severity, `error`; the code, `MISSING_UNDO`; and the name of the declaration, `approve_payment`. The code is the stable part. Zayn's conformance suite compares the codes a verifier reports and nothing else: the line number, the wording and the order stay outside its comparison.
+**The first line** is made to be scanned. It gives the file and the line, `payments.zayn:1`; the severity, `error`; the code, `MISSING_UNDO`; and the subject of the finding, here the name of the declaration, `approve_payment`. The code is the stable part. Zayn's conformance suite compares the codes a verifier reports and nothing else: the line number, the wording and the order stay outside its comparison.
 
 **The second line** is the sentence. The declaration satisfies `ACT`, and `UNDO` is not among the intents it keeps reachable. The sentence names the two fields the verifier read, so you know where the repair goes.
 
@@ -134,7 +134,7 @@ DEFINE FEEDBACK delete_flourish (
 In words: In two steps, an operator selects records and they are deleted, with cancel within reach and nothing else. Then the system answers in a celebrating tone, and says nothing of what changed.
 :::
 
-Four findings in one run. Read the second line of each: it names what the verifier read.
+Four findings in one run. Read the second line of each: it says what the verifier found.
 
 `SELECT_ACT_COLLAPSE` read `SATISFIES`, which lists `SELECT` and `ACT` with no `CONFIRM`: choosing a record carries out the act. The verb `CONFIRM` names the user's act of confirming, whatever carries it: a review step and a dialog are two drawings of the same declaration. Rule 79's sentence on confirmation is about one drawing, the dialog that interrupts, and it keeps that dialog for acts that cannot be undone.
 
@@ -212,7 +212,7 @@ Clean. So an act has two lawful forms: it keeps an undo within reach, or it says
 
 **I refused a verifier that stops at the first finding.** A file with four defects gets four findings in one run, as plate 8.3 shows. The suite carries that file as a fixture, and a verifier passes it only by reporting all four.
 
-**I refused to compare wording.** The suite that keeps two verifiers to one verdict compares the codes they report and nothing else: the line number, the order and the sentence are free. The contract binds each code to the law it cites, and the sentence may be written in whatever language its reader reads.
+**I refused to compare wording.** The suite that keeps two verifiers to one verdict compares the codes they report and nothing else: the line number, the order and the sentence are free. Between the reference and its own port the bar is higher, and chapter 9 gives it. The contract binds each code to the law it cites, and the sentence may be written in whatever language its reader reads.
 
 **I refused a citation that the law does not back.** A finding that cites a rule is answered by a repair or by an amendment, so a citation is a claim. On 2 November 2026 I ruled that two kinds of finding, `EXPRESSION_ORPHAN` and `VIBE_STRIPS_RIGHT`, go on citing an article and no rule.
 

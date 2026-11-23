@@ -70,7 +70,7 @@ DEFINE WIZARD onboarding (
 In words: An approver selects a payment, confirms, and it is sent, with undo and cancel within reach. A form serves that flow. A newcomer is taken through three steps, identity, contact and review, and can cancel or leave at each one.
 :::
 
-An `INTENT_FLOW` is a flow: the intents a user goes through, under one name. The verifier reads the list as a set: which verbs it holds. A `FORM` is a surface where a user enters something, and it points at the flow it serves in place of saying the flow again. A `WIZARD` is a flow with named steps in order.
+An `INTENT_FLOW` is a flow: the intents a user goes through, under one name. The verifier reads the list as a set: which verbs it holds. A `FORM` is a surface where a user enters something, and it names the flow it serves. From the file alone that is enough; chapter 6's exercise showed what an inventory asks of it at level 3, a verb of its own. A `WIZARD` is a flow with named steps in order.
 
 Four kinds say where a user is.
 
@@ -182,7 +182,9 @@ DEFINE FEEDBACK overdue_notice (
 In words: On the screen of overdue invoices a user scans and compares. A message, in a cautionary tone, reports how many invoices are overdue.
 :::
 
-Clean. Before this check existed, a field on the wrong kind was read by nothing and reported by nothing, and its author believed it was working. A few fields are read on any kind, and so pass anywhere: `STEPS`, `INTENT_FLOW`, `VISIBLE_STATE` and `VISIBLE_ENTITIES`.
+Clean. Before this check existed, a field on the wrong kind was read by nothing and reported by nothing, and its author believed it was working. The table says where a field belongs. The verifier also reads some fields wherever they sit, so they pass on any kind: `STEPS` (a declaration that carries it is read as having steps), `INTENT_FLOW` (its name is looked up wherever it is written), `VISIBLE_STATE` and `VISIBLE_ENTITIES` (gathered from the whole file). That is why chapter 9 writes `VISIBLE_STATE` on a `SCREEN`.
+
+A field takes a list in brackets, or one value. `SATISFIES`, `ALWAYS_REACHABLE` and `SUPPRESSES` take a list of verbs. `STEPS`, `VISIBLE_STATE`, `VISIBLE_ENTITIES`, `REPORTS` and `ENTRIES` take a list of names, and the names of `ENTRIES` are those of other `NAV_GRAPH` declarations, in the order the menu shows them. `INTENT_FLOW`, `TARGET` and `ACTOR` take one name; the verifier looks up the name of an `INTENT_FLOW` in the file, and the specification says of `TARGET` and `ENTRIES` that neither "is resolved against the surfaces of the system". `LABEL` takes words in quotation marks. `DENSITY` and `MOTION` take one word of the author's: the specification gives `compact` and `comfortable` as examples of the first, and says of the second that "`none` is lawful and common". The other fields take their words from closed lists, which the last refusals of this chapter show.
 
 ## A field written twice
 
@@ -324,7 +326,7 @@ DEFINE SCREEN overdue_invoices (
 In words: The same four lines, with the kind spelt as the language spells it.
 :::
 
-Two refusals, and a third defect waits behind the first: the tone is on the wrong kind, and its word comes from the other list. Repair each one, and go on until the verifier answers clean and every line of your file is true.
+Two refusals, and a third defect waits behind the one on the tone: the tone is on the wrong kind, and its word comes from the other list. Repair each one, and go on until the verifier answers clean and every line of your file is true.
 
 ::: plate A form the verifier accepts
 ```zayn invoices.zayn
@@ -342,6 +344,6 @@ DEFINE FEEDBACK overdue_notice (
 In words: On the screen of overdue invoices a user scans and compares, and the values carry a signal of danger. A message, in a critical tone, reports how many invoices are overdue.
 :::
 
-The first draft was clean because the verifier read nothing of it: `SCREN` is not a kind of this language, and a kind of another language is passed over, with whatever it holds. A file may hold declarations of several languages, and the verifier judges only its own. So how is it to tell a misspelt kind of its own from a kind that belongs to someone else? The record holds two answers. The verifier passes such a kind over. The evaluator of chapter 9, forged from a second declaration of the language, refuses every kind it does not know.
+The first draft was clean because the verifier read nothing of it: `SCREN` is not a kind of this language, and a kind of another language is passed over, with whatever it holds. A file may hold declarations of several languages, and the verifier judges only its own. So how is it to tell a misspelt kind of its own from a kind that belongs to someone else? The record holds two answers. The verifier passes such a kind over. The evaluator of chapter 9, forged from a second declaration of the language, takes the other course: its file says of the kinds of other languages that they are "refused, not ignored".
 
 A declaration that the grammar accepts can still break the law. The next chapter makes the verifier refuse one, and reads the refusal line by line.

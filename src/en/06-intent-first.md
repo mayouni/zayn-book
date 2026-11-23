@@ -14,7 +14,7 @@ fixtures: [clean-minimal, unknown-intent, intent-flow-no-satisfies, intent-orpha
 
 Intent first is the rule Zayn rests on: an interface is declared from what its user is doing, and a control on a screen is what that intent becomes in one medium. In this chapter I write a first declaration, three lines long, and I name the words it is made of. Then I give the verbs, all {{n:law.verbs}} of them, and I show what the verifier answers when a word is outside them, when a flow names no intent, when an element of an interface answers to no verb, and when a declaration starts from a widget.
 
-Three words first. The **law** is Zayn's constitution for interfaces: {{n:law.articles}} articles, and {{n:law.rules}} numbered rules that derive from them, kept as data. The **verifier** is the program that reads a declaration and checks it against the law. A **widget** is a drawn control or container: a button, a card, a table.
+Three words first. The **law** is Zayn's constitution for interfaces: {{n:law.articles}} articles, and {{n:law.rules}} numbered rules that derive from them, kept as data. Their numbers run to {{n:law.highest}}: the law does not give again the number of a rule it merged into another, nor a number it reserved. The **verifier** is the program that reads a declaration and checks it against the law. A **widget** is a drawn control or container: a button, a card, a table.
 
 ## The field
 
@@ -31,6 +31,8 @@ So the idea of starting from what the user does is in the field's record. It sta
 The law holds the inversion as its second article.
 
 {{article:intent}}
+
+The article's sentence is prose: its last word, recover, is in no list. The list that the verifier holds comes below.
 
 The Zayn site says in one sentence what the other starting point costs: "When the unit of declaration is a widget, a tool can check only the widget."
 
@@ -111,7 +113,7 @@ I keep the list closed on purpose. A medium is where an interface reaches its us
 
 ## A flow that names no intent
 
-A flow is the one kind of declaration that the verifier asks for its `SATISFIES`. Here is one that says only what stays within reach.
+From the file alone, the verifier asks one kind of declaration for its `SATISFIES`: the `INTENT_FLOW`, a flow. Here is one that says only what stays within reach.
 
 ::: plate A flow with a name and no verb
 ```zayn statement.zayn
@@ -150,6 +152,8 @@ In words: The amount due is something a user reads. The inventory says that the 
 Refused, and this time the third line cites a rule: Rule 130. The first line has no line number, because the element is in the inventory and not in the file. The report's sentence says "a declared element": it means an element that the inventory says exists.
 
 {{rule:130}}
+
+A card gives the rule's article, its set, which is a group of rules on one subject, and its tier, a word the law files each rule under and that chapter 17 reads.
 
 The rule's text gives two repairs: the element "is removed, or the intent it was always meant to serve is declared". Here is the second.
 
