@@ -173,6 +173,18 @@ def closed_lists(snap):
     return out
 
 
+def fields_by_kind(snap):
+    """Which fields each kind carries beyond the ones every kind carries, as the specification tables it (VIOLATIONS.md,
+    the note on FIELD_MISPLACED): [(kinds, fields)]. Read from the snapshot, never typed."""
+    text = (snap / "doc" / "language" / "VIOLATIONS.md").read_text(encoding="utf-8")
+    out = []
+    for line in text.splitlines():
+        row = re.match(r"^\|\s*\*\*([A-Z_, ]+)\*\*\s*\|\s*(.+?)\s*\|\s*$", line)
+        if row:
+            out.append(([k.strip() for k in row.group(1).split(",")], re.findall(r"`([A-Z_]+)`", row.group(2))))
+    return out
+
+
 def law_facts(snap):
     """Every count the pages may print, read from the snapshot's data files. A fact that cannot be read is None,
     and the builder prints it as `null` and fails. The keys are the tokens a page writes as {{n:key}}."""

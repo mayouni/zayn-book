@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 10:03 UTC+01:00",
+  "date": "2026-11-23 10:10 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -328,18 +328,69 @@
      }
     },
     {
-     "hash": "743007456242",
+     "hash": "841c4e9ae5bb",
      "name": "lookup.zayn",
-     "level": 3,
-     "symbols": "screen.json",
-     "flags": [
-      "exercise"
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_INTENT",
+       "look_up_invoice"
+      ],
+      [
+       "UNKNOWN_INTENT",
+       "look_up_invoice"
+      ],
+      [
+       "UNKNOWN_INTENT",
+       "look_up_invoice"
+      ]
      ],
-     "promise": [],
-     "stated": false,
-     "verdict": "exercise",
-     "report": "",
-     "diagnostics": []
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "lookup.zayn:2  error  UNKNOWN_INTENT  SEARCH in SATISFIES of look_up_invoice\n    A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\n    Article II\nlookup.zayn:2  error  UNKNOWN_INTENT  NAVIGATE in SATISFIES of look_up_invoice\n    A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\n    Article II\nlookup.zayn:2  error  UNKNOWN_INTENT  VIEW in SATISFIES of look_up_invoice\n    A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\n    Article II\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_INTENT",
+       "severity": "error",
+       "subject": "SEARCH in SATISFIES of look_up_invoice",
+       "line": 2,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22."
+      },
+      {
+       "code": "UNKNOWN_INTENT",
+       "severity": "error",
+       "subject": "NAVIGATE in SATISFIES of look_up_invoice",
+       "line": 2,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22."
+      },
+      {
+       "code": "UNKNOWN_INTENT",
+       "severity": "error",
+       "subject": "VIEW in SATISFIES of look_up_invoice",
+       "line": 2,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"lookup.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_INTENT\",\n      \"severity\": \"error\",\n      \"message\": \"A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\",\n      \"span\": {\n        \"file\": \"lookup.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"SEARCH in SATISFIES of look_up_invoice\"\n    },\n    {\n      \"code\": \"UNKNOWN_INTENT\",\n      \"severity\": \"error\",\n      \"message\": \"A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\",\n      \"span\": {\n        \"file\": \"lookup.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"NAVIGATE in SATISFIES of look_up_invoice\"\n    },\n    {\n      \"code\": \"UNKNOWN_INTENT\",\n      \"severity\": \"error\",\n      \"message\": \"A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\",\n      \"span\": {\n        \"file\": \"lookup.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"VIEW in SATISFIES of look_up_invoice\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
     },
     {
      "hash": "71db71b3daca",
@@ -412,9 +463,9 @@
      }
     }
    ],
-   "kept": 10,
-   "runnable": 10,
-   "exercises": 1,
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 0,
    "court": [
     {
      "file": "clean-minimal.zayn",
@@ -493,7 +544,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:03 UTC+01:00"
+   "ran": "2026-11-23 10:10 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1020,7 +1071,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:03 UTC+01:00"
+   "ran": "2026-11-23 10:10 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1262,18 +1313,76 @@
      }
     },
     {
-     "hash": "8a7a41b61c0d",
+     "hash": "62a6534490a5",
      "name": "close-account.zayn",
      "level": 2,
      "symbols": null,
-     "flags": [
-      "exercise"
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "close_account"
+      ],
+      [
+       "SELECT_ACT_COLLAPSE",
+       "close_account"
+      ],
+      [
+       "TRAPPED_FLOW",
+       "close_account"
+      ]
      ],
-     "promise": [],
-     "stated": false,
-     "verdict": "exercise",
-     "report": "",
-     "diagnostics": []
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "close-account.zayn:1  error  SELECT_ACT_COLLAPSE  close_account\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\nclose-account.zayn:1  error  MISSING_UNDO  close_account\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\nclose-account.zayn:1  error  TRAPPED_FLOW  close_account\n    A multi-step flow has no reachable EXIT.\n    Rule 51 · The Cognitive Tunnel · Rule 53 · Interaction Lockdown · Article II · the right to leave\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "close_account",
+       "line": 1,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      },
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "close_account",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "TRAPPED_FLOW",
+       "severity": "error",
+       "subject": "close_account",
+       "line": 1,
+       "cites": [
+        "rule:51",
+        "rule:53",
+        "article:intent",
+        "right:leave"
+       ],
+       "level": 2,
+       "message": "A multi-step flow has no reachable EXIT."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"close-account.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"close-account.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"close_account\"\n    },\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"close-account.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"close_account\"\n    },\n    {\n      \"code\": \"TRAPPED_FLOW\",\n      \"severity\": \"error\",\n      \"message\": \"A multi-step flow has no reachable EXIT.\",\n      \"span\": {\n        \"file\": \"close-account.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:51\",\n        \"rule:53\",\n        \"article:intent\",\n        \"right:leave\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"close_account\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
     },
     {
      "hash": "2d292ebc50fd",
@@ -1294,9 +1403,9 @@
      }
     }
    ],
-   "kept": 7,
-   "runnable": 7,
-   "exercises": 1,
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
    "court": [
     {
      "file": "missing-undo.zayn",
@@ -1437,7 +1546,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:03 UTC+01:00"
+   "ran": "2026-11-23 10:10 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1515,18 +1624,58 @@
      }
     },
     {
-     "hash": "63a542677271",
+     "hash": "bacf69d96bc8",
      "name": "refunds.zayn",
      "level": 3,
      "symbols": "desk.json",
-     "flags": [
-      "exercise"
+     "flags": [],
+     "promise": [
+      [
+       "HIDDEN_AUTHORITY",
+       "issue_refund"
+      ],
+      [
+       "INVISIBLE_STATE",
+       "active_filter"
+      ]
      ],
-     "promise": [],
-     "stated": false,
-     "verdict": "exercise",
-     "report": "",
-     "diagnostics": []
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "refunds.zayn:6  error  HIDDEN_AUTHORITY  issue_refund\n    A consequential act names no actor.\n    Rule 83 · Predictable Authority · Article V\nrefunds.zayn  error  INVISIBLE_STATE  active_filter\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n2 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "HIDDEN_AUTHORITY",
+       "severity": "error",
+       "subject": "issue_refund",
+       "line": 6,
+       "cites": [
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 3,
+       "message": "A consequential act names no actor."
+      },
+      {
+       "code": "INVISIBLE_STATE",
+       "severity": "error",
+       "subject": "active_filter",
+       "line": 0,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know",
+        "pattern:invisible-active-filters"
+       ],
+       "level": 3,
+       "message": "The system holds state the operator must know, and no surface declares showing it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"refunds.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"HIDDEN_AUTHORITY\",\n      \"severity\": \"error\",\n      \"message\": \"A consequential act names no actor.\",\n      \"span\": {\n        \"file\": \"refunds.zayn\",\n        \"line\": 6\n      },\n      \"cites\": [\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"issue_refund\"\n    },\n    {\n      \"code\": \"INVISIBLE_STATE\",\n      \"severity\": \"error\",\n      \"message\": \"The system holds state the operator must know, and no surface declares showing it.\",\n      \"span\": {\n        \"file\": \"refunds.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\",\n        \"pattern:invisible-active-filters\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"active_filter\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
     },
     {
      "hash": "1cbbb1c2ef1e",
@@ -1547,9 +1696,9 @@
      }
     }
    ],
-   "kept": 4,
-   "runnable": 4,
-   "exercises": 1,
+   "kept": 5,
+   "runnable": 5,
+   "exercises": 0,
    "court": [
     {
      "file": "hidden-authority.zayn",
@@ -1694,7 +1843,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 10:03 UTC+01:00"
+   "ran": "2026-11-23 10:10 UTC+01:00"
   }
  }
 }

@@ -27,7 +27,7 @@ sits outside the variables; the type scale is out of order. It still writes the 
 """
 import html, json, re, subprocess, sys
 from book_common import (ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
-                         closed_lists, GH_BLOB, PIN_TAG)
+                         closed_lists, fields_by_kind, GH_BLOB, PIN_TAG)
 from book_judge import WORDS
 
 ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
@@ -62,6 +62,7 @@ UI = {
     "families_h": ["Family", "Its verbs", "What its verbs keep true"],
     "levels_h": ["Level", "Its name", "What the verifier is given", "What it decides", "Kinds of finding"],
     "lists_h": ["Field", "On", "The values it admits, and no others"],
+    "fields_h": ["Kind", "The fields it carries, beyond those every kind carries"], "fields_none": "none of its own",
     "spec_src": "Printed from the language specification, version {v}.",
     "contract_src": "Printed from the verifier's contract, version {v}.",
     "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
@@ -731,6 +732,18 @@ def levels_table(law, ui):
             + f'<p class="table-src">{html.escape(ui["contract_src"].format(v=v))}</p>')
 
 
+def fields_table(law, ui):
+    """Which fields each kind carries beyond the ones every kind carries."""
+    rows_in = law.get("fields_by_kind") or []
+    if not rows_in:
+        raise SystemExit("fields: the specification at the pin tables no fields by kind")
+    rows = [[" ".join(f"<code>{html.escape(k)}</code>" for k in kinds),
+             " ".join(f"<code>{html.escape(f)}</code>" for f in fields) if fields else html.escape(ui["fields_none"])]
+            for kinds, fields in rows_in]
+    return (render_table(rows, "book-table families", ui["fields_h"])
+            + f'<p class="table-src">{html.escape(ui["spec_src"].format(v=law.get("spec_version") or "null"))}</p>')
+
+
 def lists_table(law, ui):
     """The closed lists of the language: the field, the kind that carries it, and every value it admits."""
     lists = law.get("closed_lists") or []
@@ -846,6 +859,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(levels_table(law, ui)); i += 1; continue
         if s == "{{lists}}":
             flush(); out.append(lists_table(law, ui)); i += 1; continue
+        if s == "{{fields}}":
+            flush(); out.append(fields_table(law, ui)); i += 1; continue
         m_card = re.match(r"^\{\{(rule|right|suite|article):([a-z0-9-]+)\}\}$", s)
         if m_card:
             flush()
@@ -1244,6 +1259,7 @@ def main():
     snap, _ = snapshot((runs.get("run", {}).get("zayn") or {}).get("commit"))
     law = law_data(snap)
     law["closed_lists"] = closed_lists(snap)
+    law["fields_by_kind"] = fields_by_kind(snap)
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     en_src = sources("en")
     errors = []

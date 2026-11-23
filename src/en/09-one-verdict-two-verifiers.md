@@ -12,13 +12,13 @@ research: research/ch09.md
 fixtures: [hidden-authority, invisible-state, intent-orphan, unresolved-entity, projection-visual-trust, clean-minimal, unknown-intent, unspecified-declaration, multiple-violations, duplicate-field, role-undeclared, foreign-pillar-ignored]
 ---
 
-A verdict is the set of findings a verifier gives on one file. This chapter asks what keeps that verdict the same when the verifier changes. I give the four levels of checking and what each one needs. I run the conformance suite, which is a set of declarations kept with the answers they must get. Then I tell how two verifiers, written in two languages, are kept to one verdict, and how a third evaluator, made another way, keeps a list of the places where it differs.
+A verdict is the set of codes a verifier reports on one file. This chapter asks what keeps that verdict the same when the verifier changes. I give the four levels of checking and what each one needs. I run the conformance suite, which is a set of declarations kept with the answers they must get. Then I tell how two verifiers, written in two languages, are kept to one verdict, and how a third evaluator, made another way, keeps a list of the places where it differs.
 
 If you open the book here: a declaration is a few lines that say what a user is doing on a surface; the law is Zayn's constitution of {{n:law.rules}} rules for interfaces; the verifier is the program that checks a declaration against it; and a finding is one entry of the verifier's report, a refusal when it is an error. The contract is the list of every kind of finding the verifier can report, and the machine form is the same report as data.
 
 ## The field
 
-The field knows how to keep several implementations of one standard to one result: it writes a shared suite of tests. The web-platform-tests project calls itself "a cross-browser test suite for the Web-platform stack", and its results are archived from an array of web browsers on a regular basis. Test262 is, in its own words, "the implementation conformance test suite" for the specification of ECMAScript.
+The field knows how to keep several implementations of one standard to one result: it writes a shared suite of tests. The web-platform-tests project calls itself "a cross-browser test suite for the Web-platform stack", and its results are archived from an array of web browsers on a regular basis. Test262 is, in its own words, "the implementation conformance test suite" for the specification of ECMAScript, the standard behind JavaScript.
 
 For interfaces, the field has taken the same step for the instruments that test a page. The W3C's format for accessibility test rules, a Recommendation of 5 February 2026, asks that each rule be published with examples whose outcome is known: passed, failed, and inapplicable. It gives the purpose: the harmonization of testing methods, the ones built into test tools among them.
 
@@ -102,6 +102,8 @@ Now the same runner, asked for level 2.
 
 {{n:suite.2.pass}} passed and {{n:suite.2.skipped}} were skipped. The skipped ones are the fixtures of level 3, and a skip is not a failure: a verifier that reads the file alone has nothing with which to decide who an actor is. It states its level, and the suite holds it to that level.
 
+A verifier written by other hands is judged the same way. It claims a level, it is run on each fixture at or below that level, and the set of codes it reports is compared with the manifest's. The manifest gives each fixture its file, its level, the codes it must get and, at level 3, its symbol table.
+
 Of the {{n:fix.total}} fixtures, {{n:fix.clean}} must get no finding, and {{n:fix.twins}} of those are lawful twins of a fixture that gets a finding. And {{n:fix.unfixtured}} kinds of finding have no fixture at all, each with its reason written in the manifest. One is the finding of level 4, which is a fact about a painted page. The other two are failures to parse: what a parser reports after its first failure differs from one parser to the next, and a fixture would bind every verifier to one parser's habits.
 
 The suite holds no fixture above level 3, so its last line at level 4 says what a run at level 3 says. Level 4 needs a painted page, and chapter 10 measures one.
@@ -110,25 +112,25 @@ The suite holds no fixture above level 3, so its last line at level 4 says what 
 
 The verifier that ran every page of this book is written in JavaScript. It is the reference.
 
-The verifier a team installs is the `zayn` command, one file, written in another language. It is a port of the reference, and its bar is set above the suite's. The suite compares codes. The gate between the command and the reference compares every byte: what each prints, what each prints on failure, and the exit code, on every fixture and on a corpus of inputs that a generator makes from the fixtures. The gate's own head states its rule: "There are NO allowed differences."
+The verifier a team installs is the `zayn` command, one file, written in another language. It is a port of the reference: the same verifier, written again. Its bar is set above the suite's. The suite compares codes. A gate is a check that must pass before a release, and the gate between the command and the reference compares every byte: what each prints, what each prints on failure, and the exit code, on every fixture and on a corpus, a large set of inputs that a program makes from the fixtures. The first lines of the gate's file state its rule: "There are NO allowed differences."
 
-Why bytes, when the suite asks only for codes? Because a port that agrees on the code and changes the sentence has changed what a person reads.
+Why bytes, when the suite asks only for codes? The design of the command answers: a port that agrees on the codes and differs in a message "has changed what a person reads".
 
-I asked for that command in these words, which the design keeps as I typed them: "We should not depend on Node or any other thing!"
+I asked for that command in these words, which the design keeps as I typed them: "We should not depend on Node or any other thing!" Node is the program that runs JavaScript.
 
 The release notes record the runs. Those of release 0.1.0 record the gate's full run with no difference to the byte. Those of release {{n:release.version}} record the Windows file passing the suite, {{n:fix.total}} fixtures of {{n:fix.total}}, and list the Linux and macOS files as built.
 
 The same core is also compiled for the browser, {{n:wasm.bytes}} bytes, so that a page can check a declaration with nothing installed. A proof page runs every fixture at every level through it and compares each answer with the command's: the record it compares with holds {{n:proof.answers}} answers for {{n:proof.fixtures}} fixtures.
 
-The gate says in its own head what it proves, and I keep the sentence beside the result: parity is sameness. A command that agrees with the reference on every input carries every mistake of the reference.
+The first lines of the gate's file also say what it proves, and I keep the sentence beside the result: "Parity is sameness, not rightness". A command that agrees with the reference on every input carries every mistake of the reference.
 
 ## A third evaluator, and its differences
 
-Two verifiers that share a design can share a blind spot. So Zayn was also declared a second time, in Haro, the language of this series' first book, which is a language for declaring languages. The declaration was written from the contract's data and the tables of the declarations. An evaluator is forged from that declaration, and it shares no code with the verifier. The record calls it the forged court.
+Two verifiers that share a design can share a blind spot. So Zayn was also declared a second time, in Haro, the language of this series' first book, which is a language for declaring languages. The declaration was written from the contract's data and the tables of the declarations. An evaluator is forged from that declaration, which means that a program makes it from the declaration with no hand in between, and it shares no code with the verifier. The record calls it the forged court.
 
-It does not agree everywhere, and that is its use. Its judge ran it against the reference on {{n:haro.judged}} fixtures, and the list of its differences holds {{n:haro.rows}} rows, four of them added on 8 November 2026 for the menu fixtures and written by expectation. Each row names the fixture, what each of the two says, and the class of the difference. In {{n:haro.other_code}} rows both refuse and speak different codes. In {{n:haro.court_only}} rows the forged evaluator refuses a file the verifier accepts. In {{n:haro.not_refused}} rows the verifier refuses or warns and the forged evaluator says clean, and the {{n:fix.level3}} fixtures of level 3 are among them. The judge counts a fixture as agreed when the forged evaluator's first code is one of the codes expected: it speaks one refusal for a file, where the verifier reports them all.
+It does not agree everywhere, and that is its use. Its judge, the script that compares the two, ran it against the reference on {{n:haro.judged}} fixtures. The list of its differences holds {{n:haro.rows}} rows, four of them added on 8 November 2026 for the menu fixtures and written by expectation: from what the evaluator is expected to say, ahead of the run that confirms it. Each row names the fixture, what each of the two says, and the class of the difference. In {{n:haro.other_code}} rows both refuse and speak different codes. In {{n:haro.court_only}} rows the forged evaluator refuses a file the verifier accepts. In {{n:haro.not_refused}} rows the verifier refuses or warns and the forged evaluator says clean, and the {{n:fix.level3}} fixtures of level 3 are among them. The judge counts a fixture as agreed when the forged evaluator's first code is one of the codes expected: it speaks one refusal for a file, where the verifier reports them all.
 
-The list is a ratchet. The judge fails when a difference appears that is not on it, when a listed row changes, and when a listed difference now agrees and is still listed. A difference can leave the list only by being repaired and removed.
+The list is a ratchet, a list that may only shrink. The judge fails when a difference appears that is not on it, when a listed row changes, and when a listed difference now agrees and is still listed. A difference can leave the list only by being repaired and removed.
 
 ## What I refused
 
@@ -160,10 +162,10 @@ Two things ran on this page: the reference verifier and the suite's runner, both
 
 ## In your hands
 
-Here is a refund desk: a screen and a flow. From the file alone it is clean. Beside it is the table of the system around it.
+Here is a refund desk: a screen and a flow. From the file alone it is clean. Beside it is the table of the system around it. One field is new: `VISIBLE_STATE` lists the state a surface shows, and the table's `state` list says what state the system holds.
 
 ::: plate For you: a refund desk, and the system around it
-```zayn exercise refunds.zayn level=3 symbols=desk.json
+```zayn refunds.zayn level=3 symbols=desk.json
 DEFINE SCREEN refund_desk (
   SATISFIES [READ, FILTER],
   VISIBLE_STATE [open_refunds]
@@ -173,6 +175,8 @@ DEFINE INTENT_FLOW issue_refund (
   SATISFIES [SELECT, CONFIRM, ACT],
   ALWAYS_REACHABLE [UNDO, CANCEL]
 )
+//--> HIDDEN_AUTHORITY issue_refund
+//--> INVISIBLE_STATE active_filter
 ```
 In words: At the refund desk, a user reads the refunds and filters them, and the screen shows which refunds are open. To issue a refund, a user selects one, confirms, and the refund is issued, with undo and cancel within reach at every step.
 
@@ -184,7 +188,7 @@ In words: At the refund desk, a user reads the refunds and filters them, and the
 ```
 :::
 
-Run it at level 2, then at level 3 with the table: `zayn check refunds.zayn --level 3 --symbols desk.json`. Before the second run, write the codes you expect and what each will be about. One of the two findings has no line number: say why before you read on.
+The plate shows it at level 3, with the table: `zayn check refunds.zayn --level 3 --symbols desk.json`. Cover the report, write the codes you expect and what each will be about, then compare. One of the two findings has no line number: say why before you read on.
 
 Repair it until the verifier answers clean at level 3 and every line of your file is true.
 
@@ -205,6 +209,6 @@ DEFINE INTENT_FLOW issue_refund (
 In words: At the refund desk, a user reads the refunds and filters them, and the screen shows which refunds are open and which filter is active. To issue a refund, a cashier selects one, confirms, and the refund is issued, with undo and cancel within reach at every step.
 :::
 
-It is clean. Now write `ACTOR intern`, a name the table does not hold, and run it again. The verifier asked that an actor be named. Should the actor also be one the system knows, as an entity that a view shows must be?
+It is clean. Now write `ACTOR intern`, a name the table does not hold, and run it again. The verifier asked that an actor be named. Should the actor also be one the system knows?
 
 Every level so far reads a declaration or a table. Level 4 reads a painted page, and a declaration does not hold one. Part IV begins there, with what a declaration cannot see.

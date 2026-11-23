@@ -51,9 +51,9 @@ In words: On the home screen of invoices, a user finds out which invoices there 
 title: Invoices
 say: 12 open · 3 overdue
 say: 2041 · 1,200.00 · due today
-control: Search
+control: Go to invoice number
 control: Open
-caption: One drawing among many. The declaration says discover and locate; a list and a search field are one way a screen carries them, and a spoken menu is another.
+caption: One drawing among many. The declaration says discover and locate; a list to look through and a field that goes straight to a known invoice are one way a screen carries them, and a spoken menu is another.
 ```
 :::
 
@@ -84,7 +84,7 @@ The words between the brackets are not free. They are the verbs of the law, and 
 
 {{families}}
 
-Read the right column. Each family carries one sentence that its verbs must keep true in every declaration: its invariant. Several refusals of this book come from those sentences. A screen that reads and acts breaks the invariant of information. A flow where selecting carries out the act breaks the invariant of selection. Chapter 8 runs the invariants of action and of continuity.
+Read the right column. Each family carries one sentence that its verbs must keep true in every declaration: its invariant. Several refusals of this book come from those sentences. A screen that reads and acts breaks the invariant of information. A flow where selecting carries out the act breaks the invariant of selection. Chapter 8 runs the invariants of action and of continuity. An invariant is the law's sentence, and what the verifier checks of it can be narrower: each chapter says which part a check decides.
 
 If you come from the Zayn site, you met the same verbs grouped by what a user is busy with: understanding, deciding, acting, recovering. The families are the law's own grouping, and chapter 13 gives the other.
 
@@ -183,7 +183,7 @@ DEFINE WIDGET sales_card (
 In words: There is a card of sales figures, and a user reads it.
 :::
 
-A warning, and the exit code is 0: the language has no kind named `WIDGET`, and the verifier reports the word where it is written. The repair names what the user does with the figures and leaves the card to the drawing.
+A warning, and the exit code is 0: the language has no kind named `WIDGET`, and the verifier reports the word where it is written. The report names two words, `WIDGET` and `USER`: they are the two kinds the language knows of and leaves out. Any other word in the place of a kind is read as another language's declaration and passed over whole, as chapter 7's exercise shows. The repair names what the user does with the figures and leaves the card to the drawing.
 
 ::: plate The same figures, declared from the user
 ```zayn sales.zayn
@@ -228,7 +228,7 @@ Starting from intent makes checkable what a declaration states: its verbs, what 
 Here is a first draft written in the words of mechanics, with a form that points at its flow, and the inventory of the screen. A `FORM` is a third kind of declaration: a surface where a user enters something.
 
 ::: plate For you: a lookup, in the words of mechanics
-```zayn exercise lookup.zayn level=3 symbols=screen.json
+```zayn lookup.zayn
 DEFINE INTENT_FLOW look_up_invoice (
   SATISFIES [SEARCH, NAVIGATE, VIEW]
 )
@@ -236,19 +236,16 @@ DEFINE INTENT_FLOW look_up_invoice (
 DEFINE FORM search_form (
   INTENT_FLOW look_up_invoice
 )
+//--> UNKNOWN_INTENT look_up_invoice
+//--> UNKNOWN_INTENT look_up_invoice
+//--> UNKNOWN_INTENT look_up_invoice
 ```
 In words: To look up an invoice, a user searches, navigates and views. A search form serves that flow.
-
-```symbols screen.json
-{
-  "elements": ["search_form", "promo_banner"]
-}
-```
 :::
 
-Before you run it, write the codes you expect, and how many times each. Then run it and compare.
+Cover the report under the declaration. Write the codes you expect, and how many times each. Then compare.
 
-Now say each word as a verb of the law, and run it again with the inventory, at level 3: `zayn check lookup.zayn --level 3 --symbols screen.json`. Write what you expect first. Try before you read on.
+Now say each word as a verb of the law, and check the file again with the inventory of the screen, at level 3: `zayn check lookup.zayn --level 3 --symbols screen.json`. The inventory holds two elements, the form and a banner. Write what you expect first. Try before you read on.
 
 ::: plate The verbs said, and the inventory given
 ```zayn lookup.zayn level=3 symbols=screen.json
@@ -263,9 +260,15 @@ DEFINE FORM search_form (
 //--> INTENT_ORPHAN promo_banner
 ```
 In words: To look up an invoice, a user filters the list, goes to an invoice and reads it. A search form serves that flow. The screen holds the form and a banner.
+
+```symbols screen.json
+{
+  "elements": ["search_form", "promo_banner"]
+}
+```
 :::
 
-Two elements are reported. The banner you expected. The form is the surprise: it names its flow, and the flow is lawful. Go on until the verifier answers clean and every line of your file is true. Do not give the banner a verb it does not serve: the declaration would be untrue.
+Searching a list is narrowing it, which is `FILTER`. Going to an invoice the user knows is `LOCATE`. Viewing it is `READ`. And two elements are reported. The banner you expected. The form is the surprise: it names its flow, and the flow is lawful. Go on until the verifier answers clean and every line of your file is true. Do not give the banner a verb it does not serve: the declaration would be untrue.
 
 Here is a form the verifier accepts, with the banner gone from the screen.
 

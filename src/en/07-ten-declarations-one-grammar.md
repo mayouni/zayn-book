@@ -126,7 +126,7 @@ DEFINE VIBE operator_dense (
 In words: One control confirms, and it promises that what it does can be taken back. One message, in an informing tone, reports the state of the transfer. One culture is dense, and it is drawn on a terminal.
 :::
 
-An `INTERACTION` stands for one control and can state its role, the promise the control makes. A `FEEDBACK` is what the system says back, and it must report a state. A `VIBE` is a culture of use: how dense, on which medium, with what motion. Chapter 14 is about cultures.
+An `INTERACTION` stands for one control and can state its role, the promise the control makes. A `FEEDBACK` is what the system says back, and one that takes a tone or moves must report a state. A `VIBE` is a culture of use: how dense, on which medium, with what motion. Chapter 14 is about cultures.
 
 Three files, {{n:lang.kinds}} kinds, and the verifier accepts all three!
 
@@ -150,7 +150,9 @@ Refused, at line 3. The finding has two lines: what was found, and why. It cites
 
 ## A field in the wrong place
 
-A known field can sit on a kind that does not carry it.
+A known field can sit on a kind that does not carry it. Every kind carries `SATISFIES`, `ALWAYS_REACHABLE`, `SIGNALS` and `ACTOR`. Beyond those, each kind has its own fields.
+
+{{fields}}
 
 ::: plate A tone, written on a screen
 ```zayn invoices.zayn
@@ -256,7 +258,7 @@ One finding, on the message. On the screen, `danger` passes: `SIGNALS` says what
 
 **I refused nesting.** A field holds a value or a list of names. The grammar gives the reason: nesting "is where widget trees creep back into an intent language".
 
-**I refused to let any word be a medium.** The field once accepted any name, and `kiosk` passed. A closed list of media is what makes a table of verbs against media finite, and a kiosk is a property of one of them.
+**I refused to let any word be a medium.** `SURFACE_AS` once accepted any name, and `kiosk` passed. A closed list of media is what makes a table of verbs against media finite, and a kiosk is a property of one of them.
 
 **I refused one vocabulary for the tone and the signal.** The specification draws the line: one subject with two vocabularies is a defect, which the law corrected in itself, and "two subjects with two vocabularies is correct", provided the border is written down.
 
@@ -276,7 +278,7 @@ And the design tokens name what a declaration leaves to the drawing: colours, di
 
 Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
-The grammar refuses what this chapter showed: a field, a place, a second copy, a value. It reads the {{n:lang.kinds}} kinds it defines, it reports the words `WIDGET` and `USER` with a warning, and it passes over any other kind as another language's, as the exercise below shows.
+The grammar refuses what this chapter showed: a field, a place, a second copy, a value. It reads the {{n:lang.kinds}} kinds it defines, it reports the words `WIDGET` and `USER` with a warning, and it passes over any other kind as another language's. Appendix B gives the grammar in full, with the form each field takes.
 
 ## In your hands
 

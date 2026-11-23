@@ -189,7 +189,7 @@ In words: An administrator confirms, and the archive is purged. The control says
 
 Refused, under the same Rule 79! The declaration promises a way back that the act does not have, and a user who trusts that promise learns the truth at the one moment it matters.
 
-Under the report, the plate prints the same answer as a machine reads it, for the tools that read reports in place of people. It is one object: the level, the versions of the contract and of the law, the files, the counts, and a list named `diagnostics` with one entry for each finding. In the entry, `code` is the stable name. `span` gives the file and the line. `cites` gives the law as three keys: `rule:79`, `article:reversibility`, `right:reverse`. `subject` says what the finding is about, and `level` says at which level it was decided. A build needs less than that. It reads the exit code: 0 when the verifier refused nothing, 1 when it refused, 2 when it could not read the file.
+Under the report, the plate prints the same answer as a machine reads it, for the tools that read reports in place of people. The command gives this form when it is asked with `--json`. It is one object: the level, the versions of the contract and of the law, the files, the counts, and a list named `diagnostics` with one entry for each finding. In the entry, `code` is the stable name. `span` gives the file and the line. `cites` gives the law as three keys: `rule:79`, `article:reversibility`, `right:reverse`. `subject` says what the finding is about, and `level` says at which level it was decided. A build needs less than that. It reads the exit code: 0 when the verifier refused nothing, 1 when it refused, 2 when it could not read the file.
 
 The repair removes the promise and keeps the right that still holds.
 
@@ -232,24 +232,27 @@ And WCAG's criterion reaches the page as a user meets it, where a declaration st
 
 Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
-Every run on this page was made by the verifier's JavaScript reference, at Zayn's release {{n:release.version}}, against the law at version {{n:law.version}}. A refusal covers what a declaration states: on this page, what its fields say of intents, reach, steps, tone and role. The rules it cites say more than a declaration can state, and Part VII sets the law's three instruments side by side: the verifier, the audit of the painted page and a person's judgment.
+Every run on this page was made by the verifier's JavaScript reference, at Zayn's release {{n:release.version}}, against the law at version {{n:law.version}}. A refusal covers what a declaration states: on this page, what its fields say of intents, reach, steps, tone and role. The rules it cites say more than a declaration can state, and Part VII sets the law's three instruments side by side: the verifier, the audit of the painted page and a person's judgment. A clean verdict covers the declaration and what it states. Whether the declaration is true of the screen that is delivered is measured on the painted page, in chapter 10.
 
 ## In your hands
 
 Here is a wizard that closes an account, and a closed account stays closed.
 
 ::: plate For you: a wizard that closes an account
-```zayn exercise close-account.zayn
+```zayn close-account.zayn
 DEFINE WIZARD close_account (
   SATISFIES [SELECT, ACT],
   ALWAYS_REACHABLE [CANCEL],
   STEPS [choose, review, close]
 )
+//--> SELECT_ACT_COLLAPSE close_account
+//--> MISSING_UNDO close_account
+//--> TRAPPED_FLOW close_account
 ```
 In words: In three steps, a user selects an account and it is closed, with cancel within reach and nothing else.
 :::
 
-Before you run it, write the codes you expect. Then run it and compare.
+Cover the report under the declaration, write the codes you expect, then compare.
 
 Now repair it. Adding `UNDO` silences `MISSING_UNDO` and makes the declaration untrue: nothing reopens the account. The true word is `irreversible`. Write it on the wizard, and read the refusal you get. Then go on until the verifier answers clean and every line of your file is true. Try before you read on.
 
@@ -274,6 +277,6 @@ DEFINE INTERACTION close_for_good (
 In words: In three steps, a user selects an account and confirms, and can cancel or leave at every step. One control closes the account: the account holder confirms, can cancel at every step before, and the control says that the closing cannot be taken back.
 :::
 
-It is clean, and it has two declarations: the wizard, which no longer says that it acts, and an interaction that acts and says `irreversible`. The two stand side by side, and the file leaves their order to its reader. Should a flow be able to say that its own act cannot be undone? Or is one interaction for each such act the right grain?
+It is clean, and it has two declarations: the wizard, which no longer says that it acts, and an interaction that acts and says `irreversible`. The act had to move: `irreversible` is a role, and only an interaction states a role. The two stand side by side, and the file leaves their order to its reader. Should a flow be able to say that its own act cannot be undone? Or is one interaction for each such act the right grain?
 
 A refusal is worth what the court behind it is worth. The next chapter gives the four levels, runs the suite, and tells how a second verifier, the command, is kept to the reference's verdict.
