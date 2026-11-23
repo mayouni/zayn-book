@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 18:13 UTC+01:00",
+  "date": "2026-11-23 18:43 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -71,6 +71,12 @@
    "law.principles": 3,
    "law.axioms": 4,
    "diag.cite_right": 8,
+   "cite.verifier": 13,
+   "cite.audit": 8,
+   "cite.ui": 7,
+   "cite.shot": 3,
+   "cite.union": 20,
+   "cite.both": 1,
    "law.tiers": 4,
    "right.max": 102,
    "corpus.records": 489,
@@ -572,7 +578,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:43 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1117,7 +1123,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:43 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1627,7 +1633,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1942,7 +1948,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -2446,7 +2452,594 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
+  },
+  "en/17-the-enforcement-ladder": {
+   "id": "the-enforcement-ladder",
+   "blocks": [
+    {
+     "hash": "f721e9a61cb5",
+     "name": "help.zayn",
+     "level": 3,
+     "symbols": "elements.json",
+     "flags": [],
+     "promise": [
+      [
+       "INTENT_ORPHAN",
+       "news_ticker"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "help.zayn  error  INTENT_ORPHAN  news_ticker\n    A declared element traces to no intent.\n    Rule 130 · Every Element Serves an Intent · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INTENT_ORPHAN",
+       "severity": "error",
+       "subject": "news_ticker",
+       "line": 0,
+       "cites": [
+        "rule:130",
+        "article:intent"
+       ],
+       "level": 3,
+       "message": "A declared element traces to no intent."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"help.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INTENT_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"A declared element traces to no intent.\",\n      \"span\": {\n        \"file\": \"help.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:130\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"news_ticker\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "e7dbc5f1f1d8",
+     "name": "help.zayn",
+     "level": 3,
+     "symbols": "elements.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"help.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "43d3eeba3e57",
+     "name": "messages.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "delete_message"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "messages.zayn:1  error  MISSING_UNDO  delete_message\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "delete_message",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"messages.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"messages.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"delete_message\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8da11600e029",
+     "name": "messages.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"messages.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "aa7002748c72",
+     "name": "messages.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"messages.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "9bd99c56fea0",
+     "name": "assistant.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"assistant.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "ec88ec867d6a",
+     "name": "assistant.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_INTENT",
+       "ask_assistant"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "assistant.zayn:3  error  UNKNOWN_INTENT  HUMAN in ALWAYS_REACHABLE of ask_assistant\n    A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_INTENT",
+       "severity": "error",
+       "subject": "HUMAN in ALWAYS_REACHABLE of ask_assistant",
+       "line": 3,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"assistant.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_INTENT\",\n      \"severity\": \"error\",\n      \"message\": \"A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\",\n      \"span\": {\n        \"file\": \"assistant.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"HUMAN in ALWAYS_REACHABLE of ask_assistant\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "a734d0af8f0d",
+     "name": "assistant.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_FIELD",
+       "HUMAN_PATH"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "assistant.zayn:4  error  UNKNOWN_FIELD  HUMAN_PATH\n    A field name is not one the grammar defines in the form it is written.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_FIELD",
+       "severity": "error",
+       "subject": "HUMAN_PATH",
+       "line": 4,
+       "cites": [],
+       "level": 1,
+       "message": "A field name is not one the grammar defines in the form it is written."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"assistant.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_FIELD\",\n      \"severity\": \"error\",\n      \"message\": \"A field name is not one the grammar defines in the form it is written.\",\n      \"span\": {\n        \"file\": \"assistant.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"HUMAN_PATH\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "9a8ed40e7a83",
+     "name": "refund.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "PROPOSAL_COMMITS",
+       "suggest_refund"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "refund.zayn:4  error  PROPOSAL_COMMITS  proposal suggest_refund acts and names no ACTOR\n    A proposal acts without naming the authority that accepted it.\n    Rule 98 · Proposals, Not Commits · Rule 83 · Predictable Authority · Article V\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "PROPOSAL_COMMITS",
+       "severity": "error",
+       "subject": "proposal suggest_refund acts and names no ACTOR",
+       "line": 4,
+       "cites": [
+        "rule:98",
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 2,
+       "message": "A proposal acts without naming the authority that accepted it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"refund.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"PROPOSAL_COMMITS\",\n      \"severity\": \"error\",\n      \"message\": \"A proposal acts without naming the authority that accepted it.\",\n      \"span\": {\n        \"file\": \"refund.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:98\",\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"proposal suggest_refund acts and names no ACTOR\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "5e83d8da4a7f",
+     "name": "refund.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"refund.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "999ebd3f8e61",
+     "name": "refund.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"refund.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "5f07ddec1a8e",
+     "name": "grant.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "refund_sparkle"
+      ],
+      [
+       "MISSING_UNDO",
+       "grant_refund"
+      ],
+      [
+       "PROPOSAL_COMMITS",
+       "grant_refund"
+      ],
+      [
+       "SELECT_ACT_COLLAPSE",
+       "grant_refund"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "grant.zayn:1  error  SELECT_ACT_COLLAPSE  grant_refund\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\ngrant.zayn:1  error  MISSING_UNDO  grant_refund\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\ngrant.zayn:4  error  PROPOSAL_COMMITS  proposal grant_refund acts and names no ACTOR\n    A proposal acts without naming the authority that accepted it.\n    Rule 98 · Proposals, Not Commits · Rule 83 · Predictable Authority · Article V\ngrant.zayn:7  error  DECORATIVE_ANIMATION  refund_sparkle\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n4 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "grant_refund",
+       "line": 1,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      },
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "grant_refund",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "PROPOSAL_COMMITS",
+       "severity": "error",
+       "subject": "proposal grant_refund acts and names no ACTOR",
+       "line": 4,
+       "cites": [
+        "rule:98",
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 2,
+       "message": "A proposal acts without naming the authority that accepted it."
+      },
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "refund_sparkle",
+       "line": 7,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"grant.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 4,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"grant.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"grant_refund\"\n    },\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"grant.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"grant_refund\"\n    },\n    {\n      \"code\": \"PROPOSAL_COMMITS\",\n      \"severity\": \"error\",\n      \"message\": \"A proposal acts without naming the authority that accepted it.\",\n      \"span\": {\n        \"file\": \"grant.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:98\",\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"proposal grant_refund acts and names no ACTOR\"\n    },\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"grant.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"refund_sparkle\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "31030ee44eea",
+     "name": "grant.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "refund_sparkle"
+      ],
+      [
+       "PROPOSAL_COMMITS",
+       "grant_refund"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "grant.zayn:4  error  PROPOSAL_COMMITS  proposal grant_refund acts and names no ACTOR\n    A proposal acts without naming the authority that accepted it.\n    Rule 98 · Proposals, Not Commits · Rule 83 · Predictable Authority · Article V\ngrant.zayn:7  error  DECORATIVE_ANIMATION  refund_sparkle\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "PROPOSAL_COMMITS",
+       "severity": "error",
+       "subject": "proposal grant_refund acts and names no ACTOR",
+       "line": 4,
+       "cites": [
+        "rule:98",
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 2,
+       "message": "A proposal acts without naming the authority that accepted it."
+      },
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "refund_sparkle",
+       "line": 7,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"grant.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"PROPOSAL_COMMITS\",\n      \"severity\": \"error\",\n      \"message\": \"A proposal acts without naming the authority that accepted it.\",\n      \"span\": {\n        \"file\": \"grant.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:98\",\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"proposal grant_refund acts and names no ACTOR\"\n    },\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"grant.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"refund_sparkle\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "28ce7fbf921f",
+     "name": "grant.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"grant.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 14,
+   "runnable": 14,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "intent-orphan.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "got_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "irreversible-claims-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "IRREVERSIBLE_CLAIMS_UNDO"
+     ],
+     "got_ids": [
+      "IRREVERSIBLE_CLAIMS_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "irreversible-claims-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "proposal-commits.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "PROPOSAL_COMMITS"
+     ],
+     "got_ids": [
+      "PROPOSAL_COMMITS"
+     ],
+     "pass": true
+    },
+    {
+     "file": "proposal-commits-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_CANCEL"
+     ],
+     "got_ids": [
+      "MISSING_CANCEL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "multiple-violations.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION",
+      "MISSING_UNDO",
+      "SELECT_ACT_COLLAPSE",
+      "TRAPPED_FLOW"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION",
+      "MISSING_UNDO",
+      "SELECT_ACT_COLLAPSE",
+      "TRAPPED_FLOW"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "got_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 18:44 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -2821,7 +3414,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -3228,7 +3821,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -3237,7 +3830,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -3246,7 +3839,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -3255,7 +3848,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 18:13 UTC+01:00"
+   "ran": "2026-11-23 18:44 UTC+01:00"
   }
  }
 }

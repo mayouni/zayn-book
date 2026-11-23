@@ -265,6 +265,28 @@ def pin_files(snap):
     return out
 
 
+def ladder(snap):
+    """The count by citation (chapter 17). The verifier's side: the rules that the contract binds to a kind of finding
+    whose code the reference verifier raises (the code occurs in tools/zayn/zayn.js). The audits' side: the citations of
+    data/audit-citations.json, each checked against the snapshot. Returns {rule: {"codes": [...], "audits": [(inst, check)]}}
+    and the instruments' names. A citation shows that an instrument reads a rule, never that it decides the whole rule."""
+    contract = json.loads((snap / "conformance" / "violations.json").read_text(encoding="utf-8"))
+    diags = contract["diagnostics"] if isinstance(contract["diagnostics"], list) else list(contract["diagnostics"].values())
+    verifier = (snap / "tools" / "zayn" / "zayn.js").read_text(encoding="utf-8")
+    out = {}
+    for d in diags:
+        if d.get("rules") and re.search(r"['\"]" + re.escape(d["id"]) + r"['\"]", verifier):
+            for n in d["rules"]:
+                out.setdefault(str(n), {"codes": [], "audits": []})["codes"].append(d["id"])
+    data = json.loads((DATA / "audit-citations.json").read_text(encoding="utf-8"))
+    for c in data["citations"]:
+        f = snap / c["file"]
+        if not f.exists() or c["needle"] not in f.read_text(encoding="utf-8"):
+            raise SystemExit(f"audit-citations.json: '{c['needle']}' is not in {c['file']} at the pin")
+        out.setdefault(str(c["rule"]), {"codes": [], "audits": []})["audits"].append((c["instrument"], c["check"]))
+    return out, data.get("instruments", {})
+
+
 def _history_facts(snap, law, rules, diags):
     """The law's history and anatomy as its own file holds them, and what pins it. Counted, never typed."""
     meta = law.get("metadata", {})
@@ -297,6 +319,13 @@ def _history_facts(snap, law, rules, diags):
     out["law.principles"] = len((law.get("philosophy") or {}).get("rules") or []) or None
     out["law.axioms"] = sum(1 for a in (law.get("articles") or {}).values() if a.get("axiom")) or None
     out["diag.cite_right"] = sum(1 for d in diags if d.get("rights")) or None
+    lad, _ = ladder(snap)
+    out["cite.verifier"] = sum(1 for v in lad.values() if v["codes"]) or None
+    out["cite.audit"] = sum(1 for v in lad.values() if v["audits"]) or None
+    out["cite.ui"] = sum(1 for v in lad.values() if any(i == "ui" for i, _ in v["audits"])) or None
+    out["cite.shot"] = sum(1 for v in lad.values() if any(i == "shot" for i, _ in v["audits"])) or None
+    out["cite.union"] = len(lad) or None
+    out["cite.both"] = sum(1 for v in lad.values() if v["codes"] and v["audits"]) or None
     out["law.tiers"] = len({r.get("enforcement") for r in rules if r.get("enforcement")}) or None
     listed = [int(n) for r in (law.get("rights") or []) for n in (r.get("enforced_by") or []) if str(n).isdigit()]
     out["right.max"] = max(listed) if listed else None

@@ -68,9 +68,20 @@ If they are ruled, they land after the pin; the Zayn session tells the book whic
 - **The rule card** prints a rule's tier as the law's own word (`machine`, `tool`, `machine-later`, `judgment`) with no gloss, and
   beside it the diagnostics of the contract that cite the rule: both are data of the pin. It said "Enforced by the verifier, on the
   declaration" until 2026-11-23; that was the book's gloss of a tier, and it is gone (LAW-TIER-REFUSED-01).
-- **No page states, as settled, how many of the law's rules a machine refuses.** Chapter 17, *The enforcement ladder*, is drafted
-  from the count by citation above, each figure recounted at the pin, with the sentences a ruling would change marked in its
-  research file. It is drafted after Part III.
+- **No page states, as settled, how many of the law's rules a machine refuses.** Chapter 17, *The enforcement ladder*, was
+  drafted on 2026-11-23 from the count by citation, recounted at the pin by the build itself (`tools/book_common.py`, `ladder`;
+  the audits' citations in `data/audit-citations.json`, each checked against its file at build): the verifier's kinds of finding
+  cite 13 rules, the audits name 8, Rule 116 is in both, 20 in all. The definition is printed beside every number. **Sentences
+  of chapter 17 that a ruling would change:**
+  - LAW-TIER-REFUSED-01: the principle, "A tier names the instrument a rule is owed; a citation shows the instrument that
+    answers today", and the closing question of the exercise ("should a rule's card say what answers for it today?"). The
+    principle rests on the docket's sentence (`doc/AMENDMENT-DOCKET.md:591-592`), which the Zayn session recommends keeping.
+  - LAW-TIER-REFUSED-01: "Read the first two columns as the law's filing, and nothing more", and the reading of the tiers
+    table ("The rules filed under `judgment` that the verifier cites are rules whose one clause a declaration can state").
+  - LAW-TIER-CHECK-01: "Every rule filed under `machine`, and most filed under `tool`, names in a field of its own, `lint`,
+    the instrument it is owed" (11 of 11 and 4 of 7, counted at the pin).
+  - LAW-SELECT-CONFIRM-01: the plate on Rule 79's dialog clause rests on `doc/ROLE-DESIGN.md:133-134`, a design note.
+  - LANG-FLOW-REFERENCE-01 changes none of chapter 17's plates (each `ROLE` sits on an `INTERACTION`).
 - **Chapter 8, plate 8.3's reading**: "The verb `CONFIRM` names the user's act of confirming, whatever carries it: a review step and
   a dialog are two drawings of the same declaration." It now rests on `doc/ROLE-DESIGN.md:127-133` (LAW-SELECT-CONFIRM-01 would move
   it into the specification).

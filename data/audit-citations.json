@@ -1,0 +1,79 @@
+{
+  "_what": "Where an audit of the Zayn repository names a rule for a check, at the pin. Each entry is verified at build: 'needle' must occur in 'file' of the snapshot, or the build fails. Counted with the verifier's citations (computed from conformance/violations.json and tools/zayn/zayn.js) to give the count by citation of chapter 17. A citation shows that an instrument reads a rule; it is not a verdict that the whole rule is decided (research/ch17.md, section 2a).",
+  "instruments": {
+    "ui": "the audit of the painted page (tools/ui-audit.html)",
+    "shot": "the audit of a screenshot's facts (doc/design/audit/)"
+  },
+  "citations": [
+    {
+      "rule": "38",
+      "instrument": "ui",
+      "check": "K22 LAYOUT_STILL",
+      "file": "doc/design/DESIGN-SYSTEM.md",
+      "needle": "(Rule 38, Zero Displacement)"
+    },
+    {
+      "rule": "62",
+      "instrument": "shot",
+      "check": "contrast",
+      "file": "doc/design/audit/decides.json",
+      "needle": "\"rules\": [\"62\", \"105\"]"
+    },
+    {
+      "rule": "105",
+      "instrument": "ui",
+      "check": "size and contrast of every text node",
+      "file": "tools/ui-audit.html",
+      "needle": "against Rules 105, 107, 108 and 114–116"
+    },
+    {
+      "rule": "105",
+      "instrument": "shot",
+      "check": "contrast",
+      "file": "doc/design/audit/decides.json",
+      "needle": "\"rules\": [\"62\", \"105\"]"
+    },
+    {
+      "rule": "107",
+      "instrument": "ui",
+      "check": "the reading floor",
+      "file": "tools/ui-audit.html",
+      "needle": "against Rules 105, 107, 108 and 114–116"
+    },
+    {
+      "rule": "107",
+      "instrument": "shot",
+      "check": "size",
+      "file": "doc/design/audit/decides.json",
+      "needle": "\"rules\": [\"107\"]"
+    },
+    {
+      "rule": "108",
+      "instrument": "ui",
+      "check": "the trail",
+      "file": "tools/ui-audit.html",
+      "needle": "against Rules 105, 107, 108 and 114–116"
+    },
+    {
+      "rule": "114",
+      "instrument": "ui",
+      "check": "room before scrollbars",
+      "file": "tools/ui-audit.html",
+      "needle": "against Rules 105, 107, 108 and 114–116"
+    },
+    {
+      "rule": "115",
+      "instrument": "ui",
+      "check": "the path",
+      "file": "tools/ui-audit.html",
+      "needle": "against Rules 105, 107, 108 and 114–116"
+    },
+    {
+      "rule": "116",
+      "instrument": "ui",
+      "check": "the menu",
+      "file": "tools/ui-audit.html",
+      "needle": "against Rules 105, 107, 108 and 114–116"
+    }
+  ]
+}

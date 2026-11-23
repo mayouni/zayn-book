@@ -26,7 +26,7 @@ the fixed headings, or holds a declaration outside a plate or without its "In wo
 sits outside the variables; the type scale is out of order. It still writes the page first, so the failure can be seen.
 """
 import html, json, re, subprocess, sys
-from book_common import (pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
+from book_common import (ladder, pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
                          closed_lists, fields_by_kind, GH_BLOB, PIN_TAG)
 from book_judge import WORDS
 
@@ -79,7 +79,10 @@ UI = {
     "sources_h": ["Id", "The source", "What the page is", "Read on", "Used in"],
     "articles_h": ["Article", "Its title", "Its sentence", "Rules derived from it"],
     "sets_h": ["Set", "Its title", "Rules", "Their numbers"],
-    "tiers_h": ["Tier, in the law's word", "Rules filed under it", "Of these, cited by a diagnostic of the contract"],
+    "tiers_h": ["Tier, in the law's word", "Rules filed under it", "Cited by a kind of finding the verifier raises", "Named by an audit for a check"],
+    "ladder_h": ["Rule", "Tier", "The verifier: kinds of finding that cite it", "The audits: checks that name it"],
+    "ladder_src": "Counted by citation at this build, from the contract, the verifier's code and the files of the two audits; each audit citation is checked against its file. A citation shows that an instrument reads the rule. Which clauses it reads is said rule by rule in the chapter.",
+    "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
     "pins_h": ["A data file of Zayn", "The version of the law it records"],
     "pins_src": "Read from each file at the version of Zayn this book reads.",
@@ -900,23 +903,39 @@ def sets_table(law, ui, version):
 
 
 def tiers_table(law, ui, version):
-    """The law's own filing of each rule under a tier, beside what the contract's data shows: how many rules of the
-    tier some diagnostic cites. Both columns are counted from files of the pin; neither is a gloss of what a tier means."""
-    cited = {str(n) for d in law["diag_list"] for n in (d.get("rules") or [])}
+    """The law's own filing of each rule under a tier, beside the count by citation (law["ladder"]): how many rules of
+    the tier a kind of finding that the verifier raises cites, and how many an audit names. Counted, never glossed."""
+    lad = law.get("ladder") or {}
     order, by = [], {}
     for r in law["rule_list"]:
-        t = r.get("enforcement") or "null"
-        if t not in by:
-            by[t] = []; order.append(t)
-        by[t].append(r)
+        tr = r.get("enforcement") or "null"
+        if tr not in by:
+            by[tr] = []; order.append(tr)
+        by[tr].append(r)
+    def cell(nums):
+        return (f"{len(nums)}: " + ", ".join(str(n) for n in nums)) if nums else "0"
     rows = []
-    for t in order:
-        hit = sorted(_rule_num(r) for r in by[t] if str(r["number"]) in cited)
-        rows.append([f"<code>{html.escape(t)}</code>", str(len(by[t])),
-                     (f"{len(hit)}: " + ", ".join(str(n) for n in hit)) if hit else "0"])
+    for tr in order:
+        ver = sorted(_rule_num(r) for r in by[tr] if (lad.get(str(r["number"])) or {}).get("codes"))
+        aud = sorted(_rule_num(r) for r in by[tr] if (lad.get(str(r["number"])) or {}).get("audits"))
+        rows.append([f"<code>{html.escape(tr)}</code>", str(len(by[tr])), cell(ver), cell(aud)])
     return (render_table(rows, "book-table", ui["tiers_h"])
-            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))} '
-            + html.escape(ui["contract_src"].format(v=(law["contract"].get("metadata") or {}).get("version", "null"))) + "</p>")
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))} {html.escape(ui["ladder_src"])}</p>')
+
+
+def ladder_table(law, ui):
+    lad = law.get("ladder") or {}
+    if not lad:
+        raise SystemExit("ladder: no citation counted at the pin")
+    rows = []
+    for n in sorted(lad, key=lambda x: int(x)):
+        r = law["rules"].get(n) or {}
+        codes = " ".join(f"<code>{html.escape(c)}</code>" for c in lad[n]["codes"]) or "none"
+        auds = "; ".join(f'{html.escape(chk)} ({html.escape(ui["inst_" + inst])})' for inst, chk in lad[n]["audits"]) or "none"
+        rows.append([f"<strong>{html.escape(n)}</strong> {html.escape(r.get('title', ''))}",
+                     f"<code>{html.escape(r.get('enforcement') or 'null')}</code>", codes, auds])
+    return (render_table(rows, "book-table families diag", ui["ladder_h"])
+            + f'<p class="table-src">{html.escape(ui["ladder_src"])}</p>')
 
 
 def anatomy_table(number, law, ui, version):
@@ -1067,6 +1086,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(forbidden_table(law, ui, version)); i += 1; continue
         if s == "{{sets}}":
             flush(); out.append(sets_table(law, ui, version)); i += 1; continue
+        if s == "{{ladder}}":
+            flush(); out.append(ladder_table(law, ui)); i += 1; continue
         if s == "{{pins}}":
             flush(); out.append(pins_table(law, ui)); i += 1; continue
         if s == "{{tiers}}":
@@ -1512,6 +1533,7 @@ def main():
     law["closed_lists"] = closed_lists(snap)
     law["fields_by_kind"] = fields_by_kind(snap)
     law["pins"] = pin_files(snap)
+    law["ladder"], law["instruments"] = ladder(snap)
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     en_src = sources("en")
     errors = []
