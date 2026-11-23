@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 20:33 UTC+01:00",
+  "date": "2026-11-23 22:09 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -171,6 +171,266 @@
   "failed": []
  },
  "chapters": {
+  "en/01-what-ui-governance-is": {
+   "id": "what-ui-governance-is",
+   "blocks": [
+    {
+     "hash": "6b4a7f58d6b9",
+     "name": "dashboard.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "overdue_total"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "dashboard.zayn:9  error  ROLE_ACTS_WITHOUT_CONSEQUENCE  inert overdue_total satisfies ACT\n    A control promising to change nothing declares that it acts.\n    Rule 119 · A Card Is Not a Button · Rule 112 · Motion Reports, It Never Decorates · Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "severity": "error",
+       "subject": "inert overdue_total satisfies ACT",
+       "line": 9,
+       "cites": [
+        "rule:119",
+        "rule:112",
+        "rule:16",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A control promising to change nothing declares that it acts."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"dashboard.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_ACTS_WITHOUT_CONSEQUENCE\",\n      \"severity\": \"error\",\n      \"message\": \"A control promising to change nothing declares that it acts.\",\n      \"span\": {\n        \"file\": \"dashboard.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:119\",\n        \"rule:112\",\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"inert overdue_total satisfies ACT\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "68b45fc93150",
+     "name": "dashboard.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"dashboard.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "c79dfcc2285e",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "overdue_total"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:8  error  ROLE_ACTS_WITHOUT_CONSEQUENCE  inert overdue_total satisfies ACT\n    A control promising to change nothing declares that it acts.\n    Rule 119 · A Card Is Not a Button · Rule 112 · Motion Reports, It Never Decorates · Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "severity": "error",
+       "subject": "inert overdue_total satisfies ACT",
+       "line": 8,
+       "cites": [
+        "rule:119",
+        "rule:112",
+        "rule:16",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A control promising to change nothing declares that it acts."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_ACTS_WITHOUT_CONSEQUENCE\",\n      \"severity\": \"error\",\n      \"message\": \"A control promising to change nothing declares that it acts.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 8\n      },\n      \"cites\": [\n        \"rule:119\",\n        \"rule:112\",\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"inert overdue_total satisfies ACT\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "ef9c0fdf98d4",
+     "name": "language.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "language_switch"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "language.zayn:4  error  ROLE_ACTS_WITHOUT_CONSEQUENCE  navigate language_switch satisfies ACT\n    A control promising to change nothing declares that it acts.\n    Rule 119 · A Card Is Not a Button · Rule 112 · Motion Reports, It Never Decorates · Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "severity": "error",
+       "subject": "navigate language_switch satisfies ACT",
+       "line": 4,
+       "cites": [
+        "rule:119",
+        "rule:112",
+        "rule:16",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A control promising to change nothing declares that it acts."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"language.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_ACTS_WITHOUT_CONSEQUENCE\",\n      \"severity\": \"error\",\n      \"message\": \"A control promising to change nothing declares that it acts.\",\n      \"span\": {\n        \"file\": \"language.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:119\",\n        \"rule:112\",\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"navigate language_switch satisfies ACT\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "0801a60626d8",
+     "name": "language.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"language.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "c2d9f3bce966",
+     "name": "language.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"language.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1e18ceac0616",
+     "name": "language.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_UNDECLARED",
+       null
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "language.zayn  warning  ROLE_UNDECLARED  1 INTERACTION, no ROLE\n    A surface declares interactions and gives none of them a role.\n\n0 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_UNDECLARED",
+       "severity": "warning",
+       "subject": "1 INTERACTION, no ROLE",
+       "line": 0,
+       "cites": [],
+       "level": 2,
+       "message": "A surface declares interactions and gives none of them a role."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"language.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_UNDECLARED\",\n      \"severity\": \"warning\",\n      \"message\": \"A surface declares interactions and gives none of them a role.\",\n      \"span\": {\n        \"file\": \"language.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"1 INTERACTION, no ROLE\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 7,
+   "runnable": 7,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "role-acts-without-consequence.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "got_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-acts-without-consequence-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "role-undeclared.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "got_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-undeclared-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "clean-minimal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 22:09 UTC+01:00"
+  },
   "en/06-intent-first": {
    "id": "intent-first",
    "blocks": [
@@ -604,7 +864,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1149,7 +1409,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1659,7 +1919,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1974,7 +2234,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -2618,7 +2878,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -3107,7 +3367,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -3611,7 +3871,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -4198,7 +4458,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -4573,7 +4833,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -4980,7 +5240,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -4989,7 +5249,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -4998,7 +5258,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -5007,7 +5267,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 20:33 UTC+01:00"
+   "ran": "2026-11-23 22:09 UTC+01:00"
   }
  }
 }
