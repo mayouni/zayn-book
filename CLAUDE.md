@@ -1,8 +1,11 @@
 # CLAUDE.md: Zayn (the book)
 
-**Read this first.** This folder holds the Zayn book, the third of the AYOUNI books (AYOUNI Press). It is a local git repository with
-no remote. Nothing here is pushed and nothing is public: creating a public repository, a first push and publication are the author's
-acts, prepared by the house desk and done on his explicit "go".
+**Read this first.** This folder holds the Zayn book, the third of the AYOUNI books (AYOUNI Press). Since 2026-11-23 it is the
+public repository `mayouni/zayn-book` (`origin`), a submodule of the house, and its reader is on the AYOUNI Press site at
+`https://mayouni.github.io/ayouni/books/zayn/en/` (the author's word in the house session: "yes we should create it's public repo and
+add it to the AYOUNI Press site"; done by the house desk, house commit 0454cea, pin 908c382). **A push publishes at once: the book
+session never pushes.** It commits here by explicit paths and hands each commit to the house desk by memo; the desk verifies, pins,
+asks the author's go and publishes. The house gate (menus, affirmative voice, colophon, font licences) runs on this reader.
 
 ```
 Zayn
@@ -107,8 +110,8 @@ stopped them.
 
 ## Rules that bind
 
-- Stage files by explicit path, never `git add -A`. Commit here, never in the house for this folder. **Never push.** Hand a commit
-  over to the house desk in a memo.
+- Stage files by explicit path, never `git add -A`. Commit here, never in the house for this folder. **Never push** (the repository
+  is public: a push publishes). Hand each commit over to the house desk in a memo.
 - Never move a page beyond `draft`. When the author moves one, send the desk the page id, the stage and his words first.
 - Never background a heavy command. A secret appears only as `$env:NAME`. Every stamp is read from the clock.
 - What the book needs from another repository is a numbered request (`BOOK-ZAYN-01` onward) in a memo and one line in
