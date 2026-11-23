@@ -4,7 +4,7 @@ part: 7
 number: 17
 title: The enforcement ladder
 stage:
-  built: "a tier on each of the {{n:law.rules}} rules, in the law's own words; the verifier, whose kinds of finding cite {{n:cite.verifier}} rules, each kind with its fixture; the audit of the painted page, which names {{n:cite.ui}} rules for its checks and whose runs are recorded; the checker of a screenshot's facts, run on its example"
+  built: "a tier on each of the {{n:law.rules}} rules, in the law's own words; the verifier, whose kinds of finding cite {{n:cite.verifier}} rules, each kind with its fixture; the audit of the painted page, which names {{n:cite.ui}} rules and whose runs are recorded; the checker of a screenshot's facts, run on its example"
   designed: "the audit of a screenshot as a whole, from the picture to the verdict; an audit that refuses at the moment of painting"
   next: "rules moved up the ladder as their instruments are built"
 status: draft
@@ -12,37 +12,37 @@ research: research/ch17.md
 fixtures: [intent-orphan, missing-undo, missing-undo-lawful, irreversible-claims-undo, irreversible-claims-undo-lawful, proposal-commits, proposal-commits-lawful, missing-cancel, missing-cancel-lawful, multiple-violations, unknown-signal, unknown-signal-lawful]
 ---
 
-The enforcement ladder is the law's word for how its rules are held: each rule is filed under one word that names the instrument it is owed. In this chapter I read those words. Then I set beside them what answers today: the verifier, which refuses a declaration; the audits, which measure a page; and a person, who judges. I show each at work on one surface, a help desk where an AI agent answers a customer, and I count which rules each instrument names, with the definition of the count printed beside every number.
+The enforcement ladder is the phrase the law's site uses for how its rules are held: each rule is filed under one word, its tier, which names the instrument the rule is owed. In this chapter I read those words. Then I set beside them what answers today: the verifier, which refuses a declaration; the audits, which measure a page; and a person, who judges. I show the verifier and the person at work on one surface, a help desk where an AI agent answers a customer, and the audits on their recorded runs. And I count which rules each instrument names, with the definition of the count printed beside every number.
 
 If you open the book here, four words are enough to follow. A **declaration** is a few lines that say what a user is doing on a surface. The **law** is Zayn's constitution of {{n:law.rules}} rules for interfaces, kept as a data file. The **verifier** is the program that checks a declaration against the law. A **finding** is one entry of the verifier's report, and a refusal when it is an error.
 
 ## The field
 
-The field knows that its instruments reach part of a rule. The accessibility guidelines write their criteria "as testable criteria for objectively determining if content satisfies them", and their page on conformance adds that testing "would involve a combination of automated testing and human evaluation". W3C's page on evaluation says it plainly: "no tool alone can determine if a site meets accessibility standards".
+The field knows that its instruments reach part of a rule. The accessibility guidelines, WCAG, are published by W3C, the body that writes the web's standards. Their page on conformance says that the criteria are written "as testable criteria for objectively determining if content satisfies them", and adds that testing them "would involve a combination of automated testing and human evaluation". W3C's page on evaluation says it in one line: "no tool alone can determine if a site meets accessibility standards".
 
-The tools say the same of themselves. axe-core, an engine that tests a page in a browser, says that with it "you can find on average 57% of WCAG issues automatically", a figure of its own, and that it returns an element as "incomplete" where "manual review is needed". A linter for the markup of one framework says that it "only catches errors in static code", and sends its reader to a second tool for the page as rendered.
+The tools say the same of themselves. axe-core, an engine that tests a page in a browser, says that with it "you can find on average 57% of WCAG issues automatically", a figure of its own, and that it returns an element as "incomplete" where "manual review is needed". A linter is a tool that checks source code against rules. One linter for the markup of a framework, the code that a browser draws a page from, says that it "only catches errors in static code", and sends its reader to a second tool for the page once it is drawn.
 
-And the field gives a rule a force. ESLint, a linter for code, lets its user set a rule to "warn", which "doesn't affect exit code", or to "error", whose "exit code is 1 when triggered": a build that stops.
+And the field gives each rule a severity. ESLint, a linter for code, lets its user set a rule to "warn", which "doesn't affect exit code", or to "error", whose "exit code is 1 when triggered". The exit code is the number a command returns when it ends, and a build, the program that assembles and checks a product, stops on 1.
 
-So the field has instruments at two moments, before rendering and after, a force set per rule, and a person beside them. Each source was read on 21 or 23 November 2026, and Appendix F lists them.
+Each source was read on 21 and 23 November 2026, and Appendix F lists them. So the field has instruments at two moments, before a page is drawn and after, a severity set rule by rule, and a person beside them.
 
 ## The principle
 
 **A tier names the instrument a rule is owed; a citation shows the instrument that answers today.**
 
-The law's site calls it a ladder: "Each rule declares one rung of an enforcement ladder, and rules climb as instruments are invented." A rung is a tier, and a climb is an amendment, which chapter 18 tells. The docket, the file where changes to the law are ruled, says what a tier claims, in a sentence on one rule: it "is honest about which instrument owes the check; it is not a claim that the check runs today".
+The law's site calls the tiers a ladder: "Each rule declares one rung of an enforcement ladder, and rules climb as instruments are invented." A rung is a tier. The foot of the ladder is `judgment`, and the roadmap moves a rule up toward `tool` and `machine` as its instrument is built. A move up is a promotion, a change of the law that I rule. The docket, the file where changes to the law are ruled, says what a tier claims, in a sentence on Rule 127: it "is honest about which instrument owes the check; it is not a claim that the check runs today". A citation, the other half of the principle, is a rule named by number in what an instrument reports.
 
-## Four words, as the law files them
+## The four tiers, as filed
 
-Every rule has a field named `enforcement`, and its value is one of {{n:law.tiers}} words. Here they are, with the rules filed under each, and beside them the count by citation that the rest of this chapter explains.
+Every rule has an entry named `enforcement`, and its value is one of {{n:law.tiers}} words. Here they are, with how many rules the law files under each, and beside them the count by citation that the rest of this chapter explains.
 
 {{tiers}}
 
-Read the first two columns as the law's filing, and nothing more. The founding document of the project gives the meaning of the largest rung in its own table: `judgment`, "a human decides, until an instrument is invented". The other columns come from the instruments.
+Read the first two columns as the law's filing, and nothing more. A proposal of the project, *The Second Founding*, gives in its own table the meaning of the tier with the most rules: `judgment`, "a human decides, until an instrument is invented". The other columns come from the instruments.
 
 ## Three instruments
 
-The architecture of the law puts its instruments at two moments: "The constitution is enforced twice, at two different moments." Before rendering, the verifier reads a declaration and refuses it. After rendering, an audit measures the painted page, the interface as a browser draws it. And at every moment a person can read a rule, judge a surface against it, and cite its number.
+The document that sets the law's architecture puts its instruments at two moments: "The constitution is enforced twice, at two different moments." Before a page is drawn, the verifier reads a declaration and refuses it. After, an audit measures the painted page, the interface as a browser draws it. And at every moment a person can read a rule, judge a surface against it, and cite its number.
 
 **The verifier refuses.** Here is the help desk's home screen, checked at level 3, where the verifier is given an inventory: the list of the elements on the screen.
 
@@ -66,7 +66,7 @@ In words: On the help desk's home a user discovers and reads, and an answer card
 ```
 :::
 
-Refused, under Rule 130, which the law files under `machine`. The verifier needed the inventory: from the file alone it cannot know what the screen holds. The rule names two repairs, to remove the element or to declare the intent it serves. Here is the second.
+Refused, under Rule 130, which the law files under `machine`. Rule 130 has an entry named `lint`, which names the instrument the rule is owed, and it describes this very check: "a declared element that traces to no intent, decided against an element inventory". The verifier needed the inventory: the file alone does not say what the screen holds. The rule names two repairs, to remove the element or to declare the intent it serves. Here is the second.
 
 ::: plate The ticker, given an intent
 ```zayn help.zayn level=3 symbols=elements.json
@@ -86,9 +86,9 @@ DEFINE COMPONENT news_ticker (
 In words: The same screen, and the ticker is something a user scans.
 :::
 
-Clean. The verifier read that an intent is declared. Whether a ticker of news serves a customer who came for help is a person's to judge: one rule, and two instruments for its two halves.
+Clean. The verifier read that an intent is declared, and a person judges whether that intent fits: a ticker of news, for a customer who came for help.
 
-**One clause of a rule.** The verifier often reads one clause of a rule and leaves the others to the other instruments. Here is a message that a support agent deletes.
+The verifier often reads one clause of a rule and leaves the others to the audit and to a person. Here is a message that a support agent, a person at the help desk, deletes.
 
 ::: plate A deletion with no way back
 ```zayn messages.zayn
@@ -114,7 +114,7 @@ DEFINE INTENT_FLOW delete_message (
 In words: The same deletion, and undo stays within reach.
 :::
 
-Clean, and it still holds `CONFIRM` on a common deletion. The first thing Rule 79 lists to avoid is "Confirmation dialogs for every deletion". Here is the same act as a control that confirms and can be undone.
+Clean, and it still declares `CONFIRM` on a common deletion. The first thing Rule 79 lists to avoid is "Confirmation dialogs for every deletion". Here is the same act as a control that confirms and can be undone.
 
 ::: plate A control that confirms what it can undo
 ```zayn messages.zayn
@@ -128,13 +128,13 @@ DEFINE INTERACTION delete_message (
 In words: A control deletes a message after the user confirms. The act can be undone, and the control says so.
 :::
 
-Clean. Is the confirmation a dialog that interrupts, or a step of review? A declaration does not say, and a design note of the project gives the reason: "Rule 79's dialog clause is a fact about a rendering, not about a declaration". That clause goes to the painted page, and to a person.
+Clean. Is the confirmation a dialog that interrupts, or a step of review? A design note of the project gives the reason a declaration leaves it open: "Rule 79's dialog clause is a fact about a rendering, not about a declaration". On the painted page, a person judges that clause.
 
-**The audit measures.** The audit of the painted page is a page of Zayn's repository that opens another page in the browser and measures what is drawn: sizes, contrast, the menu, the trail, the room before a scrollbar. Its title names the rules it measures against: "Rules 105, 107, 108 and 114–116". Its larger mode runs numbered checks, and one of them, K22, reads whether something on the page moves because something else appeared: that is Rule 38, Zero Displacement. The contract, the file that binds each kind of finding to the law, has a kind for it, `LAYOUT_DISPLACEMENT`, and says where its answer comes from: "Measured today by tools/ui-audit.html, which is the enforcement ladder working as designed."
+**The audit measures.** The audit of the painted page is a page of Zayn's repository that opens another page in the browser and measures what is drawn: sizes, contrast, the menu, the trail of links that shows where a page sits, the room before a scrollbar. Its title names the rules it measures against: "Rules 105, 107, 108 and 114–116". Its larger mode runs numbered checks, and one of them, K22, reads whether something on the page moves while the page loads: that is Rule 38, Zero Displacement. The contract, the file that binds each kind of finding to the law, has a kind for it, `LAYOUT_DISPLACEMENT`, and sends the reader to the audit: "Measured today by tools/ui-audit.html, which is the enforcement ladder working as designed." So Rule 38, filed under `machine`, is answered by the audit.
 
-This page cannot run a browser on another page, so the audit is told from its recorded runs. The project's record of its second milestone gives two full runs, before and after a change of the stylesheet: "38 pages, five widths, both cultures: 380 renders each", read on 10 November 2026. A culture, or vibe, is a way of drawing the same interface, and chapter 15 is about them. On both runs, K22 found nothing to report.
+The audit runs in a browser, and this page gives it from its recorded runs. The design system's record of its second milestone gives two full runs of the larger mode on the Zayn site's own pages, before and after a change of the stylesheet, the file that sets how the pages look: "38 pages, five widths, both cultures: 380 renders each". The widths run from 375 to 1900 pixels, the cultures are Modern and Retro, and the runs were made on 10 November 2026, before the version this book reads. A culture is a way of drawing the same interface; chapters 14 and 15 are about cultures. On both runs, K22 reported nothing.
 
-A second audit reads a screenshot, once a writer has reduced the picture to facts: the lines of text, their size, their contrast. Its checker gives three answers per line, "fail, pass, not_decided", and it keeps one of them out of reach for size: "A size is never `pass`." It runs on an example made by hand, and the site files it as designed. Together the two audits name {{n:cite.audit}} rules for a check.
+A second audit reads a screenshot, once a separate program has reduced the picture to facts: the lines of text, their size, their contrast. Its checker gives three answers per line, "fail, pass, not_decided", and one of them is kept out of its reach for size: "A size is never `pass`." The checker runs on an example made by hand, and the site files the whole audit as designed.
 
 **A person judges.** Here is the help desk's assistant, an AI agent that answers the customer.
 
@@ -166,7 +166,7 @@ DEFINE INTENT_FLOW ask_assistant (
 In words: The same assistant, and the customer can also reach a human at any moment.
 :::
 
-Refused: the law's verbs say what a user does, and reaching a person is none of them. Then as a field.
+Refused: the law's verbs say what a user does, and reaching a person is none of them. Then as a field, a named line of the declaration.
 
 ::: plate A person, written as a field
 ```zayn assistant.zayn
@@ -180,7 +180,7 @@ DEFINE INTENT_FLOW ask_assistant (
 In words: The same assistant, and a field names the support agent as the human path.
 :::
 
-Refused again: the grammar has no field for it. The closed vocabulary that lets a machine decide the other rules has no word for this one, so a person holds it. The rule's first line of what to avoid says what that person looks for: "Support mazes that end at a bot".
+Refused again: the grammar, the set of rules that says what a declaration may be made of, has no field for it. The rule's first line of what to avoid says what a person looks for: "Support mazes that end at a bot". The closed vocabulary that lets the verifier decide the rules it cites has no word for this one, so Rule 102 stays with a person.
 
 ## One finding, two tiers
 
@@ -200,7 +200,7 @@ In words: The assistant proposes a refund, and the refund is made. Undo and canc
 
 Refused, and the third line cites two rules: Rule 98, Proposals, Not Commits, which the law files under `judgment`, and Rule 83, filed under `machine`. One verifier, one finding, two tiers. The repair names who accepts the proposal.
 
-::: plate The proposal, accepted by an agent
+::: plate The proposal, accepted by a support agent
 ```zayn refund.zayn
 DEFINE INTERACTION suggest_refund (
   SATISFIES [ACT],
@@ -215,7 +215,7 @@ In words: The assistant proposes a refund, and a support agent makes it.
 
 Clean. Now name the assistant itself as the one who accepts.
 
-::: plate The proposal, accepted by its author
+::: plate The proposal, accepted by the one who made it
 ```zayn refund.zayn
 DEFINE INTERACTION suggest_refund (
   SATISFIES [ACT],
@@ -228,43 +228,43 @@ DEFINE INTERACTION suggest_refund (
 In words: The assistant proposes a refund, and the assistant makes it.
 :::
 
-Clean as well. The verifier reads that an authority is named. Whether that authority may accept its own proposal is the clause of Rule 98 that a person reads.
+Clean as well. The verifier reads that an authority is named. Rule 98 opens on a sentence that a person reads: "Intelligence advises; execution decides." An assistant that accepts its own proposal advises and decides at once, and a person sees it.
 
 ## Where the citations fall
 
-Here is the count, with its definition. A rule is counted for the verifier when a kind of finding that the verifier raises cites it in the contract. A rule is counted for an audit when a file of that audit names it for a check. A citation shows that an instrument reads the rule. It does not say that the instrument reads every clause, and the plates above showed clauses on both sides.
+Here is the count, with its definition. A rule is counted for the verifier when a kind of finding that the verifier raises cites it in the contract. A rule is counted for an audit when the audit's title, the table of checks of its larger mode, or the screenshot checker's file of decisions names it. A rule that one finding mentions in passing is not counted: a finding of the trail check names Rules 60 and 104 beside Rule 108. A citation shows that an instrument reads the rule, and the plates above showed both a clause the verifier reads and a clause left to a person.
 
 {{ladder}}
 
-By that definition, the verifier's kinds of finding cite {{n:cite.verifier}} rules, the audits name {{n:cite.audit}}, and {{n:cite.both}} rule, Rule 116, is named by both: {{n:cite.union}} rules in all. The audit of the painted page names {{n:cite.ui}} of them and the screenshot's checker {{n:cite.shot}}. Read the tier column beside the two others. The rules filed under `judgment` that the verifier cites are rules whose one clause a declaration can state. Every rule filed under `machine`, and most filed under `tool`, names in a field of its own, `lint`, the instrument it is owed. A person judges every rule, with its number and its words in hand.
+By that definition, the verifier's kinds of finding cite {{n:cite.verifier}} rules, the audits name {{n:cite.audit}}, and Rule 116 is named by both: {{n:cite.union}} rules in all. The audit of the painted page names {{n:cite.ui}} of them and the screenshot's checker {{n:cite.shot}}, Rules 105 and 107 by both. Read the tier column beside the two others. Most of the rules filed under `judgment` that the verifier cites have a clause that a declaration can state. Every rule filed under `machine`, and most filed under `tool`, name in their `lint` entry the instrument they are owed. A person can judge every rule, with its number and its words in hand.
 
 ## What I refused
 
-**I refused a tier that no instrument could serve.** In my pass of 13 August 2026 a draft proposed to file Rule 62, on contrast, under `machine`. A declaration holds no colours, so the verifier could never read it. I adopted the move to `tool`, and the docket keeps the reason: the draft "would have placed a rule in a tier no instrument could serve".
+**I refused a tier that no instrument could serve.** In my pass of 13 August 2026 a draft proposed to file Rule 62, on contrast, under `machine`. A declaration states no colours, so the verifier could never read it. I adopted the move to `tool`, and the docket keeps the reason: the draft "would have placed a rule in a tier no instrument could serve".
 
-**I deferred a requirement until it has evidence.** A design note proposed to require a role on every control that acts. On 19 August 2026 I ruled that requiring a role is, in the note's words, "deferred to evidence", and a warning took its place: it tells the author of a declaration that a role is missing, and refuses nothing.
+**I deferred a requirement until it has evidence.** A design note asked whether the law should require a role on every declaration that acts. On 19 August 2026 I ruled that requiring a role is, in the note's words, "deferred to evidence". A warning took its place: when no interaction of a file states a role, it tells whoever writes the declaration, and it refuses nothing.
 
-**The record refuses a census typed by hand.** The ledger, the dated list of what the project found, has the rule for counts like the ones on this page: "Counts and tier tables belong in code that reads `rules.json`". Every count of this chapter is read from the files at each build.
+**The record refuses a count typed by hand.** The ledger, the dated list of what the project found, has a line for counts like the ones on this page: "Counts and tier tables belong in code that reads `rules.json`". Every count of this chapter is computed at each build: from the law, the contract and the verifier's code, and for the audits from a list of citations that the build checks against each file.
 
 [AUTHOR: the stake of this chapter, in your words: why a law should say of each rule what answers for it, and what you want a team to do with the rules that a person holds.]
 
 ## The court
 
-The court of a chapter is what proves it. Here it is Zayn's conformance suite: {{n:fix.total}} fixtures, each a declaration kept with the answer it must get. The fixtures below hold the verifier's side of this chapter: Rule 130 against an inventory, Rule 79's undo, Rules 98 and 83 in one finding, Rule 26 and Rule 118, filed under `machine-later` and `judgment`, and one file that cites rules of two tiers in one report. The audit's side has no fixture, and the suite gives its reason for `LAYOUT_DISPLACEMENT`: "A fixture here would be theatre".
+The court of a chapter is what proves it. Here it is Zayn's conformance suite: {{n:fix.total}} fixtures, each a declaration kept with the answer it must get. The fixtures below hold the verifier's side of this chapter: Rule 130 against an inventory, Rule 79's undo, Rules 98 and 83 in one finding, Rule 26 and Rule 118, filed under `machine-later` and `judgment`, and one file that cites rules of two tiers in one report. The audit's side stands on its recorded runs, and the suite gives its reason for keeping no fixture for `LAYOUT_DISPLACEMENT`: "A fixture here would be theatre". A fact about the painted page is proved on the painted page.
 
 ## Where the field leads
 
-The field leads on its tools' account of themselves. An engine that tests a page in a browser publishes the share of issues it finds, and returns what it cannot decide as incomplete, for a person. The audits of Zayn give the same three answers, and the screenshot's checker keeps one of them, a pass on size, out of its own reach.
+The field leads on its tools' account of themselves. An engine that tests a page in a browser publishes the share of issues it finds, and returns what it cannot decide as incomplete, for a person. The screenshot's checker in Zayn also gives an answer for what it cannot decide, and keeps a pass on size out of its own reach.
 
-The field leads on force. A linter's user sets each rule to warn or to error. In Zayn the contract fixes the severity of each kind of finding, the same for every team: a team gains one meaning of a refusal, and gives up a setting.
+The field leads on severity. A linter's user sets each rule to warn or to error. In Zayn the contract fixes the severity of each kind of finding, the same for every team: a team gains one meaning of a refusal, and gives up a setting.
 
-Zayn's law leads on saying, for every rule, which instrument it is owed, and on citing the rule by number wherever an instrument answers. The ledger records where the verifier's reach ends, in a test of August 2026: two payment surfaces that differed by seven broken laws were written as the same declaration, and both ran clean. Its own words: "the court is silent exactly where the deterioration lives". That is why the record answers with a second instrument on the painted page, and designs a third, an audit that refuses at the moment of painting.
+Zayn's law leads on saying, for every rule, which instrument it is owed, and on citing the rule by number in every finding of the verifier and in most of the audit's. The ledger records where the verifier's reach ends, in a test of 12 August 2026: two payment surfaces "differing by seven broken laws" were the same declaration, byte for byte, and both ran clean. Its own words: "the court is silent exactly where the deterioration lives". The project answers with the audit of the painted page, and designs one more instrument: an audit that refuses at the moment of painting.
 
 ## Where it stands
 
 Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
-Every rule of the law is filed under one of {{n:law.tiers}} words, and the file says which. By citation, the verifier's kinds of finding cite {{n:cite.verifier}} rules, each kind with a fixture, and this page ran those it shows. The audit of the painted page names {{n:cite.ui}} rules for its checks, and its runs are told here as recorded, with their date, widths and cultures. The checker of a screenshot's facts names {{n:cite.shot}} and runs on its example; the audit of a screenshot as a whole, from the picture to the verdict, is designed. Each instrument reads the clauses it can read, and this chapter names the clause for each rule it shows. A person judges every rule, and holds alone the rules whose subject no declaration and no measure states, such as the right to a human.
+Every rule of the law is filed under one of {{n:law.tiers}} words, and the file says which. By citation, the verifier's kinds of finding cite {{n:cite.verifier}} rules, each kind with a fixture, and this page ran those it shows. The audit of the painted page names {{n:cite.ui}} rules, and its runs are told here as recorded, with their date, widths and cultures. The checker of a screenshot's facts names {{n:cite.shot}} and runs on its example; the audit of a screenshot as a whole, from the picture to the verdict, is designed. For Rules 130, 79 and 98 this chapter named the clause the verifier reads. A person can judge every rule, and holds alone the rules whose subject no declaration and no measure states, such as Rule 102, which enforces the right to a human.
 
 ## In your hands
 
@@ -289,7 +289,7 @@ DEFINE FEEDBACK refund_sparkle (
 In words: The assistant proposes a refund; choosing it grants it, with cancel within reach. Then the system answers in a celebrating tone.
 :::
 
-Four findings, five rules. Open each rule's card in Appendix A, read its tier, and say which instrument has just answered for it. Then repair the selection and the undo, and say what you expect.
+Four findings, five rules. Open each rule's card in Appendix A, read its tier, and say which instrument has just answered for it. Then repair the selection and the undo, and say what you expect. Try before you read on.
 
 ::: plate The selection confirmed, the undo within reach
 ```zayn grant.zayn
@@ -328,6 +328,6 @@ DEFINE FEEDBACK refund_granted (
 In words: The assistant proposes a refund, and a support agent grants it after selecting and confirming. The message that follows reports the refund's status.
 :::
 
-Clean. Which rules of the law has the report read, and which wait for the audit and for a person? The tone is one of them: whether a celebration fits a refund is a person's call. And should a rule's card say what answers for it today? That question is filed for the law.
+Clean. Which rules of the law has the report read, and which wait for the audit and for a person? The tone is one case: whether a celebration fits a refund is a person's call. And should a rule's card say what answers for it today? That question is filed for the law.
 
-A rule climbs the ladder by an amendment. The next chapter tells how the law changes.
+A rule climbs the ladder by a promotion, a change of the law like an amendment. The next chapter tells how the law changes.

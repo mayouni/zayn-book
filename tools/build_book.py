@@ -995,8 +995,19 @@ def fill_tokens(text, facts, where, errors):
         if facts[key] is None:
             errors.append(f"{where}: the fact {key} could not be read from the snapshot")
             return "null"
-        return str(facts[key])
+        v = facts[key]
+        # a count under ten is spelt, as the house style asks of prose; capitalised where it opens a sentence
+        if isinstance(v, int) and not isinstance(v, bool) and 0 <= v < 10:
+            word = NUMBER_WORDS[v]
+            before = text[:m.start()].rstrip(" ")
+            if not before or before.endswith((".", "!", "?", chr(10), ":**")):
+                word = word.capitalize()
+            return word
+        return str(v)
     return TOKEN.sub(sub, text)
+
+
+NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 
 def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=None):
