@@ -72,7 +72,7 @@ UI = {
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
     "cited_by": "Cited by", "cited_none": "no diagnostic of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
-    "diag_h": ["Code", "Level", "Severity", "The contract's sentence", "What it cites"],
+    "diag_h": ["Code", "Level and severity", "The contract's sentence", "What it cites"],
     "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its sentence", "Rules that enforce it"],
     "forbidden_h": ["Forbidden pattern", "Rules it breaks"],
     "retired_h": ["Number", "Its title", "Where it went"], "retired_into": "merged into Rule {n}", "burned": "reserved, never assigned",
@@ -384,7 +384,7 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .book-table.families td:first-child{white-space:nowrap;}
 .book-table.diag td:first-child{white-space:normal;word-break:normal;overflow-wrap:normal;}
 .book-table td code{overflow-wrap:anywhere;}
-@media (max-width:640px){.book-table{table-layout:fixed;}.book-table th,.book-table td{overflow-wrap:anywhere;padding:6px 7px;}.book-table.families td:first-child{white-space:normal;}}
+@media (max-width:640px){.book-table th,.book-table td{padding:6px 7px;}.book-table td{overflow-wrap:anywhere;}.book-table th{overflow-wrap:normal;word-break:normal;hyphens:manual;}.book-table.families td:first-child{white-space:normal;}}
 .book-table.sources td{word-break:break-word;}
 .book-table.families code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
 .chapter-page p.table-src{font-family:var(--sans);color:var(--soft);margin:-1.1em 0 1.6em;text-indent:0;text-align:left;}
@@ -794,7 +794,7 @@ def diagnostics_table(law, ui):
     """Appendix C: every kind of finding of the verifier's contract, in the contract's order within each level."""
     rows = []
     for d in sorted(law["diag_list"], key=lambda d: int(d.get("level") or 0)):
-        rows.append(['<code>' + html.escape(d["id"]).replace("_", "_<wbr>") + '</code>', html.escape(str(d.get("level", ""))), html.escape(d.get("severity", "")),
+        rows.append(['<code>' + html.escape(d["id"]).replace("_", "_<wbr>") + '</code>', html.escape(f'{d.get("level", "")}, {d.get("severity", "")}'),
                      html.escape(d.get("summary", "")), _cites(d, law) or html.escape(ui["diag_none"])])
     v = (law["contract"].get("metadata") or {}).get("version", "null")
     return (render_table(rows, "book-table families diag", ui["diag_h"])
