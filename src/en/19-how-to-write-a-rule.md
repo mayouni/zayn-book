@@ -248,15 +248,15 @@ Clean. In the grid's data, Rule 116 is placed on the visual medium, under the ac
 
 ## Write the check that fails first
 
-Sixth, write the check so that it fails on the page as it was and passes on the page as corrected, with one change between the two and no other. That is what stops the defect from coming back. The first plate of this chapter and the last plate of the third step are that pair.
+Sixth, write the check so that it fails on the page as it was and passes on the page as corrected, with one change between the two and no other. That is what keeps the defect it was written for from coming back. The first plate of this chapter and the last plate of the third step are that pair.
 
-Zayn's suite has it as a discipline for its fixtures, the declarations it keeps with the answers they must get: "One fixture, one concern", and for every refused fixture "a lawful twin where the defect is repaired and nothing else changes". The suite's guide gives the twin its reason: it "proves the check is not simply firing on everything". The amendment of Rule 116 brought one fixture for each new kind of finding, and one lawful menu from which each differs by a line. Where only a painted page can decide, the suite keeps no fixture and says why: "A fixture here would be theatre".
+Zayn's suite has it as a discipline for its fixtures, the declarations it keeps with the answers they must get: "One fixture, one concern", and for every refused fixture "a lawful twin where the defect is repaired and nothing else changes". The suite's guide gives the twin its reason: it "proves the check is not simply firing on everything". The suite compares the set of codes that a verifier reports, and nothing else: the subject, the line and the number of times a code appears are free. The amendment of Rule 116 brought one fixture for each new kind of finding, and one lawful menu from which each differs by a line. Where only a painted page can decide, the suite keeps no fixture and says why: "A fixture here would be theatre".
 
 The same discipline applies where a check reads files or a painted page. The design study records its checks on the site's files "each shown failing on the pages as they were first", and of one more file check, which reads that a statement is made once on a screen, it gives the count: "35 of the 39 pages failed it". It also records what happens to a check written as a list of the kinds of element it covers: "the defect came back that afternoon on a kind not in the list". A check reads every element. And a check proves itself on the day it fails on the defect it was written for.
 
 ## Amend what it touches
 
-Seventh, list what the rule touches, object by object, and change each. Chapter 18 listed them for this remark: the rule's fields, the version and its line of history, the language, the contract, the fixtures, the pins. One more is the nearest: the pages of those who apply the rule. Here is the section of the Zayn site's menu that shows the page Reasoning at the version this book reads, written here with one of its entries left out.
+Seventh, list what the rule touches, object by object, and change each. Chapter 18 listed them for this remark: the rule's fields, the version and its line of history, the language, the contract, the fixtures, the pins. One more is the nearest: the pages of those who apply the rule. At the version this book reads, the site's menu keeps the page Reasoning in another section, Why, which opens on its own page. Here is that section, written with one of its entries left out.
 
 ::: plate A section of the site's own menu
 ```zayn site-menu.zayn
@@ -321,7 +321,7 @@ Each of the seven steps is shown here on a file of Zayn at release {{n:release.v
 
 ## In your hands
 
-Here is a menu with three defects at once. Before you read its report, write the codes you expect.
+Here is a menu with three defects at once. Write the codes you expect, then open the verifier's answer.
 
 ::: plate For you: a stock menu, three times wrong
 ```zayn stock.zayn
@@ -342,7 +342,7 @@ DEFINE NAV_GRAPH counts (LABEL "The deliveries", TARGET count_sheet)
 DEFINE NAV_GRAPH suppliers (LABEL "Suppliers", TARGET supplier_list)
 //--> MENU_LABEL_REPEATS_PARENT stock_now
 //--> MENU_LABEL_DUPLICATE counts
-//--> MENU_LANDING_NOT_FIRST stock_now
+//--> MENU_LANDING_NOT_FIRST stock
 ```
 In words: The section Stock leads to the stock levels. Under it the menu shows Deliveries, then Stock, then The deliveries.
 :::
@@ -395,6 +395,6 @@ DEFINE NAV_GRAPH suppliers (LABEL "Suppliers", TARGET supplier_list)
 In words: The section Stock opens on a page named Stock now.
 :::
 
-Clean. The check compares whole labels, and Stock now is a different label from Stock. Read my first remark again: its example was Try, and then Try here. So the check that my second remark produced passes a menu of the shape that my first remark gave as its example. When is a child's label its parent's name said again? That is a bound, and it is yours to set for the rules you write. For Rule 116 the question is open, and I filed it for the law, with this book's requests to Zayn.
+Clean. The check compares whole labels, and Stock now is a different label from Stock. Read my first remark again: its example was Try, and then Try here. So the check that my second remark produced passes a menu of the shape that my first remark gave as its example. When is a child's label its parent's name said again? That is a bound, and it is yours to set for the rules you write. For Rule 116 the question is open, and I filed it for the law, with this book's requests to Zayn. Take it through the template: write the remark as a person would type it, ask whether Rule 116 holds it, and write the bound you would add, with the check that fails on Stock now.
 
 The law is written, amended and checked. Part VIII asks who else may write it: a team with its own corrections, and a commons that many teams share.

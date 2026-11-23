@@ -51,13 +51,14 @@ UI = {
     "proof": "Run on {d} by the reference verifier of the zayn command, release {tag} (commit {sha}), against the law at version {law}: the verifier gave the expected answer on {k} of {n} declarations.",
     "proof_none": "This page has no declaration to run.",
     "proof_data": "Printed at build on {d} from the files of Zayn at release {tag} (commit {sha}), and from the book's own registers.",
-    "proof_how": "Each declaration on this page was checked as a file by the verifier's JavaScript reference, the one the zayn command is held to, under Node {node}. Every report printed below is the one that run gave. The lines that begin with //--> state the answer the page expects, and the build fails on any other.",
+    "proof_how": "Each declaration on this page was checked as a file by the verifier's JavaScript reference, the one the zayn command is held to, under Node {node}. Every report printed below is the one that run gave. The lines that begin with //--> state the answer the page expects, and the build fails on any other. In an exercise those lines are kept off the page, and the answer is folded until you open it.",
     "stale": "This page's declarations changed after their last run; their reports appear with the next run.",
     "contents": "Contents", "not_drafted": "in writing", "words": "words",
     "decision": "The decision, and what was refused",
     "court_head": "Run in the Zayn snapshot at commit {sha} on {d}. Each fixture is a declaration of the conformance suite; the suite's manifest states the findings it must get, and the run compares the two sets.",
     "court_ok": "answers as the manifest expects", "court_bad": "answers otherwise", "court_missing": "this fixture is not in the suite at the pin",
     "court_clean": "no finding",
+    "cover": "The verifier's answer: open it once you have written yours",
     "court_codes": "The codes above, in the words of the verifier's contract",
     "court_level": "level", "court_error": "error", "court_warning": "warning",
     "stage": {"built": "built", "designed": "designed", "next": "next"},
@@ -73,11 +74,11 @@ UI = {
     "cited_by": "Cited by", "cited_none": "no diagnostic of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
     "diag_h": ["Code", "Level and severity", "The contract's sentence", "What it cites"],
-    "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its sentence", "Rules that enforce it"],
-    "forbidden_h": ["Forbidden pattern", "Rules it breaks"],
+    "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its id", "Its sentence", "Rules that enforce it"],
+    "forbidden_h": ["Forbidden pattern", "Its id", "Rules it breaks"],
     "retired_h": ["Number", "Its title", "Where it went"], "retired_into": "merged into Rule {n}", "burned": "reserved, never assigned",
     "sources_h": ["Id", "The source", "What the page is", "Read on", "Used in"],
-    "articles_h": ["Article", "Its title", "Its sentence", "Rules derived from it"],
+    "articles_h": ["Article", "Its key", "Its title", "Its sentence", "Rules derived from it"],
     "sets_h": ["Set", "Its title", "Rules", "Their numbers"],
     "tiers_h": ["Tier, in the law's word", "Rules filed under it", "Cited by a kind of finding the verifier raises", "Named by an audit for a check"],
     "ladder_h": ["Rule", "Tier", "The verifier: kinds of finding that cite it", "The audits: checks that name it"],
@@ -351,6 +352,9 @@ pre .c-verb{color:var(--code-verb);font-weight:600;}
 .court .g-count{font-weight:700;color:var(--ink);}
 .court .g-path{color:var(--soft);}
 .court .g-what{flex-basis:100%;color:var(--ink);}
+.code-cell details.cover{border-top:1px dashed var(--rule);}
+.code-cell details.cover > summary{cursor:pointer;padding:10px 16px;font-family:var(--sans);font-weight:600;color:var(--ink);list-style-position:inside;}
+.code-cell details.cover[open] > summary{border-bottom:1px dotted var(--rule);}
 .chapter-page .court p.court-codes{margin:16px 0 6px;padding-top:10px;border-top:1px solid var(--rule);}
 .court .g-ok{color:var(--ok);font-weight:600;}
 .court .g-missing{color:var(--bad);font-weight:600;}
@@ -613,13 +617,18 @@ def render_table(rows, cls="book-table", head=None):
     return f'<table class="{cls}">' + (f"<thead><tr>{th}</tr></thead>" if th else "") + f"<tbody>{trs}</tbody></table>"
 
 
-def code_cell(block, rec, in_words, ui):
-    """One declaration: as written, said in words, then the verifier's answer from the run."""
+def code_cell(block, rec, in_words, ui, cover=False):
+    """One declaration: as written, said in words, then the verifier's answer from the run. Under cover (an exercise), the
+    lines that state the answer this page expects are not printed, and the answer folds until the reader opens it; the
+    run and its check are the same."""
     w = WORDS[ui["lang"]]
     name = (rec or {}).get("name") or block.get("name") or ""
     cited = {d.get("line") for d in (rec or {}).get("diagnostics", []) if d.get("line")}
     label = '<div class="cell-label">Zayn' + (f'<span class="cl-file">{html.escape(name)}</span>' if name else "") + "</div>"
-    parts = ['<div class="code-cell">', label, numbered(block["text"], cited)]
+    shown = block["text"]
+    if cover:
+        shown = chr(10).join(l for l in shown.split(chr(10)) if not l.strip().startswith("//-->")).rstrip(chr(10))
+    parts = ['<div class="code-cell">', label, numbered(shown, cited)]
     if in_words:
         parts.append(f'<p class="in-words"><span class="iw-label">{w["in_words"]}</span>{inline(in_words)}</p>')
     if rec is None:
@@ -636,12 +645,16 @@ def code_cell(block, rec, in_words, ui):
             else:
                 text = w[v]
             exit_note = f'<span class="exit">{html.escape(w["exit"].format(n=rec["exit"]))}</span>' if rec.get("exit") is not None else ""
+            if cover:
+                parts.append(f'<details class="cover"><summary>{html.escape(ui["cover"])}</summary>')
             parts.append(f'<p class="ran nv-{v}">{exit_note}{html.escape(text)}</p>')
             if rec.get("report"):
                 parts.append(f'<pre class="ran-out report"><code>{html.escape(rec["report"])}</code></pre>')
             if "envelope" in block["flags"] and rec.get("envelope"):
                 parts.append(f'<p class="ran-sub">{html.escape(w["envelope"])}</p>')
                 parts.append(f'<pre class="ran-out envelope"><code>{html.escape(rec["envelope"])}</code></pre>')
+            if cover:
+                parts.append("</details>")
     parts.append("</div>")
     return "\n".join(parts)
 
@@ -812,10 +825,10 @@ def constitution_full(law, ui, version):
         out.append(f"<p>{html.escape(para)}</p>")
     for aid in law["articles"]:
         out.append(article_card(aid, law, ui, version))
-    rights = [[html.escape(r.get("title", "")), html.escape(r.get("statement", "")),
+    rights = [[html.escape(r.get("title", "")), f'<code>{html.escape(r.get("id", ""))}</code>', html.escape(r.get("statement", "")),
                ", ".join(html.escape(str(n)) for n in r.get("enforced_by") or [])] for r in L.get("rights", [])]
     out.append(render_table(rights, "book-table", ui["rights_h"]))
-    forb = [[html.escape(f.get("title", "")), ", ".join(html.escape(str(n)) for n in f.get("violates") or [])] for f in L.get("forbidden", [])]
+    forb = [[html.escape(f.get("title", "")), f'<code>{html.escape(f.get("id", ""))}</code>', ", ".join(html.escape(str(n)) for n in f.get("violates") or [])] for f in L.get("forbidden", [])]
     out.append(render_table(forb, "book-table", ui["forbidden_h"]))
     sets = sorted((k for k in L if re.fullmatch(r"set\d+", k)), key=lambda k: int(k[3:]))
     for k in sets:
@@ -874,20 +887,20 @@ def articles_table(law, ui, version):
     rows = []
     for aid, a in law["articles"].items():
         n = sum(1 for r in law["rule_list"] if r.get("derived_from") == aid)
-        rows.append([html.escape(a.get("numeral", "")), html.escape(a.get("title", "")), html.escape(a.get("statement", "")), str(n)])
+        rows.append([html.escape(a.get("numeral", "")), f"<code>{html.escape(aid)}</code>", html.escape(a.get("title", "")), html.escape(a.get("statement", "")), str(n)])
     return (render_table(rows, "book-table", ui["articles_h"])
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
 
 
 def rights_table(law, ui, version):
-    rows = [[html.escape(r.get("title", "")), html.escape(r.get("statement", "")),
+    rows = [[html.escape(r.get("title", "")), f'<code>{html.escape(r.get("id", ""))}</code>', html.escape(r.get("statement", "")),
              ", ".join(html.escape(str(n)) for n in r.get("enforced_by") or [])] for r in law["law"].get("rights", [])]
     return (render_table(rows, "book-table", ui["rights_h"])
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
 
 
 def forbidden_table(law, ui, version):
-    rows = [[html.escape(f.get("title", "")), ", ".join(html.escape(str(n)) for n in f.get("violates") or [])]
+    rows = [[html.escape(f.get("title", "")), f'<code>{html.escape(f.get("id", ""))}</code>', ", ".join(html.escape(str(n)) for n in f.get("violates") or [])]
             for f in law["law"].get("forbidden", [])]
     return (render_table(rows, "book-table", ui["forbidden_h"])
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
@@ -1147,7 +1160,7 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
                     errors.append(f"{where}: the declaration '{block.get('name') or k_code}' has no \"In words\" line")
                 if not in_plate:
                     errors.append(f"{where}: the declaration '{block.get('name') or k_code}' stands outside a plate")
-                out.append(code_cell(block, rec, in_words, ui))
+                out.append(code_cell(block, rec, in_words, ui, cover=(current == "In your hands")))
             elif tag == "sketch":
                 if not in_plate:
                     errors.append(f"{where}: a sketch stands outside a plate")

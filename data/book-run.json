@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 19:07 UTC+01:00",
+  "date": "2026-11-23 19:17 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -77,6 +77,7 @@
    "cite.shot": 3,
    "cite.union": 20,
    "cite.both": 1,
+   "cite.rest": 103,
    "law.tiers": 4,
    "right.max": 102,
    "corpus.records": 489,
@@ -578,7 +579,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1123,7 +1124,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1633,7 +1634,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1948,7 +1949,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -2452,7 +2453,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -3039,7 +3040,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -3414,7 +3415,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -3656,7 +3657,7 @@
      }
     },
     {
-     "hash": "ec754066e555",
+     "hash": "f4f99fedce7f",
      "name": "stock.zayn",
      "level": 2,
      "symbols": null,
@@ -3672,7 +3673,7 @@
       ],
       [
        "MENU_LANDING_NOT_FIRST",
-       "stock_now"
+       "stock"
       ]
      ],
      "stated": true,
@@ -3821,7 +3822,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -3830,7 +3831,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -3839,7 +3840,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -3848,7 +3849,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:07 UTC+01:00"
+   "ran": "2026-11-23 19:17 UTC+01:00"
   }
  }
 }

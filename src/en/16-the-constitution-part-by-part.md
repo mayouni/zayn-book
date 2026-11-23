@@ -62,7 +62,7 @@ Every rule has the same shape. Here is Rule 105, whole, as the file holds it.
 
 Every rule has {{n:rule.fields.all}} fields. `id` is a handle, and `number` is what a citation names. `title` is printed after the number in a report. `avoid` is a list of defects and `solution` is the text of the rule: the list shows the rule broken, the text states it kept. `why` is the reason, in a sentence or two.
 
-`derived_from` is the article, by its name in the file: here `operator`, which is Article VI. `enforcement` is the rule's tier: one of {{n:law.tiers}} words, here `tool`, and chapter 17 reads them. `evidence` says where the rule comes from. Rule 105's is printed as written: it says amended where the lineage says canonized, and the site it speaks of is the one that showed the law at the time.
+`derived_from` is the article, by its name in the file: here `operator`, which is Article VI. `enforcement` is the rule's tier: one of {{n:law.tiers}} words, here `tool`, and chapter 17 reads them. `evidence` says where the rule comes from. Rule 105's is printed as written, and the site it speaks of is the one that showed the law at the time.
 
 Some rules have more: {{n:rule.fields.some}} other fields exist. `invariant` is a mark, the value `true`, on {{n:rule.invariant}} rules. The law's reader prints it as the badge "vibe-invariant", and Article VI uses the same word of rights: "Vibe-invariant rights never flex." A vibe is a culture of interaction, and chapters 14 and 15 are about cultures. `lint` is a sentence that names a check or an instrument, the tool that makes a check, on {{n:rule.lint}} rules. `vibes` is a note for one culture or another, on {{n:rule.vibes}}. `see_also` points at a neighbouring rule, on {{n:rule.see_also}}. `absorbs` names the retired number that a rule took in, on {{n:rule.absorbs}}.
 
@@ -86,7 +86,7 @@ DEFINE INTENT_FLOW post_entry (
 In words: An accountant confirms and an entry is posted. At every step the accountant can cancel or leave.
 :::
 
-Refused! Read the third line of the report: a rule, an article, a right. Now follow each into the file. Rule 79 is the rule whose `number` is 79. Its `derived_from` says `reversibility`, and that is the name of Article IV. And the right to reverse lists 79 among the rules that enforce it. Here is that right, as the file states it.
+Refused! The report ends on the level, here 2, which means that the verifier was given the file alone, and on the exit code, the number the command returns: 1 for a refusal, 0 for a file that passes. Read the third line of the report: a rule, an article, a right. Now follow each into the file. Rule 79 is the rule whose `number` is 79. Its `derived_from` says `reversibility`, and that is the name of Article IV. And the right to reverse lists 79 among the rules that enforce it. Here is that right, as the file states it.
 
 {{right:reverse}}
 
@@ -134,7 +134,7 @@ DEFINE WIZARD account_opening (
 In words: The same three steps, and at each one the applicant can also leave.
 :::
 
-Clean. A third, under Article III and the right to know. A `VIBE` declares the culture of a surface and its medium, the channel through which it reaches its user. Here the medium is sound: a queue monitor that a user hears.
+Clean. A third, under Article III and the right to know. A `VIBE` declares the culture of a surface and its medium, the channel through which it reaches its user. Here the medium is sound: a queue monitor that a user hears. Its field `SIGNALS` lists the statuses that its values carry, from a closed list of five.
 
 ::: plate A monitor whose only status is silence
 ```zayn queue.zayn
@@ -190,7 +190,7 @@ DEFINE INTENT_FLOW pick_and_pay (
 In words: A clerk selects an invoice and it is paid. Undo, cancel and exit stay within reach.
 :::
 
-Refused under Rule 16 and Article II. Look at the machine form, at the list named `cites`: after the rule and the article it has a third entry, `pattern:select-silently-acts`. That is the pattern "Selection that silently executes" of the table above. The repair puts a confirmation between the choice and the act.
+Refused under Rule 16 and Article II. The command that prints the machine form is `zayn check pick.zayn --json`. Look at the machine form, at the list named `cites`: after the rule and the article it has a third entry, `pattern:select-silently-acts`. That is the pattern "Selection that silently executes" of the table above. The repair puts a confirmation between the choice and the act.
 
 ::: plate A confirmation between the two
 ```zayn pick.zayn
@@ -238,7 +238,7 @@ Every table of this page was printed from the law's file at version {{n:law.vers
 
 ## In your hands
 
-Here is a printed ledger that promises an act. The `VIBE` says that the surface is paper. Before you read its report, write the codes you expect, and how many.
+Here is a printed ledger that promises an act. The `VIBE` says that the surface is paper. A printed page carries the verbs of finding and reading, `DISCOVER`, `UNDERSTAND`, `LOCATE`, `READ`, `SCAN` and `COMPARE`, and on paper every other verb is absent. Write the codes you expect, and how many, then open the verifier's answer under the plate.
 
 ::: plate For you: an approval, on paper
 ```zayn paper.zayn

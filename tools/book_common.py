@@ -326,6 +326,7 @@ def _history_facts(snap, law, rules, diags):
     out["cite.shot"] = sum(1 for v in lad.values() if any(i == "shot" for i, _ in v["audits"])) or None
     out["cite.union"] = len(lad) or None
     out["cite.both"] = sum(1 for v in lad.values() if v["codes"] and v["audits"]) or None
+    out["cite.rest"] = (len(rules) - len(lad)) if rules and lad else None
     out["law.tiers"] = len({r.get("enforcement") for r in rules if r.get("enforcement")}) or None
     listed = [int(n) for r in (law.get("rights") or []) for n in (r.get("enforced_by") or []) if str(n).isdigit()]
     out["right.max"] = max(listed) if listed else None

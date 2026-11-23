@@ -19,6 +19,8 @@ def text_of(article):
     a = re.sub(r'<span class="cl[^"]*">(.*?)</span>(?=<span class="cl|</code>)', lambda m: m.group(1) + "\n", a, flags=re.S)
     a = re.sub(r"<(script|style)\b.*?</\1>", "", a, flags=re.S)
     a = re.sub(r'<span class="exit">(.*?)</span>', r"[\1] ", a)
+    a = re.sub(r'<details class="cover"><summary>(.*?)</summary>', r"\n[folded under a button: \1]\n", a)
+    a = a.replace("</details>", "\n[end of the folded answer]\n")
     a = re.sub(r'<span class="sk-rule">(.*?)</span>', r" (\1)", a)
     a = re.sub(r'<span class="(?:sk-ctl sk-missing)">', "[missing control: ", a)
     a = re.sub(r'<span class="(?:sk-ctl sk-restored)">', "[restored control: ", a)

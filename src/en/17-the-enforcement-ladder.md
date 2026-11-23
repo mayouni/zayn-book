@@ -38,7 +38,9 @@ Every rule has an entry named `enforcement`, and its value is one of {{n:law.tie
 
 {{tiers}}
 
-Read the first two columns as the law's filing, and nothing more. A proposal of the project, *The Second Founding*, gives in its own table the meaning of the tier with the most rules: `judgment`, "a human decides, until an instrument is invented". The other columns come from the instruments.
+Read the first two columns as the law's filing. The record gives each word its meaning in a table of a proposal of the project, *The Second Founding*: `judgment`, "a human decides, until an instrument is invented"; `machine-later`, "the law's own admission that the instrument is missing"; `machine`, "a declaration checker refuses it"; `tool`, "measured by a runnable instrument". From the foot of the ladder, the rungs go `judgment`, `machine-later`, then `tool` and `machine`, the two whose instrument is named.
+
+The other columns are what the instruments name at this version, and they follow the filing in part. Rules 38 and 107, filed under `machine`, are named by the audit of the painted page. Several rules filed under `judgment` are cited by the verifier for one clause. That is the docket's sentence at work: a tier says which instrument owes the check, and a citation says which one answers today. Whether the filing should follow the instruments is a question filed for the law.
 
 ## Three instruments
 
@@ -66,7 +68,7 @@ In words: On the help desk's home a user discovers and reads, and an answer card
 ```
 :::
 
-Refused, under Rule 130, which the law files under `machine`. Rule 130 has an entry named `lint`, which names the instrument the rule is owed, and it describes this very check: "a declared element that traces to no intent, decided against an element inventory". The verifier needed the inventory: the file alone does not say what the screen holds. The rule names two repairs, to remove the element or to declare the intent it serves. Here is the second.
+Refused, under Rule 130, which the law files under `machine`. Rule 130 has an entry named `lint`, which names the instrument the rule is owed, and it describes this very check: "a declared element that traces to no intent, decided against an element inventory". The verifier needed the inventory, given on the command line: `zayn check help.zayn --level 3 --symbols elements.json`. The file alone does not say what the screen holds. The rule names two repairs, to remove the element or to declare the intent it serves. Here is the second.
 
 ::: plate The ticker, given an intent
 ```zayn help.zayn level=3 symbols=elements.json
@@ -236,13 +238,13 @@ Here is the count, with its definition. A rule is counted for the verifier when 
 
 {{ladder}}
 
-By that definition, the verifier's kinds of finding cite {{n:cite.verifier}} rules, the audits name {{n:cite.audit}}, and Rule 116 is named by both: {{n:cite.union}} rules in all. The audit of the painted page names {{n:cite.ui}} of them and the screenshot's checker {{n:cite.shot}}, Rules 105 and 107 by both. Read the tier column beside the two others. Most of the rules filed under `judgment` that the verifier cites have a clause that a declaration can state. Every rule filed under `machine`, and most filed under `tool`, name in their `lint` entry the instrument they are owed. A person can judge every rule, with its number and its words in hand.
+By that definition, the verifier's kinds of finding cite {{n:cite.verifier}} rules, the audits name {{n:cite.audit}}, and Rule 116 is named by both: {{n:cite.union}} rules in all. The audit of the painted page names {{n:cite.ui}} of them and the screenshot's checker {{n:cite.shot}}, Rules 105 and 107 by both. Read the tier column beside the two others. Most of the rules filed under `judgment` that the verifier cites have a clause that a declaration can state. Every rule filed under `machine`, and most filed under `tool`, name in their `lint` entry the instrument they are owed: for some a check of this repository, like Rule 130's; for others a lint of HTML, which the record leaves to the projects that use the law. A person can judge every rule, with its number and its words in hand, and in this repository the other {{n:cite.rest}} rules are answered by a person.
 
 ## What I refused
 
-**I refused a tier that no instrument could serve.** In my pass of 13 August 2026 a draft proposed to file Rule 62, on contrast, under `machine`. A declaration states no colours, so the verifier could never read it. I adopted the move to `tool`, and the docket keeps the reason: the draft "would have placed a rule in a tier no instrument could serve".
+**I refused a tier that no instrument could serve.** In my pass of 13 August 2026 a draft proposed to file Rule 62, on contrast, under `machine`. A declaration states no colours, so the verifier could never read it. I adopted the move to `tool`, an instrument that measures, and the docket keeps the reason: the draft "would have placed a rule in a tier no instrument could serve".
 
-**I deferred a requirement until it has evidence.** A design note asked whether the law should require a role on every declaration that acts. On 19 August 2026 I ruled that requiring a role is, in the note's words, "deferred to evidence". A warning took its place: when no interaction of a file states a role, it tells whoever writes the declaration, and it refuses nothing.
+**I deferred a requirement until it has evidence.** A design note asked whether the law should require a role on every declaration that acts. On 19 August 2026 I ruled that requiring a role is, in the note's words, "deferred to evidence". A warning took its place: when no interaction of a file states a role, it tells whoever writes the declaration, and it refuses nothing. A run that holds only that warning ends with exit code 0.
 
 **The record refuses a count typed by hand.** The ledger, the dated list of what the project found, has a line for counts like the ones on this page: "Counts and tier tables belong in code that reads `rules.json`". Every count of this chapter is computed at each build: from the law, the contract and the verifier's code, and for the audits from a list of citations that the build checks against each file.
 
@@ -258,7 +260,7 @@ The field leads on its tools' account of themselves. An engine that tests a page
 
 The field leads on severity. A linter's user sets each rule to warn or to error. In Zayn the contract fixes the severity of each kind of finding, the same for every team: a team gains one meaning of a refusal, and gives up a setting.
 
-Zayn's law leads on saying, for every rule, which instrument it is owed, and on citing the rule by number in every finding of the verifier and in most of the audit's. The ledger records where the verifier's reach ends, in a test of 12 August 2026: two payment surfaces "differing by seven broken laws" were the same declaration, byte for byte, and both ran clean. Its own words: "the court is silent exactly where the deterioration lives". The project answers with the audit of the painted page, and designs one more instrument: an audit that refuses at the moment of painting.
+Zayn's law leads on saying, for every rule, which instrument it is owed, and on citing the rule by number in every finding of the verifier that binds a rule, and in most of the audit's. The ledger records where the verifier's reach ends, in a test of 12 August 2026: two payment surfaces "differing by seven broken laws" were the same declaration, byte for byte, and both ran clean. Its own words: "the court is silent exactly where the deterioration lives". The project answers with the audit of the painted page, and designs one more instrument: an audit that refuses at the moment of painting.
 
 ## Where it stands
 
@@ -268,7 +270,7 @@ Every rule of the law is filed under one of {{n:law.tiers}} words, and the file 
 
 ## In your hands
 
-Here is the help desk's refund, as first written. Before you read the report, write the codes you expect.
+Here is the help desk's refund, as first written. A `FEEDBACK` is a message of the system; it names in `REPORTS` the state it reports. Write the codes you expect, then open the verifier's answer.
 
 ::: plate For you: a refund, granted on a click
 ```zayn grant.zayn

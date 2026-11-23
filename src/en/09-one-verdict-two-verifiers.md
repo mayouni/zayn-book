@@ -188,7 +188,7 @@ In words: At the refund desk, a user reads the refunds and filters them, and the
 ```
 :::
 
-The plate shows it at level 3, with the table: `zayn check refunds.zayn --level 3 --symbols desk.json`. Cover the report, write the codes you expect and what each will be about, then compare. One of the two findings has no line number: say why before you read on.
+The plate shows it at level 3, with the table: `zayn check refunds.zayn --level 3 --symbols desk.json`. Write the codes you expect and what each will be about, then open the verifier's answer under the plate and compare. One of the two findings has no line number: say why before you read on.
 
 Repair it until the verifier answers clean at level 3 and every line of your file is true.
 

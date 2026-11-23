@@ -252,7 +252,7 @@ DEFINE WIZARD close_account (
 In words: In three steps, a user selects an account and it is closed, with cancel within reach and nothing else.
 :::
 
-Cover the report under the declaration, write the codes you expect, then compare.
+Write the codes you expect, then open the verifier's answer under the plate and compare.
 
 Now repair it. Adding `UNDO` silences `MISSING_UNDO` and makes the declaration untrue: nothing reopens the account. The true word is `irreversible`. Write it on the wizard, and say what you expect.
 

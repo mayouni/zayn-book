@@ -247,7 +247,7 @@ DEFINE FORM search_form (
 In words: To look up an invoice, a user searches, navigates and views. A search form serves that flow.
 :::
 
-Cover the report under the declaration. Write the codes you expect, and how many times each. Then compare.
+Write the codes you expect, and how many times each. Then open the verifier's answer under the plate and compare.
 
 Now say each word as a verb of the law, and check the file again with the inventory of the screen, at level 3: `zayn check lookup.zayn --level 3 --symbols screen.json`. The inventory holds two elements, the form and a banner. Write what you expect first. Try before you read on.
 

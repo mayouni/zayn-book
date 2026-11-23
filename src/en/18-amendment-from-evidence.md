@@ -46,7 +46,7 @@ The law carries its history with it. The lineage is a list of dated entries, one
 
 What tells an amendment from a correction of wording? One question. The document that sets the law's architecture calls it the substance test: "does any interface that was lawful before become unlawful after — or must any conforming implementation change anything it does?" A conforming implementation is a tool that keeps to the law. If the answer is no, the change is a correction, "however much prose changed". The first entry of 6 August 2026 is one: two lines of the law named a file that had moved, and no requirement moved with them.
 
-The numbers have a history too. The rules are numbered up to {{n:law.highest}} and the law holds {{n:law.rules}}, so {{n:law.unused}} numbers are out of use. {{n:law.retired}} are retired: each was a duplicate, folded into the rule that survives it, and the survivor says which number it absorbed. {{n:law.burned}} are reserved for good, because older documents had cited them for something else. A number that is only proposed can be taken too. The docket is the file where changes to the law are proposed together and ruled item by item, in sittings that it calls passes. It had kept the number 125 for a candidate when another rule was written under it, and that rule became Rule 126. The docket's lesson: "a proposed number is not a free number".
+The numbers have a history too. The rules are numbered up to {{n:law.highest}} and the law holds {{n:law.rules}}, so {{n:law.unused}} numbers are out of use. {{n:law.retired}} are retired: each was a duplicate, folded into the rule that survives it, and the survivor says which number it absorbed. {{n:law.burned}} are reserved for good, because older documents had cited them for something else. A number that is only proposed can be taken too. The docket is the file where changes to the law are proposed together and ruled item by item, in sittings that it calls passes. Rule 126 was first written under the number 125. The docket had already kept 125 for another candidate, so the new rule took 126. The docket's lesson: "a proposed number is not a free number".
 
 Each of the {{n:rule.evidence}} rules carries a field named `evidence`: what happened, where and when. Since version 3.13, an amended rule keeps its first evidence and gains a dated clause after it. The architecture document gives the rule for that field in four words: "Evidence is never corrected." What happened stays as it was written.
 
@@ -159,7 +159,7 @@ At the version of Zayn this book reads, {{n:pin.files}} data files carry a pin; 
 
 A version is a name, and a name can be kept while the text under it changes. So each file that a team or a tool relies on also carries a hash. A hash is a fingerprint computed from a file's bytes. The pack is the set of {{n:pack.files}} files that a user of the law pins, each with its hash, and its document sets the two side by side: "A version number says which edition you meant. A hash says the bytes you have are that edition." The version names; the hash proves.
 
-One change in this chapter's record moved the language and left the law's version where it was. Chapter 7 showed it: a field on a kind that does not carry it has been refused since language 1.4, and that finding cites Article II and no rule.
+One change in this chapter's record moved the language and left the law's version where it was. Chapter 7 showed it: a field on a kind that does not carry it has been refused since version 1.4 of the language, which numbers its versions apart from the law, and that finding cites Article II and no rule.
 
 ## What I refused
 
@@ -185,7 +185,7 @@ The field leads on procedure. The W3C Process is a document of its own, with its
 
 Zayn's law leads on what it keeps of each change. Every rule carries its evidence, every change is a dated entry in the law's file, and a number is never given twice: the pack's document promises of one rule that it "means the same thing in ten years". And an amendment reaches the tools at once: on 16 August and on 8 November 2026 the language took an amendment on the day it was ruled.
 
-Both sides know the cost of a pin. A regulation that names version 2.1 goes on naming it when the standard is at 2.2. A file pinned at one version of Zayn's law goes on reading that version, and the docket says of a user of the law that it "moves its pin deliberately".
+Both sides know the cost of a pin. A regulation that names version 2.1 goes on naming it when the standard is at 2.2. A file pinned at one version of Zayn's law goes on reading that version, and the docket says of a user of the law that it "moves its pin deliberately". Zayn's law numbers its versions its own way: the first two numbers move when its substance moves, and a third marks a correction. So version 3.16, which added three refusals of a menu, is a step of the second number, where Semantic Versioning would ask for the first; a team that keeps its pin keeps the law it checked against.
 
 ## Where it stands
 
@@ -224,7 +224,7 @@ DEFINE NAV_GRAPH payments (
 In words: The main menu has one section, Billing, which leads to the billing home. Under it the menu shows two entries, Invoices and Payments.
 :::
 
-Cover the report under the declaration, write the code you expect, then compare. The section leads to a page that the level under it does not show. Put the page back under the section's name, and say what you expect.
+Write the code you expect, then open the verifier's answer. The section leads to a page that the level under it does not show. Put the page back under the section's name, and say what you expect.
 
 ::: plate The page back, under the section's name
 ```zayn menu.zayn
@@ -258,7 +258,7 @@ DEFINE NAV_GRAPH payments (
 In words: The same menu, and the section's page is now its first entry, under the same name as the section: Billing.
 :::
 
-Refused again, for the name. This is the menu I had refused in my remark: a reader meets the section's title, then finds the same title among its entries. Give the page another label, and put it last.
+Refused again, for the name. This is the defect my first remark named, in its plainest form: a reader meets the section's title, then finds it again among its entries. Chapter 19 gives that remark's own example. Give the page another label, and put it last.
 
 ::: plate Another label, in last place
 ```zayn menu.zayn
