@@ -1222,6 +1222,25 @@ def cover_html(ui):
             f'alt="{html.escape(ui["cover_alt"])}">')
 
 
+# ============================================================================ the names gate
+def _withheld():
+    p = ROOT / "tools" / "withheld.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"replace": [], "never": []}
+
+
+def withhold(fragment):
+    """The book's copy of the law: a withheld name becomes its description in square brackets."""
+    for a, b in _withheld()["replace"]:
+        fragment = fragment.replace(a, html.escape(b, quote=False))
+    return fragment
+
+
+def check_names(text, where, errors):
+    for name in _withheld()["never"]:
+        if re.search(r"(?<![A-Za-z])" + re.escape(name) + r"(?![A-Za-z])", text):
+            errors.append(f"{where}: prints a name the book leaves out ({name[0]}…, see tools/withheld.json)")
+
+
 # ============================================================================ pages
 def chapter_part(st, number):
     for p in st["parts"]:
@@ -1266,11 +1285,13 @@ def build_pages(st, en_src, runs, law, ui, errors):
             spine = number in st["spine"]
             eyebrow = ui["preface"] if number == 0 else f'{ui["part"]} {ROMAN[part["number"]]} · {ui["chapter"]} {number}'
         check_shape(body, meta, where, errors)
+        check_names(body, where + " (source)", errors)
         run_rec = runs.get("chapters", {}).get(key)
         filled = fill_tokens(body, facts, where, errors)
         meta = {**meta, "stage": {k: fill_tokens(str(v), facts, where, errors) for k, v in (meta.get("stage") or {}).items()}}
-        body_html = convert_body(filled, meta, ui, run_rec, law, version, errors, where,
-                                 run.get("suite")).replace("{COURT_HEAD}", court_head)
+        body_html = withhold(convert_body(filled, meta, ui, run_rec, law, version, errors, where,
+                                          run.get("suite")).replace("{COURT_HEAD}", court_head))
+        check_names(body_html, where, errors)
         pages.append(dict(key=key, slug=slug, meta=meta, number=number, title=meta["title"], eyebrow=eyebrow, spine=spine,
                           body_html=body_html, run=run_rec, words=words_of(body), preview=preview_of(filled), appendix=appendix))
     for k, p in enumerate(pages):
