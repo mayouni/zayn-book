@@ -13,8 +13,8 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-03 | 2026-11-22 | README lines against the data or the tree, parts (a) to (e) | **Committed with 02**, verified, waiting for the push. One more file carried the dead link of part (a): `ROADMAP.md:25` |
 | BOOK-ZAYN-04 | 2026-11-22 | A flow whose act cannot be undone has no form of its own | **Answered 2026-11-23 09:26**: the four readings confirmed by the Zayn desk and by the Zayn session, on the reference and on the built command. One correction, one addition (below). A ruling on the language waits for the author: LANG-FLOW-REFERENCE-01 |
 | BOOK-ZAYN-05 | 2026-11-22 | A rule's tier and the diagnostics that cite it tell two stories | **Answered 2026-11-23 09:26**: the figures stand, and a count by citation is given (below). Three rulings on the law wait for the author: LAW-TIER-REFUSED-01, LAW-TIER-CHECK-01, LAW-SELECT-CONFIRM-01 |
-| BOOK-ZAYN-06 | 2026-11-23 | Ten findings of Part III's research, parts (a) to (j), below | **Filed 2026-11-23 10:17**; each part with its runs and its lines in `research/ch06.md`, `ch07.md` and `ch09.md`, section 12 |
-| BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Filed 2026-11-23**, with Part VII's memo; each part with its runs and its lines in `research/ch16.md` to `ch19.md`, section 12. Three of them are the open questions that chapters 16, 18 and 19 leave to their reader |
+| BOOK-ZAYN-06 | 2026-11-23 | Ten findings of Part III's research, parts (a) to (j), below | **Answered 2026-11-23 19:54** (the Zayn session): all ten confirmed at the pin by the Zayn desk, 27 runs on the reference and on the built command, identical; full text in the Zayn repository's `.central/outbox.md`, NOTE of 2026-11-23 19:34. Six rulings go to the author (below). Part (i)'s texts are rewritten in Zayn's `ce58575`, after the pin |
+| BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Filed 2026-11-23**, with Part VII's memo; each part with its runs and its lines in `research/ch16.md` to `ch19.md`, section 12. Three of them are the open questions that chapters 16, 18 and 19 leave to their reader | Routed by the Zayn session to the desk as a read of its own, ZAYN-LAW-BOOK-READ-03 (2026-11-23 19:54)
 | BOOK-ZAYN-08 | 2026-11-23 | Findings of the research of Parts I and V, in parts, below | **Filed 2026-11-23**, with the memo of Parts I and V; parts added as chapters 1, 2, 12 and 13 are drafted. Two parts are the open questions that chapters 12 and 13 leave to their reader |
 
 ## What the answers say, and what the book checked at its own pin
@@ -61,8 +61,14 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | LAW-TIER-CHECK-01 | a check that a tier and the instruments agree | |
 | LAW-SELECT-CONFIRM-01 | Rule 16's text, and the meaning of `CONFIRM` in the specification | |
 | LANG-FLOW-REFERENCE-01 | a reference may name a `WIZARD`; `MISSING_UNDO` reads `ROLE` on an `INTERACTION` only | |
+| LANG-LEVEL-SKIPPED-01 | what a run prints when a level 3 check has no table (BOOK-ZAYN-06 (a)) | |
+| LANG-FOREIGN-KIND-01 | a misspelt kind of Zayn, beside another language's kinds, which the verifier ignores by the ruling of 2026-10-31 (06 (b)) | |
+| LANG-TRACE-01 | an element traced through `INTENT_FLOW`; the fixture `clean-full.zayn` answers `INTENT_ORPHAN payment_form` at level 3 with that element listed (06 (c)) | |
+| LANG-SATISFIES-EMPTY-01 | `SATISFIES` called required and read for presence only (06 (d)) | |
+| LANG-LEVEL3-LAWFUL-01 | the level 3 checks from the lawful side: an actor's name never looked up (06 (e)) | |
+| LANG-RECORD-GAPS-01 | (a) and (b) three clauses of the families' sentences carried by no diagnostic, `MISSING_CANCEL` filed under continuity; (c) which form a decoder writes; (d) where the election of a surface is stated (06 (f), (g), (j)) | |
 
-If they are ruled, they land after the pin; the Zayn session tells the book which release carries them.
+If they are ruled, they land after the pin; the Zayn session tells the book which release carries them. The six rulings added on 2026-11-23 19:54 each carry the Zayn desk's recommendation, in the outbox note named above.
 
 ## What the open rulings hold back in the book, and the sentences a ruling would change
 
