@@ -383,6 +383,8 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .chapter-page .sketch p.sk-caption{font-family:var(--sans);line-height:1.45;margin:12px 0 0;color:var(--ink-soft);}
 .book-table.families td:first-child{white-space:nowrap;}
 .book-table.diag td:first-child{white-space:normal;word-break:normal;overflow-wrap:normal;}
+.book-table td code{overflow-wrap:anywhere;}
+@media (max-width:640px){.book-table{table-layout:fixed;}.book-table th,.book-table td{overflow-wrap:anywhere;padding:6px 7px;}.book-table.families td:first-child{white-space:normal;}}
 .book-table.sources td{word-break:break-word;}
 .book-table.families code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
 .chapter-page p.table-src{font-family:var(--sans);color:var(--soft);margin:-1.1em 0 1.6em;text-indent:0;text-align:left;}
@@ -930,7 +932,7 @@ def ladder_table(law, ui):
     rows = []
     for n in sorted(lad, key=lambda x: int(x)):
         r = law["rules"].get(n) or {}
-        codes = " ".join(f"<code>{html.escape(c)}</code>" for c in lad[n]["codes"]) or "none"
+        codes = " ".join("<code>" + html.escape(c).replace("_", "_<wbr>") + "</code>" for c in lad[n]["codes"]) or "none"
         auds = "; ".join(f'{html.escape(chk)} ({html.escape(ui["inst_" + inst])})' for inst, chk in lad[n]["audits"]) or "none"
         rows.append([f"<strong>{html.escape(n)}</strong> {html.escape(r.get('title', ''))}",
                      f"<code>{html.escape(r.get('enforcement') or 'null')}</code>", codes, auds])
