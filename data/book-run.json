@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 09:49 UTC+01:00",
+  "date": "2026-11-23 10:03 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -493,7 +493,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:49 UTC+01:00"
+   "ran": "2026-11-23 10:03 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -672,6 +672,24 @@
      }
     },
     {
+     "hash": "a701f43e1bcd",
+     "name": "statement.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"statement.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
      "hash": "47bf95d2fe6d",
      "name": "lobby.zayn",
      "level": 2,
@@ -738,18 +756,73 @@
      }
     },
     {
-     "hash": "25632b0aae2a",
+     "hash": "1b7ea8158b51",
      "name": "invoices.zayn",
      "level": 2,
      "symbols": null,
-     "flags": [
-      "exercise"
-     ],
+     "flags": [],
      "promise": [],
-     "stated": false,
-     "verdict": "exercise",
-     "report": "",
-     "diagnostics": []
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "7a54a457ed32",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "FIELD_MISPLACED",
+       "overdue_invoices"
+      ],
+      [
+       "UNKNOWN_SIGNAL",
+       "overdue_invoices"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:4  error  UNKNOWN_SIGNAL  critical in SIGNALS of overdue_invoices\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\ninvoices.zayn:3  error  FIELD_MISPLACED  TONE on SCREEN overdue_invoices; it belongs to FEEDBACK\n    A field is declared on a kind that does not declare it.\n    Article II\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "critical in SIGNALS of overdue_invoices",
+       "line": 4,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      },
+      {
+       "code": "FIELD_MISPLACED",
+       "severity": "error",
+       "subject": "TONE on SCREEN overdue_invoices; it belongs to FEEDBACK",
+       "line": 3,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A field is declared on a kind that does not declare it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"critical in SIGNALS of overdue_invoices\"\n    },\n    {\n      \"code\": \"FIELD_MISPLACED\",\n      \"severity\": \"error\",\n      \"message\": \"A field is declared on a kind that does not declare it.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"TONE on SCREEN overdue_invoices; it belongs to FEEDBACK\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
     },
     {
      "hash": "918f0ff4ce8d",
@@ -770,9 +843,9 @@
      }
     }
    ],
-   "kept": 10,
-   "runnable": 10,
-   "exercises": 1,
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 0,
    "court": [
     {
      "file": "clean-full.zayn",
@@ -947,7 +1020,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:49 UTC+01:00"
+   "ran": "2026-11-23 10:03 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1364,7 +1437,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:49 UTC+01:00"
+   "ran": "2026-11-23 10:03 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1621,7 +1694,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:49 UTC+01:00"
+   "ran": "2026-11-23 10:03 UTC+01:00"
   }
  }
 }

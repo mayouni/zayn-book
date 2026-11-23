@@ -276,4 +276,4 @@ In words: In three steps, a user selects an account and confirms, and can cancel
 
 It is clean, and it has two declarations: the wizard, which no longer says that it acts, and an interaction that acts and says `irreversible`. The two stand side by side, and the file leaves their order to its reader. Should a flow be able to say that its own act cannot be undone? Or is one interaction for each such act the right grain?
 
-A refusal is worth what the court behind it is worth. The next chapter gives the same declarations to two verifiers, the reference and the command, and shows how they are kept to one verdict.
+A refusal is worth what the court behind it is worth. The next chapter gives the four levels, runs the suite, and tells how a second verifier, the command, is kept to the reference's verdict.
