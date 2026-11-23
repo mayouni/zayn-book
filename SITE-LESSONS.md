@@ -52,6 +52,29 @@ marks a sentence that stood in the pages of the second reading; "added after the
 - **A sentence of the record is quoted as the record's.** Where a page reused a sentence of the specification as its own prose, a verifier found it each time; the sentence is now in quotation marks with its source.
 - **What a page says ran, ran.** Three verifiers each found a sentence about a run that no run of the page backed. Each became a run plate.
 
+## Parts I and V, The Deterioration and The Senses (chapters 1, 2, 12 and 13)
+
+Read on 2026-11-23 by a fresh verifier and a voice reader for each chapter, then by one reader from each of the six doors for
+the four pages in order (`research/verify/ch01.md`, `ch02.md`, `ch12.md`, `ch13.md`, `research/voice/`, `research/read/part1-5-*.md`).
+Verdicts of the doors: "ready after the items above" for every page from every door, and "ready" for chapter 12 from the builder of
+tools; none "not ready". Every item below was fixed and the build passed (commit `12a4dcd`); the fixed pages wait for a second
+fresh reading.
+
+| Concept | The sentence | The order | The plate | The stumble, and what repaired it | Read again? | The site page |
+|---|---|---|---|---|---|---|
+| UI governance | "UI governance holds an interface to rules: the rules it keeps toward its user, the instrument that checks each rule, the moment it checks, and the way the rules change." | The book's first sentence | none | The voice reader: the first form defined the word by itself, and Zayn was never said on the page every reader enters by. Repaired by both | added after | `index.html`, `site/why.html` |
+| the level | "The report ends on the level, here 2: the verifier was given the file alone. Level 3 gives it more, what the system holds, in a small file named on the command line" | At the first report of the book | 1.1 | Four doors of six: "at level 2" printed under every report and never said; the command never shown. Repaired by one paragraph with the command | added after | `site/testbench.html`, `site/conformance.html` |
+| a control's promise | "`ROLE` is the control's promise, one of five: `inert`, `navigate`, `reversible`, `irreversible` and `proposal`." | Before the first plate that uses it | 1.1 and 1.2 | The AI agent: the values were never listed. The verifier: the exercise's draft was told as an AI agent's, and the record calls it a reading by hand. Both repaired | added after | `site/web.html` (the web case) |
+| a defect that comes back | "A remark corrects one page, once; a rule kept as data is checked on every declaration an instrument reads." | The principle of chapter 1 | the two remarks of 9 November, on a site of the estate | The verifier: the remarks were said to be on the Zayn site; they were on another site of the estate. Repaired | read | `site/why.html` |
+| the causes | Each correction is filed under a cause, and each cause is a default; the table prints, per cause, the share that came back | After the corpus's counts | the table of causes, from the data | Five doors: "The causes that come back most" was true by share and the table printed counts. Repaired by a column of shares and a sentence that reads it | added after | `site/why.html`, the corpus's page |
+| a chain | "A chain is a defect that a repair moved somewhere else." | Before the three chains | none (records quoted, typing kept) | none quoted beyond dates and one paraphrase quoted as words; repaired | read | `site/why.html` |
+| a medium | "A medium is the way an interface meets its user" | First line of chapter 12 | 12.1 to 12.4: one declaration, on no medium, a lamp, a voice, a screen and a lamp | The voice reader: medium, channel and surface each did two jobs. Repaired: the site's word is said once, and the page keeps "medium" | added after | `site/media.html` |
+| what a medium carries | the data's three words, with its own definition of a cost: "served, but at a cost the designer must know" | With the table of media | the table, from the data | The designer: "the cost" was named and never stated. Repaired by the data's sentence | added after | `site/media.html` |
+| one declaration, many media | "A declaration says what a user does, whatever the medium; the medium a file names decides which of those promises can be kept" | The principle of chapter 12 | the exercise: a lamp and a console in two files | The educator and the decision-maker: "written once, for every medium" against an exercise that writes two files. Repaired at the principle | added after | `site/media.html`, `site/beyond.html` |
+| the grid | "A closed cell is one that no rule can hold: the medium carries none of the verbs the activity owns." | After the table, which has a medium on each row | the grid, from the data | Two readers: the prose read the table the wrong way round; a rule counts once in the figures and once in each cell. Repaired | added after | `site/grid.html` (which draws it the same way) |
+| an empty cell | "A zero is an empty cell, where the next rule will stand." | With the table | 13.1 to 13.4: a rule answers on an empty cell | The voice reader: six words for a cell's state. Kept four: closed, open, holding a rule, empty | added after | `site/grid.html` |
+| lands on | "A declaration lands on the cells of the activities its findings' rules are placed on, in the medium its `VIBE` names." | In the exercise of chapter 13 | 13.11 | The AI agent and the tool builder: "lands on" was decided two ways. Repaired by one definition | added after | `site/grid.html` |
+
 ## Part VII, The Law (chapters 16 to 19)
 
 Read on 2026-11-23 by a fresh verifier and a voice reader for each chapter, then by one reader from each of the six doors for the
