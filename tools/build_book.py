@@ -61,11 +61,9 @@ UI = {
     "plate": "Plate", "illustration": "Illustration", "symbols": "Symbol table", "run_label": "Run",
     "families_h": ["Family", "Its verbs", "What its verbs keep true"],
     "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
-    "rule": "Rule", "article": "Article", "set": "Set", "tier": "Enforced by", "why": "Why", "right_label": "A right of the user",
+    "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
+    "cited_by": "Cited by", "cited_none": "no diagnostic of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
-    "tiers": {"machine": "the verifier, on the declaration", "tool": "a tool that measures the page",
-              "machine-later": "a machine, as its instrument is built", "judgment": "a person's judgment"},
-    "tier_word": "tier",
     "prev": "← Previous", "next": "Next →",
     "series": "Third of the AYOUNI books",
     "cover_alt": "Zayn, book cover",
@@ -368,6 +366,7 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .law-card dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:3px 14px;line-height:1.45;}
 .law-card dt{font-weight:600;color:var(--soft);}
 .law-card dd{margin:0;color:var(--ink);}
+.law-card dd code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
 .chapter-page .law-card p.lc-quote{font-family:var(--serif);font-style:italic;line-height:1.5;margin:2px 0 4px;color:var(--ink);}
 .chapter-page .law-card p.lc-src{margin:8px 0 0;color:var(--soft);line-height:1.4;}
 
@@ -665,9 +664,14 @@ def rule_card(number, law, ui, version):
     set_n = r["_set"][3:]
     set_t = re.sub(r"^Set \d+:\s*", "", r.get("_set_title", ""))
     tier = r.get("enforcement") or "null"
+    # what the pin measures, and no more: the tier is the law's own word for the rule; the diagnostics are the ones
+    # whose binding in the contract names this rule (what a tier means is a ruling the law's author has before him)
+    citing = [d["id"] for d in law["diag_list"] if str(number) in [str(x) for x in (d.get("rules") or [])]]
+    cited = " ".join(f"<code>{html.escape(c)}</code>" for c in citing) if citing else html.escape(ui["cited_none"])
     rows = [(ui["article"], f'{art.get("numeral", "null")} · {art.get("title", "null")}'),
             (ui["set"], f"{set_n} · {set_t}"),
-            (ui["tier"], f'{html.escape(ui["tiers"].get(tier, tier))} ({ui["tier_word"]} <code>{html.escape(tier)}</code>)'),
+            (ui["tier"], f"<code>{html.escape(tier)}</code>"),
+            (ui["cited_by"], cited),
             (ui["why"], html.escape(r.get("why") or "null"))]
     dl = "".join(f"<dt>{html.escape(k)}</dt><dd>{v}</dd>" for k, v in rows)
     return (f'<aside class="law-card" id="rule-{number}"><div class="lc-head"><span class="lc-num">{ui["rule"]} {number}</span>'

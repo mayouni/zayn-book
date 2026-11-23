@@ -78,7 +78,7 @@ And here is the right.
 
 {{right:reverse}}
 
-The rule gives its reason in one line and the right says what a user is owed. The verifier checked the part of Rule 79 that a declaration states: an act, and the undo that stays within reach of it.
+The rule gives its reason in one line and the right says what a user is owed. The card also names the three kinds of finding that cite this rule. The verifier checked the part of Rule 79 that a declaration states: an act, and the undo that stays within reach of it.
 
 The second refusal has the same three lines. `MISSING_CANCEL` cites Rule 26, Article IV again, and another right: the right to leave. Why two refusals for one missing field? Because they protect two different moments, and the specification says which in one line: "undo reverses what was done, cancel abandons what is being done."
 
@@ -136,7 +136,7 @@ In words: In two steps, an operator selects records and they are deleted, with c
 
 Four findings in one run. Read the second line of each: it names what the verifier read.
 
-`SELECT_ACT_COLLAPSE` read `SATISFIES`, which lists `SELECT` and `ACT` with no `CONFIRM`: choosing a record carries out the act. The verb `CONFIRM` names the user's intent to commit, whatever control carries it. Rule 79's sentence on confirmation is about the dialog that interrupts, and it keeps that dialog for acts that cannot be undone.
+`SELECT_ACT_COLLAPSE` read `SATISFIES`, which lists `SELECT` and `ACT` with no `CONFIRM`: choosing a record carries out the act. The verb `CONFIRM` names the user's act of confirming, whatever carries it: a review step and a dialog are two drawings of the same declaration. Rule 79's sentence on confirmation is about one drawing, the dialog that interrupts, and it keeps that dialog for acts that cannot be undone.
 
 `MISSING_UNDO` is the refusal of plate 8.1.
 
