@@ -15,6 +15,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-05 | 2026-11-22 | A rule's tier and the diagnostics that cite it tell two stories | **Answered 2026-11-23 09:26**: the figures stand, and a count by citation is given (below). Three rulings on the law wait for the author: LAW-TIER-REFUSED-01, LAW-TIER-CHECK-01, LAW-SELECT-CONFIRM-01 |
 | BOOK-ZAYN-06 | 2026-11-23 | Ten findings of Part III's research, parts (a) to (j), below | **Filed 2026-11-23 10:17**; each part with its runs and its lines in `research/ch06.md`, `ch07.md` and `ch09.md`, section 12 |
 | BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Filed 2026-11-23**, with Part VII's memo; each part with its runs and its lines in `research/ch16.md` to `ch19.md`, section 12. Three of them are the open questions that chapters 16, 18 and 19 leave to their reader |
+| BOOK-ZAYN-08 | 2026-11-23 | Findings of the research of Parts I and V, in parts, below | **Filed 2026-11-23**, with the memo of Parts I and V; parts added as chapters 1, 2, 12 and 13 are drafted. Two parts are the open questions that chapters 12 and 13 leave to their reader |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -175,3 +176,25 @@ the pin or counted from its files. The book edits nothing in Zayn; a finding aga
   that level read the whole file. Article II's sentence lists "recover", which is in no list of verbs.
 
 Chapter 17's findings are added to this request when the chapter is drafted.
+
+## BOOK-ZAYN-08, in parts (filed 2026-11-23)
+
+Found while researching chapters 1, 2, 12 and 13, each probed on the reference verifier of the pin or counted from its files.
+
+- **(a) A medium declared in a file applies to every declaration of it, and `soleCarrier` is read by nothing.** A lamp beside a
+  screen in one file refuses the screen's verbs on the lamp; a file whose only medium is a lamp, which the data says should never
+  carry a surface alone, passes. Nothing in a declaration says which media carry it together (`research/ch12.md`, finding 2).
+  Chapter 12's exercise asks it.
+- **(b) "clean" means two things for statuses.** Where a rendering is recorded (screen, sound, voice), clean is decided; elsewhere
+  `SIGNAL_UNPERCEIVABLE` has nothing to read, and the report prints the same word (`research/ch12.md`, finding 3).
+- **(c) Renderers.** The data records renderings for three media, while `protocol/README.md:186-187` says "Two of the ten media
+  have an implementation" (`research/ch12.md`, finding 1).
+- **(d) The grid's table and its fixtures.** The understand by `any` cell counts 12 fixtures where `COVERAGE.md:98` prints 8: four
+  are Rule 116's menu fixtures, on a cell where Rule 116 is not placed; `COVERAGE.md:363` says D5 showed Rule 79 on voice and
+  machine, which its fixtures do not; figures that the ruling of 3 November moved (34 to 35 empty cells) stand in several lines
+  (`research/ch13.md`, findings 1 to 3).
+- **(e) A rule's finding on a closed cell.** On print, `SELECT_ACT_COLLAPSE` (Rule 16) is raised beside `VERB_NOT_CARRIED` for the
+  same verbs, on cells the grid calls closed (`research/ch13.md`, finding 6). Chapter 13's exercise asks what a confirmation is
+  for an AI agent on the machine medium.
+- **(f) The hand-set placements** are said to be listed in `coverage-placement.json` and are not; "empty" names two things in
+  the record (`research/ch13.md`, findings 5 and 10).

@@ -86,7 +86,7 @@ UI = {
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
     "grid_h0": "Medium", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
-    "media_h": ["Medium", "What it is", "Verbs carried", "Carried at a cost", "Not carried", "May carry a surface alone"],
+    "media_h": ["Medium", "What it is", "Carried fully", "Carried at a cost", "Not carried", "May carry a surface alone"],
     "media_src": "Printed from Zayn's data of the media (conformance/media.json): for each medium, how many of the law's verbs it carries, carries at a cost, or does not carry at all.",
     "yes": "yes", "no": "no",
     "pins_h": ["A data file of Zayn", "The version of the law it records"],
