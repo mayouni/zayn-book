@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 09:44 UTC+01:00",
+  "date": "2026-11-23 09:49 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -342,6 +342,58 @@
      "diagnostics": []
     },
     {
+     "hash": "71db71b3daca",
+     "name": "lookup.zayn",
+     "level": 3,
+     "symbols": "screen.json",
+     "flags": [],
+     "promise": [
+      [
+       "INTENT_ORPHAN",
+       "promo_banner"
+      ],
+      [
+       "INTENT_ORPHAN",
+       "search_form"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "lookup.zayn  error  INTENT_ORPHAN  search_form\n    A declared element traces to no intent.\n    Rule 130 · Every Element Serves an Intent · Article II\nlookup.zayn  error  INTENT_ORPHAN  promo_banner\n    A declared element traces to no intent.\n    Rule 130 · Every Element Serves an Intent · Article II\n\n2 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INTENT_ORPHAN",
+       "severity": "error",
+       "subject": "search_form",
+       "line": 0,
+       "cites": [
+        "rule:130",
+        "article:intent"
+       ],
+       "level": 3,
+       "message": "A declared element traces to no intent."
+      },
+      {
+       "code": "INTENT_ORPHAN",
+       "severity": "error",
+       "subject": "promo_banner",
+       "line": 0,
+       "cites": [
+        "rule:130",
+        "article:intent"
+       ],
+       "level": 3,
+       "message": "A declared element traces to no intent."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"lookup.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INTENT_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"A declared element traces to no intent.\",\n      \"span\": {\n        \"file\": \"lookup.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:130\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"search_form\"\n    },\n    {\n      \"code\": \"INTENT_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"A declared element traces to no intent.\",\n      \"span\": {\n        \"file\": \"lookup.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:130\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"promo_banner\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
      "hash": "990cf43b97da",
      "name": "lookup.zayn",
      "level": 3,
@@ -360,8 +412,8 @@
      }
     }
    ],
-   "kept": 9,
-   "runnable": 9,
+   "kept": 10,
+   "runnable": 10,
    "exercises": 1,
    "court": [
     {
@@ -441,7 +493,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:44 UTC+01:00"
+   "ran": "2026-11-23 09:49 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -895,7 +947,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:44 UTC+01:00"
+   "ran": "2026-11-23 09:49 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1312,7 +1364,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:44 UTC+01:00"
+   "ran": "2026-11-23 09:49 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1569,7 +1621,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:44 UTC+01:00"
+   "ran": "2026-11-23 09:49 UTC+01:00"
   }
  }
 }
