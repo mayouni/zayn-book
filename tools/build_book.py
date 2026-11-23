@@ -50,6 +50,7 @@ UI = {
     "missing": "Missing · the source is awaited",
     "proof": "Run on {d} by the reference verifier of the zayn command, release {tag} (commit {sha}), against the law at version {law}: the verifier gave the expected answer on {k} of {n} declarations.",
     "proof_none": "This page has no declaration to run.",
+    "proof_data": "Printed at build on {d} from the files of Zayn at release {tag} (commit {sha}), and from the book's own registers.",
     "proof_how": "Each declaration on this page was checked as a file by the verifier's JavaScript reference, the one the zayn command is held to, under Node {node}. Every report printed below is the one that run gave. The lines that begin with //--> state the answer the page expects, and the build fails on any other.",
     "stale": "This page's declarations changed after their last run; their reports appear with the next run.",
     "contents": "Contents", "not_drafted": "in writing", "words": "words",
@@ -71,6 +72,12 @@ UI = {
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
     "cited_by": "Cited by", "cited_none": "no diagnostic of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
+    "diag_h": ["Code", "Level", "Severity", "The contract's sentence", "What it cites"],
+    "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its sentence", "Rules that enforce it"],
+    "forbidden_h": ["Forbidden pattern", "Rules it breaks"],
+    "retired_h": ["Number", "Its title", "Where it went"], "retired_into": "merged into Rule {n}", "burned": "reserved, never assigned",
+    "sources_h": ["Id", "The source", "What the page is", "Read on", "Used in"],
+    "sources_src": "Printed from the book's register of sources, research/FIELD.md.",
     "prev": "← Previous", "next": "Next →",
     "series": "Third of the AYOUNI books",
     "cover_alt": "Zayn, book cover",
@@ -366,6 +373,8 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .sketch .sk-rule{font-weight:500;}
 .chapter-page .sketch p.sk-caption{font-family:var(--sans);line-height:1.45;margin:12px 0 0;color:var(--ink-soft);}
 .book-table.families td:first-child{white-space:nowrap;}
+.book-table.diag td:first-child{white-space:normal;word-break:normal;overflow-wrap:normal;}
+.book-table.sources td{word-break:break-word;}
 .book-table.families code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
 .chapter-page p.table-src{font-family:var(--sans);color:var(--soft);margin:-1.1em 0 1.6em;text-indent:0;text-align:left;}
 .law-card{border:1px solid var(--rule);border-left:4px solid var(--ink);border-radius:0 8px 8px 0;margin:1.6em 0;padding:12px 18px 12px;background:var(--card-bg);font-family:var(--sans);}
@@ -759,6 +768,93 @@ def lists_table(law, ui):
             + f'<p class="table-src">{html.escape(ui["spec_src"].format(v=law.get("spec_version") or "null"))}</p>')
 
 
+def _cites(d, law):
+    parts = []
+    if d.get("rules"):
+        parts.append(", ".join(f"Rule {html.escape(str(n))}" for n in d["rules"]))
+    if d.get("articles"):
+        parts.append(", ".join("Article " + html.escape((law["articles"].get(a) or {}).get("numeral", a)) for a in d["articles"]))
+    if d.get("rights"):
+        parts.append(", ".join(html.escape((law["rights"].get(r) or {}).get("title", r)) for r in d["rights"]))
+    return "; ".join(parts)
+
+
+def diagnostics_table(law, ui):
+    """Appendix C: every kind of finding of the verifier's contract, in the contract's order within each level."""
+    rows = []
+    for d in sorted(law["diag_list"], key=lambda d: int(d.get("level") or 0)):
+        rows.append(['<code>' + html.escape(d["id"]).replace("_", "_<wbr>") + '</code>', html.escape(str(d.get("level", ""))), html.escape(d.get("severity", "")),
+                     html.escape(d.get("summary", "")), _cites(d, law) or html.escape(ui["diag_none"])])
+    v = (law["contract"].get("metadata") or {}).get("version", "null")
+    return (render_table(rows, "book-table families diag", ui["diag_h"])
+            + f'<p class="table-src">{html.escape(ui["contract_src"].format(v=v))}</p>')
+
+
+def constitution_full(law, ui, version):
+    """Appendix A: the law as its data holds it: the preamble, the articles, the rights, the forbidden patterns, then
+    every set with its rules. Printed fields: a rule's number, title, tier, article, text ("solution"), what it tells
+    the reader to avoid, and its reason. Nothing is typed here."""
+    L = law["law"]
+    out = []
+    pre = (L.get("preamble") or {}).get("text") or ""
+    for para in [p.strip() for p in pre.split("\n") if p.strip()]:
+        out.append(f"<p>{html.escape(para)}</p>")
+    for aid in law["articles"]:
+        out.append(article_card(aid, law, ui, version))
+    rights = [[html.escape(r.get("title", "")), html.escape(r.get("statement", "")),
+               ", ".join(html.escape(str(n)) for n in r.get("enforced_by") or [])] for r in L.get("rights", [])]
+    out.append(render_table(rights, "book-table", ui["rights_h"]))
+    forb = [[html.escape(f.get("title", "")), ", ".join(html.escape(str(n)) for n in f.get("violates") or [])] for f in L.get("forbidden", [])]
+    out.append(render_table(forb, "book-table", ui["forbidden_h"]))
+    sets = sorted((k for k in L if re.fullmatch(r"set\d+", k)), key=lambda k: int(k[3:]))
+    for k in sets:
+        st = L[k]
+        title = re.sub(r"^Set \d+:\s*", "", st.get("title", ""))
+        out.append(f'<h3 class="subsection-h" id="law-{k}">{html.escape(ui["set"])} {k[3:]} · {html.escape(title)}</h3>')
+        if st.get("description"):
+            out.append(f"<p>{html.escape(st['description'])}</p>")
+        for r in st.get("rules", []):
+            art = law["articles"].get(r.get("derived_from") or "", {})
+            rows = [(ui["article"], f'{html.escape(art.get("numeral", "null"))} · {html.escape(art.get("title", "null"))}'),
+                    (ui["tier"], f'<code>{html.escape(r.get("enforcement") or "null")}</code>')]
+            if r.get("avoid"):
+                rows.append((ui["avoid"], html.escape("; ".join(r["avoid"]))))
+            rows.append((ui["why"], html.escape(r.get("why") or "null")))
+            dl = "".join(f"<dt>{html.escape(a)}</dt><dd>{b}</dd>" for a, b in rows)
+            out.append(f'<aside class="law-card" id="law-rule-{html.escape(str(r["number"]))}"><div class="lc-head">'
+                       f'<span class="lc-num">{ui["rule"]} {html.escape(str(r["number"]))}</span>'
+                       f'<span class="lc-title">{html.escape(r.get("title", ""))}</span></div>'
+                       f'<p class="lc-quote">{html.escape(r.get("solution", ""))}</p><dl>{dl}</dl></aside>')
+    gone = [[html.escape(str(n)), html.escape(v.get("title", "")), html.escape(ui["retired_into"].format(n=v.get("into", "")))]
+            for n, v in (L.get("retired") or {}).items()]
+    gone += [[html.escape(str(n)), "", html.escape(ui["burned"])] for n in (L.get("burned") or {})]
+    if gone:
+        out.append(render_table(sorted(gone, key=lambda r: int(r[0])), "book-table", ui["retired_h"]))
+    out.append(f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+    return "\n".join(out)
+
+
+def sources_table(ui):
+    """Appendix F: the register of the field's sources, as research/FIELD.md keeps it: the source, what its page calls
+    itself, the date it was read, and where the book uses it. The reading notes stay in the register."""
+    path = ROOT / "research" / "FIELD.md"
+    rows = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"^\|\s*(F-\d+)\s*\|(.*)\|\s*$", line)
+        if not m:
+            continue
+        cells = [c.strip() for c in m.group(2).split("|")]
+        if len(cells) < 6:
+            continue
+        src = re.sub(r"<(https?://[^>]+)>", r"[\1](\1)", cells[0])
+        date = re.search(r"\d{4}-\d{2}-\d{2}", cells[2])
+        rows.append([html.escape(m.group(1)), inline(src), inline(cells[1]), html.escape(date.group(0) if date else "null"), inline(cells[5])])
+    if not rows:
+        raise SystemExit("sources: research/FIELD.md holds no source row")
+    return (render_table(rows, "book-table sources", ui["sources_h"])
+            + f'<p class="table-src">{html.escape(ui["sources_src"])}</p>')
+
+
 def suite_cell(level, suite, ui, where, errors):
     """The conformance suite's own run at one level, as the snapshot's runner printed it at this build."""
     rec = (suite or {}).get(str(level))
@@ -865,6 +961,12 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(lists_table(law, ui)); i += 1; continue
         if s == "{{fields}}":
             flush(); out.append(fields_table(law, ui)); i += 1; continue
+        if s == "{{diagnostics}}":
+            flush(); out.append(diagnostics_table(law, ui)); i += 1; continue
+        if s == "{{constitution}}":
+            flush(); out.append(constitution_full(law, ui, version)); i += 1; continue
+        if s == "{{sources}}":
+            flush(); out.append(sources_table(ui)); i += 1; continue
         m_card = re.match(r"^\{\{(rule|right|suite|article):([a-z0-9-]+)\}\}$", s)
         if m_card:
             flush()
@@ -1091,6 +1193,9 @@ def proof_html(p, runs, ui, stale):
     if stale:
         return f'<p class="proof fails"><strong>{html.escape(ui["stale"])}</strong></p>'
     if not run or not run.get("runnable"):
+        if p.get("appendix"):
+            z = (runs.get("run", {}).get("zayn") or {})
+            return '<p class="proof">' + html.escape(ui["proof_data"].format(d=runs.get("run", {}).get("date", ""), tag=z.get("tag") or "", sha=z.get("short", ""))) + "</p>"
         return f'<p class="proof">{ui["proof_none"]}</p>' if p["number"] else ""
     line = ui["proof"].format(d=run.get("ran", ""), tag=zayn.get("tag") or "", sha=zayn.get("short", ""),
                               law=(r.get("law") or {}).get("law.version", "null"), k=run["kept"], n=run["runnable"])
