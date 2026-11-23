@@ -26,6 +26,7 @@ def text_of(article):
     a = re.sub(r'<span class="(?:sk-ctl sk-restored)">', "[restored control: ", a)
     a = re.sub(r'<span class="sk-ctl">', "[control: ", a)
     a = re.sub(r"<(h1|h3|h4)\b[^>]*>", "\n\n## ", a)
+    a = re.sub(r"</(span|strong|code|th|td|dt)>(?=<)", r"</\1> ", a)
     a = re.sub(r"</(p|div|h1|h3|h4|li|pre|figcaption|dt|dd|section|aside|figure|ul|dl|tr)>", "\n", a)
     a = re.sub(r"</t[dh]>", " | ", a)
     a = re.sub(r"<[^>]+>", "", a)

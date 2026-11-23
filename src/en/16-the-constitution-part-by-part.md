@@ -28,7 +28,7 @@ So the field has documents, lists of advice, a format for a rule that a tester r
 
 ## The principle
 
-**The law is one file: the page that shows it and the count that sizes it read it there, and every refusal cites it by its numbers and its names.**
+**The law is one file: the page that shows it is made from it, its counts are read from it, and a refusal that cites it uses its own numbers and names.**
 
 The file is named `rules.json`. It is written in a notation for data, names and values between braces. A designer reads the law in its reader, a page made from the file, and never in the notation. The verifier reads the same file at each run: the title of a rule and the numeral of an article in a report are looked up there. Every count of the law on this page is read from the file by the book's build, the program that makes these pages. Appendix A prints the law, set by set.
 
@@ -86,7 +86,7 @@ DEFINE INTENT_FLOW post_entry (
 In words: An accountant confirms and an entry is posted. At every step the accountant can cancel or leave.
 :::
 
-Refused! The report ends on the level, here 2, which means that the verifier was given the file alone, and on the exit code, the number the command returns: 1 for a refusal, 0 for a file that passes. Read the third line of the report: a rule, an article, a right. Now follow each into the file. Rule 79 is the rule whose `number` is 79. Its `derived_from` says `reversibility`, and that is the name of Article IV. And the right to reverse lists 79 among the rules that enforce it. Here is that right, as the file states it.
+Refused! The report ends on the level, here 2: a run at level 2 makes every check that needs nothing but the file, those of level 1 included, and chapter 9 gives the four levels. It also ends on the exit code, the number the command returns: 1 for a refusal, 0 for a file that passes. Read the third line of the report: a rule, an article, a right. Now follow each into the file. Rule 79 is the rule whose `number` is 79. Its `derived_from` says `reversibility`, and that is the name of Article IV. And the right to reverse lists 79 among the rules that enforce it. Here is that right, as the file states it.
 
 {{right:reverse}}
 
@@ -134,7 +134,7 @@ DEFINE WIZARD account_opening (
 In words: The same three steps, and at each one the applicant can also leave.
 :::
 
-Clean. A third, under Article III and the right to know. A `VIBE` declares the culture of a surface and its medium, the channel through which it reaches its user. Here the medium is sound: a queue monitor that a user hears. Its field `SIGNALS` lists the statuses that its values carry, from a closed list of five.
+Clean. A third, under Article III and the right to know. A `VIBE` declares the culture of a surface and its medium, the channel through which it reaches its user. Here the medium is sound that is not speech: a queue monitor that a user hears. Its field `SIGNALS` lists the statuses that its values carry, from a closed list: success, warning, danger, info and muted.
 
 ::: plate A monitor whose only status is silence
 ```zayn queue.zayn

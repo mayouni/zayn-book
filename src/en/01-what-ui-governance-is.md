@@ -32,7 +32,7 @@ The Zayn site states the thesis behind it: "The only correction that keeps pace 
 
 ## The defect that comes back
 
-On 9 November 2026 I corrected a site of the estate twice for the same defect. At eleven in the morning, a word of two letters stood alone on the last line of a paragraph, and I wrote, as the corpus keeps my typing: "i raise dozens of times before in many projects the issue of visual equilibrium of text lines". At twenty-six past one, the same defect was back on a chart's label that the morning's repair had missed: "how many times I told you to avoid this ugly word taking its own line!!!" Two remarks, one defect, one day. An hour later I wrote the sentence that the Zayn site now prints on its page about why Zayn exists: "what makes my fatigue in all my projects is never the more complex technical challenges: it's always UI!"
+On 9 November 2026 I corrected a site of mine twice for the same defect. At eleven in the morning, a word of two letters stood alone on the last line of a paragraph, and I wrote, as the corpus keeps my typing: "i raise dozens of times before in many projects the issue of visual equilibrium of text lines". At twenty-six past one, the same defect was back on a chart's label that the morning's repair had missed: "how many times I told you to avoid this ugly word taking its own line!!!" Two remarks, one defect, one day. An hour later I wrote the sentence that the Zayn site now prints on its page about why Zayn exists: "what makes my fatigue in all my projects is never the more complex technical challenges: it's always UI!"
 
 The corpus is Zayn's file of corrections: {{n:corpus.records}} of them, each with its words, its place and its date. {{n:corpus.verbatim}} keep the person's words as typed, and {{n:corpus.repeat}} name an earlier correction of the same defect. Chapter 2 reads it whole.
 
@@ -144,7 +144,7 @@ The law is data at version {{n:law.version}}, and every plate of this page was r
 
 ## In your hands
 
-Here is a real first draft, printed on the Zayn site: the language switch of a site of the estate, a control that changes the language of the page, read by hand into a declaration. Write the finding you expect, by its code, then open the verifier's answer.
+Here is a real first draft, printed on the Zayn site: the language switch of a site of mine, a control that changes the language of the page, read by hand into a declaration. Write the finding you expect, by its code, then open the verifier's answer.
 
 ::: plate For you: a language switch
 ```zayn language.zayn

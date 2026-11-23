@@ -38,7 +38,7 @@ Every rule has an entry named `enforcement`, and its value is one of {{n:law.tie
 
 {{tiers}}
 
-Read the first two columns as the law's filing. The record gives each word its meaning in a table of a proposal of the project, *The Second Founding*: `judgment`, "a human decides, until an instrument is invented"; `machine-later`, "the law's own admission that the instrument is missing"; `machine`, "a declaration checker refuses it"; `tool`, "measured by a runnable instrument". From the foot of the ladder, the rungs go `judgment`, `machine-later`, then `tool` and `machine`, the two whose instrument is named.
+Read the first two columns as the law's filing. The record gives each word its meaning in a table of a proposal of the project, *The Second Founding*: `judgment`, "a human decides, until an instrument is invented"; `machine-later`, "the law's own admission that the instrument is missing"; `machine`, "a declaration checker refuses it"; `tool`, "measured by a runnable instrument". From the foot of the ladder the rungs go `judgment`, then `machine-later`, then `tool` and `machine`, the two rungs whose instrument is named, side by side at the top.
 
 The other columns are what the instruments name at this version, and they follow the filing in part. Rules 38 and 107, filed under `machine`, are named by the audit of the painted page. Several rules filed under `judgment` are cited by the verifier for one clause. That is the docket's sentence at work: a tier says which instrument owes the check, and a citation says which one answers today. Whether the filing should follow the instruments is a question filed for the law.
 
@@ -116,7 +116,7 @@ DEFINE INTENT_FLOW delete_message (
 In words: The same deletion, and undo stays within reach.
 :::
 
-Clean, and it still declares `CONFIRM` on a common deletion. The first thing Rule 79 lists to avoid is "Confirmation dialogs for every deletion". Here is the same act as a control that confirms and can be undone.
+Clean, and it still declares `CONFIRM` on a common deletion. The first thing Rule 79 lists to avoid is "Confirmation dialogs for every deletion". Here is the same act written as one control, an `INTERACTION`, that confirms and can be undone: its `ROLE`, `reversible`, is its promise that the act can be taken back.
 
 ::: plate A control that confirms what it can undo
 ```zayn messages.zayn
@@ -136,7 +136,7 @@ Clean. Is the confirmation a dialog that interrupts, or a step of review? A desi
 
 The audit runs in a browser, and this page gives it from its recorded runs. The record of the second milestone of Zayn's design system gives two full runs of the larger mode on the Zayn site's own pages, before and after a change of the stylesheet, the file that sets how the pages look: "38 pages, five widths, both cultures: 380 renders each". The widths run from 375 to 1900 pixels, the cultures are Modern and Retro, and the runs were made on 10 November 2026, before the version this book reads. A culture is a way of drawing the same interface; chapters 14 and 15 are about cultures. K22 counted zero findings on both runs.
 
-A second audit reads a screenshot, once a separate program has reduced the picture to facts: the lines of text, their size, their contrast. Its checker gives three answers per line, "fail, pass, not_decided", and one of them is kept out of its reach for size: "A size is never `pass`." The checker runs on an example made by hand, and the site files the whole audit as designed.
+A second audit reads a screenshot, once a separate program has reduced the picture to facts: the lines of text, their size, their contrast. Its checker gives three answers per line, "fail, pass, not_decided", and for the size of text it never answers pass, because a size read from a picture is only an upper bound: "A size is never `pass`." The checker runs on an example made by hand, and the site files the whole audit as designed.
 
 **A person judges.** Here is the help desk's assistant, an AI agent that answers the customer.
 
@@ -238,13 +238,13 @@ Here is the count, with its definition. A rule is counted for the verifier when 
 
 {{ladder}}
 
-By that definition, the verifier's kinds of finding cite {{n:cite.verifier}} rules, the audits name {{n:cite.audit}}, and Rule 116 is named by both: {{n:cite.union}} rules in all. The audit of the painted page names {{n:cite.ui}} of them and the screenshot's checker {{n:cite.shot}}, Rules 105 and 107 by both. Read the tier column beside the two others. Most of the rules filed under `judgment` that the verifier cites have a clause that a declaration can state. Every rule filed under `machine`, and most filed under `tool`, name in their `lint` entry the instrument they are owed: for some a check of this repository, like Rule 130's; for others a lint of HTML, which the record leaves to the projects that use the law. A person can judge every rule, with its number and its words in hand, and in this repository the other {{n:cite.rest}} rules are answered by a person.
+By that definition, the verifier's kinds of finding cite {{n:cite.verifier}} rules, the audits name {{n:cite.audit}}, and Rule 116 is named by both: {{n:cite.union}} rules in all. The audit of the painted page names {{n:cite.ui}} of them and the screenshot's checker {{n:cite.shot}}, Rules 105 and 107 by both. Read the tier column beside the two others. Most of the rules filed under `judgment` that the verifier cites have a clause that a declaration can state; Rule 16 is reached through the forbidden pattern that names it. Every rule filed under `machine`, and most filed under `tool`, name in their `lint` entry the instrument they are owed: for some a check of this repository, like Rule 130's; for others a lint of HTML, which the record leaves to the projects that use the law. A person can judge every rule, with its number and its words in hand, and in this repository the other {{n:cite.rest}} rules are answered by a person.
 
 ## What I refused
 
-**I refused a tier that no instrument could serve.** In my pass of 13 August 2026 a draft proposed to file Rule 62, on contrast, under `machine`. A declaration states no colours, so the verifier could never read it. I adopted the move to `tool`, an instrument that measures, and the docket keeps the reason: the draft "would have placed a rule in a tier no instrument could serve".
+**I refused a tier that no instrument could serve.** In my pass of 13 August 2026 a draft proposed to file Rule 62, on contrast, under `machine`. A declaration states no colours, so the verifier could never read it. I adopted the move to `tool`, an instrument that measures, and the docket keeps the reason: the draft "would have placed a rule in a tier no instrument could serve". Rule 38, on displacement, is filed under `machine` and answered by the audit: the filing and the instruments follow each other in part, and whether they should agree is a question filed for the law.
 
-**I deferred a requirement until it has evidence.** A design note asked whether the law should require a role on every declaration that acts. On 19 August 2026 I ruled that requiring a role is, in the note's words, "deferred to evidence". A warning took its place: when no interaction of a file states a role, it tells whoever writes the declaration, and it refuses nothing. A run that holds only that warning ends with exit code 0.
+**I deferred a requirement until it has evidence.** A design note asked whether the law should require a role on every declaration that acts. On 19 August 2026 I ruled that requiring a role is, in the note's words, "deferred to evidence". A warning, `ROLE_UNDECLARED`, took its place: when no interaction of a file states a role, it tells whoever writes the declaration, and it refuses nothing. A run that holds only that warning ends with exit code 0.
 
 **The record refuses a count typed by hand.** The ledger, the dated list of what the project found, has a line for counts like the ones on this page: "Counts and tier tables belong in code that reads `rules.json`". Every count of this chapter is computed at each build: from the law, the contract and the verifier's code, and for the audits from a list of citations that the build checks against each file.
 

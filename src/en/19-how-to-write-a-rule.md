@@ -172,7 +172,7 @@ The evidence. It is written as it happened. The document of the law's architectu
 
 ## Name the instrument, then the tier
 
-Fourth, ask clause by clause what can decide the rule. An instrument is what makes a check: the verifier, an audit of the painted page, or a person who reads. For Rule 116 there are three answers. A declaration decides three of its demands, and you have just run two of them. The audit of chapter 10 reads the menu, the level under it, the trail and the outline as a browser paints them. And one clause stays with a person: the rule lists, to avoid, "A label that names the author's metaphor and not what the page holds". Here is a menu that the verifier passes and that clause refuses.
+Fourth, ask clause by clause what can decide the rule. An instrument is what makes a check: the verifier, an audit of the painted page, or a person who reads. For Rule 116 the answer comes from three places. A declaration decides three of its demands, and you have just run two of them. The audit of chapter 10 reads the menu, the level under it, the trail and the outline as a browser paints them. And one clause stays with a person: the rule lists, to avoid, "A label that names the author's metaphor and not what the page holds". Here is a menu that the verifier passes and that clause refuses.
 
 ::: plate Two labels that only a person can judge
 ```zayn menu.zayn
@@ -223,7 +223,7 @@ DEFINE NAV_GRAPH returns (LABEL "Returns", TARGET return_list)
 In words: On a phone line, the menu says Orders, and the first choice under it is said with the same word: orders.
 :::
 
-Refused, on a voice surface as on a screen, and with or without the capital. The repair is the same.
+Refused, on a voice surface as on a screen. The verifier compares whole labels, ignoring capitals, the spaces around a label and a leading The, for each of its three checks of a menu. The repair is the same.
 
 ::: plate The first choice, under another word
 ```zayn phone.zayn
@@ -256,7 +256,7 @@ The same discipline applies where a check reads files or a painted page. The des
 
 ## Amend what it touches
 
-Seventh, list what the rule touches, object by object, and change each. Chapter 18 listed them for this remark: the rule's fields, the version and its line of history, the language, the contract, the fixtures, the pins. One more is the nearest: the pages of those who apply the rule. At the version this book reads, the site's menu keeps the page Reasoning in another section, Why, which opens on its own page. Here is that section, written with one of its entries left out.
+Seventh, list what the rule touches, object by object, and change each. Chapter 18 listed them for this remark: the rule's fields, the version and its line of history, the language, the contract, the fixtures, the pins. One more is the nearest: the pages of those who apply the rule. At the version this book reads, the site's menu keeps the page Reasoning in another section, Why, which opens on its own page. Here is that section, with its family entry left out, to show the rule kept on the site's own menu: the section opens on its own page, under a label of its own.
 
 ::: plate A section of the site's own menu
 ```zayn site-menu.zayn
@@ -395,6 +395,6 @@ DEFINE NAV_GRAPH suppliers (LABEL "Suppliers", TARGET supplier_list)
 In words: The section Stock opens on a page named Stock now.
 :::
 
-Clean. The check compares whole labels, and Stock now is a different label from Stock. Read my first remark again: its example was Try, and then Try here. So the check that my second remark produced passes a menu of the shape that my first remark gave as its example. When is a child's label its parent's name said again? That is a bound, and it is yours to set for the rules you write. For Rule 116 the question is open, and I filed it for the law, with this book's requests to Zayn. Take it through the template: write the remark as a person would type it, ask whether Rule 116 holds it, and write the bound you would add, with the check that fails on Stock now.
+Clean. The check compares whole labels, and Stock now is a different label from Stock. Read my first remark again: its example was Try, and then Try here. So the check that my second remark produced passes a menu of the shape that my first remark gave as its example. When is a child's label its parent's name said again? That is a bound, and it is yours to set for the rules you write. For Rule 116 the question is open, and I filed it for the law, with this book's requests to Zayn. Take it through the template: write the remark as a person would type it, ask whether Rule 116 holds it, and write the bound you would add, with the pair of menus for its check: one that should fail, Stock now under Stock, and one that should pass.
 
 The law is written, amended and checked. Part VIII asks who else may write it: a team with its own corrections, and a commons that many teams share.

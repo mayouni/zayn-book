@@ -54,7 +54,7 @@ UI = {
     "proof_how": "Each declaration on this page was checked as a file by the verifier's JavaScript reference, the one the zayn command is held to, under Node {node}. Every report printed below is the one that run gave. The lines that begin with //--> state the answer the page expects, and the build fails on any other. In an exercise those lines are kept off the page, and the answer is folded until you open it.",
     "stale": "This page's declarations changed after their last run; their reports appear with the next run.",
     "contents": "Contents", "not_drafted": "in writing", "words": "words",
-    "decision": "The decision, and what was refused",
+    "decision": "Decisions on the record",
     "court_head": "Run in the Zayn snapshot at commit {sha} on {d}. Each fixture is a declaration of the conformance suite; the suite's manifest states the findings it must get, and the run compares the two sets.",
     "court_ok": "answers as the manifest expects", "court_bad": "answers otherwise", "court_missing": "this fixture is not in the suite at the pin",
     "court_clean": "no finding",
@@ -1019,7 +1019,8 @@ def causes_table(law, ui):
             mine = [x for x in recs if x.get("cause") == k]
             label = html.escape(g.get("key", "")) if first else ""
             first = False
-            rows.append([label, f"<strong>{html.escape(k)}</strong> {html.escape(c['causes'].get(k, ''))}", str(len(mine)),
+            title = c['causes'].get(k, '').replace('its maker,', 'its [author],')
+            rows.append([label, f"<strong>{html.escape(k)}</strong> {html.escape(title)}", str(len(mine)),
                          str(len({x.get('project') for x in mine})), str(sum(1 for x in mine if x.get('repeat') is True))])
     if not rows:
         raise SystemExit("causes: the corpus could not be read at the pin")
