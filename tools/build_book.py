@@ -86,6 +86,8 @@ UI = {
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
     "grid_h0": "Medium", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
+    "causes_h": ["Group", "Cause, the default that produced the defect", "Corrections", "Projects", "Name an earlier correction"],
+    "causes_src": "Counted at this build from Zayn's corpus of corrections (doc/design/corpus/corpus.json): for each cause, the corrections filed under it, the projects they came from, and those that name an earlier correction of the same defect.",
     "media_h": ["Medium", "What it is", "Carried fully", "Carried at a cost", "Not carried", "May carry a surface alone"],
     "media_src": "Printed from Zayn's data of the media (conformance/media.json): for each medium, how many of the law's verbs it carries, carries at a cost, or does not carry at all.",
     "yes": "yes", "no": "no",
@@ -1007,6 +1009,24 @@ def media_table(law, ui):
             + f'<p class="table-src">{html.escape(ui["media_src"])}</p>')
 
 
+def causes_table(law, ui):
+    c = law.get("corpus") or {}
+    recs = c.get("records") or []
+    rows = []
+    for g in c.get("groups") or []:
+        first = True
+        for k in g.get("causes") or []:
+            mine = [x for x in recs if x.get("cause") == k]
+            label = html.escape(g.get("key", "")) if first else ""
+            first = False
+            rows.append([label, f"<strong>{html.escape(k)}</strong> {html.escape(c['causes'].get(k, ''))}", str(len(mine)),
+                         str(len({x.get('project') for x in mine})), str(sum(1 for x in mine if x.get('repeat') is True))])
+    if not rows:
+        raise SystemExit("causes: the corpus could not be read at the pin")
+    return (render_table(rows, "book-table families", ui["causes_h"])
+            + f'<p class="table-src">{html.escape(ui["causes_src"])}</p>')
+
+
 def pins_table(law, ui):
     rows = [[f"<code>{html.escape(p)}</code>", html.escape(v)] for p, v in law.get("pins") or []]
     if not rows:
@@ -1148,6 +1168,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(sets_table(law, ui, version)); i += 1; continue
         if s == "{{ladder}}":
             flush(); out.append(ladder_table(law, ui)); i += 1; continue
+        if s == "{{causes}}":
+            flush(); out.append(causes_table(law, ui)); i += 1; continue
         if s == "{{media}}":
             flush(); out.append(media_table(law, ui)); i += 1; continue
         if s == "{{grid}}":
@@ -1600,6 +1622,7 @@ def main():
     law["ladder"], law["instruments"] = ladder(snap)
     law["grid"] = grid(snap)[0]
     law["media"] = media_facts(snap)[0]
+    law["corpus"] = json.loads((snap / "doc" / "design" / "corpus" / "corpus.json").read_text(encoding="utf-8"))
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     en_src = sources("en")
     errors = []

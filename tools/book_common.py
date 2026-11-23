@@ -429,7 +429,11 @@ def _history_facts(snap, law, rules, diags):
                     "corpus.verbatim": sum(1 for x in recs if x.get("verbatim")) or None,
                     "corpus.repeat": sum(1 for x in recs if x.get("repeat")) or None,
                     "corpus.causes": len(c.get("causes") or []) or None,
-                    "corpus.groups": len(c.get("groups") or []) or None})
+                    "corpus.groups": len(c.get("groups") or []) or None,
+                    "corpus.projects": len({x.get("project") for x in recs}) or None,
+                    "corpus.oneday": sum(1 for x in recs if str(x.get("date") or "").startswith("2026-11-09")) or None,
+                    "corpus.verbatim_repeat": sum(1 for x in recs if x.get("verbatim") is True and x.get("repeat") is True) or None,
+                    "corpus.ruled": sum(1 for x in recs if x.get("ruling")) or None})
     # the files that record which version of the law they were checked against (metadata.constitution)
     pins = []
     for folder in ("conformance", "protocol"):
