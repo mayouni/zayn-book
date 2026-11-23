@@ -36,7 +36,7 @@ So the field refuses code by a name and an exit code. For the interface it advis
 
 It does not say that something is bad practice. It points at a sentence of the law. So a refusal that cites the law has two answers and no third: repair the declaration, or amend the law with evidence.
 
-[AUTHOR: the stake of this chapter, in your words: what a refusal that cites its law changes for the people who build interfaces and for the people who use them.]
+The specification of the language says why this matters: an opinion, in its words, gets "negotiated in the hallway". A finding that cites a numbered rule is settled where it can be checked: in the declaration, or in the law.
 
 ## An act with no way back
 
@@ -275,7 +275,5 @@ In words: In three steps, a user selects an account and confirms, and can cancel
 :::
 
 It is clean, and it has two declarations: the wizard, which no longer says that it acts, and an interaction that acts and says `irreversible`. The two stand side by side, and the file leaves their order to its reader. Should a flow be able to say that its own act cannot be undone? Or is one interaction for each such act the right grain?
-
-[AUTHOR: this defect is my proposal, found while probing the verifier for this chapter. Keep it as the question you leave open, or name the one you want here.]
 
 A refusal is worth what the court behind it is worth. The next chapter gives the same declarations to two verifiers, the reference and the command, and shows how they are kept to one verdict.

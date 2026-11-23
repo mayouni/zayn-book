@@ -14,7 +14,7 @@ verdict the suite's manifest expects for it (the set of diagnostic ids, compared
     python tools/book_run.py                 # Zayn at the pin
     python tools/book_run.py --commit <sha>  # Zayn at a named commit, to see what moving the pin would do
 """
-import json, shutil, subprocess, sys
+import json, re, shutil, subprocess, sys
 from book_common import (sources, code_blocks, block_hash, snapshot, law_data, law_facts, now, stamp, save_json,
                          CACHE, PIN)
 from book_judge import parse, verdict
@@ -34,15 +34,28 @@ def check(cli, cwd, name, level, as_json, symbols=None):
 
 def run_block(cli, work, k, b):
     promises, stated = parse(b["text"])
-    rec = {"hash": block_hash(b["text"]), "name": b["name"] or f"declaration-{k + 1}.zayn", "level": b["level"],
-           "flags": b["flags"], "promise": [list(p) for p in promises], "stated": stated}
+    rec = {"hash": b["hash"], "name": b["name"] or f"declaration-{k + 1}.zayn", "level": b["level"],
+           "symbols": b.get("symbols"), "flags": b["flags"], "promise": [list(p) for p in promises], "stated": stated}
     if "exercise" in b["flags"]:
         rec.update(verdict="exercise", report="", diagnostics=[])
         return rec
     d = work / f"{k + 1:02d}"
     d.mkdir(parents=True)
     (d / rec["name"]).write_text(b["text"] + "\n", encoding="utf-8", newline="\n")
-    code, out, err = check(cli, d, rec["name"], b["level"], True)
+    symbols = None
+    if b.get("symbols"):
+        if b.get("table") is None:
+            rec.update(verdict="not-run", why=f"the symbol table {b['symbols']} is not written on the page", report="",
+                       diagnostics=[])
+            return rec
+        try:
+            json.loads(b["table"])
+        except json.JSONDecodeError as e:
+            rec.update(verdict="not-run", why=f"the symbol table {b['symbols']} is not JSON ({e})", report="", diagnostics=[])
+            return rec
+        (d / b["symbols"]).write_text(b["table"] + "\n", encoding="utf-8", newline="\n")
+        symbols = b["symbols"]
+    code, out, err = check(cli, d, rec["name"], b["level"], True, symbols)
     try:
         env = json.loads(out)
     except json.JSONDecodeError:
@@ -52,7 +65,7 @@ def run_block(cli, work, k, b):
     diags = [{"code": x.get("code"), "severity": x.get("severity"), "subject": x.get("subject"),
               "line": (x.get("span") or {}).get("line"), "cites": x.get("cites") or [], "level": x.get("level"),
               "message": x.get("message")} for x in env.get("diagnostics", [])]
-    code2, report, _ = check(cli, d, rec["name"], b["level"], False)
+    code2, report, _ = check(cli, d, rec["name"], b["level"], False, symbols)
     if not stated:
         v = "unpromised"
     else:
@@ -88,6 +101,21 @@ def run_court(cli, snap, law, names, work):
     return out
 
 
+def run_suite(snap):
+    """The conformance suite, run by its own runner in the snapshot, at each of the four levels. The page that tells the
+    suite prints this run; its counts become facts ({{n:suite.4.pass}})."""
+    out = {}
+    for level in (1, 2, 3, 4):
+        p = subprocess.run([NODE, "tools/zayn/conformance.js", "--level", str(level)], cwd=snap, capture_output=True,
+                           text=True, encoding="utf-8", errors="replace", timeout=300)
+        text = (p.stdout or "").replace("\r", "").strip("\n")
+        m = re.search(r"pass (\d+) \S+ fail (\d+) \S+ skipped (\d+)", text)
+        out[str(level)] = {"command": f"node tools/zayn/conformance.js --level {level}", "exit": p.returncode,
+                           "output": text, "pass": int(m.group(1)) if m else None,
+                           "fail": int(m.group(2)) if m else None, "skipped": int(m.group(3)) if m else None}
+    return out
+
+
 def main():
     commit = sys.argv[sys.argv.index("--commit") + 1] if "--commit" in sys.argv else PIN
     snap, prov = snapshot(commit)
@@ -97,6 +125,11 @@ def main():
     started = now()
     result = {"run": {"date": stamp(started), "zayn": prov, "law": law_facts(snap), "node": node_v,
                       "verifier": "tools/zayn/cli.js, the reference verifier, in the snapshot"}, "chapters": {}}
+    suite = run_suite(snap)
+    result["run"]["suite"] = suite
+    for level, rec in suite.items():
+        for key in ("pass", "fail", "skipped", "exit"):
+            result["run"]["law"][f"suite.{level}.{key}"] = rec[key]
     failed = []
     work_root = CACHE / "run"
     shutil.rmtree(work_root, ignore_errors=True)
@@ -119,6 +152,10 @@ def main():
             failed.append(key)
             line += "  <- FAILS: " + ", ".join(sorted({r["verdict"] for r in runnable if r["verdict"] != "kept"}) + bad_court)
         print(line, flush=True)
+    bad_suite = [level for level, rec in suite.items() if rec["exit"] != 0]
+    if bad_suite:
+        failed.append("the suite's own runner, at level " + ", ".join(bad_suite))
+    print("suite: " + "; ".join(f"level {l}: pass {r['pass']}, fail {r['fail']}, skipped {r['skipped']}" for l, r in suite.items()))
     result["run"]["failed"] = failed
     save_json("book-run.json", result)
     shutil.rmtree(work_root, ignore_errors=True)

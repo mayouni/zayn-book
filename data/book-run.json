@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-22 00:21 UTC+01:00",
+  "date": "2026-11-23 08:26 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -40,10 +40,60 @@
    "lang.version": "1.7",
    "lang.kinds": 10,
    "release.version": "0.2.0",
-   "pin.tag": "v0.2.0"
+   "pin.tag": "v0.2.0",
+   "suite.1.pass": 12,
+   "suite.1.fail": 0,
+   "suite.1.skipped": 65,
+   "suite.1.exit": 0,
+   "suite.2.pass": 72,
+   "suite.2.fail": 0,
+   "suite.2.skipped": 5,
+   "suite.2.exit": 0,
+   "suite.3.pass": 77,
+   "suite.3.fail": 0,
+   "suite.3.skipped": 0,
+   "suite.3.exit": 0,
+   "suite.4.pass": 77,
+   "suite.4.fail": 0,
+   "suite.4.skipped": 0,
+   "suite.4.exit": 0
   },
   "node": "v22.20.0",
   "verifier": "tools/zayn/cli.js, the reference verifier, in the snapshot",
+  "suite": {
+   "1": {
+    "command": "node tools/zayn/conformance.js --level 1",
+    "exit": 0,
+    "output": "Zayn conformance — level 1\n  spec         doc/language/ v1.7\n  contract     violations.json v1.11 (constitution v3.17)\n  envelope     diagnostic-contract v1.2.2 — 9 diagnostics and 12 reports, all conform\n  media        10 media — verifier agrees with media.json\n  catalogue    40 diagnostics — contract agrees with VIOLATIONS.md\n  fixtures     77 total\n  pass 12 · fail 0 · skipped 65 (above level 1)\n\n  conforms at level 1; 65 fixture(s) above it were skipped.",
+    "pass": 12,
+    "fail": 0,
+    "skipped": 65
+   },
+   "2": {
+    "command": "node tools/zayn/conformance.js --level 2",
+    "exit": 0,
+    "output": "Zayn conformance — level 2\n  spec         doc/language/ v1.7\n  contract     violations.json v1.11 (constitution v3.17)\n  envelope     diagnostic-contract v1.2.2 — 54 diagnostics and 72 reports, all conform\n  media        10 media — verifier agrees with media.json\n  catalogue    40 diagnostics — contract agrees with VIOLATIONS.md\n  fixtures     77 total\n  pass 72 · fail 0 · skipped 5 (above level 2)\n\n  conforms at level 2; 5 fixture(s) above it were skipped.",
+    "pass": 72,
+    "fail": 0,
+    "skipped": 5
+   },
+   "3": {
+    "command": "node tools/zayn/conformance.js --level 3",
+    "exit": 0,
+    "output": "Zayn conformance — level 3\n  spec         doc/language/ v1.7\n  contract     violations.json v1.11 (constitution v3.17)\n  envelope     diagnostic-contract v1.2.2 — 59 diagnostics and 77 reports, all conform\n  media        10 media — verifier agrees with media.json\n  catalogue    40 diagnostics — contract agrees with VIOLATIONS.md\n  fixtures     77 total\n  pass 77 · fail 0 · skipped 0 (above level 3)\n\n  conforms at level 3 — every fixture in the suite.",
+    "pass": 77,
+    "fail": 0,
+    "skipped": 0
+   },
+   "4": {
+    "command": "node tools/zayn/conformance.js --level 4",
+    "exit": 0,
+    "output": "Zayn conformance — level 4\n  spec         doc/language/ v1.7\n  contract     violations.json v1.11 (constitution v3.17)\n  envelope     diagnostic-contract v1.2.2 — 59 diagnostics and 77 reports, all conform\n  media        10 media — verifier agrees with media.json\n  catalogue    40 diagnostics — contract agrees with VIOLATIONS.md\n  fixtures     77 total\n  pass 77 · fail 0 · skipped 0 (above level 4)\n\n  conforms at level 4 — every fixture in the suite.",
+    "pass": 77,
+    "fail": 0,
+    "skipped": 0
+   }
+  },
   "failed": []
  },
  "chapters": {
@@ -54,6 +104,7 @@
      "hash": "877fb08d468c",
      "name": "payments.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [],
      "promise": [
       [
@@ -107,6 +158,7 @@
      "hash": "de2cc199c610",
      "name": "payments.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [],
      "promise": [],
      "stated": true,
@@ -124,6 +176,7 @@
      "hash": "3c76e5d6e191",
      "name": "ledger.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [],
      "promise": [
       [
@@ -212,6 +265,7 @@
      "hash": "8ce1b35b2f62",
      "name": "ledger.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [],
      "promise": [],
      "stated": true,
@@ -229,6 +283,7 @@
      "hash": "24a6cdc4c731",
      "name": "archive.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [
       "envelope"
      ],
@@ -267,6 +322,7 @@
      "hash": "ac39b6a2e6ea",
      "name": "archive.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [],
      "promise": [],
      "stated": true,
@@ -284,6 +340,7 @@
      "hash": "8a7a41b61c0d",
      "name": "close-account.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [
       "exercise"
      ],
@@ -297,6 +354,7 @@
      "hash": "2d292ebc50fd",
      "name": "close-account.zayn",
      "level": 2,
+     "symbols": null,
      "flags": [],
      "promise": [],
      "stated": true,
@@ -454,7 +512,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-22 00:21 UTC+01:00"
+   "ran": "2026-11-23 08:26 UTC+01:00"
   }
  }
 }

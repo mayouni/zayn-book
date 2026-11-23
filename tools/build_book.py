@@ -58,7 +58,8 @@ UI = {
     "court_ok": "answers as the manifest expects", "court_bad": "answers otherwise", "court_missing": "this fixture is not in the suite at the pin",
     "court_clean": "no finding",
     "stage": {"built": "built", "designed": "designed", "next": "next"},
-    "plate": "Plate", "illustration": "Illustration",
+    "plate": "Plate", "illustration": "Illustration", "symbols": "Symbol table", "run_label": "Run",
+    "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Enforced by", "why": "Why", "right_label": "A right of the user",
     "law_src": "Printed from the law's data, version {v}.",
     "tiers": {"machine": "the verifier, on the declaration", "tool": "a tool that measures the page",
@@ -299,6 +300,10 @@ pre .c-verb{color:var(--code-verb);font-weight:600;}
 .code-cell .ran.nv-exercise::before{content:"\\270E";}
 .code-cell .ran .exit{float:right;font-weight:600;}
 .code-cell .ran-out{border-radius:0;margin:0;border-top:none;}
+.code-cell.aux-cell{margin-top:10px;}
+.code-cell.aux-cell pre{border-radius:0 0 10px 10px;}
+.code-cell.run-cell .ran{border-radius:0 0 10px 10px;}
+.plate .code-cell + .code-cell{margin-top:10px;}
 .code-cell .ran-out:last-child{border-radius:0 0 10px 10px;}
 .code-cell .ran-sub{font-family:var(--sans);margin:0;padding:7px 14px;border:1px solid var(--rule);border-top:none;background:var(--sidebar-bg);color:var(--ink-soft);}
 
@@ -676,6 +681,20 @@ def right_card(rid, law, ui, version):
             f'<p class="lc-src">{html.escape(ui["law_src"].format(v=version))}</p></aside>')
 
 
+def suite_cell(level, suite, ui, where, errors):
+    """The conformance suite's own run at one level, as the snapshot's runner printed it at this build."""
+    rec = (suite or {}).get(str(level))
+    if not rec:
+        errors.append(f"{where}: the suite has no run on record at level {level}")
+        return ""
+    ok = rec.get("exit") == 0
+    return ('<div class="code-cell run-cell"><div class="cell-label">' + html.escape(ui["run_label"])
+            + f'<span class="cl-file">{html.escape(rec["command"])}</span></div>'
+            + f'<pre class="ran-out"><code>{html.escape(rec["output"])}</code></pre>'
+            + f'<p class="ran nv-{"kept" if ok else "differs"}"><span class="exit">{html.escape(WORDS[ui["lang"]]["exit"].format(n=rec["exit"]))}</span>'
+            + html.escape(ui["suite_ran"]) + "</p></div>")
+
+
 TOKEN = re.compile(r"\{\{n:([a-z0-9_.\-]+)\}\}")
 
 
@@ -693,7 +712,7 @@ def fill_tokens(text, facts, where, errors):
     return TOKEN.sub(sub, text)
 
 
-def convert_body(body, meta, ui, run_rec, law, version, errors, where):
+def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=None):
     """The Refine build's Markdown reading, with this book's chapter shape: the plate, the decision (boxed), the court
     (fixtures run at build), the stage words at the head of "Where it stands"."""
     lines = body.split("\n")
@@ -760,11 +779,14 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where):
             flush(); out.append(f'<h4 class="subsubsection-h">{inline(s[4:].strip())}</h4>'); i += 1; continue
         if s == "---":
             flush(); out.append('<div class="divider">· · ·</div>'); i += 1; continue
-        m_card = re.match(r"^\{\{(rule|right):([a-z0-9-]+)\}\}$", s)
+        m_card = re.match(r"^\{\{(rule|right|suite):([a-z0-9-]+)\}\}$", s)
         if m_card:
             flush()
-            out.append(rule_card(m_card.group(2), law, ui, version) if m_card.group(1) == "rule"
-                       else right_card(m_card.group(2), law, ui, version))
+            if m_card.group(1) == "suite":
+                out.append(suite_cell(m_card.group(2), suite, ui, where, errors))
+            else:
+                out.append(rule_card(m_card.group(2), law, ui, version) if m_card.group(1) == "rule"
+                           else right_card(m_card.group(2), law, ui, version))
             i += 1; continue
         if s.startswith("```"):
             flush()
@@ -799,6 +821,13 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where):
                 if not in_plate:
                     errors.append(f"{where}: a sketch stands outside a plate")
                 out.append(sketch_html(code, ui))
+            elif tag == "symbols":
+                if not in_plate:
+                    errors.append(f"{where}: a symbol table stands outside a plate")
+                name = info[1] if len(info) > 1 else "symbols.json"
+                out.append('<div class="code-cell aux-cell"><div class="cell-label">' + html.escape(ui["symbols"])
+                           + f'<span class="cl-file">{html.escape(name)}</span></div>'
+                           + f"<pre><code>{html.escape(chr(10).join(code))}</code></pre></div>")
             else:
                 out.append(f"<pre><code>{html.escape(chr(10).join(code))}</code></pre>")
             continue
@@ -943,7 +972,8 @@ def build_pages(st, en_src, runs, law, ui, errors):
         run_rec = runs.get("chapters", {}).get(key)
         filled = fill_tokens(body, facts, where, errors)
         meta = {**meta, "stage": {k: fill_tokens(str(v), facts, where, errors) for k, v in (meta.get("stage") or {}).items()}}
-        body_html = convert_body(filled, meta, ui, run_rec, law, version, errors, where).replace("{COURT_HEAD}", court_head)
+        body_html = convert_body(filled, meta, ui, run_rec, law, version, errors, where,
+                                 run.get("suite")).replace("{COURT_HEAD}", court_head)
         pages.append(dict(key=key, slug=slug, meta=meta, number=number, title=meta["title"], eyebrow=eyebrow, spine=spine,
                           body_html=body_html, run=run_rec, words=words_of(body), preview=preview_of(filled), appendix=appendix))
     for k, p in enumerate(pages):
@@ -1152,7 +1182,7 @@ def main():
     for path, m, body in en_src:
         key = f"en/{path.stem}"
         r = runs.get("chapters", {}).get(key)
-        hashes = [block_hash(b["text"]) for b in code_blocks(body)]
+        hashes = [b["hash"] for b in code_blocks(body)]
         if hashes and (not r or [b.get("hash") for b in r["blocks"]] != hashes):
             stale_keys.add(key); errors.append(f"{key}: its declarations changed since their last run (or never ran)")
         elif r and r["runnable"] and r["kept"] < r["runnable"]:

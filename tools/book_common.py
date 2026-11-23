@@ -68,24 +68,44 @@ def block_hash(text):
     return hashlib.sha1(text.encode("utf-8")).hexdigest()[:12]
 
 
+def symbol_tables(body):
+    """The symbol tables a chapter writes for its level 3 declarations: one ```symbols <name.json> fence each.
+    A symbol table is what a declaration cannot know about the system around it: its entities, actors, state, elements."""
+    out = {}
+    for m in FENCE.finditer(body):
+        info = m.group(1).strip().split()
+        if info and info[0].lower() == "symbols":
+            out[info[1] if len(info) > 1 else "symbols.json"] = m.group(2).rstrip("\n")
+    return out
+
+
 def code_blocks(body):
     """Every Zayn fence of a chapter, in order. The info string after `zayn` holds, in any order: a file name
-    (`payments.zayn`, the name the report prints), `level=N` (default 2), and the flags `exercise` and `envelope`."""
+    (`payments.zayn`, the name the report prints), `level=N` (default 2), `symbols=<name.json>` (a symbol table written
+    on the same page in a ```symbols fence), and the flags `exercise` and `envelope`. A block's hash covers what its
+    run depends on: its text, its level when it is not 2, and its symbol table."""
     out = []
+    tables = symbol_tables(body)
     for m in FENCE.finditer(body):
         info = m.group(1).strip().split()
         if not info or info[0].lower() != CODE_TAG:
             continue
-        name, level, flags = None, 2, []
+        name, level, flags, symbols = None, 2, [], None
         for w in info[1:]:
-            if w.lower().endswith(".zayn"):
+            lw = w.lower()
+            if lw.endswith(".zayn"):
                 name = w
-            elif w.lower().startswith("level="):
+            elif lw.startswith("level="):
                 level = int(w.split("=", 1)[1])
+            elif lw.startswith("symbols="):
+                symbols = w.split("=", 1)[1]
             else:
-                flags.append(w.lower())
-        out.append({"flags": flags, "name": name, "level": level, "text": m.group(2).rstrip("\n"),
-                    "start": m.start(), "end": m.end()})
+                flags.append(lw)
+        text = m.group(2).rstrip("\n")
+        table = tables.get(symbols) if symbols else None
+        key = text + (f"\n@level {level}" if level != 2 else "") + (f"\n@symbols {table}" if symbols else "")
+        out.append({"flags": flags, "name": name, "level": level, "symbols": symbols, "table": table, "text": text,
+                    "hash": block_hash(key), "start": m.start(), "end": m.end()})
     return out
 
 
