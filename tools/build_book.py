@@ -77,6 +77,10 @@ UI = {
     "forbidden_h": ["Forbidden pattern", "Rules it breaks"],
     "retired_h": ["Number", "Its title", "Where it went"], "retired_into": "merged into Rule {n}", "burned": "reserved, never assigned",
     "sources_h": ["Id", "The source", "What the page is", "Read on", "Used in"],
+    "articles_h": ["Article", "Its title", "Its sentence", "Rules derived from it"],
+    "sets_h": ["Set", "Its title", "Rules", "Their numbers"],
+    "tiers_h": ["Tier, in the law's word", "Rules filed under it", "Of these, cited by a diagnostic of the contract"],
+    "anatomy_h": ["Field, as the file names it", "What this rule holds"],
     "sources_src": "Printed from the book's register of sources, research/FIELD.md.",
     "prev": "← Previous", "next": "Next →",
     "series": "Third of the AYOUNI books",
@@ -855,6 +859,82 @@ def sources_table(ui):
             + f'<p class="table-src">{html.escape(ui["sources_src"])}</p>')
 
 
+def _rule_num(r):
+    return int(re.sub(r"\D", "", str(r["number"])) or 0)
+
+
+def articles_table(law, ui, version):
+    rows = []
+    for aid, a in law["articles"].items():
+        n = sum(1 for r in law["rule_list"] if r.get("derived_from") == aid)
+        rows.append([html.escape(a.get("numeral", "")), html.escape(a.get("title", "")), html.escape(a.get("statement", "")), str(n)])
+    return (render_table(rows, "book-table", ui["articles_h"])
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+
+
+def rights_table(law, ui, version):
+    rows = [[html.escape(r.get("title", "")), html.escape(r.get("statement", "")),
+             ", ".join(html.escape(str(n)) for n in r.get("enforced_by") or [])] for r in law["law"].get("rights", [])]
+    return (render_table(rows, "book-table", ui["rights_h"])
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+
+
+def forbidden_table(law, ui, version):
+    rows = [[html.escape(f.get("title", "")), ", ".join(html.escape(str(n)) for n in f.get("violates") or [])]
+            for f in law["law"].get("forbidden", [])]
+    return (render_table(rows, "book-table", ui["forbidden_h"])
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+
+
+def sets_table(law, ui, version):
+    L = law["law"]
+    rows = []
+    for k in sorted((k for k in L if re.fullmatch(r"set\d+", k)), key=lambda k: int(k[3:])):
+        st = L[k]
+        nums = sorted(_rule_num(r) for r in st.get("rules", []))
+        rows.append([k[3:], html.escape(re.sub(r"^Set \d+:\s*", "", st.get("title", ""))), str(len(nums)), ", ".join(str(n) for n in nums)])
+    return (render_table(rows, "book-table", ui["sets_h"])
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+
+
+def tiers_table(law, ui, version):
+    """The law's own filing of each rule under a tier, beside what the contract's data shows: how many rules of the
+    tier some diagnostic cites. Both columns are counted from files of the pin; neither is a gloss of what a tier means."""
+    cited = {str(n) for d in law["diag_list"] for n in (d.get("rules") or [])}
+    order, by = [], {}
+    for r in law["rule_list"]:
+        t = r.get("enforcement") or "null"
+        if t not in by:
+            by[t] = []; order.append(t)
+        by[t].append(r)
+    rows = []
+    for t in order:
+        hit = sorted(_rule_num(r) for r in by[t] if str(r["number"]) in cited)
+        rows.append([f"<code>{html.escape(t)}</code>", str(len(by[t])),
+                     (f"{len(hit)}: " + ", ".join(str(n) for n in hit)) if hit else "0"])
+    return (render_table(rows, "book-table", ui["tiers_h"])
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))} '
+            + html.escape(ui["contract_src"].format(v=(law["contract"].get("metadata") or {}).get("version", "null"))) + "</p>")
+
+
+def anatomy_table(number, law, ui, version):
+    """One rule printed whole, field by field, under the names its file gives them."""
+    r = law["rules"].get(str(number))
+    if not r:
+        raise SystemExit(f"anatomy: the law at the pin has no rule {number}")
+    rows = []
+    for k, v in r.items():
+        if k.startswith("_"):
+            continue
+        if isinstance(v, list):
+            v = "; ".join(str(x) for x in v) if v else "[]"
+        elif isinstance(v, dict):
+            v = json.dumps(v, ensure_ascii=False)
+        rows.append([f"<code>{html.escape(k)}</code>", html.escape(str(v))])
+    return (render_table(rows, "book-table families", ui["anatomy_h"])
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+
+
 def suite_cell(level, suite, ui, where, errors):
     """The conformance suite's own run at one level, as the snapshot's runner printed it at this build."""
     rec = (suite or {}).get(str(level))
@@ -967,6 +1047,19 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(constitution_full(law, ui, version)); i += 1; continue
         if s == "{{sources}}":
             flush(); out.append(sources_table(ui)); i += 1; continue
+        if s == "{{articles}}":
+            flush(); out.append(articles_table(law, ui, version)); i += 1; continue
+        if s == "{{rights}}":
+            flush(); out.append(rights_table(law, ui, version)); i += 1; continue
+        if s == "{{forbidden}}":
+            flush(); out.append(forbidden_table(law, ui, version)); i += 1; continue
+        if s == "{{sets}}":
+            flush(); out.append(sets_table(law, ui, version)); i += 1; continue
+        if s == "{{tiers}}":
+            flush(); out.append(tiers_table(law, ui, version)); i += 1; continue
+        m_an = re.match(r"^\{\{anatomy:(\d+)\}\}$", s)
+        if m_an:
+            flush(); out.append(anatomy_table(m_an.group(1), law, ui, version)); i += 1; continue
         m_card = re.match(r"^\{\{(rule|right|suite|article):([a-z0-9-]+)\}\}$", s)
         if m_card:
             flush()
