@@ -202,7 +202,7 @@ Then the tier. A rule's tier is one word in the law's file, and the card above s
 
 ## Place it on the grid
 
-Fifth, place the rule: which activity of the user it protects, and on which media. Chapter 13 gives the grid. The placement reads the activity from the rule's title and its reason, and the medium from the rule's own words; a rule whose check does not look at the medium is placed on every medium. Does the menu's check look at the medium? Here is the defect of the repeated name on a surface that speaks. A `VIBE` declares the surface, here a voice, and the first choice under Orders is the same word without its capital.
+Fifth, place the rule: which activity of the user it protects, and on which media. The grid crosses the activities of the user, perceive, understand, decide, act, recover and trust, with the media, and chapter 13 gives it whole. The placement reads the activity from the rule's title and its reason, and the medium from the rule's own words; a rule whose check does not look at the medium is placed on every medium. Does the menu's check look at the medium? Here is the defect of the repeated name on a surface that speaks. A `VIBE` declares the surface, here a voice, and the first choice under Orders is the same word without its capital.
 
 ::: plate The same defect, on a phone line
 ```zayn phone.zayn
@@ -248,7 +248,7 @@ Clean. In the grid's data, Rule 116 is placed on the visual medium, under the ac
 
 ## Write the check that fails first
 
-Sixth, write the check so that it fails on the page as it was and passes on the page as corrected, with one change between the two and no other. That is what keeps the defect it was written for from coming back. The first plate of this chapter and the last plate of the third step are that pair.
+Sixth, write the check so that it fails on the page as it was and passes on the page as corrected, with one repair between the two and nothing else changed. That is what keeps the defect it was written for from coming back. The first plate of this chapter and the last plate of the third step are that pair.
 
 Zayn's suite has it as a discipline for its fixtures, the declarations it keeps with the answers they must get: "One fixture, one concern", and for every refused fixture "a lawful twin where the defect is repaired and nothing else changes". The suite's guide gives the twin its reason: it "proves the check is not simply firing on everything". The suite compares the set of codes that a verifier reports, and nothing else: the subject, the line and the number of times a code appears are free. The amendment of Rule 116 brought one fixture for each new kind of finding, and one lawful menu from which each differs by a line. Where only a painted page can decide, the suite keeps no fixture and says why: "A fixture here would be theatre".
 

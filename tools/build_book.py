@@ -71,7 +71,7 @@ UI = {
     "contract_src": "Printed from the verifier's contract, version {v}.",
     "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
-    "cited_by": "Cited by", "cited_none": "no diagnostic of the verifier's contract",
+    "cited_by": "Cited by", "cited_none": "no kind of finding of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
     "diag_h": ["Code", "Level and severity", "The contract's sentence", "What it cites"],
     "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its id", "Its sentence", "Rules that enforce it"],

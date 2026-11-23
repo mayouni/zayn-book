@@ -12,7 +12,7 @@ research: research/ch18.md
 fixtures: [unknown-signal, unknown-signal-lawful, intent-orphan, field-misplaced, field-misplaced-lawful, menu-landing-not-first, menu-label-repeats-parent, menu-label-duplicate, menu-lawful]
 ---
 
-An amendment is a change to what the law requires. In this chapter I tell how Zayn's law changes. I read its history in the file that holds it. I give three cases from the record: a correction of a screen that turned out to be law already, two rules that contradicted each other, and a check that ran before a rule was written for it. Then I list what moves when one rule moves.
+An amendment is a change to what the law requires. In this chapter I tell how Zayn's law changes. I read its history in the file that holds it. I give three cases from the record: a remark on a screen that turned out to be law already, two rules that contradicted each other, and a check that ran before a rule was written for it. Then I list what moves when one rule moves.
 
 If you open the book here, four words are enough to follow. A **declaration** is a few lines that say what a user is doing on a surface. The **law** is Zayn's constitution of {{n:law.rules}} rules for interfaces, kept as a data file. The **verifier** is the program that checks a declaration against the law. A **finding** is one entry of the verifier's report, and a refusal when it is an error.
 
@@ -44,13 +44,13 @@ The article sets two burdens. To add a protection, the harm must be shown. To re
 
 The law carries its history with it. The lineage is a list of dated entries, one for each state of the law: {{n:law.lineage}} entries, from version 2.0 on 3 August 2026 to version {{n:law.version}} on 12 November 2026. Most entries canonize a rule, which means that they give it a number and a place in a set. Some amend a rule and add none. Some are corrections of wording. Some change a word or a name.
 
-What tells an amendment from a correction of wording? One question. The document that sets the law's architecture calls it the substance test: "does any interface that was lawful before become unlawful after — or must any conforming implementation change anything it does?" A conforming implementation is a tool that keeps to the law. If the answer is no, the change is a correction, "however much prose changed". The first entry of 6 August 2026 is one: two lines of the law named a file that had moved, and no requirement moved with them.
+What tells an amendment from a correction of wording? One question. The document that sets the law's architecture calls it the substance test: "does any interface that was lawful before become unlawful after — or must any conforming implementation change anything it does?" A conforming implementation is a tool that keeps to the law. If the answer is no, the change is a correction of wording, "however much prose changed". The first entry of 6 August 2026 is one: two lines of the law named a file that had moved, and no requirement moved with them.
 
 The numbers have a history too. The rules are numbered up to {{n:law.highest}} and the law holds {{n:law.rules}}, so {{n:law.unused}} numbers are out of use. {{n:law.retired}} are retired: each was a duplicate, folded into the rule that survives it, and the survivor says which number it absorbed. {{n:law.burned}} are reserved for good, because older documents had cited them for something else. A number that is only proposed can be taken too. The docket is the file where changes to the law are proposed together and ruled item by item, in sittings that it calls passes. Rule 126 was first written under the number 125. The docket had already kept 125 for another candidate, so the new rule took 126. The docket's lesson: "a proposed number is not a free number".
 
 Each of the {{n:rule.evidence}} rules carries a field named `evidence`: what happened, where and when. Since version 3.13, an amended rule keeps its first evidence and gains a dated clause after it. The architecture document gives the rule for that field in four words: "Evidence is never corrected." What happened stays as it was written.
 
-## A correction that was already law
+## A remark that was already law
 
 In August 2026 an AI agent that was not consulting the law built a status dashboard for me. I rejected two versions and corrected the third. The ledger is the dated list of what the project found, and it says what those corrections were worth: "Every correction he made was already law."
 
@@ -60,7 +60,7 @@ So what did the episode add to the law? Five candidates were put to the docket o
 
 {{rule:129}}
 
-Why is this evidence, and not compliance? Because the law was closed while it happened. The ledger's sentence names the law's file: "Nobody consulted `rules.json` while it happened". The docket gives the size of the case, "one surface, one operator, one implementer", and I print it at that size.
+Why is this evidence, and not compliance? Because the law stayed shut while it happened. The ledger's sentence names the law's file: "Nobody consulted `rules.json` while it happened". The docket gives the size of the case, "one surface, one operator, one implementer", and I print it at that size.
 
 ## Two rules that contradicted each other
 
@@ -112,13 +112,13 @@ Here is a screen with one declaration, and its inventory: the list of the elemen
 DEFINE COMPONENT balance_card (
   SATISFIES [READ]
 )
-//--> INTENT_ORPHAN export_button
+//--> INTENT_ORPHAN hide_button
 ```
-In words: The balance is something a user reads. The inventory of the screen holds a second element, an export button, and no declaration says what a user does with it.
+In words: The balance is something a user reads. The inventory of the screen holds a second element, a button that hides the balance, and no declaration says what a user does with it.
 
 ```symbols screen.json
 {
-  "elements": ["balance_card", "export_button"]
+  "elements": ["balance_card", "hide_button"]
 }
 ```
 :::
@@ -133,14 +133,14 @@ DEFINE COMPONENT balance_card (
   SATISFIES [READ]
 )
 
-DEFINE INTERACTION export_button (
+DEFINE INTERACTION hide_button (
   SATISFIES [ACT],
   ALWAYS_REACHABLE [UNDO, CANCEL],
   ROLE reversible
 )
 //--> clean
 ```
-In words: A user reads the balance. With the button a user acts; the act can be undone or cancelled, and the button says that it can be taken back.
+In words: A user reads the balance. With the button a user hides it; the act can be undone or cancelled, and the button says that it can be taken back.
 :::
 
 Clean. The ruling of that day weighed two more of the kinds of finding that cite an article only, and left them so.

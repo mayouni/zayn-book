@@ -28,7 +28,7 @@ So the field has documents, lists of advice, a format for a rule that a tester r
 
 ## The principle
 
-**The law is one file: the page that shows it, the count that sizes it and the refusal that cites it all read it there.**
+**The law is one file: the page that shows it and the count that sizes it read it there, and every refusal cites it by its numbers and its names.**
 
 The file is named `rules.json`. It is written in a notation for data, names and values between braces. A designer reads the law in its reader, a page made from the file, and never in the notation. The verifier reads the same file at each run: the title of a rule and the numeral of an article in a report are looked up there. Every count of the law on this page is read from the file by the book's build, the program that makes these pages. Appendix A prints the law, set by set.
 
@@ -208,7 +208,7 @@ Clean. Four refusals, and the fourth takes a pattern's name to the tool that rea
 
 ## What I refused
 
-**The law refuses a second use of a number.** Article VII ends on it: "Retired numbers are never reused." Two numbers that an earlier numbering had given to what are now Rules 82 and 83 are marked in the file with these words: "Reserved, never to be assigned". Under Article VII, a citation of Rule 79 names the same rule in every version of the law.
+**The law refuses a second use of a number.** Article VII ends on it: "Retired numbers are never reused." Two numbers that an earlier numbering had given to what are now Rules 82 and 83 are marked in the file with these words: "Reserved, never to be assigned". Under Article VII, a citation of Rule 79 names the same rule in every version of the law, and the rule's evidence says what changed in it.
 
 **An amended rule keeps its number.** When Rule 116 was first amended, on 5 August 2026, the lineage wrote: "No new number: the same rule, stated whole." A rule that changes is the same rule, with its history in its evidence.
 

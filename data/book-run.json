@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 19:17 UTC+01:00",
+  "date": "2026-11-23 19:21 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -579,7 +579,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1124,7 +1124,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1634,7 +1634,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1949,7 +1949,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -2453,7 +2453,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -3040,7 +3040,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -3116,7 +3116,7 @@
      }
     },
     {
-     "hash": "c745f02a31e5",
+     "hash": "6cba34d7a704",
      "name": "balance.zayn",
      "level": 3,
      "symbols": "screen.json",
@@ -3124,18 +3124,18 @@
      "promise": [
       [
        "INTENT_ORPHAN",
-       "export_button"
+       "hide_button"
       ]
      ],
      "stated": true,
      "verdict": "kept",
      "exit": 1,
-     "report": "balance.zayn  error  INTENT_ORPHAN  export_button\n    A declared element traces to no intent.\n    Rule 130 · Every Element Serves an Intent · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "report": "balance.zayn  error  INTENT_ORPHAN  hide_button\n    A declared element traces to no intent.\n    Rule 130 · Every Element Serves an Intent · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
      "diagnostics": [
       {
        "code": "INTENT_ORPHAN",
        "severity": "error",
-       "subject": "export_button",
+       "subject": "hide_button",
        "line": 0,
        "cites": [
         "rule:130",
@@ -3145,14 +3145,14 @@
        "message": "A declared element traces to no intent."
       }
      ],
-     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"balance.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INTENT_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"A declared element traces to no intent.\",\n      \"span\": {\n        \"file\": \"balance.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:130\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"export_button\"\n    }\n  ]\n}",
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"balance.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INTENT_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"A declared element traces to no intent.\",\n      \"span\": {\n        \"file\": \"balance.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:130\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"hide_button\"\n    }\n  ]\n}",
      "contract": {
       "version": "1.11",
       "constitution": "3.17"
      }
     },
     {
-     "hash": "a4155cc2e098",
+     "hash": "a7d5a8547d22",
      "name": "balance.zayn",
      "level": 3,
      "symbols": "screen.json",
@@ -3415,7 +3415,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -3822,7 +3822,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -3831,7 +3831,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -3840,7 +3840,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -3849,7 +3849,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:17 UTC+01:00"
+   "ran": "2026-11-23 19:21 UTC+01:00"
   }
  }
 }
