@@ -141,7 +141,16 @@ stopped them.
   `{{fields}}`, the cards `{{rule:N}}`, `{{right:id}}`, `{{article:id}}`, the run `{{suite:N}}`); a level 3 plate takes
   `level=3 symbols=<name.json>` and a `symbols` fence; no page says how many of the law's rules a machine refuses before the
   author's ruling (the count by citation is in `research/REQUESTS.md`).
-- Next: Part VII (chapters 16, 18, 19, then 17), then Parts I, V, IX and X, then II, IV, VI and VIII. For each chapter:
+- 2026-11-23, later: **Part VII is drafted, run and read by a verifier and a voice reader per chapter** (16, 17, 18, 19); the six
+  doors for the part follow. Appendices A, C and F are generated at build (`{{constitution}}`, `{{diagnostics}}`, `{{sources}}`);
+  the law's tables are directives (`{{articles}}`, `{{sets}}`, `{{rights}}`, `{{forbidden}}`, `{{anatomy:N}}`, `{{tiers}}`,
+  `{{ladder}}`, `{{pins}}`). The names gate (`tools/withheld.json`, WITHHELD-01) fails the build on a name the book leaves out;
+  the book's copy of the law gives a description in square brackets. The count by citation of chapter 17 is made by the build
+  (`book_common.ladder`, `data/audit-citations.json`); its definition is printed beside every number. Token counts under ten are
+  spelt. Tables reflow at phone width with no sideways scroll (Rule 14). Requests: BOOK-ZAYN-07.
+- The house desk published the book on 2026-11-23 (pins 908c382, then 03068f3, on the author's "Publish now"). Hand each next
+  commit to the desk by memo, naming it.
+- Next: Part VII's six doors, `SITE-LESSONS.md` for Part VII and its memo; then Parts I, V, IX and X, then II, IV, VI and VIII. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
