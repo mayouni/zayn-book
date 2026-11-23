@@ -160,6 +160,19 @@ def law_data(snap):
             "manifest": manifest, "fixtures": {f["file"]: f for f in manifest.get("fixtures", [])}}
 
 
+def closed_lists(snap):
+    """The fields whose value comes from a closed list, as the language specification tables them (DECLARATIONS.md,
+    "Enumerations, complete"): [(field, on which kind, [values])]. Read from the snapshot, never typed."""
+    text = (snap / "doc" / "language" / "DECLARATIONS.md").read_text(encoding="utf-8")
+    m = re.search(r"(?ms)^## 5\. Enumerations, complete\s*$(.*?)^###? ", text)
+    out = []
+    for line in (m.group(1) if m else "").splitlines():
+        row = re.match(r"^\|\s*`(\w+)`\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*$", line)
+        if row:
+            out.append((row.group(1), row.group(2).replace("`", ""), re.findall(r"`([a-z_]+)`", row.group(3))))
+    return out
+
+
 def law_facts(snap):
     """Every count the pages may print, read from the snapshot's data files. A fact that cannot be read is None,
     and the builder prints it as `null` and fails. The keys are the tokens a page writes as {{n:key}}."""
@@ -213,6 +226,7 @@ def law_facts(snap):
         "law.family.action": len(families.get("action", {}).get("verbs", [])) or None,
         "lang.version": m_spec.group(1) if m_spec else None,
         "lang.kinds": len(re.findall(r'"[A-Z_]+"', m_kinds.group(1))) if m_kinds else None,
+        "lang.lists": len(closed_lists(snap)) or None,
         "release.version": m_rel.group(1) if m_rel else None,
         "pin.tag": PIN_TAG,
     }

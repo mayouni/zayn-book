@@ -27,7 +27,7 @@ sits outside the variables; the type scale is out of order. It still writes the 
 """
 import html, json, re, subprocess, sys
 from book_common import (ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
-                         GH_BLOB, PIN_TAG)
+                         closed_lists, GH_BLOB, PIN_TAG)
 from book_judge import WORDS
 
 ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
@@ -61,6 +61,8 @@ UI = {
     "plate": "Plate", "illustration": "Illustration", "symbols": "Symbol table", "run_label": "Run",
     "families_h": ["Family", "Its verbs", "What its verbs keep true"],
     "levels_h": ["Level", "Its name", "What the verifier is given", "What it decides", "Kinds of finding"],
+    "lists_h": ["Field", "On", "The values it admits, and no others"],
+    "spec_src": "Printed from the language specification, version {v}.",
     "contract_src": "Printed from the verifier's contract, version {v}.",
     "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
@@ -729,6 +731,17 @@ def levels_table(law, ui):
             + f'<p class="table-src">{html.escape(ui["contract_src"].format(v=v))}</p>')
 
 
+def lists_table(law, ui):
+    """The closed lists of the language: the field, the kind that carries it, and every value it admits."""
+    lists = law.get("closed_lists") or []
+    if not lists:
+        raise SystemExit("lists: the specification at the pin tables no closed list")
+    rows = [[f"<code>{html.escape(field)}</code>", html.escape(on.lower()) if on.lower().startswith("any") else f"<code>{html.escape(on)}</code>",
+             " ".join(f"<code>{html.escape(v)}</code>" for v in values)] for field, on, values in lists]
+    return (render_table(rows, "book-table families", ui["lists_h"])
+            + f'<p class="table-src">{html.escape(ui["spec_src"].format(v=law.get("spec_version") or "null"))}</p>')
+
+
 def suite_cell(level, suite, ui, where, errors):
     """The conformance suite's own run at one level, as the snapshot's runner printed it at this build."""
     rec = (suite or {}).get(str(level))
@@ -831,6 +844,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(families_table(law, ui, version)); i += 1; continue
         if s == "{{levels}}":
             flush(); out.append(levels_table(law, ui)); i += 1; continue
+        if s == "{{lists}}":
+            flush(); out.append(lists_table(law, ui)); i += 1; continue
         m_card = re.match(r"^\{\{(rule|right|suite|article):([a-z0-9-]+)\}\}$", s)
         if m_card:
             flush()
@@ -1228,6 +1243,8 @@ def main():
     runs = load_json("book-run.json", {})
     snap, _ = snapshot((runs.get("run", {}).get("zayn") or {}).get("commit"))
     law = law_data(snap)
+    law["closed_lists"] = closed_lists(snap)
+    law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     en_src = sources("en")
     errors = []
 

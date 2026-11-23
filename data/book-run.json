@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 09:40 UTC+01:00",
+  "date": "2026-11-23 09:44 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -44,6 +44,7 @@
    "law.family.action": 4,
    "lang.version": "1.7",
    "lang.kinds": 10,
+   "lang.lists": 5,
    "release.version": "0.2.0",
    "pin.tag": "v0.2.0",
    "haro.rows": 22,
@@ -440,7 +441,461 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:40 UTC+01:00"
+   "ran": "2026-11-23 09:44 UTC+01:00"
+  },
+  "en/07-ten-declarations-one-grammar": {
+   "id": "ten-declarations-one-grammar",
+   "blocks": [
+    {
+     "hash": "048cc3d338a0",
+     "name": "payments.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d5b09d0fd4dc",
+     "name": "places.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"places.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8c37b8025820",
+     "name": "answers.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"answers.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "79f9b71730b0",
+     "name": "deploy.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_FIELD",
+       "COLOR"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "deploy.zayn:3  error  UNKNOWN_FIELD  COLOR\n    A field name is not one the grammar defines in the form it is written.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_FIELD",
+       "severity": "error",
+       "subject": "COLOR",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "A field name is not one the grammar defines in the form it is written."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"deploy.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_FIELD\",\n      \"severity\": \"error\",\n      \"message\": \"A field name is not one the grammar defines in the form it is written.\",\n      \"span\": {\n        \"file\": \"deploy.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"COLOR\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "77ae3499712c",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "FIELD_MISPLACED",
+       "overdue_invoices"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:3  error  FIELD_MISPLACED  TONE on SCREEN overdue_invoices; it belongs to FEEDBACK\n    A field is declared on a kind that does not declare it.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "FIELD_MISPLACED",
+       "severity": "error",
+       "subject": "TONE on SCREEN overdue_invoices; it belongs to FEEDBACK",
+       "line": 3,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A field is declared on a kind that does not declare it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"FIELD_MISPLACED\",\n      \"severity\": \"error\",\n      \"message\": \"A field is declared on a kind that does not declare it.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"TONE on SCREEN overdue_invoices; it belongs to FEEDBACK\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8f11a12686b2",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "e806d8ff546e",
+     "name": "statement.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DUPLICATE_FIELD",
+       "ambiguous_flow"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "statement.zayn:4  error  DUPLICATE_FIELD  SATISFIES in INTENT_FLOW ambiguous_flow\n    A field key appears more than once in one declaration.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "DUPLICATE_FIELD",
+       "severity": "error",
+       "subject": "SATISFIES in INTENT_FLOW ambiguous_flow",
+       "line": 4,
+       "cites": [],
+       "level": 1,
+       "message": "A field key appears more than once in one declaration."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"statement.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"DUPLICATE_FIELD\",\n      \"severity\": \"error\",\n      \"message\": \"A field key appears more than once in one declaration.\",\n      \"span\": {\n        \"file\": \"statement.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"SATISFIES in INTENT_FLOW ambiguous_flow\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "47bf95d2fe6d",
+     "name": "lobby.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_MEDIUM",
+       "lobby_kiosk"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "lobby.zayn:1  error  UNKNOWN_MEDIUM  kiosk on lobby_kiosk\n    SURFACE_AS names a medium outside the ten this language defines.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_MEDIUM",
+       "severity": "error",
+       "subject": "kiosk on lobby_kiosk",
+       "line": 1,
+       "cites": [],
+       "level": 2,
+       "message": "SURFACE_AS names a medium outside the ten this language defines."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"lobby.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_MEDIUM\",\n      \"severity\": \"error\",\n      \"message\": \"SURFACE_AS names a medium outside the ten this language defines.\",\n      \"span\": {\n        \"file\": \"lobby.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"kiosk on lobby_kiosk\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "637d613f35f5",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "INVALID_TONE",
+       "overdue_notice"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:6  error  INVALID_TONE  danger on overdue_notice\n    TONE outside its enumeration.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "INVALID_TONE",
+       "severity": "error",
+       "subject": "danger on overdue_notice",
+       "line": 6,
+       "cites": [],
+       "level": 2,
+       "message": "TONE outside its enumeration."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INVALID_TONE\",\n      \"severity\": \"error\",\n      \"message\": \"TONE outside its enumeration.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 6\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"danger on overdue_notice\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "25632b0aae2a",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "exercise"
+     ],
+     "promise": [],
+     "stated": false,
+     "verdict": "exercise",
+     "report": "",
+     "diagnostics": []
+    },
+    {
+     "hash": "918f0ff4ce8d",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 1,
+   "court": [
+    {
+     "file": "clean-full.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "comments-and-formatting.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-field.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_FIELD"
+     ],
+     "got_ids": [
+      "UNKNOWN_FIELD"
+     ],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "got_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced-read-anywhere.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "duplicate-field.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "DUPLICATE_FIELD"
+     ],
+     "got_ids": [
+      "DUPLICATE_FIELD"
+     ],
+     "pass": true
+    },
+    {
+     "file": "duplicate-declaration.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "DUPLICATE_DECLARATION"
+     ],
+     "got_ids": [
+      "DUPLICATE_DECLARATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "invalid-tone.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "INVALID_TONE"
+     ],
+     "got_ids": [
+      "INVALID_TONE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "invalid-perspective.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "INVALID_PERSPECTIVE"
+     ],
+     "got_ids": [
+      "INVALID_PERSPECTIVE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-medium.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "got_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-medium-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "got_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-role.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_ROLE"
+     ],
+     "got_ids": [
+      "UNKNOWN_ROLE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-role-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "foreign-pillar-ignored.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 09:44 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -857,7 +1312,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:40 UTC+01:00"
+   "ran": "2026-11-23 09:44 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1114,7 +1569,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:40 UTC+01:00"
+   "ran": "2026-11-23 09:44 UTC+01:00"
   }
  }
 }
