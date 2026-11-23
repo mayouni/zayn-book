@@ -85,10 +85,10 @@ UI = {
     "ladder_src": "Counted by citation at this build, from the contract, the verifier's code and the files of the two audits; each audit citation is checked against its file. A citation shows that an instrument reads the rule. Which clauses it reads is said rule by rule in the chapter.",
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
-    "grid_h0": "Medium", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
-    "causes_h": ["Group", "Cause, the default that produced the defect", "Corrections", "Projects", "Name an earlier correction", "Share that came back"],
-    "causes_src": "Counted at this build from Zayn's corpus of corrections (doc/design/corpus/corpus.json): for each cause, the corrections filed under it, the projects they came from, and those that name an earlier correction of the same defect.",
-    "media_h": ["Medium", "What it is", "Carried fully", "Carried at a cost", "Not carried", "May carry a surface alone"],
+    "grid_h0": "Medium", "grid_legend": "The columns are the activities of the user: {legend}.", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
+    "causes_h": ["Group", "Cause, the default that produced the defect", "Corrections", "Name an earlier one, and the share"],
+    "causes_src": "Counted at this build from Zayn's corpus of corrections (doc/design/corpus/corpus.json): for each cause, the corrections filed under it, and those that name an earlier correction of the same defect, with their share.",
+    "media_h": ["Medium", "What it is", "Verbs carried fully, at a cost, not at all", "May carry a surface alone"],
     "media_src": "Printed from Zayn's data of the media (conformance/media.json): for each medium, how many of the law's verbs it carries, carries at a cost, or does not carry at all.",
     "yes": "yes", "no": "no",
     "pins_h": ["A data file of Zayn", "The version of the law it records"],
@@ -984,7 +984,7 @@ def grid_table(law, ui):
     g = law.get("grid")
     if not g:
         raise SystemExit("grid: the placement could not be read at the pin")
-    head = [ui["grid_h0"]] + [a for a in g["acts"]]
+    head = [ui["grid_h0"]] + [a[0].upper() for a in g["acts"]]
     rows = []
     for col in g["cols"]:
         label = f"<code>{html.escape(col)}</code>"
@@ -993,16 +993,17 @@ def grid_table(law, ui):
             cell = g["cells"][(a, col)]
             row.append(html.escape(ui["grid_closed"]) if cell["closed"] else str(len(cell["rules"])))
         rows.append(row)
+    legend = ", ".join(f"{a[0].upper()} {a}" for a in g["acts"])
     return (render_table(rows, "book-table grid", head)
-            + f'<p class="table-src">{html.escape(ui["grid_src"])}</p>')
+            + f'<p class="table-src">{html.escape(ui["grid_legend"].format(legend=legend))} {html.escape(ui["grid_src"])}</p>')
 
 
 def media_table(law, ui):
     rows = []
     for r in law.get("media") or []:
         ks = list(r["kinds"].values())
-        rows.append([f"<code>{html.escape(r['id'])}</code>", html.escape(r["title"]), str(ks.count("native")),
-                     str(ks.count("degraded")), str(ks.count("absent")), html.escape(ui["yes"] if r["sole"] else ui["no"])])
+        rows.append([f"<code>{html.escape(r['id'])}</code>", html.escape(r["title"]),
+                     f'{ks.count("native")} · {ks.count("degraded")} · {ks.count("absent")}', html.escape(ui["yes"] if r["sole"] else ui["no"])])
     if not rows:
         raise SystemExit("media: no medium read at the pin")
     return (render_table(rows, "book-table grid", ui["media_h"])
@@ -1020,9 +1021,9 @@ def causes_table(law, ui):
             label = html.escape(g.get("key", "")) if first else ""
             first = False
             title = c['causes'].get(k, '').replace('its maker,', 'its [author],')
+            back = sum(1 for x in mine if x.get('repeat') is True)
             rows.append([label, f"<strong>{html.escape(k)}</strong> {html.escape(title)}", str(len(mine)),
-                         str(len({x.get('project') for x in mine})), str(sum(1 for x in mine if x.get('repeat') is True)),
-                         (f"{round(100 * sum(1 for x in mine if x.get('repeat') is True) / len(mine))}%" if mine else "0%")])
+                         f"{back} ({round(100 * back / len(mine)) if mine else 0}%)"])
     if not rows:
         raise SystemExit("causes: the corpus could not be read at the pin")
     return (render_table(rows, "book-table families", ui["causes_h"])

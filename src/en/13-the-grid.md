@@ -246,7 +246,7 @@ DEFINE INTENT_FLOW reorder_stock (
 In words: Through a supplier's interface for programs, an AI agent selects a product and the order is placed. It can undo, cancel or leave at every step.
 :::
 
-Now place it on the grid. The report cites Rule 16, and the grid's placement puts Rule 16 on decide, act and trust, with no medium named. The `VIBE` says the medium is a program. A declaration lands on the cells of the activities its findings' rules are placed on, in the medium its `VIBE` names. So this one lands on the row `machine`, in the columns decide, act and trust: look at the table, and each of those cells is empty. Repair the declaration. Try before you read on.
+Now place it on the grid. The report cites Rule 16, and the grid's placement puts Rule 16 on decide, act and trust, with no medium named. The `VIBE` says the medium is a program. A declaration lands on the cells of the activities its findings' rules are placed on, in the medium its `VIBE` names. So this one lands on the row `machine`, in the columns D, A and T, decide, act and trust: look at the table, and each of those cells is empty. Repair the declaration. Try before you read on.
 
 ::: plate The order, confirmed
 ```zayn reorder.zayn
