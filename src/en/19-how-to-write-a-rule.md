@@ -4,39 +4,41 @@ part: 7
 number: 19
 title: How to write a rule
 stage:
-  built: "a corpus of {{n:corpus.records}} corrections as data, each with its words, its place and its date; a rule's shape in the law's file, on each of the {{n:law.rules}} rules; the menu remark of 8 November 2026 followed on this page from the sentence to the check, with its fixtures and their lawful twin in the suite"
-  designed: "the checks of the painted page that the site's study specifies, each shown failing on the pages as they were; the record by which an issue lands on a cell of the grid"
+  built: "a corpus of {{n:corpus.records}} corrections as data, each with its words, its place and its date where it is known; a rule's shape in the law's file, on each of the {{n:law.rules}} rules; the menu remark of 8 November 2026 followed on this page from the sentence to the check, with its fixtures and their lawful twin in the suite; the checks of the painted page, run and recorded in Zayn's repository"
+  designed: "the record by which a correction lands on a cell of the grid"
   next: "a way to capture a correction where it is made, so that it reaches the docket with its words and its place"
 status: draft
 research: research/ch19.md
 fixtures: [menu-landing-not-first, menu-label-repeats-parent, menu-label-duplicate, menu-lawful, invisible-state]
 ---
 
-A rule is a remark that was kept. In this chapter I follow one remark of mine from the sentence I typed to a rule with a check, in seven steps. Each step is shown on the record of that remark, and a team can take the same steps with no tool installed. The chapter ends on a template that you can fill.
+A rule is a remark that was kept. In this chapter I follow a remark of mine on a menu, and the second remark that its repair called for, from the sentences I typed to a rule with a check. There are seven steps. Each is shown on the record of those remarks, and a team can take the same steps for rules of its own. The chapter ends on a template that you can fill.
 
 If you open the book here, four words are enough to follow. A **declaration** is a few lines that say what a user is doing on a surface. The **law** is Zayn's constitution for interfaces. The **verifier** is the program that checks a declaration against the law. A **finding** is one entry of the verifier's report, and a refusal when it is an error.
 
 ## The field
 
-The field has written down what a rule must be, more than once. An accessibility standard says of its criteria that they are "written as testable criteria". The format for the rules that testers run, ACT, asks that each expectation of a rule be "distinct, unambiguous, and be written in plain language". The convention that the standards of the internet use for their own wording gives the word MUST one meaning, "an absolute requirement of the specification", and adds that such words "must be used with care and sparingly".
+The field has written down what a rule must be, more than once. The page that explains conformance to the accessibility guidelines says that their criteria are "written as testable criteria". ACT, the format for the rules that testers run, asks that each expectation of a rule be "distinct, unambiguous, and be written in plain language". A document of the internet's engineers, a Best Current Practice of 1997, gives the word MUST one meaning, "an absolute requirement of the specification", and adds that such words "must be used with care and sparingly".
 
-Those who keep a body of rules have criteria for a new one. ESLint, a linter, which is a tool that checks source code against rules, asks that a rule of its core be atomic, "Rules must function completely on their own", and unique: "No two rules can produce the same warning." The GOV.UK Design System asks of a proposal that it be useful, with evidence, and that it "does not replicate something already in the Design System".
+Those who keep a body of rules have criteria for a new one. ESLint is a linter, a tool that checks source code against rules. It asks a rule of its core to be atomic, "Rules must function completely on their own", and unique: "No two rules can produce the same warning." The GOV.UK Design System asks a proposed component or pattern to be useful, with evidence, and one that "does not replicate something already in the Design System".
 
-So the field agrees on four things: a rule can be tested, its words are exact, it stands alone, and it does not say again what another rule says. Each source was read on 23 November 2026, and Appendix F lists them.
+Each source was read on 23 November 2026, and Appendix F lists them. Between them they ask four things of a rule: it can be tested, its words are exact, it stands alone, and it does not say again what is already said.
 
 ## The principle
 
 **A remark becomes a rule when it names its cause, is bounded on both sides, and keeps the check that failed on the page as it was.**
 
-The study of the Zayn site, written from its corrections, has the sentence this chapter stands on: "A correction stored as a symptom does not stop the defect; it moves it." And the law has its own, in the reason of Rule 78: "A law that cannot be tested at the door will be negotiated in the hallway."
+A bound is an edge of what the rule allows. The rule states the least and the most, so that a repair stops where it should. Zayn's design study, written from the corpus of its corrections, has the sentence this chapter stands on: "A correction stored as a symptom does not stop the defect; it moves it." The law has its own, in the reason of Rule 78: "A law that cannot be tested at the door will be negotiated in the hallway." A rule is tested at the door by its check.
 
 ## Write the remark down
 
-The first step is to keep the remark as it was made. Zayn keeps its corrections in a corpus: a data file of {{n:corpus.records}} records. Each record holds the words, the page or the file where they were said, the date, what was wrong, what was asked, and the sense that noticed it. {{n:corpus.verbatim}} of them keep the person's words as typed.
+First, keep the remark as it was made. Zayn calls such a remark a correction, and keeps its corrections in a corpus: a data file of {{n:corpus.records}} records. Each record has the words, the page or the file where they were said, the date where it is known, what was wrong, what was asked, and what the remark concerned. {{n:corpus.verbatim}} of them keep the person's words as typed.
 
-Here is mine, of 6 November 2026, on the menu of the Zayn site: "the same menu option in the main and submenu levels (like Try and then Try here)!!!" A section named Try opened on an entry named Try here: the level under a section said the section's name again. The repair that followed deleted that entry, and with it the section's own page left the level under the section. Two days later, looking at a section whose first place stood empty, I wrote a second remark: bring the page back, under another label.
+Here is mine, of 6 November 2026, on the menu of the Zayn site: "the same menu option in the main and submenu levels (like Try and then Try here)!!!" A section named Try opened on an entry named Try here: the level under a section said the section's name again. The repair that followed deleted that entry, and with it the section's own page left the level under the section. On 8 November I wrote a second remark, and the corpus keeps its typing: "you must bring bakc the frist option but find an other lable for it".
 
-A record has one more field, and it is the one that makes a rule necessary: whether an earlier correction of the same defect exists. {{n:corpus.repeat}} of the {{n:corpus.records}} records say yes. My second remark is one of them, and its record says what the first repair broke. Here is the section as that second remark found it, written as a declaration. A `NAV_GRAPH` states an entry of a menu: `LABEL` is the name it shows, `TARGET` the page it leads to, `ENTRIES` its children in order.
+One more field of a record matters here, and it is the one that makes a rule necessary: whether an earlier correction of the same defect exists. {{n:corpus.repeat}} of the {{n:corpus.records}} records say yes. My second remark is one of them, and its record says what the first repair broke.
+
+Here is another section of that menu, Approach, as the second remark found it, written as a declaration. A `NAV_GRAPH` states an entry of a menu: `LABEL` is the name it shows, `TARGET` the page it leads to, `ENTRIES` its children in order. An entry with a target and children is a section, and the page it leads to is its landing page. You repaired a menu like it in chapter 18.
 
 ::: plate The section, as the remark found it
 ```zayn band.zayn
@@ -60,13 +62,13 @@ DEFINE NAV_GRAPH claims (LABEL "Claims", TARGET innovation)
 In words: The site's menu has a section, Approach, which leads to a page. Under it the menu shows four entries, and none of them is that page.
 :::
 
-Refused. The declaration is written today from the docket's sentence on that menu, and the check that answers it is the one the remark produced: it fails on the page as it was. The docket is the file where changes to the law are proposed and ruled.
+Refused: no entry under Approach leads to its page, and the report cites Rule 116. The declaration is written for this book from the sentence of the docket on that menu; the docket is the file where changes to the law are proposed and ruled. The check that answers it is the one the remark produced, and it fails on the page as it was.
 
 ## Ask whether it is law already
 
-The second step costs the least and saves the most: look for the rule that already holds the remark. In August 2026 five candidates came from one surface. Two were refused as new rules, because each was a rule that existed, and each of those rules gained the new case. The docket's sentence on one of them: "The author's correction and Rule 113 are the same law, reached twice."
+The second step is a search: look for the rule that already covers the remark. In August 2026 five candidates for a rule came from one surface. Three became rules. Two were refused as new rules, because each was a rule that existed, and each of those rules gained the new case. The docket's sentence on one of the two: "The author's correction and Rule 113 are the same law, reached twice." The law was extended, and its count stayed.
 
-A declaration can ask the question. One of those two candidates said that a status board must show what it requires of its user. Here is such a board, checked at level 3, where the verifier is given a list of what the system holds.
+A declaration can ask the question. The other of the two said that a status board must show what it requires of its user. Here is such a board, checked at level 3, where the verifier is given a list of what the system holds.
 
 ::: plate A board that keeps the next action to itself
 ```zayn board.zayn level=3 symbols=board.json
@@ -98,19 +100,25 @@ DEFINE SCREEN status_board (
 In words: The same board, and it now shows a third thing: the next action.
 :::
 
-Clean. A search that finds nothing needs a control: a term that you know is in the law. The ledger, the dated list of what the project found, records a search of the law that returned nothing for every term, the word undo included, in a law whose Rule 79 is named The Undo Covenant. Its lesson is in the imperative: "Put a control in every corpus test".
+Clean. A search that finds nothing needs a control: a term that you know is in the law. Zayn's ledger, the dated list of what the project found, records a search of the law that returned nothing for every term, the word undo included, in a law that has a rule on undo. Its lesson is in the imperative: "Put a control in every corpus test". A search proves itself on a term it must find.
 
-For the menu the answer was yes. Rule 116, The Menu Tells the Truth About the Tree, held the subject since August 2026. So the remark became an amendment of that rule, and took no new number.
+My remarks on the Zayn site went the same way. In November 2026 a table of them was filed in the docket under the heading "evidence for existing rules, not new rules", most beside the rule they support.
+
+For the menu the answer was yes: Rule 116 has covered the subject since August 2026. So the remark became an amendment of that rule, and took no new number. Here is Rule 116 as amended.
+
+{{rule:116}}
+
+Its last line is the reason: a menu hands its user a map.
 
 ## Give it the law's shape
 
-The third step writes the rule in the shape that every rule has: what to avoid, as a list; the rule's text; its reason, in a sentence; the article it derives from; and its evidence, which says what happened, where and when. Chapter 16 printed one rule whole.
+Third, write the rule in the shape that every rule has: what to avoid, as a list; the rule's text; its reason, in a sentence or two; the article, one of the law's statements of principle, that it derives from; and its evidence, which says where the rule comes from. Chapter 16 printed one rule whole. Three things make the rule hold: its cause, its two bounds and its evidence.
 
-Three things make the text hold. It names the cause. Mine was this: the entry of the main menu names a section, and the first entry under it names the section's landing page. The docket's words: "they are two things, so each keeps one name". A cause settles the next case, which a symptom leaves open.
+The cause. For the menu it was this: the entry of the main menu names a section, and the first entry under it names the section's landing page. The docket's words: "they are two things, so each keeps one name". A cause settles the next case, which a symptom leaves open.
 
-It is bounded on both sides. My first remark had one bound: no repeated label. The repair went past it and deleted the page. The amended rule has both, and its list of what to avoid gained two entries: "A section whose landing page is missing from the level under it, or listed after the pages it leads to", and "A child entry that carries its parent's label, or two entries at one level that carry one label". Here is the second bound at work, on the same section.
+The two bounds. My first remark had one: no repeated label. The repair went past it and deleted the page. The amended rule has both, and its list of what to avoid gained two entries: "A section whose landing page is missing from the level under it, or listed after the pages it leads to", and "A child entry that carries its parent's label, or two entries at one level that carry one label". Here is that first bound, still at work, on the same section.
 
-::: plate The page back, under the section's name
+::: plate The landing page, named as its section
 ```zayn band.zayn
 DEFINE NAV_GRAPH site_menu (
   SATISFIES [LOCATE],
@@ -133,9 +141,9 @@ DEFINE NAV_GRAPH claims (LABEL "Claims", TARGET innovation)
 In words: The section's page is back, first under the section, and under the section's name: Approach.
 :::
 
-Refused, on the other side. And here is the menu as it was corrected.
+Refused, on the other side. Here is the menu with the label that the site's writing rule records for that page, written here as a declaration.
 
-::: plate The page back, under another label
+::: plate The landing page, under another label
 ```zayn band.zayn
 DEFINE NAV_GRAPH site_menu (
   SATISFIES [LOCATE],
@@ -158,13 +166,15 @@ DEFINE NAV_GRAPH claims (LABEL "Claims", TARGET innovation)
 In words: The section Approach opens on its page, named Reasoning, and then shows its four other entries.
 :::
 
-Clean! And the third thing: the evidence is written as it happened. The record's rule for it has four words, "Evidence is never corrected.", and a rule that entered another way says so: the evidence of Rule 130 calls its own origin "the reverse of the usual order".
+Clean! Between the two refusals, the rule has its room.
+
+The evidence. It is written as it happened. The document of the law's architecture has the sentence for it, "Evidence is never corrected.", and a rule that entered another way says so: the evidence of Rule 130 calls its origin "the reverse of the usual order". What happened is kept as it was told.
 
 ## Name the instrument, then the tier
 
-The fourth step asks, clause by clause, what can decide the rule. For Rule 116 there are three answers. A declaration decides three of its demands, and you have just run two of them. The painted page, which is the menu as a browser draws it, is read by the audit of chapter 10. And one clause stays with a reader: the rule tells its reader to avoid "A label that names the author's metaphor and not what the page holds".
+Fourth, ask clause by clause what can decide the rule. An instrument is what makes a check: the verifier, an audit of the painted page, or a person who reads. For Rule 116 there are three answers. A declaration decides three of its demands, and you have just run two of them. The audit of chapter 10 reads the menu, the level under it, the trail and the outline as a browser paints them. And one clause stays with a person: the rule lists, to avoid, "A label that names the author's metaphor and not what the page holds". Here is a menu that the verifier passes and that clause refuses.
 
-::: plate Two labels that only a reader can judge
+::: plate Two labels that only a person can judge
 ```zayn menu.zayn
 DEFINE NAV_GRAPH main_menu (
   SATISFIES [LOCATE],
@@ -186,15 +196,15 @@ DEFINE NAV_GRAPH customers (LABEL "Depth", TARGET customer_list)
 In words: The section Orders opens on a page named The pulse, and the menu's second entry, which leads to the customers, is named Depth.
 :::
 
-Clean, and wrong for a reader: neither label says what its page holds. The verifier judges what a declaration states, and whether a word is a metaphor is a reader's to say.
+Clean, and wrong for a person who reads it: neither label says what its page holds. The verifier judges what a declaration states, and whether a word is a metaphor is a person's to say.
 
-The tier follows from the instrument, and it is filed as the instrument stands. The docket's sentence on one rule says what a tier claims: it "is honest about which instrument owes the check; it is not a claim that the check runs today". A rule's pointer to its instrument is written when the instrument exists: for one rule the docket left the pointer out, because "a pointer to an instrument that does not exist is worse than silence". When Rule 116 gained its three checks on a declaration, its tier stayed where it was, and the docket left the question to me: "whether that moves the tier is a ruling, not this desk's". Chapter 17 reads the tiers.
+Then the tier. A rule's tier is one word in the law's file, and the card above shows Rule 116's. The docket says of one rule what that word claims: the tier "is honest about which instrument owes the check; it is not a claim that the check runs today". A rule can also point at its instrument, in a field of its own, and the pointer is written when the instrument exists: the docket left one out, because "a pointer to an instrument that does not exist is worse than silence". When Rule 116 gained its checks on a declaration, its tier stayed, and the docket left the question to me: "whether that moves the tier is a ruling, not this desk's". Chapter 17 reads the tiers.
 
 ## Place it on the grid
 
-The fifth step places the rule: which activity of the user it protects, and on which media. Chapter 13 gives the grid. The placement reads the activity from the rule's title and its reason, and the medium from the rule's own words; a rule whose check does not look at the medium is placed on every medium. Does the menu's check look at the medium? Run it on a surface that speaks: a `VIBE` declares the surface, and here it is a voice.
+Fifth, place the rule: which activity of the user it protects, and on which media. Chapter 13 gives the grid. The placement reads the activity from the rule's title and its reason, and the medium from the rule's own words; a rule whose check does not look at the medium is placed on every medium. Does the menu's check look at the medium? Here is the defect of the repeated name on a surface that speaks. A `VIBE` declares the surface, here a voice, and the first choice under Orders is the same word without its capital.
 
-::: plate The same fault, on a phone line
+::: plate The same defect, on a phone line
 ```zayn phone.zayn
 DEFINE VIBE phone_line (
   SURFACE_AS voice
@@ -213,7 +223,7 @@ DEFINE NAV_GRAPH returns (LABEL "Returns", TARGET return_list)
 In words: On a phone line, the menu says Orders, and the first choice under it is said with the same word: orders.
 :::
 
-Refused, on a voice surface as on a screen: a label is compared without its capitals. The repair is the same.
+Refused, on a voice surface as on a screen, and with or without the capital. The repair is the same.
 
 ::: plate The first choice, under another word
 ```zayn phone.zayn
@@ -234,21 +244,21 @@ DEFINE NAV_GRAPH returns (LABEL "Returns", TARGET return_list)
 In words: The menu says Orders, and the first choice under it is said as Today.
 :::
 
-Clean. In the grid's data, Rule 116 is placed on the visual medium, under the activity of understanding. The run says that three of its checks answer on any medium. So a rule that is amended is placed again, and that is one more thing an amendment touches.
+Clean. In the grid's data, Rule 116 is placed on the visual medium, under the activity of understanding. The run says that this check answers on a voice surface as on a screen. So an amended rule is to be placed again, and that is one more thing an amendment touches.
 
 ## Write the check that fails first
 
-The sixth step is the one that keeps the remark from coming back. A check is written to fail on the page as it was, and to pass on the page as corrected, with one change between the two and no other. The first plate of this chapter and the last plate of the third step are that pair.
+Sixth, write the check so that it fails on the page as it was and passes on the page as corrected, with one change between the two and no other. That is what stops the defect from coming back. The first plate of this chapter and the last plate of the third step are that pair.
 
-Zayn's suite states it as a rule for its fixtures, the declarations it keeps with the answers they must get: "One fixture, one concern", and for every refused fixture "a lawful twin where the defect is repaired and nothing else changes". The suite's guide gives the twin its reason: it "proves the check is not simply firing on everything". The amendment of Rule 116 brought one fixture for each new kind of finding, and one lawful menu from which each differs by a line.
+Zayn's suite has it as a discipline for its fixtures, the declarations it keeps with the answers they must get: "One fixture, one concern", and for every refused fixture "a lawful twin where the defect is repaired and nothing else changes". The suite's guide gives the twin its reason: it "proves the check is not simply firing on everything". The amendment of Rule 116 brought one fixture for each new kind of finding, and one lawful menu from which each differs by a line. Where only a painted page can decide, the suite keeps no fixture and says why: "A fixture here would be theatre".
 
-The same discipline holds where the check reads files or a painted page. The site's study records its file checks "each shown failing on the pages as they were first", and one of them with its count: of a check that a statement is made once on a screen, "35 of the 39 pages failed it". A check proves itself on the day it fails on the defect it was written for.
+The same discipline applies where a check reads files or a painted page. The design study records its checks on the site's files "each shown failing on the pages as they were first", and of one more file check, which reads that a statement is made once on a screen, it gives the count: "35 of the 39 pages failed it". It also records what happens to a check written as a list of the kinds of element it covers: "the defect came back that afternoon on a kind not in the list". A check reads every element. And a check proves itself on the day it fails on the defect it was written for.
 
 ## Amend what it touches
 
-The seventh step lists what the rule touches, object by object, and changes each. Chapter 18 counted them for this remark: the rule's fields, the version and its line of history, the language, the contract, the fixtures, the pins. The last on the list is the nearest: the pages of those who hold the rule. Here is the same section in the Zayn site's own menu, as the site declares it at the version this book reads.
+Seventh, list what the rule touches, object by object, and change each. Chapter 18 listed them for this remark: the rule's fields, the version and its line of history, the language, the contract, the fixtures, the pins. One more is the nearest: the pages of those who apply the rule. Here is the section of the Zayn site's menu that shows the page Reasoning at the version this book reads, written here with one of its entries left out.
 
-::: plate The site's own section, as declared
+::: plate A section of the site's own menu
 ```zayn site-menu.zayn
 DEFINE NAV_GRAPH whyzayn (
   LABEL "Why",
@@ -262,10 +272,10 @@ DEFINE NAV_GRAPH thinking (LABEL "Reasoning", TARGET thinking)
 DEFINE NAV_GRAPH innovation (LABEL "Claims", TARGET innovation)
 //--> clean
 ```
-In words: The section Why opens on its page, named The problem, and then shows three more entries.
+In words: The section Why opens on its page, named The problem, and Reasoning is one of the entries after it.
 :::
 
-Clean. The remark went further than the site: the house that publishes this book adopted the same three refusals for the menu of every book's reader, this one included.
+Clean. The remark went further than the site: the house that publishes this book adopted the same three kinds of finding for the menu of every book it puts online, this one included.
 
 ## The template
 
@@ -273,25 +283,21 @@ Seven steps, and what each one writes.
 
 | Step | What you write |
 |---|---|
-| 1. The correction | The person's sentence as typed; the page or the file; the date; what was wrong; what was asked; whether an earlier correction of the same defect exists, and what its repair broke |
-| 2. Already law? | The rule that holds it, by number, and the case added to that rule; or how you searched, and the control that proved the search works |
-| 3. The rule | What to avoid, as a list; the text; the reason, in a sentence; the article; the evidence; the least and the most the rule allows |
-| 4. The instrument | Which clause a declaration decides, which a painted page decides, which a reader decides; the tier; a pointer when the instrument exists |
+| 1. The remark | The person's sentence as typed; the page or the file; the date; what was wrong; what was asked; whether an earlier correction of the same defect exists, and what its repair broke |
+| 2. Already law? | The rule that covers it, by number, and the case added to that rule; or how you searched, and the control that proved the search works |
+| 3. The rule | What to avoid, as a list; the text; the reason; the article; the evidence; the least and the most the rule allows |
+| 4. The instrument | Which clause a declaration decides, which a painted page decides, which a person decides; the tier; a pointer when the instrument exists |
 | 5. The grid | The activity of the user it protects; the media its own words name, or every medium |
 | 6. The check | The page as it was, and the finding expected; the page as corrected, with one change; a case the check must leave alone |
 | 7. What it touches | The rule's fields; the version and its line of history; the rules it cites or narrows; the checks and their fixtures; the placement; the pages and the teams to tell |
 
+Row 6 asks one thing more than the plates showed: a case that the check must leave alone, so that it fails for its defect and for nothing else.
+
 ## What I refused
 
-**I refused the repair made on my first remark.** It had deleted the landing page from the level under its section. My ruling of 8 November 2026 brought the page back under a label of its own, and the docket says of that ruling that it "reverses the reading of 2026-11-06". A remark with one bound had been read past its bound.
+**I refused the repair made on my first remark.** It had deleted the landing page from the level under its section. My ruling of 8 November 2026 brought the page back under another label, and the docket says of that ruling that it "reverses the reading of 2026-11-06". A remark with one bound had been read past its bound.
 
 **I refused a rule written to fill a cell.** The grid of chapter 13 has cells that no rule names a medium for. My ruling, as the grid's document keeps it, "forbids writing a rule for them until that is measured". A rule answers a defect that happened; an empty cell is a question.
-
-**A remark that the law already covers stays evidence.** In November 2026 a table of my remarks on the Zayn site was filed under the heading "evidence for existing rules, not new rules", each beside the rule it supports, and I ruled on what the docket recommended for them.
-
-**The suite refuses a fixture it cannot judge.** One kind of finding is a fact about a painted page, and the suite's manifest gives its reason for keeping no fixture for it: "A fixture here would be theatre".
-
-**A check is never a list of kinds.** The site's study records a correction that was kept as a list of the kinds of element it applied to, and what followed: "the defect came back that afternoon on a kind not in the list". The study asks of a check that it read every element.
 
 [AUTHOR: the stake of this chapter, in your words: what you want a team to be able to do on the day after it reads this page.]
 
@@ -303,19 +309,19 @@ The court of a chapter is what proves it. Here it is Zayn's conformance suite: {
 
 The field leads on the form of a rule that a tester runs. The ACT format asks for a rule's applicability and its expectations, with examples that pass, fail and do not apply. A rule of Zayn's law has a list of what to avoid and a text, and the examples live apart from it, in the suite's fixtures.
 
-The field leads on the words of obligation. A standard of the internet says exactly what MUST means. Zayn's rules are written in sentences, and what binds in them is the check and its fixture where one exists, a reader's judgment elsewhere.
+The field leads on the words of obligation. The engineers' document says exactly what MUST means. Zayn's rules are written in sentences, and what binds in them is the check and its fixture where one exists, a person's judgment elsewhere.
 
-Zayn leads on the path from a remark. A correction is kept with its words, its place and its date; the rule keeps it as evidence; the check fails on the page as it was. And the cost is stated: a rule drawn from one case is of the size of that case, and several of the newest candidates are kept as candidates until a second case comes.
+Zayn's part is the path from a remark. A correction is kept with its words and its place; the rule keeps it as evidence; the check fails on the page as it was. The cost is stated too: a rule drawn from one case is as wide as that case, and one of the newest candidates is kept as a candidate until a second site is measured.
 
 ## Where it stands
 
 Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
-The seven steps are the record's: each is shown here on a file of Zayn at release {{n:release.version}}, and every declaration was run. The section of the first plate is written today from the docket's sentence, and it is refused by today's verifier. The checks on the site's files and on its painted pages are told from the site's study, with the counts that it records. The template is this book's: it is assembled from the shapes of the corpus, the docket, the law's file, the grid and the suite, and it holds for a team that keeps its rules in a document of its own.
+Each of the seven steps is shown here on a file of Zayn at release {{n:release.version}}, and every declaration was run. The sections of the first three plates are written for this book from the docket's sentence and from the site's writing rule, and the verifier of this page answers them. The checks on the site's files and on its painted pages are told from the design study, with the counts that it records. The template is this book's: it is assembled from the shapes of the corpus, the docket, the law's file, the grid and the suite, and it is written for a team that keeps its rules in a document of its own.
 
 ## In your hands
 
-Here is a menu with three faults at once.
+Here is a menu with three defects at once. Before you read its report, write the codes you expect.
 
 ::: plate For you: a stock menu, three times wrong
 ```zayn stock.zayn
@@ -341,7 +347,7 @@ DEFINE NAV_GRAPH suppliers (LABEL "Suppliers", TARGET supplier_list)
 In words: The section Stock leads to the stock levels. Under it the menu shows Deliveries, then Stock, then The deliveries.
 :::
 
-Cover the report under the declaration, write the codes you expect, then compare. Three findings, and they come in the order of the checks, which is another order than the lines'. Repair all three: the landing page first, under a label that is its own, and one name for each entry. Try before you read on.
+Three findings, in the order of the checks, not of the lines. The second reads past a leading The: for the verifier, The deliveries and Deliveries are one label. Repair all three: the landing page first, under another label, and one name for each entry. Try before you read on.
 
 ::: plate The stock menu, repaired
 ```zayn stock.zayn
@@ -389,6 +395,6 @@ DEFINE NAV_GRAPH suppliers (LABEL "Suppliers", TARGET supplier_list)
 In words: The section Stock opens on a page named Stock now.
 :::
 
-Clean. The check compares whole labels, and Stock now is another label than Stock. Read my first remark again: its example was Try, and then Try here. So the check that my remark produced passes the example that my remark gave. When is a child's label its parent's name said again? That is the second bound of a rule, and it is yours to set for the rules you write. For this one it is a remark for the law, filed with the book's findings.
+Clean. The check compares whole labels, and Stock now is a different label from Stock. Read my first remark again: its example was Try, and then Try here. So the check that my second remark produced passes a menu of the shape that my first remark gave as its example. When is a child's label its parent's name said again? That is a bound, and it is yours to set for the rules you write. For Rule 116 the question is open, and I filed it for the law, with this book's requests to Zayn.
 
 The law is written, amended and checked. Part VIII asks who else may write it: a team with its own corrections, and a commons that many teams share.
