@@ -5,7 +5,7 @@ number: 18
 title: Amendment from evidence
 stage:
   built: "Article VII as data; a lineage of {{n:law.lineage}} dated entries inside the law's file; {{n:law.retired}} retired and {{n:law.burned}} reserved numbers; an evidence field on each of the {{n:law.rules}} rules; the amendments of versions 3.11, 3.12 and 3.16 answered by the verifier on this page; {{n:pin.files}} data files that record the version of the law they were checked against, and a pack of {{n:pack.files}} files, each with its hash"
-  designed: "a law in four parts, from a core that every interface keeps to a commons that teams add to; the test and the record by which a contributed rule is admitted"
+  designed: "a law in four layers: statute, core, commons and local; the test and the record by which a contributed rule is admitted"
   next: "rules moved to an instrument as each instrument is built, and a law fed by the corrections of the people who use it"
 status: draft
 research: research/ch18.md
@@ -191,7 +191,7 @@ Both sides know the cost of a pin. A regulation that names version 2.1 goes on n
 
 Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
-The history told here is data of the law's file at version {{n:law.version}}, and the amendments of versions 3.11, 3.12 and 3.16 were answered on this page by the verifier of release {{n:release.version}}. What was lawful before a version is told from the record: this page runs one verifier, today's. Two rules that touch one subject are reconciled by amending both, and the pair is found by whoever puts them side by side; a rule of precedence, or a check for two rules on one subject, is a question that the docket has filed for me. The evidence behind a rule is of the size its field states: a body of recorded corrections for some, one surface for others, a decision or a check for two, and each rule says which. The law in four parts, with its commons, is a design: it is written, and it waits for my pass, section by section.
+The history told here is data of the law's file at version {{n:law.version}}, and the amendments of versions 3.11, 3.12 and 3.16 were answered on this page by the verifier of release {{n:release.version}}. What was lawful before a version is told from the record: this page runs one verifier, today's. Two rules that touch one subject are reconciled by amending both, and the pair is found by whoever puts them side by side; a rule of precedence, or a check for two rules on one subject, is a question that the docket has filed for me. The evidence behind a rule is of the size its field states: a body of recorded corrections for some, one surface for others, a decision or a check for two, and each rule says which. The law in four layers, with its commons, is a design: it is written, and it waits for my pass, section by section.
 
 ## In your hands
 

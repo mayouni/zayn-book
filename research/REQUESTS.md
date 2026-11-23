@@ -14,6 +14,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-04 | 2026-11-22 | A flow whose act cannot be undone has no form of its own | **Answered 2026-11-23 09:26**: the four readings confirmed by the Zayn desk and by the Zayn session, on the reference and on the built command. One correction, one addition (below). A ruling on the language waits for the author: LANG-FLOW-REFERENCE-01 |
 | BOOK-ZAYN-05 | 2026-11-22 | A rule's tier and the diagnostics that cite it tell two stories | **Answered 2026-11-23 09:26**: the figures stand, and a count by citation is given (below). Three rulings on the law wait for the author: LAW-TIER-REFUSED-01, LAW-TIER-CHECK-01, LAW-SELECT-CONFIRM-01 |
 | BOOK-ZAYN-06 | 2026-11-23 | Ten findings of Part III's research, parts (a) to (j), below | **Filed 2026-11-23 10:17**; each part with its runs and its lines in `research/ch06.md`, `ch07.md` and `ch09.md`, section 12 |
+| BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Filed 2026-11-23**, with Part VII's memo; each part with its runs and its lines in `research/ch16.md` to `ch19.md`, section 12. Three of them are the open questions that chapters 16, 18 and 19 leave to their reader |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -117,3 +118,49 @@ language is a gift to it; the book edits nothing there.
   at Level 2 today"), and `doc/ARCHITECTURE.md:72` (a count of verbs the specification corrected).
 - **(j) A kiosk.** `SURFACE_AS visual` carries `election: elected` in `conformance/media.json`, so the property that makes a kiosk
   (a surface its user did not choose) has no place to be stated (`research/ch07.md`, section 12).
+
+## BOOK-ZAYN-07, in parts (filed 2026-11-23)
+
+Found while researching chapters 16 to 19 and in the second readings of Part III. Each was probed on the reference verifier of
+the pin or counted from its files. The book edits nothing in Zayn; a finding against the law is a gift to it.
+
+- **(a) A section that stops saying where it leads passes.** Take a section whose landing page is absent from the level under it
+  (`MENU_LANDING_NOT_FIRST`) and delete its `TARGET`: the file is clean. The specification calls an entry with `ENTRIES` and no
+  `TARGET` a bar; a labelled child of the main menu with children and no page of its own is judged by neither reading
+  (`research/ch18.md`, finding 13). Chapter 18's exercise asks it.
+- **(b) The first remark's own example passes its check.** A section labelled "Try" whose first child is labelled "Try here" is
+  clean: labels are compared whole (`research/ch19.md`, finding 1; the corpus record of 2026-11-06). Chapter 19's exercise asks
+  when a child's label is its parent's name said again.
+- **(c) A finding's article is not always its rule's.** `VERB_NOT_CARRIED` cites Rule 82 with Article II; Rule 82 derives from
+  Article III and stands in the right to know, which the finding does not cite. `ROLE_ACTS_WITHOUT_CONSEQUENCE` cites Rule 112
+  under Article II; the rule derives from Article I. Two findings cite Rule 83 and no right, while a right lists 83
+  (`research/ch16.md`, finding 13). Chapter 16's exercise asks it.
+- **(d) The amendment of version 3.16 did not reach the grid.** Rule 116 is placed on `visual`; its three diagnostics ignore the
+  medium (run on a voice surface, chapter 19). The grid's figures are those of 73 fixtures; the manifest holds 77
+  (`research/ch19.md`, findings 2 and 3).
+- **(e) The law's history, against itself.** Two entries of the lineage bear version 3.8; `lastUpdated` says 2026-11-08 and the
+  last entry is dated 2026-11-12; the docket's header says "three passes" and "v3.13" over seven ruled sections and a law at
+  3.17, and `protocol/README.md:127` repeats it in a pinned file; who ruled D6 (Rule 130) is said two ways; the second pass names
+  no ruler (`research/ch18.md`, findings 1 to 5).
+- **(f) Names the corrections of versions 3.7.2 and 3.7.3 did not reach.** In normative parts of the law: a product in the
+  description of Set 30, a store in Rules 79, 83 and 98, the language's former name in Rule 44's `lint` and in `intents.note`;
+  in 101 of the 123 `evidence` values, a product or a project; in the lineage, the law's first home and two former names
+  (`research/ch16.md`, section 2k and finding 9; `research/ch18.md`, finding 14). One quotation dated 2026-11-08 carries the name
+  the language took on 2026-11-12 (`research/ch19.md`, finding 3). The book's copy of the law gives a description in square
+  brackets (`DECISIONS.md`, WITHHELD-01).
+- **(g) The law's data, read closely.** No right's list names a rule above 102; `invariant` is a mark on a rule, a sentence on a
+  family and a field of a diagnostic; `philosophy` names a line of axioms and a section of principles; Rule 5's `avoid` is empty;
+  the pattern `decorative-animation` names Rules 1 and 17 and its diagnostic cites Rule 112; two ids keep a former title's words;
+  Rule 105's evidence says "Amended in v2.1" where the lineage says canonized (`research/ch16.md`, findings 3 to 11).
+- **(h) "Real and recurring."** Article VII asks proof that a harm is real and recurring; Rules 126 and 130 entered without an
+  observed defect and say so, and several rules rest on one surface or one measurement. The record is open about each; the
+  article's word has no stated reading for them (`research/ch18.md`, finding 8).
+- **(i) Texts against the data**, with their lines in the research files: `README.md:13` (every rule above 104 "from a defect an
+  AI produced") against the evidence of Rules 125, 126 and 130; `doc/ARCHITECTURE.md:53` (three values of `enforcement`; the file
+  holds four); the law's reader ("Visible State (Rule 82)", "cites article numbers", `lint` shown for one tier only, a set's
+  numbers printed as a range); `site/rules.html:143-144` (two horizontal levels given to version 3.16); `ROADMAP.md:7` and `:106`;
+  a fixture's comment against its run (`verb-not-carried.zayn:8-10`).
+- **(j) From Part III's second readings.** The contract's sentence for level 2 says "a single declaration"; several checks of
+  that level read the whole file. Article II's sentence lists "recover", which is in no list of verbs.
+
+Chapter 17's findings are added to this request when the chapter is drafted.

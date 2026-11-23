@@ -297,6 +297,9 @@ def _history_facts(snap, law, rules, diags):
     out["law.principles"] = len((law.get("philosophy") or {}).get("rules") or []) or None
     out["law.axioms"] = sum(1 for a in (law.get("articles") or {}).values() if a.get("axiom")) or None
     out["diag.cite_right"] = sum(1 for d in diags if d.get("rights")) or None
+    out["law.tiers"] = len({r.get("enforcement") for r in rules if r.get("enforcement")}) or None
+    listed = [int(n) for r in (law.get("rights") or []) for n in (r.get("enforced_by") or []) if str(n).isdigit()]
+    out["right.max"] = max(listed) if listed else None
     # the corpus of corrections, as its data file holds it
     out.update({"corpus.records": None, "corpus.verbatim": None, "corpus.repeat": None, "corpus.causes": None, "corpus.groups": None})
     corpus = snap / "doc" / "design" / "corpus" / "corpus.json"
