@@ -13,6 +13,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-03 | 2026-11-22 | README lines against the data or the tree, parts (a) to (e) | **Committed with 02**, verified, waiting for the push. One more file carried the dead link of part (a): `ROADMAP.md:25` |
 | BOOK-ZAYN-04 | 2026-11-22 | A flow whose act cannot be undone has no form of its own | **Answered 2026-11-23 09:26**: the four readings confirmed by the Zayn desk and by the Zayn session, on the reference and on the built command. One correction, one addition (below). A ruling on the language waits for the author: LANG-FLOW-REFERENCE-01 |
 | BOOK-ZAYN-05 | 2026-11-22 | A rule's tier and the diagnostics that cite it tell two stories | **Answered 2026-11-23 09:26**: the figures stand, and a count by citation is given (below). Three rulings on the law wait for the author: LAW-TIER-REFUSED-01, LAW-TIER-CHECK-01, LAW-SELECT-CONFIRM-01 |
+| BOOK-ZAYN-06 | 2026-11-23 | Ten findings of Part III's research, parts (a) to (j), below | **Filed 2026-11-23 10:17**; each part with its runs and its lines in `research/ch06.md`, `ch07.md` and `ch09.md`, section 12 |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -84,3 +85,35 @@ If they are ruled, they land after the pin; the Zayn session tells the book whic
 | 2026-11-21 | `books/zayn-book` is an untracked local repository in the house; proposed later as `mayouni/zayn-book`, a submodule, slug `zayn`, on the author's go | told; waits for the author |
 | 2026-11-22 | `templates/LICENSE.md` and the Softanza reader carry the colophon line from before HOUSE-23 | told; no answer yet |
 | 2026-11-22 | One preview entry, `zayn-book` (port 8740), added to the house's local `.claude/launch.json`, which git ignores | told; removed on a word |
+
+## BOOK-ZAYN-06, in parts (filed 2026-11-23 10:17)
+
+Found while researching chapters 6, 7 and 9, each probed on the reference verifier of the pin. A finding against the law or the
+language is a gift to it; the book edits nothing there.
+
+- **(a) "clean" at level 3 with no table.** Asked for `--level 3` with no `--symbols`, or with a table that lacks a check's list, the
+  report prints `clean … at level 3`, exit 0, and the machine form says `"level": 3` with an empty list. Three texts say "undecidable
+  is silence, never a pass" (`research/ch09.md`, section 12, finding 1; `research/ch06.md`, finding 8).
+- **(b) A kind outside the ten is passed over whole.** `WIDGET` and `USER` get a warning; any other word (`SCREN`, `BUTTON`, a kind
+  in lower case) answers `clean`, with whatever the declaration holds, an act with no undo included (`research/ch07.md`, finding
+  F1; `research/ch06.md`, finding 16). Chapter 7's exercise is built on it.
+- **(c) The trace of an element reads its own `SATISFIES` only.** A `FORM` bound to a lawful flow by `INTENT_FLOW` is an
+  `INTENT_ORPHAN` once an inventory lists it; the grammar's own complete example carries such a form. Two files checked against
+  one inventory are each blamed for the other's elements (`research/ch06.md`, findings 9 to 13). Chapter 6's exercise asks it.
+- **(d) `SATISFIES` marked required, and its absence.** `SATISFIES []` on a flow passes with no finding; a `WIZARD` with no
+  `SATISFIES` is clean (`research/ch06.md`, findings 5 and 6).
+- **(e) The level 3 checks from the lawful side.** `HIDDEN_AUTHORITY` uses the list of actors as a switch: `ACTOR visitor`, a name
+  the table does not hold, is clean. `INVISIBLE_STATE` is counted file by file. No level 3 fixture has a lawful twin
+  (`research/ch09.md`, finding 2). Chapter 9's exercise asks the first.
+- **(f) The family invariants and the checks.** Three clauses of the six invariants have no diagnostic; `MISSING_CANCEL` is filed
+  under the continuity invariant while `CANCEL` is a verb of action (`research/ch06.md`, findings 19 and 20).
+- **(g) The grammar file.** `haro/zayn.gbnf` writes another form of declaration (`AS ( … ) RATIONALE`), which the verifier answers
+  with `SYNTAX_ERROR` (`research/ch07.md`, section 12). Chapter 24 needs to know which form a decoder is to produce.
+- **(h) The forged evaluator's count.** The site's "55 of 77 agree, 22 named differences" adds 73 judged fixtures and four rows
+  written by expectation; the judge counts agreement on the first code, so `multiple-violations.zayn` agrees with one code of four
+  (`research/ch09.md`, finding 3). Chapter 9 gives the judged count and the judge's rule.
+- **(i) Texts against the data**, listed with their lines in the three research files: among them `doc/language/README.md:106-107`
+  ("Every diagnostic it raises cites a numbered rule"; the contract binds a rule to 20 of 40) and `:147-158` ("No implementation is
+  at Level 2 today"), and `doc/ARCHITECTURE.md:72` (a count of verbs the specification corrected).
+- **(j) A kiosk.** `SURFACE_AS visual` carries `election: elected` in `conformance/media.json`, so the property that makes a kiosk
+  (a surface its user did not choose) has no place to be stated (`research/ch07.md`, section 12).
