@@ -26,7 +26,7 @@ the fixed headings, or holds a declaration outside a plate or without its "In wo
 sits outside the variables; the type scale is out of order. It still writes the page first, so the failure can be seen.
 """
 import html, json, re, subprocess, sys
-from book_common import (ladder, pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
+from book_common import (grid, ladder, pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
                          closed_lists, fields_by_kind, GH_BLOB, PIN_TAG)
 from book_judge import WORDS
 
@@ -85,6 +85,7 @@ UI = {
     "ladder_src": "Counted by citation at this build, from the contract, the verifier's code and the files of the two audits; each audit citation is checked against its file. A citation shows that an instrument reads the rule. Which clauses it reads is said rule by rule in the chapter.",
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
+    "grid_h0": "Medium", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
     "pins_h": ["A data file of Zayn", "The version of the law it records"],
     "pins_src": "Read from each file at the version of Zayn this book reads.",
     "sources_src": "Printed from the book's register of sources, research/FIELD.md.",
@@ -388,6 +389,7 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .book-table.families td:first-child{white-space:nowrap;}
 .book-table.diag td:first-child{white-space:normal;word-break:normal;overflow-wrap:normal;}
 .book-table td code{overflow-wrap:anywhere;}
+.book-table.grid td:not(:first-child),.book-table.grid th:not(:first-child){text-align:center;}
 @media (max-width:640px){.book-table th,.book-table td{padding:6px 7px;}.book-table td{overflow-wrap:anywhere;}.book-table th{overflow-wrap:normal;word-break:normal;hyphens:manual;}.book-table.families td:first-child{white-space:normal;}}
 .book-table.sources td{word-break:break-word;}
 .book-table.families code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
@@ -973,6 +975,23 @@ def anatomy_table(number, law, ui, version):
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
 
 
+def grid_table(law, ui):
+    g = law.get("grid")
+    if not g:
+        raise SystemExit("grid: the placement could not be read at the pin")
+    head = [ui["grid_h0"]] + [a for a in g["acts"]]
+    rows = []
+    for col in g["cols"]:
+        label = f"<code>{html.escape(col)}</code>"
+        row = [label]
+        for a in g["acts"]:
+            cell = g["cells"][(a, col)]
+            row.append(html.escape(ui["grid_closed"]) if cell["closed"] else str(len(cell["rules"])))
+        rows.append(row)
+    return (render_table(rows, "book-table grid", head)
+            + f'<p class="table-src">{html.escape(ui["grid_src"])}</p>')
+
+
 def pins_table(law, ui):
     rows = [[f"<code>{html.escape(p)}</code>", html.escape(v)] for p, v in law.get("pins") or []]
     if not rows:
@@ -1114,6 +1133,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(sets_table(law, ui, version)); i += 1; continue
         if s == "{{ladder}}":
             flush(); out.append(ladder_table(law, ui)); i += 1; continue
+        if s == "{{grid}}":
+            flush(); out.append(grid_table(law, ui)); i += 1; continue
         if s == "{{pins}}":
             flush(); out.append(pins_table(law, ui)); i += 1; continue
         if s == "{{tiers}}":
@@ -1560,6 +1581,7 @@ def main():
     law["fields_by_kind"] = fields_by_kind(snap)
     law["pins"] = pin_files(snap)
     law["ladder"], law["instruments"] = ladder(snap)
+    law["grid"] = grid(snap)[0]
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     en_src = sources("en")
     errors = []

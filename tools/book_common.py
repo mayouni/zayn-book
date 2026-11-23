@@ -287,6 +287,60 @@ def ladder(snap):
     return out, data.get("instruments", {})
 
 
+ACT_LETTERS = {"P": "perceive", "U": "understand", "D": "decide", "A": "act", "R": "recover", "T": "trust"}
+
+
+def grid(snap):
+    """The grid of chapter 13, counted from the data as Zayn's own script counts it: six activities of the user, each owning
+    some of the 22 verbs (the constant VERBS of doc/design/coverage-count.js, the one place the map is written), by the ten
+    media of conformance/media.json and one more column, "any". A cell is closed when its activity owns verbs and the medium
+    marks every one of them absent. A rule sits on the cells of its activities, in its media (coverage-placement.json)."""
+    src = (snap / "doc" / "design" / "coverage-count.js").read_text(encoding="utf-8")
+    m = re.search(r"const VERBS = \{(.*?)\};", src, re.S)
+    verbs = {k: re.findall(r"'([A-Z]+)'", v) for k, v in re.findall(r"(\w+):\s*\[(.*?)\]", m.group(1), re.S)}
+    acts = list(verbs)
+    media = json.loads((snap / "conformance" / "media.json").read_text(encoding="utf-8"))["media"]
+    law = json.loads((snap / "constitution" / "rules.json").read_text(encoding="utf-8"))
+    all22 = {v for f in law["intents"]["families"].values() for v in f["verbs"]}
+    absent = {}
+    for md in media:
+        car = md.get("carries") or {}
+        if car.get("default") == "absent":
+            absent[md["id"]] = all22 - set(car.get("native") or []) - set(car.get("degraded") or [])
+        else:
+            absent[md["id"]] = set(car.get("absent") or [])
+    cols = ["any"] + [md["id"] for md in media]
+    place = json.loads((snap / "doc" / "design" / "coverage-placement.json").read_text(encoding="utf-8"))
+    cells = {(a, col): {"closed": False, "rules": []} for a in acts for col in cols}
+    for a in acts:
+        for md in media:
+            if verbs[a] and all(v in absent[md["id"]] for v in verbs[a]):
+                cells[(a, md["id"])]["closed"] = True
+    for n, r in place["rules"].items():
+        for letter in r["activities"]:
+            a = ACT_LETTERS[letter]
+            for col in (["any"] if r["media"] == "any" else r["media"]):
+                cells[(a, col)]["rules"].append(int(n))
+    rules = place["rules"]
+    live = [k for k, v in cells.items() if not v["closed"]]
+    ruled = [k for k in live if cells[k]["rules"]]
+    empty = [k for k in live if not cells[k]["rules"]]
+    anyrows = {a for a in acts if cells[(a, "any")]["rules"]}
+    facts = {
+        "grid.activities": len(acts), "grid.media": len(media), "grid.cells": len(cells),
+        "grid.closed": sum(1 for v in cells.values() if v["closed"]), "grid.live": len(live),
+        "grid.ruled": len(ruled), "grid.empty": len(empty),
+        "grid.reach": sum(1 for (a, _) in empty if a in anyrows),
+        "grid.placed": len(rules), "grid.off": len(place.get("off") or {}),
+        "grid.visual": sum(1 for r in rules.values() if r["media"] != "any" and "visual" in r["media"]),
+        "grid.visualonly": sum(1 for r in rules.values() if r["media"] == ["visual"]),
+        "grid.free": sum(1 for r in rules.values() if r["media"] == "any"),
+        "grid.named": sum(1 for r in rules.values() if r["media"] != "any" and r["media"] != ["visual"]),
+        "grid.norule": sum(1 for md in media if not any(cells[(a, md["id"])]["rules"] for a in acts)),
+    }
+    return {"acts": acts, "cols": cols, "cells": cells, "titles": {md["id"]: md.get("title", "") for md in media}}, facts
+
+
 def _history_facts(snap, law, rules, diags):
     """The law's history and anatomy as its own file holds them, and what pins it. Counted, never typed."""
     meta = law.get("metadata", {})
@@ -327,6 +381,7 @@ def _history_facts(snap, law, rules, diags):
     out["cite.union"] = len(lad) or None
     out["cite.both"] = sum(1 for v in lad.values() if v["codes"] and v["audits"]) or None
     out["cite.rest"] = (len(rules) - len(lad)) if rules and lad else None
+    out.update(grid(snap)[1])
     out["law.tiers"] = len({r.get("enforcement") for r in rules if r.get("enforcement")}) or None
     listed = [int(n) for r in (law.get("rights") or []) for n in (r.get("enforced_by") or []) if str(n).isdigit()]
     out["right.max"] = max(listed) if listed else None

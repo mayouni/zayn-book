@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 19:21 UTC+01:00",
+  "date": "2026-11-23 19:54 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -78,6 +78,21 @@
    "cite.union": 20,
    "cite.both": 1,
    "cite.rest": 103,
+   "grid.activities": 6,
+   "grid.media": 10,
+   "grid.cells": 66,
+   "grid.closed": 11,
+   "grid.live": 55,
+   "grid.ruled": 20,
+   "grid.empty": 35,
+   "grid.reach": 35,
+   "grid.placed": 121,
+   "grid.off": 2,
+   "grid.visual": 94,
+   "grid.visualonly": 89,
+   "grid.free": 26,
+   "grid.named": 6,
+   "grid.norule": 5,
    "law.tiers": 4,
    "right.max": 102,
    "corpus.records": 489,
@@ -579,7 +594,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1124,7 +1139,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1634,7 +1649,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1949,7 +1964,496 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
+  },
+  "en/13-the-grid": {
+   "id": "the-grid",
+   "blocks": [
+    {
+     "hash": "ae77335cdb1e",
+     "name": "alert.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "dismiss_alert"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "alert.zayn:5  error  MISSING_UNDO  dismiss_alert\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "dismiss_alert",
+       "line": 5,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"alert.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"alert.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"dismiss_alert\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "977f24564709",
+     "name": "alert.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"alert.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "720672fec0d4",
+     "name": "voicemail.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "delete_voicemail"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "voicemail.zayn:5  error  MISSING_UNDO  delete_voicemail\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "delete_voicemail",
+       "line": 5,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"voicemail.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"voicemail.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"delete_voicemail\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "34e25bb56112",
+     "name": "voicemail.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"voicemail.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "41c1f76cb2dc",
+     "name": "ledger.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "read_ledger"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "read_ledger"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "read_ledger"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "ledger.zayn:5  error  VERB_NOT_CARRIED  UNDO in read_ledger on print\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nledger.zayn:5  error  VERB_NOT_CARRIED  CANCEL in read_ledger on print\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nledger.zayn:5  error  VERB_NOT_CARRIED  EXIT in read_ledger on print\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "UNDO in read_ledger on print",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "CANCEL in read_ledger on print",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "EXIT in read_ledger on print",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"UNDO in read_ledger on print\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"CANCEL in read_ledger on print\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"EXIT in read_ledger on print\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1ff3d371691f",
+     "name": "ledger.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "4ddfb7ff8865",
+     "name": "notice.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "printed_notice"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "notice.zayn:1  error  DECORATIVE_ANIMATION  printed_notice\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "printed_notice",
+       "line": 1,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"notice.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"notice.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"printed_notice\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "92ff74e85278",
+     "name": "notice.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"notice.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1fa2895c958e",
+     "name": "reorder.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "SELECT_ACT_COLLAPSE",
+       "reorder_stock"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "reorder.zayn:5  error  SELECT_ACT_COLLAPSE  reorder_stock\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "reorder_stock",
+       "line": 5,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reorder.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"reorder.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"reorder_stock\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "517ec708d82b",
+     "name": "reorder.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reorder.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "projection-auditory-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-auditory-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-voice-select-act.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-voice-select-act-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-machine-cancel.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_CANCEL"
+     ],
+     "got_ids": [
+      "MISSING_CANCEL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-machine-cancel-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-print-motion.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-print-motion-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-print-promise.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "got_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-print-promise-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-perceive.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-understand.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "got_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-decide.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-act.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "READ_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "READ_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-recover.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-trust.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -2453,7 +2957,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -3040,7 +3544,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -3415,7 +3919,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -3822,7 +4326,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -3831,7 +4335,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -3840,7 +4344,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -3849,7 +4353,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:21 UTC+01:00"
+   "ran": "2026-11-23 19:54 UTC+01:00"
   }
  }
 }
