@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 08:26 UTC+01:00",
+  "date": "2026-11-23 09:27 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -97,6 +97,338 @@
   "failed": []
  },
  "chapters": {
+  "en/06-intent-first": {
+   "id": "intent-first",
+   "blocks": [
+    {
+     "hash": "d1bb9b2789f7",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8d3719daa7d6",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "76ca7013424e",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_INTENT",
+       "find_invoice"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:2  error  UNKNOWN_INTENT  NAVIGATE in SATISFIES of find_invoice\n    A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_INTENT",
+       "severity": "error",
+       "subject": "NAVIGATE in SATISFIES of find_invoice",
+       "line": 2,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_INTENT\",\n      \"severity\": \"error\",\n      \"message\": \"A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"NAVIGATE in SATISFIES of find_invoice\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "dcf08c784315",
+     "name": "statement.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "INTENT_FLOW_NO_SATISFIES",
+       "check_statement"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "statement.zayn:1  warning  INTENT_FLOW_NO_SATISFIES  check_statement\n    An INTENT_FLOW declares no intents.\n    Article II\n\n0 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "INTENT_FLOW_NO_SATISFIES",
+       "severity": "warning",
+       "subject": "check_statement",
+       "line": 1,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "An INTENT_FLOW declares no intents."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"statement.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INTENT_FLOW_NO_SATISFIES\",\n      \"severity\": \"warning\",\n      \"message\": \"An INTENT_FLOW declares no intents.\",\n      \"span\": {\n        \"file\": \"statement.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"check_statement\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "f8578315894b",
+     "name": "statement.zayn",
+     "level": 3,
+     "symbols": "inventory.json",
+     "flags": [],
+     "promise": [
+      [
+       "INTENT_ORPHAN",
+       "overdue_mark"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "statement.zayn  error  INTENT_ORPHAN  overdue_mark\n    A declared element traces to no intent.\n    Rule 130 · Every Element Serves an Intent · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INTENT_ORPHAN",
+       "severity": "error",
+       "subject": "overdue_mark",
+       "line": 0,
+       "cites": [
+        "rule:130",
+        "article:intent"
+       ],
+       "level": 3,
+       "message": "A declared element traces to no intent."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"statement.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INTENT_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"A declared element traces to no intent.\",\n      \"span\": {\n        \"file\": \"statement.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:130\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"overdue_mark\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "7dec41f6254e",
+     "name": "statement.zayn",
+     "level": 3,
+     "symbols": "inventory.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"statement.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8c00dc585e56",
+     "name": "sales.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNSPECIFIED_DECLARATION",
+       "sales_card"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "sales.zayn:1  warning  UNSPECIFIED_DECLARATION  WIDGET sales_card\n    A .zayn declaration kind outside the ten this language defines (WIDGET, USER).\n    Article II\n\n0 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNSPECIFIED_DECLARATION",
+       "severity": "warning",
+       "subject": "WIDGET sales_card",
+       "line": 1,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A .zayn declaration kind outside the ten this language defines (WIDGET, USER)."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"sales.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNSPECIFIED_DECLARATION\",\n      \"severity\": \"warning\",\n      \"message\": \"A .zayn declaration kind outside the ten this language defines (WIDGET, USER).\",\n      \"span\": {\n        \"file\": \"sales.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"WIDGET sales_card\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "e17eb566878c",
+     "name": "sales.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"sales.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "743007456242",
+     "name": "lookup.zayn",
+     "level": 3,
+     "symbols": "screen.json",
+     "flags": [
+      "exercise"
+     ],
+     "promise": [],
+     "stated": false,
+     "verdict": "exercise",
+     "report": "",
+     "diagnostics": []
+    },
+    {
+     "hash": "990cf43b97da",
+     "name": "lookup.zayn",
+     "level": 3,
+     "symbols": "screen-kept.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"lookup.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 9,
+   "runnable": 9,
+   "exercises": 1,
+   "court": [
+    {
+     "file": "clean-minimal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-intent.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_INTENT"
+     ],
+     "got_ids": [
+      "UNKNOWN_INTENT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "intent-flow-no-satisfies.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "INTENT_FLOW_NO_SATISFIES"
+     ],
+     "got_ids": [
+      "INTENT_FLOW_NO_SATISFIES"
+     ],
+     "pass": true
+    },
+    {
+     "file": "intent-orphan.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "got_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unspecified-declaration.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNSPECIFIED_DECLARATION"
+     ],
+     "got_ids": [
+      "UNSPECIFIED_DECLARATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "expression-orphan.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "EXPRESSION_ORPHAN"
+     ],
+     "got_ids": [
+      "EXPRESSION_ORPHAN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "expression-orphan-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 09:27 UTC+01:00"
+  },
   "en/08-the-refusal": {
    "id": "the-refusal",
    "blocks": [
@@ -512,7 +844,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 08:26 UTC+01:00"
+   "ran": "2026-11-23 09:27 UTC+01:00"
   }
  }
 }

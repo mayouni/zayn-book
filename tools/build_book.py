@@ -59,6 +59,7 @@ UI = {
     "court_clean": "no finding",
     "stage": {"built": "built", "designed": "designed", "next": "next"},
     "plate": "Plate", "illustration": "Illustration", "symbols": "Symbol table", "run_label": "Run",
+    "families_h": ["Family", "Its verbs", "What its verbs keep true"],
     "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Enforced by", "why": "Why", "right_label": "A right of the user",
     "law_src": "Printed from the law's data, version {v}.",
@@ -357,6 +358,9 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .sketch .sk-ctl.sk-restored{border-color:var(--ok);color:var(--ok);}
 .sketch .sk-rule{font-weight:500;}
 .chapter-page .sketch p.sk-caption{font-family:var(--sans);line-height:1.45;margin:12px 0 0;color:var(--ink-soft);}
+.book-table.families td:first-child{white-space:nowrap;}
+.book-table.families code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
+.chapter-page p.table-src{font-family:var(--sans);color:var(--soft);margin:-1.1em 0 1.6em;text-indent:0;text-align:left;}
 .law-card{border:1px solid var(--rule);border-left:4px solid var(--ink);border-radius:0 8px 8px 0;margin:1.6em 0;padding:12px 18px 12px;background:var(--card-bg);font-family:var(--sans);}
 .law-card .lc-head{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;margin-bottom:6px;}
 .law-card .lc-num{font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--bookmark-text);}
@@ -509,7 +513,7 @@ def type_css():
         f".sketch .sk-title,.chapter-page .sketch p.sk-say,.sketch .sk-ctl{{font-size:{T['sketch']}px;}}\n"
         f".chapter-page .sketch p.sk-caption{{font-size:{T['sketch_note']}px;}}\n"
         f".law-card .lc-title,.law-card dd{{font-size:{T['law_card']}px;}}\n"
-        f".law-card .lc-num,.law-card dt,.chapter-page .law-card p.lc-src{{font-size:{T['law_card_label']}px;}}\n"
+        f".law-card .lc-num,.law-card dt,.chapter-page .law-card p.lc-src,.chapter-page p.table-src{{font-size:{T['law_card_label']}px;}}\n"
         ".ayouni-home{display:inline-flex;align-items:center;}\n"
         ".top-header .ayouni-home{height:38px;margin-right:6px;}\n"
         ".top-header .ayouni-home svg{height:22px;width:auto;aspect-ratio:2095/518;}\n"
@@ -681,6 +685,28 @@ def right_card(rid, law, ui, version):
             f'<p class="lc-src">{html.escape(ui["law_src"].format(v=version))}</p></aside>')
 
 
+def article_card(aid, law, ui, version):
+    a = law["articles"].get(aid)
+    if not a:
+        raise SystemExit(f"article card: the law at the pin has no article '{aid}'")
+    return (f'<aside class="law-card" id="article-{aid}"><div class="lc-head"><span class="lc-num">{ui["article"]} {html.escape(a.get("numeral", ""))}</span>'
+            f'<span class="lc-title">{html.escape(a.get("title", ""))}</span></div>'
+            f'<p class="lc-quote">{html.escape(a.get("statement", ""))}</p>'
+            f'<p class="lc-src">{html.escape(ui["law_src"].format(v=version))}</p></aside>')
+
+
+def families_table(law, ui, version):
+    """The verbs in their families, each with its invariant, as the law's data holds them."""
+    fams = (law["law"].get("intents") or {}).get("families") or {}
+    if not fams:
+        raise SystemExit("families: the law at the pin holds no intent families")
+    rows = [[f"<strong>{html.escape(name)}</strong>",
+             " ".join(f"<code>{html.escape(v)}</code>" for v in f.get("verbs", [])),
+             html.escape(f.get("invariant", ""))] for name, f in fams.items()]
+    return (render_table(rows, "book-table families", ui["families_h"])
+            + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+
+
 def suite_cell(level, suite, ui, where, errors):
     """The conformance suite's own run at one level, as the snapshot's runner printed it at this build."""
     rec = (suite or {}).get(str(level))
@@ -779,11 +805,15 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(f'<h4 class="subsubsection-h">{inline(s[4:].strip())}</h4>'); i += 1; continue
         if s == "---":
             flush(); out.append('<div class="divider">· · ·</div>'); i += 1; continue
-        m_card = re.match(r"^\{\{(rule|right|suite):([a-z0-9-]+)\}\}$", s)
+        if s == "{{families}}":
+            flush(); out.append(families_table(law, ui, version)); i += 1; continue
+        m_card = re.match(r"^\{\{(rule|right|suite|article):([a-z0-9-]+)\}\}$", s)
         if m_card:
             flush()
             if m_card.group(1) == "suite":
                 out.append(suite_cell(m_card.group(2), suite, ui, where, errors))
+            elif m_card.group(1) == "article":
+                out.append(article_card(m_card.group(2), law, ui, version))
             else:
                 out.append(rule_card(m_card.group(2), law, ui, version) if m_card.group(1) == "rule"
                            else right_card(m_card.group(2), law, ui, version))

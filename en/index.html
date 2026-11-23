@@ -1030,6 +1030,9 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .sketch .sk-ctl.sk-restored{border-color:var(--ok);color:var(--ok);}
 .sketch .sk-rule{font-weight:500;}
 .chapter-page .sketch p.sk-caption{font-family:var(--sans);line-height:1.45;margin:12px 0 0;color:var(--ink-soft);}
+.book-table.families td:first-child{white-space:nowrap;}
+.book-table.families code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
+.chapter-page p.table-src{font-family:var(--sans);color:var(--soft);margin:-1.1em 0 1.6em;text-indent:0;text-align:left;}
 .law-card{border:1px solid var(--rule);border-left:4px solid var(--ink);border-radius:0 8px 8px 0;margin:1.6em 0;padding:12px 18px 12px;background:var(--card-bg);font-family:var(--sans);}
 .law-card .lc-head{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;margin-bottom:6px;}
 .law-card .lc-num{font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--bookmark-text);}
@@ -1131,7 +1134,7 @@ body.vm-list .overview-contents{margin-top:24px;}
 .sketch .sk-title,.chapter-page .sketch p.sk-say,.sketch .sk-ctl{font-size:16px;}
 .chapter-page .sketch p.sk-caption{font-size:14.5px;}
 .law-card .lc-title,.law-card dd{font-size:15.5px;}
-.law-card .lc-num,.law-card dt,.chapter-page .law-card p.lc-src{font-size:14px;}
+.law-card .lc-num,.law-card dt,.chapter-page .law-card p.lc-src,.chapter-page p.table-src{font-size:14px;}
 .ayouni-home{display:inline-flex;align-items:center;}
 .top-header .ayouni-home{height:38px;margin-right:6px;}
 .top-header .ayouni-home svg{height:22px;width:auto;aspect-ratio:2095/518;}
@@ -1231,6 +1234,10 @@ body.vm-list .overview-contents{margin-top:24px;}
 </section>
 
 <section class="chapter-grid" id="chapterGrid">
+<a class="chapter-card" href="#ch6-intent-first">
+<span class="card-bookmark"></span><div class="card-preview"><p>Intent first is the rule Zayn rests on: an interface is declared from what its user is doing, and a control on a screen is what that intent becomes in one medium. In this chapter I write the first declaration of the book, three lines long, and I…</p></div>
+<div class="card-meta"><h3 class="card-title">Intent first</h3><p class="card-words">Part III · Chapter 6 · 2093 words</p></div>
+</a>
 <a class="chapter-card is-spine" href="#ch8-the-refusal">
 <span class="card-bookmark"></span><div class="card-preview"><p>A refusal is the verifier's answer to a declaration that breaks the law. In this chapter I make the verifier refuse. I give it a declaration, I print its answer as the run gave it, and I read that answer one line at a time: what it found and where,…</p></div>
 <div class="card-meta"><h3 class="card-title">The refusal</h3><p class="card-words">Part III · Chapter 8 · 2728 words</p></div>
@@ -1248,7 +1255,7 @@ body.vm-list .overview-contents{margin-top:24px;}
 <div class="ce-row is-absent"><span class="ce-num">4</span><span class="ce-title">The instruments of the field</span><span class="ce-pg">in writing</span></div>
 <div class="ce-row is-absent"><span class="ce-num">5</span><span class="ce-title">The road sign</span><span class="ce-pg">in writing</span></div>
 <div class="ce-part">Part III · The Inversion</div>
-<div class="ce-row is-absent"><span class="ce-num">6</span><span class="ce-title">Intent first</span><span class="ce-pg">in writing</span></div>
+<div class="ce-row"><span class="ce-num">6</span><a class="ce-title" href="#ch6-intent-first">Intent first</a></div>
 <div class="ce-row is-absent"><span class="ce-num">7</span><span class="ce-title">Ten declarations, one grammar</span><span class="ce-pg">in writing</span></div>
 <div class="ce-row is-spine"><span class="ce-num">8</span><a class="ce-title" href="#ch8-the-refusal">The refusal</a><span class="ce-spine">Spine</span></div>
 <div class="ce-row is-absent"><span class="ce-num">9</span><span class="ce-title">One verdict, two verifiers</span><span class="ce-pg">in writing</span></div>
@@ -1307,7 +1314,7 @@ body.vm-list .overview-contents{margin-top:24px;}
 <span class="sidebar-link is-absent" title="in writing"><span class="sl-text" data-t="4 · The instruments of the field"><span class="sl-spine"></span>4 · The instruments of the field</span></span>
 <span class="sidebar-link is-absent" title="in writing"><span class="sl-text" data-t="5 · The road sign"><span class="sl-spine"></span>5 · The road sign</span></span>
 <div class="sb-part">Part III · The Inversion</div>
-<span class="sidebar-link is-absent" title="in writing"><span class="sl-text" data-t="6 · Intent first"><span class="sl-spine"></span>6 · Intent first</span></span>
+<a class="sidebar-link" href="#ch6-intent-first"><span class="sl-text" data-t="6 · Intent first"><span class="sl-spine"></span>6 · Intent first</span><span class="sl-leader"></span></a>
 <span class="sidebar-link is-absent" title="in writing"><span class="sl-text" data-t="7 · Ten declarations, one grammar"><span class="sl-spine"></span>7 · Ten declarations, one grammar</span></span>
 <a class="sidebar-link is-spine" href="#ch8-the-refusal"><span class="sl-text" data-t="8 · The refusal"><span class="sl-spine"></span>8 · The refusal</span><span class="sl-leader"></span></a>
 <span class="sidebar-link is-absent" title="in writing"><span class="sl-text" data-t="9 · One verdict, two verifiers"><span class="sl-spine"></span>9 · One verdict, two verifiers</span></span>
@@ -1349,11 +1356,209 @@ body.vm-list .overview-contents{margin-top:24px;}
 
 <main class="chapter-main">
 
-<article class="chapter-page" id="page-ch8-the-refusal" data-slug="ch8-the-refusal" data-title="The refusal" data-prev="" data-next="">
+<article class="chapter-page" id="page-ch6-intent-first" data-slug="ch6-intent-first" data-title="Intent first" data-prev="" data-next="ch8-the-refusal">
+<div class="ch-eyebrow">Part III · Chapter 6</div>
+<h1 class="ch-title">Intent first</h1>
+<div class="status-banner st-draft" title="Written, its declarations run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
+<p class="proof"><strong>Run on 2026-11-23 09:27 UTC+01:00 by the reference verifier of the zayn command, release v0.2.0 (commit adaecc271), against the law at version 3.17: the verifier gave the expected answer on 9 of 9 declarations.</strong></p><p class="proof-engine">Each declaration on this page was checked as a file by the verifier&#x27;s JavaScript reference, the one the zayn command is held to, under Node 22.20.0. Every report printed below is the one that run gave. The lines that begin with //--&gt; state the answer the page expects, and the build fails on any other.</p>
+<div class="ch-rule"></div>
+<p>Intent first is the rule Zayn rests on: an interface is declared from what its user is doing, and a control on a screen is what that intent becomes in one medium. In this chapter I write the first declaration of the book, three lines long, and I name the words it is made of. Then I give the verbs, all 22 of them, and I show what the verifier answers when a word is outside them, when a flow names no intent, and when an element of an interface answers to no verb.</p>
+<p>Two words first. The <strong>law</strong> is Zayn's constitution for interfaces: 123 numbered rules, kept as data. The <strong>verifier</strong> is the program that reads a declaration and checks it against the law.</p>
+<h3 class="subsection-h">The field</h3>
+<p>The field builds an interface from the thing drawn. React's first lesson says that apps "are made out of components", and that a component is a piece of the interface with its own logic and its own appearance. The first word a team writes is the name of a thing on a screen.</p>
+<p>The field has also started from the other end. In 2014 a working group of the W3C published a note on task models, which "describe the logical activities" a user carries out to reach a goal, and it built its exchange format on a notation named ConcurTaskTrees. A companion note describes an abstract interface, written with no reference to how it is implemented and independent of any modality: screen, voice or touch. Both are Working Group Notes, and the first says in its own status that the group stopped taking it toward a W3C Recommendation.</p>
+<p>So the idea of starting from what the user does is in the field's record. It stands there as a description that tools exchange. Each of these pages was read at its source on 23 November 2026, and Appendix F lists them.</p>
+<h3 class="subsection-h">The principle</h3>
+<p><strong>An interface is declared from what its user is doing, in a closed set of verbs: a widget is what an intent becomes in a medium, never where a declaration starts.</strong></p>
+<p>The law holds this as its second article.</p>
+<aside class="law-card" id="article-intent"><div class="lc-head"><span class="lc-num">Article II</span><span class="lc-title">Intent Over Mechanics</span></div><p class="lc-quote">Interaction starts from what the human is trying to do — discover, focus, read, select, act, recover — and widgets are consequences of intent, never primitives. Selection never implies execution; a flow that traps is unconstitutional.</p><p class="lc-src">Printed from the law&#x27;s data, version 3.17.</p></aside>
+<p>The Zayn site says in one sentence what the inversion buys: "When the unit of declaration is a widget, a tool can check only the widget."</p>
+<h3 class="subsection-h">The first declaration</h3>
+<p>Here is the home screen of a ledger of invoices, declared.</p>
+<figure class="plate" id="plate-6-1"><figcaption class="plate-h"><span class="plate-n">Plate 6.1</span><span class="plate-t">A screen, and what its user does there</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">invoices.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">SCREEN</span> invoices_home (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">DISCOVER</span>, <span class="c-verb">LOCATE</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; clean</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>On the home screen of invoices, a user finds out which invoices there are, and goes to one they already know.</p>
+<p class="ran nv-kept"><span class="exit">exit code 0</span>run: the verifier found nothing, as this page expects</p>
+<pre class="ran-out report"><code>clean — 1 file(s), 0 violations at level 2 against Zayn v3.17</code></pre>
+</div>
+<div class="sketch">
+<div class="sk-label">Illustration</div>
+<div class="sk-title">Invoices</div>
+<p class="sk-say">12 open · 3 overdue</p>
+<p class="sk-say">2041 · 1,200.00 · due today</p>
+<div class="sk-controls">
+<span class="sk-ctl">Search</span>
+<span class="sk-ctl">Open</span>
+</div>
+<p class="sk-caption">One drawing among many. The declaration says discover and locate; a list and a search field are one way a screen carries them, and a spoken menu is another.</p>
+</div>
+</figure>
+<p>Clean! The verifier found nothing to refuse, and it handed back the number 0. That number is the exit code, what a command returns when it ends, and a team's build reads it to know whether to go on.</p>
+<p>Read the three lines. <code>DEFINE</code> opens every declaration. <code>SCREEN</code> is its kind: a place where a user can be. <code>invoices_home</code> is its name. Between the parentheses come its fields, and this one has a single field, <code>SATISFIES</code>, with the list of what the user does here. Nothing in the three lines says list, table, button or colour.</p>
+<p>To run it yourself, save the lines in a file and give the file to the verifier: <code>zayn check invoices.zayn</code>. Chapter 25 installs the command, and the testbench of the Zayn site checks a declaration in the browser with nothing installed. The line that begins with <code>//--&gt;</code> is a comment, which the verifier skips: it states the answer this page expects, and the book's build fails if the verifier gives another.</p>
+<p>A second field carries the rest of the idea.</p>
+<figure class="plate" id="plate-6-2"><figcaption class="plate-h"><span class="plate-n">Plate 6.2</span><span class="plate-t">A flow, and what stays within reach</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">invoices.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">INTENT_FLOW</span> find_invoice (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">LOCATE</span>, <span class="c-verb">READ</span>],</span><span class="cl">  <span class="c-field">ALWAYS_REACHABLE</span> [<span class="c-verb">EXIT</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; clean</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>To find an invoice, a user goes to it and reads it. At every step the user can leave.</p>
+<p class="ran nv-kept"><span class="exit">exit code 0</span>run: the verifier found nothing, as this page expects</p>
+<pre class="ran-out report"><code>clean — 1 file(s), 0 violations at level 2 against Zayn v3.17</code></pre>
+</div>
+</figure>
+<p>An <code>INTENT_FLOW</code> is a named sequence of intents a user moves through. <code>SATISFIES</code> says what the surface lets the user do. <code>ALWAYS_REACHABLE</code> says what the user can get to at every step, and not merely somewhere. Chapter 8 shows what the verifier does with a flow that acts and keeps nothing within reach.</p>
+<h3 class="subsection-h">The verbs, in six families</h3>
+<p>The words between the brackets are not free. They are the verbs of the law, and the law holds them in 6 families.</p>
+<table class="book-table families"><thead><tr><th>Family</th><th>Its verbs</th><th>What its verbs keep true</th></tr></thead><tbody><tr><td><strong>orienting</strong></td><td><code>DISCOVER</code> <code>UNDERSTAND</code> <code>LOCATE</code></td><td>Discovery must be satisfiable at every entry point.</td></tr><tr><td><strong>attention</strong></td><td><code>FOCUS</code> <code>FILTER</code> <code>COMPARE</code></td><td>An active filter is visible state; focus and discovery cannot both be at maximum.</td></tr><tr><td><strong>information</strong></td><td><code>READ</code> <code>SCAN</code> <code>SCROLL</code> <code>ZOOM</code></td><td>A read surface that silently acts is an intent violation.</td></tr><tr><td><strong>selection</strong></td><td><code>SELECT</code> <code>HIGHLIGHT</code> <code>PREVIEW</code> <code>MARK</code></td><td>Selection expresses interest, never commitment.</td></tr><tr><td><strong>action</strong></td><td><code>ACT</code> <code>CONFIRM</code> <code>CANCEL</code> <code>UNDO</code></td><td>Every act has a reachable undo, or declares why it cannot.</td></tr><tr><td><strong>continuity</strong></td><td><code>PAUSE</code> <code>RESUME</code> <code>RETRY</code> <code>EXIT</code></td><td>Pause, resume, and exit are always reachable; a trapped flow is unconstitutional.</td></tr></tbody></table><p class="table-src">Printed from the law&#x27;s data, version 3.17.</p>
+<p>Read the right column. Each family carries one sentence that its verbs must keep true in every declaration: its invariant. Several refusals of this book come straight from those sentences. A screen that reads and acts breaks the sentence of information. A flow where selecting carries out the act breaks the sentence of selection. Chapter 8 runs the sentences of action and of continuity.</p>
+<p>If you come from the Zayn site, you met the same verbs grouped by what a user is busy with: understanding, deciding, acting, recovering. The families are the law's own grouping, and chapter 13 gives the other.</p>
+<h3 class="subsection-h">A word outside the verbs</h3>
+<p>What happens when a declaration uses a word that is not on the list? Here is the word nearly everyone reaches for first.</p>
+<figure class="plate" id="plate-6-3"><figcaption class="plate-h"><span class="plate-n">Plate 6.3</span><span class="plate-t">The word everyone reaches for</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">invoices.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">INTENT_FLOW</span> find_invoice (</span><span class="cl cited">  <span class="c-field">SATISFIES</span> [<span class="c-verb">NAVIGATE</span>, <span class="c-verb">READ</span>],</span><span class="cl">  <span class="c-field">ALWAYS_REACHABLE</span> [<span class="c-verb">EXIT</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; UNKNOWN_INTENT find_invoice</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>To find an invoice, a user navigates and reads it, and can leave at every step.</p>
+<p class="ran nv-kept"><span class="exit">exit code 1</span>run: the verifier gave the answer this page expects</p>
+<pre class="ran-out report"><code>invoices.zayn:2  error  UNKNOWN_INTENT  NAVIGATE in SATISFIES of find_invoice
+    A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.
+    Article II
+
+1 error(s), 0 warning(s) across 1 file(s) at level 2</code></pre>
+</div>
+</figure>
+<p>Refused, and the exit code is 1! The report's first line gives the place, <code>invoices.zayn:2</code>, the severity, <code>error</code>, the code, <code>UNKNOWN_INTENT</code>, and what it is about. Its second line gives the reason. Its third line gives the law: Article II, the one printed above, and no rule, because the law has no numbered rule for this and the verifier claims none.</p>
+<p>Why is <code>NAVIGATE</code> not a verb? Because it hides two intents. A user who navigates is going to a place they know, which is <code>LOCATE</code>, or is finding out which places exist, which is <code>DISCOVER</code>. The declaration has to say which, and only its author knows. The second plate of this chapter is the repair for the first case.</p>
+<p>The list is closed on purpose. A new medium brings new drawings of the same verbs: a voice has no button, and its user still acts. A medium that seems to need a new verb is asking for a new drawing of an old one.</p>
+<h3 class="subsection-h">A flow that names no intent</h3>
+<p>A flow is the one kind of declaration that must say what it satisfies. Here is one that says only what stays within reach.</p>
+<figure class="plate" id="plate-6-4"><figcaption class="plate-h"><span class="plate-n">Plate 6.4</span><span class="plate-t">A flow with a name and no verb</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">statement.zayn</span></div>
+<pre class="numbered"><code><span class="cl cited"><span class="c-kw">DEFINE</span> <span class="c-kw">INTENT_FLOW</span> check_statement (</span><span class="cl">  <span class="c-field">ALWAYS_REACHABLE</span> [<span class="c-verb">EXIT</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; INTENT_FLOW_NO_SATISFIES check_statement</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>A user checks a statement and can leave at every step. The declaration does not say what checking is made of.</p>
+<p class="ran nv-kept"><span class="exit">exit code 0</span>run: the verifier gave the answer this page expects</p>
+<pre class="ran-out report"><code>statement.zayn:1  warning  INTENT_FLOW_NO_SATISFIES  check_statement
+    An INTENT_FLOW declares no intents.
+    Article II
+
+0 error(s), 1 warning(s) across 1 file(s) at level 2</code></pre>
+</div>
+</figure>
+<p>A finding, and the exit code is 0. Look at the severity on the first line: <code>warning</code>. A warning is a finding that lets the declaration pass. An error is a refusal. The verifier says that this flow is a name and no more, and it leaves the build running. The lawful shape is the plate before the last: a flow with its <code>SATISFIES</code>.</p>
+<h3 class="subsection-h">An element that answers to no verb</h3>
+<p>Now the rule that founds the language. Every element of an interface answers to a verb, or it has no reason to be there.</p>
+<p>A declaration cannot know which elements exist on a screen: it does not draw the screen. So the verifier is told. The list of elements is given to it in a small file, a symbol table, and the check is made at level 3, the level where the verifier is given more than the declaration.</p>
+<figure class="plate" id="plate-6-5"><figcaption class="plate-h"><span class="plate-n">Plate 6.5</span><span class="plate-t">Two elements on the screen, one declared</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">statement.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">COMPONENT</span> amount_due (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">READ</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; INTENT_ORPHAN overdue_mark</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>The amount due is something a user reads. The inventory says that the screen holds a second element, a mark for overdue statements, and no declaration says what a user does with it.</p>
+<p class="ran nv-kept"><span class="exit">exit code 1</span>run: the verifier gave the answer this page expects</p>
+<pre class="ran-out report"><code>statement.zayn  error  INTENT_ORPHAN  overdue_mark
+    A declared element traces to no intent.
+    Rule 130 · Every Element Serves an Intent · Article II
+
+1 error(s), 0 warning(s) across 1 file(s) at level 3</code></pre>
+</div>
+<div class="code-cell aux-cell"><div class="cell-label">Symbol table<span class="cl-file">inventory.json</span></div><pre><code>{
+  &quot;elements&quot;: [&quot;amount_due&quot;, &quot;overdue_mark&quot;]
+}</code></pre></div>
+</figure>
+<p>Refused, and this time the third line cites a rule: Rule 130. The first line has no line number, because the element is in the inventory and not in the file.</p>
+<aside class="law-card" id="rule-130"><div class="lc-head"><span class="lc-num">Rule 130</span><span class="lc-title">Every Element Serves an Intent</span></div><dl><dt>Article</dt><dd>II · Intent Over Mechanics</dd><dt>Set</dt><dd>29 · Declaration Governance</dd><dt>Enforced by</dt><dd>the verifier, on the declaration (tier <code>machine</code>)</dd><dt>Why</dt><dd>An element no intent asks for competes with the ones that matter (Article I) and answers a question nobody put. The person spends attention deciding it is irrelevant, or takes it for a choice. Being able to name the intent is the cheapest test an element has to pass, and an element that cannot pass it is mechanics, which Article II puts below intent.</dd></dl><p class="lc-src">Printed from the law&#x27;s data, version 3.17.</p></aside>
+<p>The rule names two repairs: remove the element, or declare the intent it was always meant to serve. Here is the second.</p>
+<figure class="plate" id="plate-6-6"><figcaption class="plate-h"><span class="plate-n">Plate 6.6</span><span class="plate-t">The mark, asked what it is for</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">statement.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">COMPONENT</span> amount_due (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">READ</span>]</span><span class="cl">)</span><span class="cl">&#8203;</span><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">COMPONENT</span> overdue_mark (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">SCAN</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; clean</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>The amount due is something a user reads. The overdue mark is something a user scans for, down a list of statements.</p>
+<p class="ran nv-kept"><span class="exit">exit code 0</span>run: the verifier found nothing, as this page expects</p>
+<pre class="ran-out report"><code>clean — 1 file(s), 0 violations at level 3 against Zayn v3.17</code></pre>
+</div>
+</figure>
+<p>Clean. Declaring the mark was the moment it was first asked what it is for.</p>
+<h3 class="subsection-h">A kind for the widget</h3>
+<p>One more word that a first draft reaches for.</p>
+<figure class="plate" id="plate-6-7"><figcaption class="plate-h"><span class="plate-n">Plate 6.7</span><span class="plate-t">A declaration that starts from the drawing</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">sales.zayn</span></div>
+<pre class="numbered"><code><span class="cl cited"><span class="c-kw">DEFINE</span> <span class="c-verb">WIDGET</span> sales_card (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">READ</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; UNSPECIFIED_DECLARATION sales_card</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>There is a card of sales figures, and a user reads it.</p>
+<p class="ran nv-kept"><span class="exit">exit code 0</span>run: the verifier gave the answer this page expects</p>
+<pre class="ran-out report"><code>sales.zayn:1  warning  UNSPECIFIED_DECLARATION  WIDGET sales_card
+    A .zayn declaration kind outside the ten this language defines (WIDGET, USER).
+    Article II
+
+0 error(s), 1 warning(s) across 1 file(s) at level 2</code></pre>
+</div>
+</figure>
+<p>A warning, and the exit code is 0: the language has no kind named <code>WIDGET</code>, and the verifier reports the word where it is written. The repair names what the user does with the figures and leaves the card to the drawing.</p>
+<figure class="plate" id="plate-6-8"><figcaption class="plate-h"><span class="plate-n">Plate 6.8</span><span class="plate-t">The same figures, declared from the user</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">sales.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">COMPONENT</span> sales_figures (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">READ</span>, <span class="c-verb">COMPARE</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; clean</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>A user reads the sales figures and compares them.</p>
+<p class="ran nv-kept"><span class="exit">exit code 0</span>run: the verifier found nothing, as this page expects</p>
+<pre class="ran-out report"><code>clean — 1 file(s), 0 violations at level 2 against Zayn v3.17</code></pre>
+</div>
+</figure>
+<p>Clean. Card or table is the drawing's business.</p>
+<section class="decision"><div class="decision-tag">The decision, and what was refused</div>
+<h3 class="subsection-h">What I refused</h3>
+<p><strong>I refused a kind for the widget.</strong> A widget is a consequence of an intent. A declaration that could name one would start from the drawing, and the language would have two starting points.</p>
+<p><strong>I refused a twenty-third verb.</strong> The verbs are a closed list, and <code>NAVIGATE</code> is the first word it turns away. A closed list is what makes the rest countable: which verbs a medium carries, which rules speak of which verb.</p>
+<p><strong>I refused to leave the founding check outside the law.</strong> The verifier reported an element that answers to no verb before any numbered rule said so. On 2 November 2026 the check was given its rule, number 130, and the law's record says plainly that the order was reversed: the check came first.</p>
+</section>
+<h3 class="subsection-h">The court</h3>
+<p>The court of a chapter is what proves it. Here it is a set of fixtures from Zayn's conformance suite: declarations kept with the answer each must get. The build ran each fixture below in the snapshot of Zayn and compared its answer with the suite's manifest.</p>
+<p>One pair stands in the box, <code>expression-orphan</code> and its lawful twin: the same rule one level down, for a declaration that says how its values should be perceived and says nothing of what its user is doing. The lawful forms of the other fixtures are this chapter's own plates.</p>
+<div class="court"><p class="court-head">Run in the Zayn snapshot at commit adaecc271 on 2026-11-23 09:27 UTC+01:00. Each fixture is a declaration of the conformance suite; the suite&#x27;s manifest states the findings it must get, and the run compares the two sets.</p><ul><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/clean-minimal.zayn" target="_blank" rel="noopener"><code>clean-minimal.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/unknown-intent.zayn" target="_blank" rel="noopener"><code>unknown-intent.zayn</code></a></span><span class="g-count">UNKNOWN_INTENT</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/intent-flow-no-satisfies.zayn" target="_blank" rel="noopener"><code>intent-flow-no-satisfies.zayn</code></a></span><span class="g-count">INTENT_FLOW_NO_SATISFIES</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/intent-orphan.zayn" target="_blank" rel="noopener"><code>intent-orphan.zayn</code></a></span><span class="g-count">INTENT_ORPHAN</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/unspecified-declaration.zayn" target="_blank" rel="noopener"><code>unspecified-declaration.zayn</code></a></span><span class="g-count">UNSPECIFIED_DECLARATION</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/expression-orphan.zayn" target="_blank" rel="noopener"><code>expression-orphan.zayn</code></a></span><span class="g-count">EXPRESSION_ORPHAN</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/expression-orphan-lawful.zayn" target="_blank" rel="noopener"><code>expression-orphan-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li></ul></div>
+<h3 class="subsection-h">Where the field leads</h3>
+<p>The field leads in what a task model can say. The W3C note describes tasks with the order between them and their decomposition into subtasks: one task enables another, two tasks are a choice, one suspends another. A declaration of Zayn lists the intents of a surface and names a wizard's steps. It holds no operator between intents.</p>
+<p>And the frameworks build the screen. A declaration builds none: a team still draws its interface with the framework it has, and Zayn checks what was declared before the drawing begins.</p>
+<h3 class="subsection-h">Where it stands</h3>
+<ul class="stage-list"><li><span class="stage s-built">built</span><span>the 22 verbs in 6 families, each with its invariant, as data of the law; a word outside them refused from the file alone; an element that answers to no verb refused at level 3, against an inventory the verifier is given, under Rule 130</span></li><li><span class="stage s-designed">designed</span><span>the tables that say which control follows from which intent in each medium; the inventory of elements computed from a project in place of being given</span></li><li><span class="stage s-next">next</span><span>the law served to an AI model while it generates, so that a generated surface starts from a declared intent</span></li></ul>
+<p>Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.</p>
+<p>Starting from intent makes checkable what a declaration states: its verbs, what it keeps within reach, its steps, from the file alone and before anything is drawn. That every element answers to a verb is decided at level 3, when the verifier is given the list of elements. An element traces to an intent there when a declaration of its own name satisfies a verb.</p>
+<h3 class="subsection-h">In your hands</h3>
+<p>Here is a first draft written in the words of mechanics, with a form that points at its flow, and the inventory of the screen.</p>
+<figure class="plate" id="plate-6-9"><figcaption class="plate-h"><span class="plate-n">Plate 6.9</span><span class="plate-t">For you: a lookup, in the words of mechanics</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">lookup.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">INTENT_FLOW</span> look_up_invoice (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">SEARCH</span>, <span class="c-verb">NAVIGATE</span>, <span class="c-verb">VIEW</span>]</span><span class="cl">)</span><span class="cl">&#8203;</span><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">FORM</span> search_form (</span><span class="cl">  <span class="c-field">INTENT_FLOW</span> look_up_invoice</span><span class="cl">)</span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>To look up an invoice, a user searches, navigates and views. A search form serves that flow.</p>
+<p class="ran nv-exercise">exercise: written for you to run and repair</p>
+</div>
+<div class="code-cell aux-cell"><div class="cell-label">Symbol table<span class="cl-file">screen.json</span></div><pre><code>{
+  &quot;elements&quot;: [&quot;search_form&quot;, &quot;promo_banner&quot;]
+}</code></pre></div>
+</figure>
+<p>Before you run it, write the codes you expect, and how many times each. Then run it and compare.</p>
+<p>Now say each word as a verb of the law, and run it again with the inventory, at level 3: <code>zayn check lookup.zayn --level 3 --symbols screen.json</code>. Two elements are reported. The banner you expected. The form is the surprise: it names its flow, and the flow is lawful. Go on until the verifier answers clean and every line of your file is true. Giving the banner a verb it does not serve silences the verifier and makes the declaration untrue. Try before you read on.</p>
+<p>Here is a form the verifier accepts, with the banner gone from the screen.</p>
+<figure class="plate" id="plate-6-10"><figcaption class="plate-h"><span class="plate-n">Plate 6.10</span><span class="plate-t">A form the verifier accepts</span></figcaption>
+<div class="code-cell">
+<div class="cell-label">Zayn<span class="cl-file">lookup.zayn</span></div>
+<pre class="numbered"><code><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">INTENT_FLOW</span> look_up_invoice (</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">FILTER</span>, <span class="c-verb">LOCATE</span>, <span class="c-verb">READ</span>]</span><span class="cl">)</span><span class="cl">&#8203;</span><span class="cl"><span class="c-kw">DEFINE</span> <span class="c-kw">FORM</span> search_form (</span><span class="cl">  <span class="c-field">INTENT_FLOW</span> look_up_invoice,</span><span class="cl">  <span class="c-field">SATISFIES</span> [<span class="c-verb">FILTER</span>]</span><span class="cl">)</span><span class="cl"><span class="c-promise">//--&gt; clean</span></span></code></pre>
+<p class="in-words"><span class="iw-label">In words</span>To look up an invoice, a user filters the list, goes to an invoice and reads it. The search form serves that flow, and a user filters with it.</p>
+<p class="ran nv-kept"><span class="exit">exit code 0</span>run: the verifier found nothing, as this page expects</p>
+<pre class="ran-out report"><code>clean — 1 file(s), 0 violations at level 3 against Zayn v3.17</code></pre>
+</div>
+<div class="code-cell aux-cell"><div class="cell-label">Symbol table<span class="cl-file">screen-kept.json</span></div><pre><code>{
+  &quot;elements&quot;: [&quot;search_form&quot;]
+}</code></pre></div>
+</figure>
+<p>It is clean, and the form says twice what it is for: once by naming its flow, once by a verb of its own. The verifier reads the second. Should an element that names its flow answer through it?</p>
+<p>A verb says what a user does. The next chapter gives the ten kinds of declaration that say where, and the whole grammar on one page.</p>
+</article>
+<article class="chapter-page" id="page-ch8-the-refusal" data-slug="ch8-the-refusal" data-title="The refusal" data-prev="ch6-intent-first" data-next="">
 <div class="ch-eyebrow">Part III · Chapter 8<span class="spine-badge" title="One of the spine chapters: they carry the whole argument and can be read alone">Spine</span></div>
 <h1 class="ch-title">The refusal</h1>
 <div class="status-banner st-draft" title="Written, its declarations run and judged, read by fresh readers; awaiting the author&#x27;s review">Draft</div>
-<p class="proof"><strong>Run on 2026-11-23 08:26 UTC+01:00 by the reference verifier of the zayn command, release v0.2.0 (commit adaecc271), against the law at version 3.17: the verifier gave the expected answer on 7 of 7 declarations.</strong></p><p class="proof-engine">Each declaration on this page was checked as a file by the verifier&#x27;s JavaScript reference, the one the zayn command is held to, under Node 22.20.0. Every report printed below is the one that run gave. The lines that begin with //--&gt; state the answer the page expects, and the build fails on any other.</p>
+<p class="proof"><strong>Run on 2026-11-23 09:27 UTC+01:00 by the reference verifier of the zayn command, release v0.2.0 (commit adaecc271), against the law at version 3.17: the verifier gave the expected answer on 7 of 7 declarations.</strong></p><p class="proof-engine">Each declaration on this page was checked as a file by the verifier&#x27;s JavaScript reference, the one the zayn command is held to, under Node 22.20.0. Every report printed below is the one that run gave. The lines that begin with //--&gt; state the answer the page expects, and the build fails on any other.</p>
 <div class="ch-rule"></div>
 <p>A refusal is the verifier's answer to a declaration that breaks the law. In this chapter I make the verifier refuse. I give it a declaration, I print its answer as the run gave it, and I read that answer one line at a time: what it found and where, why, and under which law. Then I repair the declaration and run it again.</p>
 <p>If you open the book here, three words are enough to follow. A <strong>declaration</strong> is a few lines that say what a user is doing on a surface, with 22 verbs and no others, and that say nothing of how the surface is drawn. The <strong>law</strong> is Zayn's constitution for interfaces: 123 numbered rules, kept as data, under 7 articles and 6 rights of the user. The <strong>verifier</strong> is the program that reads a declaration and checks it against the law. Chapter 6 gives the verbs, chapter 7 the 10 kinds of declaration, and Part VII the law.</p>
@@ -1544,7 +1749,7 @@ ledger.zayn:8  error  DECORATIVE_ANIMATION  delete_flourish
 <h3 class="subsection-h">The court</h3>
 <p>The court of a chapter is what proves it. Here it is Zayn's conformance suite: 77 fixtures, each a declaration kept with the answer it must get, and a manifest that lists those answers. The build ran each fixture below in the snapshot of Zayn and compared its answer with the manifest.</p>
 <p>Of the fixtures, 28 must get no finding, because a check that fires on everything proves nothing. Among them are the lawful twins: for a refused declaration, a second fixture where the defect is repaired. The box below sets a refused fixture beside its twin wherever the suite has one.</p>
-<div class="court"><p class="court-head">Run in the Zayn snapshot at commit adaecc271 on 2026-11-23 08:26 UTC+01:00. Each fixture is a declaration of the conformance suite; the suite&#x27;s manifest states the findings it must get, and the run compares the two sets.</p><ul><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-undo.zayn" target="_blank" rel="noopener"><code>missing-undo.zayn</code></a></span><span class="g-count">MISSING_UNDO</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-undo-lawful.zayn" target="_blank" rel="noopener"><code>missing-undo-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-cancel.zayn" target="_blank" rel="noopener"><code>missing-cancel.zayn</code></a></span><span class="g-count">MISSING_CANCEL</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-cancel-lawful.zayn" target="_blank" rel="noopener"><code>missing-cancel-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/select-act-collapse.zayn" target="_blank" rel="noopener"><code>select-act-collapse.zayn</code></a></span><span class="g-count">SELECT_ACT_COLLAPSE</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/select-act-lawful.zayn" target="_blank" rel="noopener"><code>select-act-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/trapped-flow.zayn" target="_blank" rel="noopener"><code>trapped-flow.zayn</code></a></span><span class="g-count">TRAPPED_FLOW</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/trapped-flow-lawful.zayn" target="_blank" rel="noopener"><code>trapped-flow-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/decorative-animation.zayn" target="_blank" rel="noopener"><code>decorative-animation.zayn</code></a></span><span class="g-count">DECORATIVE_ANIMATION</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/decorative-animation-lawful.zayn" target="_blank" rel="noopener"><code>decorative-animation-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/multiple-violations.zayn" target="_blank" rel="noopener"><code>multiple-violations.zayn</code></a></span><span class="g-count">DECORATIVE_ANIMATION, MISSING_UNDO, SELECT_ACT_COLLAPSE, TRAPPED_FLOW</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/irreversible-claims-undo.zayn" target="_blank" rel="noopener"><code>irreversible-claims-undo.zayn</code></a></span><span class="g-count">IRREVERSIBLE_CLAIMS_UNDO</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/irreversible-claims-undo-lawful.zayn" target="_blank" rel="noopener"><code>irreversible-claims-undo-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li></ul></div>
+<div class="court"><p class="court-head">Run in the Zayn snapshot at commit adaecc271 on 2026-11-23 09:27 UTC+01:00. Each fixture is a declaration of the conformance suite; the suite&#x27;s manifest states the findings it must get, and the run compares the two sets.</p><ul><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-undo.zayn" target="_blank" rel="noopener"><code>missing-undo.zayn</code></a></span><span class="g-count">MISSING_UNDO</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-undo-lawful.zayn" target="_blank" rel="noopener"><code>missing-undo-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-cancel.zayn" target="_blank" rel="noopener"><code>missing-cancel.zayn</code></a></span><span class="g-count">MISSING_CANCEL</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/missing-cancel-lawful.zayn" target="_blank" rel="noopener"><code>missing-cancel-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/select-act-collapse.zayn" target="_blank" rel="noopener"><code>select-act-collapse.zayn</code></a></span><span class="g-count">SELECT_ACT_COLLAPSE</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/select-act-lawful.zayn" target="_blank" rel="noopener"><code>select-act-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/trapped-flow.zayn" target="_blank" rel="noopener"><code>trapped-flow.zayn</code></a></span><span class="g-count">TRAPPED_FLOW</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/trapped-flow-lawful.zayn" target="_blank" rel="noopener"><code>trapped-flow-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/decorative-animation.zayn" target="_blank" rel="noopener"><code>decorative-animation.zayn</code></a></span><span class="g-count">DECORATIVE_ANIMATION</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/decorative-animation-lawful.zayn" target="_blank" rel="noopener"><code>decorative-animation-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/multiple-violations.zayn" target="_blank" rel="noopener"><code>multiple-violations.zayn</code></a></span><span class="g-count">DECORATIVE_ANIMATION, MISSING_UNDO, SELECT_ACT_COLLAPSE, TRAPPED_FLOW</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/irreversible-claims-undo.zayn" target="_blank" rel="noopener"><code>irreversible-claims-undo.zayn</code></a></span><span class="g-count">IRREVERSIBLE_CLAIMS_UNDO</span><span class="g-ok">answers as the manifest expects</span></li><li><span class="g-name"><a href="https://github.com/mayouni/zayn/blob/v0.2.0/conformance/fixtures/irreversible-claims-undo-lawful.zayn" target="_blank" rel="noopener"><code>irreversible-claims-undo-lawful.zayn</code></a></span><span class="g-count">no finding</span><span class="g-ok">answers as the manifest expects</span></li></ul></div>
 <h3 class="subsection-h">Where the field leads</h3>
 <p>The field leads on the painted page. A checker such as axe-core reads the interface a browser has built: the contrast of a text against its background, the name a button exposes to a screen reader. Its rule list had 105 rules on 21 November 2026, each with its impact and its tags. A declaration of Zayn has no colour and no widget: both belong to the drawing. Chapter 10 measures the painted page.</p>
 <p>And WCAG's criterion reaches the page as a user meets it, where a declaration states what every drawing of it must keep. A team keeps both: the refusal before anything is drawn, and the measurement of what was drawn.</p>
