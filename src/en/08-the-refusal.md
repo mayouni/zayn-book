@@ -214,7 +214,7 @@ Clean. So an act has two lawful forms: it keeps an undo within reach, or it says
 
 **I refused to compare wording.** The suite that keeps two verifiers to one verdict compares the codes they report and nothing else: the line number, the order and the sentence are free. Between the reference and its own port the bar is higher, and chapter 9 gives it. The contract binds each code to the law it cites, and the sentence may be written in whatever language its reader reads.
 
-**I refused a citation that the law does not back.** A finding that cites a rule is answered by a repair or by an amendment, so a citation is a claim. On 2 November 2026 I ruled that two kinds of finding, `EXPRESSION_ORPHAN` and `VIBE_STRIPS_RIGHT`, go on citing an article and no rule.
+**I refused a citation that the law does not back.** A finding that cites a rule is answered by a repair or by an amendment, so a citation is a claim. The ruling of 2 November 2026 left two kinds of finding, `EXPRESSION_ORPHAN` and `VIBE_STRIPS_RIGHT`, citing an article and no rule.
 
 ## The court
 
