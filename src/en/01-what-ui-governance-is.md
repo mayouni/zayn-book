@@ -16,7 +16,7 @@ UI governance holds an interface to rules: the rules it keeps toward its user, t
 
 [AUTHOR: the opening. The Zayn site prints your sentence of 9 November 2026, quoted below in "The defect that comes back"; is it the book's first words?]
 
-Zayn is the subject of this book: a language of declarations, a law for interfaces kept as data, and the instruments that hold an interface to that law. Four words carry the book. A **declaration** is a few lines that say what a user is doing on a surface, and nothing of how the surface is drawn. A **user** is whoever acts through an interface: a person, or an AI agent. The **law** is Zayn's constitution for interfaces: {{n:law.rules}} numbered rules, kept as a data file. And the **verifier** is the program that checks a declaration against the law. Its report is a list of findings, and a finding that is an error is a refusal.
+Zayn is the subject of this book: a language of declarations, a law for interfaces kept as data, and the instruments that hold an interface to that law. Four words carry the book. A **declaration** is a few lines that say what a user is doing on a surface, and nothing of how the surface is drawn. A **user** is whoever acts through an interface: a person, or an AI agent. The **law** is Zayn's constitution for interfaces: {{n:law.rules}} numbered rules, kept as a data file. Their numbers run to {{n:law.highest}}, because a number taken out of use is never given again. And the **verifier** is the program that checks a declaration against the law. Its report is a list of findings, and a finding that is an error is a refusal.
 
 ## The field
 
@@ -42,7 +42,7 @@ Why does a defect come back? The front page of Zayn's repository, the store of i
 
 This book answers with three moves, and each is shown once here.
 
-**Declare what a user is doing.** A declaration states the user's intent and each control's promise, and says nothing of shape or colour. An `INTERACTION` is one control. `SATISFIES` lists what the user does with it, and `ALWAYS_REACHABLE` what the user can always get to, such as undo. `ROLE` is the control's promise: `inert` promises that acting on it changes nothing. Here is a dashboard with two totals.
+**Declare what a user is doing.** A declaration states the user's intent and each control's promise, and says nothing of shape or colour. An `INTERACTION` is one control. `SATISFIES` lists what the user does with it, and `ALWAYS_REACHABLE` what the user can always get to, such as undo. `ROLE` is the control's promise, one of five: `inert`, `navigate`, `reversible`, `irreversible` and `proposal`. `inert` promises that acting on it changes nothing. Here is a dashboard with two totals.
 
 ::: plate Two totals, and one of them acts
 ```zayn dashboard.zayn
@@ -61,7 +61,7 @@ DEFINE INTERACTION overdue_total (
 In words: A dashboard shows two totals. The user reads the revenue, and both totals promise only to inform. Touching the overdue total does something, which can be undone.
 :::
 
-**Hold it to the law.** Refused! The overdue total promises to inform and declares that it acts. The report cites three rules, Rule 119 first, and Article II of the law. Rule 119 was written from this defect, a tile that looks like information and behaves like a button, corrected in the interface of a banking product in April 2026. Here the verifier refuses it before anything is drawn. The repair gives the act a control of its own.
+**Hold it to the law.** Refused! The overdue total promises to inform and declares that it acts. The report's third line cites the rules that the contract, the file binding each kind of finding to the law, gives this kind: a card that acts (Rule 119), motion that changes nothing (Rule 112) and a click that acts unasked (Rule 16). It also cites Article II: an article is one of the law's {{n:law.articles}} statements of principle, and every rule derives from one. The report ends on the level, here 2: the verifier was given the file alone. Level 3 gives it more, what the system holds, in a small file named on the command line, and chapter 9 gives the four levels. To run a file yourself: `zayn check dashboard.zayn`; the Zayn site's testbench runs it in a browser. Rule 119 was written from this defect, a tile that looks like information and behaves like a button, corrected in the interface of a banking product in April 2026. Here the verifier refuses it before anything is drawn. The repair gives the act a control of its own.
 
 ::: plate The act, given a control of its own
 ```zayn dashboard.zayn
@@ -87,7 +87,7 @@ In words: The two totals only inform: the user reads one and scans the other. A 
 
 Clean. The totals inform, and the act is a control whose promise says that it changes what is true (here, the reminders are sent) and can be undone. The verifier does not say what the control looks like: that is the drawing's business. The control is held to its promise.
 
-The user can be an AI agent. Here is the same total, read by a program. A `VIBE`, the kind of declaration that names a medium, says so with `SURFACE_AS machine`, and `ACTOR agent` names an AI agent as the one who acts.
+The user can be an AI agent. Here is the same total, read by a program. A `VIBE` is the kind of declaration that states a culture of interaction, and its field `SURFACE_AS` names the medium, the way the interface meets its user. Here it says `machine`, and `ACTOR agent` names the one who acts, in a name the team chooses: an AI agent.
 
 ::: plate The same total, for an AI agent
 ```zayn invoices.zayn
@@ -110,7 +110,7 @@ The same refusal. The promise is read the same whoever the user is.
 
 Part VII reads the three ways the law is held. The verifier refuses a declaration before anything is drawn. An audit measures the painted page: one of its checks finds a short last line in a paragraph of running text, the defect I corrected twice in one day. And a person judges what only a person perceives; the Zayn site says of testing with people: "Nothing replaces it. No instrument here perceives for a person."
 
-**Keep the corrections, so that they become rules.** The law's last article says how it grows: "The law grows only from evidence". A correction that happened, was corrected, holds beyond its project and can be decided can become a rule with a number. Chapters 18 and 19 tell how, on the record.
+**Keep the corrections, so that they become rules.** The law's last article says how it grows: "The law grows only from evidence". A correction can become a rule with a number when it happened, was corrected, holds beyond its own project, and can be decided yes or no. Chapters 18 and 19 tell how, on the record.
 
 ## What I refused
 

@@ -14,7 +14,7 @@ fixtures: [projection-auditory-undo, projection-auditory-undo-lawful, projection
 
 The grid is a map of what the law covers, drawn from what a user does with an interface. In this chapter I draw it: the media crossed with the activities of the user, the cells that no rule can hold, the cells that hold one and the cells that wait for one. I show how each rule finds its place. Then I run a rule on a cell where no rule is written, to see whether it answers there.
 
-If you open the book here, four words are enough to follow. A **declaration** is a few lines that say what a user is doing on a surface. The **law** is Zayn's constitution of {{n:law.rules}} rules for interfaces. The **verifier** is the program that checks a declaration against the law. A **medium** is the way an interface meets its user: a screen, a sound, a voice, a printed page, a program that reads it. The Zayn site and chapter 12 also call it a channel, and chapter 12 gives the {{n:grid.media}} media of the law.
+If you open the book here, four words are enough to follow, and an `INTENT_FLOW`, on the plates, is a flow: what a user does to reach one goal. A **declaration** is a few lines that say what a user is doing on a surface. The **law** is Zayn's constitution of {{n:law.rules}} rules for interfaces. The **verifier** is the program that checks a declaration against the law. A **medium** is the way an interface meets its user: a screen, a sound, a voice, a printed page, a program that reads it. The Zayn site and chapter 12 also call it a channel, and chapter 12 gives the {{n:grid.media}} media of the law.
 
 ## The field
 
@@ -40,7 +40,7 @@ The media are the ten of the law, and one more, `any`: in the document's words, 
 
 Read the table by its kinds of cell. A closed cell is one that no rule can hold: the medium carries none of the verbs the activity owns. Every other cell is open. A number is the count of rules written for that activity in that medium, and a zero is an empty cell, where the next rule will stand. The grid has {{n:grid.cells}} cells: {{n:grid.closed}} are closed, and of the {{n:grid.live}} open ones, {{n:grid.ruled}} hold a rule and {{n:grid.empty}} are empty.
 
-Two rows carry most of the law. Of the {{n:grid.placed}} rules placed, {{n:grid.visual}} sit on the screen and {{n:grid.free}} name no medium. The law is written for a screen, and the row `any` holds the rules stated for every medium.
+Two rows carry most of the law. Of the {{n:grid.placed}} rules placed, {{n:grid.visual}} sit on the screen, {{n:grid.free}} name no medium, and Rule 125 sits on sound alone. A rule counts once in these figures, and once in each cell of the table where it is placed. The law is written for a screen, and the row `any` holds the rules stated for every medium.
 
 ## How a rule finds its place
 
@@ -86,7 +86,7 @@ DEFINE INTENT_FLOW dismiss_alert (
 In words: The same alert, and undo stays within reach.
 :::
 
-Clean. The rule fired on the defect and stayed quiet on its twin. When both of Zayn's verifiers agree on such a pair, the design document records that the rule "applies". Zayn's conformance suite, its set of fixtures, which are declarations kept with the answers they must get, holds such pairs for sound, voice, a program and print. Here is one more empty cell, recover by voice, measured on this page by a declaration of its own.
+Clean. The rule fired on the defect and stayed quiet on its twin. Zayn has two verifiers: the reference that this page runs, and a second one built from another declaration of the language, which chapter 9 describes. When both agree on such a pair, the design document records that the rule "applies". Zayn's conformance suite, its set of fixtures, which are declarations kept with the answers they must get, holds such pairs for sound, voice, a program and print. Here is one more empty cell, recover by voice, measured on this page by a declaration of its own.
 
 ::: plate A voicemail, deleted for good
 ```zayn voicemail.zayn
@@ -126,7 +126,7 @@ Clean. The run measured one more empty cell, and the grid's count stayed where i
 
 ## A closed cell, refused
 
-A closed cell is drawn on the grid, and a declaration that lands on one is refused by the verifier. Print carries no verb of the way back. Here is a printed ledger that promises one.
+A closed cell is drawn on the grid, and the verifier refuses what lands there: it refuses each verb that a medium cannot carry, and on a closed cell none of the activity's verbs is carried. Print carries no verb of the way back. Here is a printed ledger that promises one.
 
 ::: plate A printed ledger that promises a way back
 ```zayn ledger.zayn
@@ -228,7 +228,7 @@ The grid on this page is counted at each build from the placement of the rules, 
 
 ## In your hands
 
-Here an AI agent is the user: it orders stock through a supplier's interface for programs. A `VIBE` with `SURFACE_AS machine` says that the surface is read by a program. Write the finding you expect, by its code, then open the verifier's answer.
+This exercise is written for the book. Here an AI agent is the user: it orders stock through a supplier's interface for programs. A `VIBE` with `SURFACE_AS machine` says that the surface is read by a program. Write the finding you expect, by its code, then open the verifier's answer.
 
 ::: plate For you: an order placed on a choice
 ```zayn reorder.zayn
@@ -246,7 +246,7 @@ DEFINE INTENT_FLOW reorder_stock (
 In words: Through a supplier's interface for programs, an AI agent selects a product and the order is placed. It can undo, cancel or leave at every step.
 :::
 
-Now place it on the grid. The report cites Rule 16, and the grid's placement puts Rule 16 on decide, act and trust, with no medium named. The `VIBE` says the medium is a program. So the declaration lands on the row `machine`, in the columns decide, act and trust: look at the table, and each of those cells is empty. Repair the declaration. Try before you read on.
+Now place it on the grid. The report cites Rule 16, and the grid's placement puts Rule 16 on decide, act and trust, with no medium named. The `VIBE` says the medium is a program. A declaration lands on the cells of the activities its findings' rules are placed on, in the medium its `VIBE` names. So this one lands on the row `machine`, in the columns decide, act and trust: look at the table, and each of those cells is empty. Repair the declaration. Try before you read on.
 
 ::: plate The order, confirmed
 ```zayn reorder.zayn

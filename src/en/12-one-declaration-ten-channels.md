@@ -14,7 +14,7 @@ fixtures: [verb-not-carried, verb-not-carried-lawful, signal-unperceivable, sign
 
 A medium is the way an interface meets its user: a screen, a sound, a voice, a printed page, a lamp, a program that reads it. The Zayn site, and this chapter's title, call it a channel; this page says medium. In this chapter I write one declaration once, with no medium named, and check it on several media. Each medium is a row of data; the verifier holds the same row, checked against the data by the suite, and refuses what the medium cannot carry.
 
-If you open the book here, four words are enough to follow. A **declaration** is a few lines that say what a user is doing on a surface, the part of an interface that a user meets. The **law** is Zayn's constitution of {{n:law.rules}} rules for interfaces. The **verifier** is the program that checks a declaration against the law. A **verb** is one of the law's {{n:law.verbs}} words for what a user does: discover, read, select, act, undo, and the others.
+If you open the book here, four words are enough to follow. A **declaration** is a few lines that say what a user is doing on a surface, the part of an interface that a user meets. The **law** is Zayn's constitution of {{n:law.rules}} rules for interfaces. The **verifier** is the program that checks a declaration against the law. A **verb** is one of the law's {{n:law.verbs}} words for what a user does. The law's verbs, by family: `DISCOVER`, `UNDERSTAND`, `LOCATE`; `FOCUS`, `FILTER`, `COMPARE`; `READ`, `SCAN`, `SCROLL`, `ZOOM`; `SELECT`, `HIGHLIGHT`, `PREVIEW`, `MARK`; `ACT`, `CONFIRM`, `CANCEL`, `UNDO`; `PAUSE`, `RESUME`, `RETRY`, `EXIT`.
 
 ## The field
 
@@ -26,13 +26,13 @@ Each source was read on 23 November 2026, and Appendix F lists them. So the fiel
 
 ## The principle
 
-**A declaration is written once, for every medium; the medium it names decides which of its promises can be kept, and the verifier refuses those that the medium cannot keep at all.**
+**A declaration says what a user does, whatever the medium; the medium a file names decides which of those promises can be kept, and the verifier refuses those that the medium cannot keep at all.**
 
 The contract, the file that binds each kind of finding to the law, gives the rule behind it in one sentence: "A new medium adds renderings, never verbs." The verbs stay the same on every medium, and each medium says which of them it can carry.
 
 ## The media, as data
 
-Each medium is a row of Zayn's data of the media. {{n:media.properties}} properties describe it: how long what it shows lasts, whether it shows things one after another or all at once, whether the user chose to look at it, how much it can carry at a time, whether it can change, and whether it can take back what it showed. And for each of the law's verbs, the row says whether the medium carries it fully, carries it at a cost, or does not carry it at all. The table counts, for each medium, the verbs in each of the three.
+Each medium is a row of Zayn's data of the media. {{n:media.properties}} properties describe it: how long what it shows lasts, whether it shows things one after another or all at once, whether the user chose to look at it, how much it can carry at a time, whether it can change, and whether it can take back what it showed. And for each of the law's verbs, the row says whether the medium carries it fully, carries it at a cost, or does not carry it at all. The data defines the cost: "served, but at a cost the designer must know -- a parallel act becomes a serial one, or a perception becomes a memory task". The table counts, for each medium, the verbs in each of the three.
 
 {{media}}
 
@@ -53,7 +53,7 @@ DEFINE INTENT_FLOW review_overdue_invoices (
 In words: A user discovers the overdue invoices, goes to one, scans them, compares them and reads one. Each invoice shows one of three statuses: danger, warning and muted.
 :::
 
-Clean. With no medium named, the declaration is checked by the law that holds on every medium. A `VIBE` is the kind of declaration that names a medium, in its field `SURFACE_AS`. Here is the same review, shown by a lamp.
+Clean. An `INTENT_FLOW` is a flow: what a user does, from the first step to the last, to reach one goal. With no medium named, the declaration is checked by the law that holds on every medium. A `VIBE` is the kind of declaration that states a culture of interaction, and its field `SURFACE_AS` names the medium, the way the interface meets its user. Here is the same review, shown by a lamp.
 
 ::: plate The review, shown by a lamp
 ```zayn invoices.zayn
@@ -170,7 +170,7 @@ Clean.
 
 ## A status that sounds like nothing
 
-A medium also renders the statuses of a declaration: the words of `SIGNALS` for what a value says about its record, such as danger or muted. To render one is to show it, sound it or say it. On a voice line, `muted` is rendered as silence. Here is a queue that a user hears, whose only status is that one.
+A medium also renders the statuses of a declaration: the words of `SIGNALS` for what a value says about its record, success, warning, danger, info and muted. To render one is to show it, sound it or say it. On a voice line, `muted` is rendered as silence. Here is a queue that a user hears, whose only status is that one.
 
 ::: plate A queue whose only status is silence
 ```zayn queue.zayn
@@ -187,7 +187,7 @@ DEFINE INTENT_FLOW hear_queue_status (
 In words: The queue is heard on a voice line. A user discovers and understands its state, and its values carry one status: muted.
 :::
 
-Refused, under Rule 82 and the right to know: every status the surface declares is rendered as nothing on this medium. Silence is the correct rendering of `muted`, and the contract says so: "silence is the CORRECT rendering of 'waiting, inactive'". The defect is a surface that has nothing else to say. The repair gives it a status that sounds.
+Refused, under Rule 82, Article III and the right to know: every status the surface declares is rendered as nothing on this medium. The contract binds each kind of finding to its article: this one to Article III, the article Rule 82 derives from, and the refusals of a verb a medium cannot carry to Article II, the article of the verbs. A right is a sentence of the law about what the user is owed. Silence is the correct rendering of `muted`, and the contract says so: "silence is the CORRECT rendering of 'waiting, inactive'". The defect is a surface that has nothing else to say. The repair gives it a status that sounds.
 
 ::: plate A queue with a status that sounds
 ```zayn queue.zayn
@@ -226,7 +226,7 @@ DEFINE INTENT_FLOW submit_batch (
 In words: A program reads the batch. An integration, a program of another system, confirms and the batch is submitted; undo and exit stay within reach.
 :::
 
-Refused: a flow that acts must keep cancel within reach, and the rule holds for a program as for a person. The repair keeps it there.
+Refused: a flow that acts must keep cancel within reach, and the rule holds for a program as for a person. A single control, an `INTERACTION`, is held to its own promise instead. The repair keeps it there.
 
 ::: plate The batch, with cancel within reach
 ```zayn batch.zayn
@@ -278,7 +278,7 @@ The media are data at version {{n:media.version}} of their file. The verifier ke
 
 ## In your hands
 
-A build is the run that assembles a team's product; when it breaks, a lamp on the team's wall turns red. Here is that lamp, and the work it asks for. Write the findings you expect, by their codes, then open the verifier's answer.
+This exercise is written for the book. A build is the run that assembles a team's product; when it breaks, a lamp on the team's wall turns red. Here is that lamp, and the work it asks for. Write the findings you expect, by their codes, then open the verifier's answer.
 
 ::: plate For you: a lamp that asks for a repair
 ```zayn build.zayn

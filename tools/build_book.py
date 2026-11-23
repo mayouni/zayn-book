@@ -86,7 +86,7 @@ UI = {
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
     "grid_h0": "Medium", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
-    "causes_h": ["Group", "Cause, the default that produced the defect", "Corrections", "Projects", "Name an earlier correction"],
+    "causes_h": ["Group", "Cause, the default that produced the defect", "Corrections", "Projects", "Name an earlier correction", "Share that came back"],
     "causes_src": "Counted at this build from Zayn's corpus of corrections (doc/design/corpus/corpus.json): for each cause, the corrections filed under it, the projects they came from, and those that name an earlier correction of the same defect.",
     "media_h": ["Medium", "What it is", "Carried fully", "Carried at a cost", "Not carried", "May carry a surface alone"],
     "media_src": "Printed from Zayn's data of the media (conformance/media.json): for each medium, how many of the law's verbs it carries, carries at a cost, or does not carry at all.",
@@ -1021,7 +1021,8 @@ def causes_table(law, ui):
             first = False
             title = c['causes'].get(k, '').replace('its maker,', 'its [author],')
             rows.append([label, f"<strong>{html.escape(k)}</strong> {html.escape(title)}", str(len(mine)),
-                         str(len({x.get('project') for x in mine})), str(sum(1 for x in mine if x.get('repeat') is True))])
+                         str(len({x.get('project') for x in mine})), str(sum(1 for x in mine if x.get('repeat') is True)),
+                         (f"{round(100 * sum(1 for x in mine if x.get('repeat') is True) / len(mine))}%" if mine else "0%")])
     if not rows:
         raise SystemExit("causes: the corpus could not be read at the pin")
     return (render_table(rows, "book-table families", ui["causes_h"])

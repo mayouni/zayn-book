@@ -38,7 +38,7 @@ Each correction is filed under a cause, and each cause is a default. The design 
 
 {{causes}}
 
-Read, for each cause, how many of its corrections name an earlier one. The causes that come back most are those a person's eye judges first: the size of type, the width of a block, the balance of a line. On 15 August 2026, of cards brought back on small screens, I said to an AI model, as the corpus keeps my words: "This is the power of dogmatic influence you got from your training data." These are the defaults a generator carries from the interfaces it learned from.
+Read the last column: for each cause, the share of its corrections that name an earlier one. The causes with the largest share are those a person's eye judges first: the size of type, the width of a block, the balance of a line. By count, the words written for the writer come back most often, because they are the largest cause. On 15 August 2026, of cards brought back on small screens, I said to an AI model, as the corpus keeps my words: "This is the power of dogmatic influence you got from your training data." These are the defaults a generator carries from the interfaces it learned from.
 
 ## Three chains
 
@@ -54,7 +54,7 @@ The design study puts what the chains share in one sentence: "A correction store
 
 ## A correction, as a declaration
 
-Some defects of the corpus can be stated as a declaration, and then the verifier refuses them before anything is drawn. Smooth scrolling is one: a page that glides to its place when a user picks a section from its menu. I corrected it on 3 August 2026, and Rule 112 entered the law two days later with smooth scrolling first in its list of what to avoid. It was corrected again in two other projects, on 22 September and 1 October. A `VIBE` is the kind of declaration that states a culture of interaction, and its field `MOTION` says how the surface moves.
+Some defects of the corpus can be stated as a declaration, and then the verifier refuses them before anything is drawn. Smooth scrolling is one: a page that glides to its place when a user picks a section from its menu. I corrected it on 3 August 2026, and Rule 112 entered the law two days later with smooth scrolling first in its list of what to avoid. It was corrected again in two other projects, on 22 September and 1 October. A `VIBE` is the kind of declaration that states a culture of interaction, and its field `SURFACE_AS` names the medium, the way the interface meets its user. Its field `MOTION` says how the surface moves.
 
 ::: plate A page that glides
 ```zayn reader.zayn
@@ -80,7 +80,7 @@ DEFINE VIBE reader_culture (
 In words: On a screen, the page does not move: a choice jumps to its place.
 :::
 
-Clean. A filter the user cannot see is another. On 24 October 2026, in an organisation-chart editor of mine, an active filter left nothing on the screen to say it was active. It was recorded twice that day, once after my third look. At level 3 the verifier is given what the system holds, its state, in a small file, and checks that a surface shows it. A `SCREEN` is one screen, `SATISFIES` lists what the user does on it, and `VISIBLE_STATE` what it shows of the system's state.
+Clean. A filter the user cannot see is another. On 24 October 2026, in an organisation-chart editor of mine, an active filter left nothing on the screen to say it was active. It was recorded twice that day, once after my third look. At level 3 the verifier is given what the system holds, its state, in a small file named on the command line (`zayn check chart.zayn --level 3 --symbols chart.json`), and checks that a surface shows it. A `SCREEN` is one screen, `SATISFIES` lists what the user does on it, and `VISIBLE_STATE` what it shows of the system's state.
 
 ::: plate A chart with a filter it does not show
 ```zayn chart.zayn level=3 symbols=chart.json
@@ -195,7 +195,7 @@ DEFINE INTERACTION stop_server (
 In words: An operator confirms, the server stops, and the control says that this cannot be taken back.
 :::
 
-Clean, and untrue: the first correction asked that the server can be started again. The second asked that the question be asked in place, where the button was, and not in the browser's box; `CONFIRM` names the user's act of confirming, whatever draws it. Write the form the record asks for. Try before you read on.
+Clean, and untrue. A control that says it cannot be taken back owes no undo, so the refusal goes; the first correction asked that the server can be started again. The second asked that the question be asked in place, where the button was, and not in the browser's box; `CONFIRM` names the user's act of confirming, whatever draws it. Write the form the record asks for. Try before you read on.
 
 ::: plate A stop that can be undone
 ```zayn server.zayn
@@ -207,9 +207,9 @@ DEFINE INTERACTION stop_server (
 )
 //--> clean
 ```
-In words: An operator confirms in place and stops the server, can cancel before it stops, and can start it again: the control says that the stop can be taken back.
+In words: An operator confirms and stops the server, can cancel before it stops, and can start it again: the control says that the stop can be taken back.
 :::
 
-Clean, and true. Starting again is the undo, and the confirmation is asked where the button was. The verifier accepted the untrue form as well. Which form is true is a fact of the server, and a person reads it.
+Clean, and true. Starting again is the undo. Where the confirmation is drawn, in place of the browser's box, is the drawing's business: the declaration states that the user confirms. The verifier accepted the untrue form as well. Which form is true is a fact of the server, and a person reads it.
 
 The corrections show what a generator does when nothing stops it. Part II reads what the field wrote to stop it.
