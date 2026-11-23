@@ -150,7 +150,12 @@ stopped them.
   spelt. Tables reflow at phone width with no sideways scroll (Rule 14). Requests: BOOK-ZAYN-07.
 - The house desk published the book on 2026-11-23 (pins 908c382, then 03068f3, on the author's "Publish now"). Hand each next
   commit to the desk by memo, naming it.
-- Next: Part VII's six doors, `SITE-LESSONS.md` for Part VII and its memo; then Parts I, V, IX and X, then II, IV, VI and VIII. For each chapter:
+- 2026-11-23, night: Part VII read by six doors and a second time (designer, AI agent), fixed and published (house pin 8427dff).
+  **Parts I and V (chapters 1, 2, 12, 13) drafted, run and read** by a verifier, a voice reader and six doors; handed to the desk
+  as 141f7ba. New directives: `{{grid}}`, `{{media}}`, `{{causes}}` (from Zayn's data); every exercise ("In your hands") folds its
+  answer under a button; tables must fit 375 px (checked in the browser before each hand-over). Chapter 1's opening is the
+  author's (`[AUTHOR: the opening]`). Requests: BOOK-ZAYN-06 answered (six rulings with the author), BOOK-ZAYN-08 filed.
+- Next: Parts IX and X, then II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
