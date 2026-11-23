@@ -2,6 +2,14 @@
   "_what": "Names that no page of the book prints (the contract, section F; DECISIONS.md WITHHELD-01). 'replace' is applied to text the build prints from the law's data, longest phrase first; 'never' fails the build if a name is still on a page, or stands in a chapter's source.",
   "replace": [
     [
+      "Softanza Central",
+      "[the estate's coordinating session]"
+    ],
+    [
+      "MicroRing",
+      "[a product of the estate]"
+    ],
+    [
       "the Restolean kitchen campaign",
       "the kitchen campaign [of a product of the estate]"
     ],
@@ -22,6 +30,9 @@
     "Restolean",
     "Bedrock",
     "Organizium",
-    "Zin"
+    "Zin",
+    "MicroRing",
+    "Softanza Central",
+    "Ring"
   ]
 }

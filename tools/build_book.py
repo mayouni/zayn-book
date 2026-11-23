@@ -26,7 +26,7 @@ the fixed headings, or holds a declaration outside a plate or without its "In wo
 sits outside the variables; the type scale is out of order. It still writes the page first, so the failure can be seen.
 """
 import html, json, re, subprocess, sys
-from book_common import (ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
+from book_common import (pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
                          closed_lists, fields_by_kind, GH_BLOB, PIN_TAG)
 from book_judge import WORDS
 
@@ -81,6 +81,8 @@ UI = {
     "sets_h": ["Set", "Its title", "Rules", "Their numbers"],
     "tiers_h": ["Tier, in the law's word", "Rules filed under it", "Of these, cited by a diagnostic of the contract"],
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
+    "pins_h": ["A data file of Zayn", "The version of the law it records"],
+    "pins_src": "Read from each file at the version of Zayn this book reads.",
     "sources_src": "Printed from the book's register of sources, research/FIELD.md.",
     "prev": "← Previous", "next": "Next →",
     "series": "Third of the AYOUNI books",
@@ -926,13 +928,23 @@ def anatomy_table(number, law, ui, version):
     for k, v in r.items():
         if k.startswith("_"):
             continue
-        if isinstance(v, list):
+        if isinstance(v, bool):
+            v = "true" if v else "false"
+        elif isinstance(v, list):
             v = "; ".join(str(x) for x in v) if v else "[]"
         elif isinstance(v, dict):
             v = json.dumps(v, ensure_ascii=False)
         rows.append([f"<code>{html.escape(k)}</code>", html.escape(str(v))])
     return (render_table(rows, "book-table families", ui["anatomy_h"])
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
+
+
+def pins_table(law, ui):
+    rows = [[f"<code>{html.escape(p)}</code>", html.escape(v)] for p, v in law.get("pins") or []]
+    if not rows:
+        raise SystemExit("pins: no data file of the pin records a version of the law")
+    return (render_table(rows, "book-table families", ui["pins_h"])
+            + f'<p class="table-src">{html.escape(ui["pins_src"])}</p>')
 
 
 def suite_cell(level, suite, ui, where, errors):
@@ -1055,6 +1067,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(forbidden_table(law, ui, version)); i += 1; continue
         if s == "{{sets}}":
             flush(); out.append(sets_table(law, ui, version)); i += 1; continue
+        if s == "{{pins}}":
+            flush(); out.append(pins_table(law, ui)); i += 1; continue
         if s == "{{tiers}}":
             flush(); out.append(tiers_table(law, ui, version)); i += 1; continue
         m_an = re.match(r"^\{\{anatomy:(\d+)\}\}$", s)
@@ -1497,6 +1511,7 @@ def main():
     law = law_data(snap)
     law["closed_lists"] = closed_lists(snap)
     law["fields_by_kind"] = fields_by_kind(snap)
+    law["pins"] = pin_files(snap)
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     en_src = sources("en")
     errors = []

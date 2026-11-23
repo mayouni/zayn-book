@@ -247,6 +247,24 @@ def law_facts(snap):
     return facts
 
 
+def pin_files(snap):
+    """The data files that record which version of the law they were checked against: [(path, version)]."""
+    out = []
+    for folder in ("conformance", "protocol"):
+        for p in sorted((snap / folder).rglob("*.json")):
+            try:
+                doc = json.loads(p.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            if not isinstance(doc, dict):
+                continue
+            for holder in (doc.get("metadata"), doc.get("versions")):
+                if isinstance(holder, dict) and holder.get("constitution"):
+                    out.append((p.relative_to(snap).as_posix(), str(holder["constitution"])))
+                    break
+    return out
+
+
 def _history_facts(snap, law, rules, diags):
     """The law's history and anatomy as its own file holds them, and what pins it. Counted, never typed."""
     meta = law.get("metadata", {})
@@ -269,6 +287,16 @@ def _history_facts(snap, law, rules, diags):
         "rule.see_also": carry("see_also") or None,
         "rule.absorbs": carry("absorbs") or None,
     }
+    names = {}
+    for r in rules:
+        for k in r:
+            if not k.startswith("_"):
+                names[k] = names.get(k, 0) + 1
+    out["rule.fields.all"] = sum(1 for k, n in names.items() if n == len(rules)) or None
+    out["rule.fields.some"] = sum(1 for k, n in names.items() if n < len(rules)) or None
+    out["law.principles"] = len((law.get("philosophy") or {}).get("rules") or []) or None
+    out["law.axioms"] = sum(1 for a in (law.get("articles") or {}).values() if a.get("axiom")) or None
+    out["diag.cite_right"] = sum(1 for d in diags if d.get("rights")) or None
     # the files that record which version of the law they were checked against (metadata.constitution)
     pins = []
     for folder in ("conformance", "protocol"):
