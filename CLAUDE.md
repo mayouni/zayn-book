@@ -126,9 +126,19 @@ stopped them.
   drafted from `research/ch08.md`, run and built into the reader; read by a fresh verifier, a voice reader and a fresh reader
   from the designer's door, and fixed. Memo: `sessions/2026-11-22-phase-1-pilot.md`. **Stopped for the author's verdict on the
   format before a second chapter.**
-- 2026-11-23: the author delegated ("decide on my behalf and continue", DELEGATE-01); the decisions are in `DECISIONS.md`. Part III
-  in progress (ORDER-01: part by part): chapters 6 and 9 drafted from `research/ch06.md` and `research/ch09.md` and run; chapter 7's
-  brief is `research/ch07.md`; then the fresh readers by door for chapters 6 to 9, the fixes, `SITE-LESSONS.md` for Part III, and a
-  memo. Requests and the rulings that wait for the author: `research/REQUESTS.md`. New builder directives: `{{families}}`,
-  `{{levels}}`, `{{article:id}}`, `{{suite:N}}`; a level 3 plate takes `level=3 symbols=<name.json>` and a `symbols` fence.
+- 2026-11-23: the author delegated ("decide on my behalf and continue", DELEGATE-01); the decisions are in `DECISIONS.md`
+  (ORDER-01: the book is researched, drafted and read part by part). **Part III is drafted, run and read**: chapters 6 to 9,
+  37 declarations and 49 court fixture runs answering as expected; a verifier and a voice reader per chapter, six doors for the
+  part; `SITE-LESSONS.md` (Part III); memo `sessions/2026-11-23-part-3.md`. Owed: a second fresh reading of the fixed pages.
+  Requests and the rulings that wait for the author: `research/REQUESTS.md` (BOOK-ZAYN-01 to 06).
+- What the pilot's and Part III's readers settled, for every chapter to come: every declaration on a page is run, the steps of
+  an exercise included ("Cover the report, write the codes you expect, then compare"); a technical word is said in a clause
+  at its first use; a sentence of the record is quoted with its source, never reused as prose; a recorded result is told as
+  recorded, a run as run; no count is typed (tokens `{{n:…}}`, and the tables `{{families}}`, `{{levels}}`, `{{lists}}`,
+  `{{fields}}`, the cards `{{rule:N}}`, `{{right:id}}`, `{{article:id}}`, the run `{{suite:N}}`); a level 3 plate takes
+  `level=3 symbols=<name.json>` and a `symbols` fence; no page says how many of the law's rules a machine refuses before the
+  author's ruling (the count by citation is in `research/REQUESTS.md`).
+- Next: Part VII (chapters 16, 18, 19, then 17), then Parts I, V, IX and X, then II, IV, VI and VIII. For each chapter:
+  `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
+  reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
