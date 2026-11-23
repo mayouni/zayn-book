@@ -341,6 +341,39 @@ def grid(snap):
     return {"acts": acts, "cols": cols, "cells": cells, "titles": {md["id"]: md.get("title", "") for md in media}}, facts
 
 
+def media_facts(snap):
+    """The ten media as conformance/media.json holds them, each verb resolved as Zayn's cross-medium tool resolves it:
+    absent if listed absent, else degraded if listed degraded, else native if listed native, else the medium's default."""
+    m = json.loads((snap / "conformance" / "media.json").read_text(encoding="utf-8"))
+    law = json.loads((snap / "constitution" / "rules.json").read_text(encoding="utf-8"))
+    verbs = [v for f in law["intents"]["families"].values() for v in f["verbs"]]
+    rows = []
+    for md in m["media"]:
+        car = md.get("carries") or {}
+        kinds = {}
+        for v in verbs:
+            if v in (car.get("absent") or []):
+                k = "absent"
+            elif v in (car.get("degraded") or []):
+                k = "degraded"
+            elif v in (car.get("native") or []):
+                k = "native"
+            else:
+                k = car.get("default", "native")
+            kinds[v] = k
+        rows.append({"id": md["id"], "title": md.get("title", ""), "kinds": kinds, "sole": bool(md.get("soleCarrier"))})
+    sig = json.loads((snap / "conformance" / "signal.json").read_text(encoding="utf-8"))
+    rend = sig.get("renderings") or {}
+    rendered = sum(1 for v in rend.values() if isinstance(v, dict) and "rendersAsAbsence" in v)
+    allk = [k for r in rows for k in r["kinds"].values()]
+    facts = {"media.total": len(rows), "media.properties": len(m.get("properties") or {}),
+             "media.cells": len(allk), "media.native": allk.count("native"), "media.degraded": allk.count("degraded"),
+             "media.absent": allk.count("absent"), "media.sole": sum(1 for r in rows if r["sole"]),
+             "media.not_sole": sum(1 for r in rows if not r["sole"]), "media.rendered": rendered,
+             "media.version": (m.get("metadata") or {}).get("version")}
+    return rows, facts
+
+
 def _history_facts(snap, law, rules, diags):
     """The law's history and anatomy as its own file holds them, and what pins it. Counted, never typed."""
     meta = law.get("metadata", {})
@@ -382,6 +415,7 @@ def _history_facts(snap, law, rules, diags):
     out["cite.both"] = sum(1 for v in lad.values() if v["codes"] and v["audits"]) or None
     out["cite.rest"] = (len(rules) - len(lad)) if rules and lad else None
     out.update(grid(snap)[1])
+    out.update(media_facts(snap)[1])
     out["law.tiers"] = len({r.get("enforcement") for r in rules if r.get("enforcement")}) or None
     listed = [int(n) for r in (law.get("rights") or []) for n in (r.get("enforced_by") or []) if str(n).isdigit()]
     out["right.max"] = max(listed) if listed else None

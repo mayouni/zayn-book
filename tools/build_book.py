@@ -26,7 +26,7 @@ the fixed headings, or holds a declaration outside a plate or without its "In wo
 sits outside the variables; the type scale is out of order. It still writes the page first, so the failure can be seen.
 """
 import html, json, re, subprocess, sys
-from book_common import (grid, ladder, pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
+from book_common import (media_facts, grid, ladder, pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
                          closed_lists, fields_by_kind, GH_BLOB, PIN_TAG)
 from book_judge import WORDS
 
@@ -86,6 +86,9 @@ UI = {
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
     "grid_h0": "Medium", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
+    "media_h": ["Medium", "What it is", "Verbs carried", "Carried at a cost", "Not carried", "May carry a surface alone"],
+    "media_src": "Printed from Zayn's data of the media (conformance/media.json): for each medium, how many of the law's verbs it carries, carries at a cost, or does not carry at all.",
+    "yes": "yes", "no": "no",
     "pins_h": ["A data file of Zayn", "The version of the law it records"],
     "pins_src": "Read from each file at the version of Zayn this book reads.",
     "sources_src": "Printed from the book's register of sources, research/FIELD.md.",
@@ -992,6 +995,18 @@ def grid_table(law, ui):
             + f'<p class="table-src">{html.escape(ui["grid_src"])}</p>')
 
 
+def media_table(law, ui):
+    rows = []
+    for r in law.get("media") or []:
+        ks = list(r["kinds"].values())
+        rows.append([f"<code>{html.escape(r['id'])}</code>", html.escape(r["title"]), str(ks.count("native")),
+                     str(ks.count("degraded")), str(ks.count("absent")), html.escape(ui["yes"] if r["sole"] else ui["no"])])
+    if not rows:
+        raise SystemExit("media: no medium read at the pin")
+    return (render_table(rows, "book-table grid", ui["media_h"])
+            + f'<p class="table-src">{html.escape(ui["media_src"])}</p>')
+
+
 def pins_table(law, ui):
     rows = [[f"<code>{html.escape(p)}</code>", html.escape(v)] for p, v in law.get("pins") or []]
     if not rows:
@@ -1133,6 +1148,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(sets_table(law, ui, version)); i += 1; continue
         if s == "{{ladder}}":
             flush(); out.append(ladder_table(law, ui)); i += 1; continue
+        if s == "{{media}}":
+            flush(); out.append(media_table(law, ui)); i += 1; continue
         if s == "{{grid}}":
             flush(); out.append(grid_table(law, ui)); i += 1; continue
         if s == "{{pins}}":
@@ -1582,6 +1599,7 @@ def main():
     law["pins"] = pin_files(snap)
     law["ladder"], law["instruments"] = ladder(snap)
     law["grid"] = grid(snap)[0]
+    law["media"] = media_facts(snap)[0]
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     en_src = sources("en")
     errors = []

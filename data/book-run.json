@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 20:24 UTC+01:00",
+  "date": "2026-11-23 20:33 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -93,6 +93,16 @@
    "grid.free": 26,
    "grid.named": 6,
    "grid.norule": 5,
+   "media.total": 10,
+   "media.properties": 6,
+   "media.cells": 220,
+   "media.native": 126,
+   "media.degraded": 17,
+   "media.absent": 77,
+   "media.sole": 7,
+   "media.not_sole": 3,
+   "media.rendered": 3,
+   "media.version": "1.1",
    "law.tiers": 4,
    "right.max": 102,
    "corpus.records": 489,
@@ -594,7 +604,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1139,7 +1149,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1649,7 +1659,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1964,7 +1974,651 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
+  },
+  "en/12-one-declaration-ten-channels": {
+   "id": "one-declaration-ten-channels",
+   "blocks": [
+    {
+     "hash": "5cf2c81b48d5",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "0b488434fe69",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:5  error  VERB_NOT_CARRIED  LOCATE in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\ninvoices.zayn:5  error  VERB_NOT_CARRIED  SCAN in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\ninvoices.zayn:5  error  VERB_NOT_CARRIED  COMPARE in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\ninvoices.zayn:5  error  VERB_NOT_CARRIED  READ in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n4 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "LOCATE in review_overdue_invoices on luminous",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "SCAN in review_overdue_invoices on luminous",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "COMPARE in review_overdue_invoices on luminous",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "READ in review_overdue_invoices on luminous",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 4,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"LOCATE in review_overdue_invoices on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"SCAN in review_overdue_invoices on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"COMPARE in review_overdue_invoices on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"READ in review_overdue_invoices on luminous\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "219eedf351f8",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1cf3dd048f64",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "review_overdue_invoices"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:9  error  VERB_NOT_CARRIED  LOCATE in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\ninvoices.zayn:9  error  VERB_NOT_CARRIED  SCAN in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\ninvoices.zayn:9  error  VERB_NOT_CARRIED  COMPARE in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\ninvoices.zayn:9  error  VERB_NOT_CARRIED  READ in review_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n4 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "LOCATE in review_overdue_invoices on luminous",
+       "line": 9,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "SCAN in review_overdue_invoices on luminous",
+       "line": 9,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "COMPARE in review_overdue_invoices on luminous",
+       "line": 9,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "READ in review_overdue_invoices on luminous",
+       "line": 9,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 4,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"LOCATE in review_overdue_invoices on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"SCAN in review_overdue_invoices on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"COMPARE in review_overdue_invoices on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"READ in review_overdue_invoices on luminous\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "e97208f8c4c7",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_MEDIUM",
+       "desk_lamp"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "desk.zayn:1  error  UNKNOWN_MEDIUM  lamp on desk_lamp\n    SURFACE_AS names a medium outside the ten this language defines.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_MEDIUM",
+       "severity": "error",
+       "subject": "lamp on desk_lamp",
+       "line": 1,
+       "cites": [],
+       "level": 2,
+       "message": "SURFACE_AS names a medium outside the ten this language defines."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_MEDIUM\",\n      \"severity\": \"error\",\n      \"message\": \"SURFACE_AS names a medium outside the ten this language defines.\",\n      \"span\": {\n        \"file\": \"desk.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"lamp on desk_lamp\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1f06371bf93c",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "notice_overdue_invoices"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "desk.zayn:5  error  VERB_NOT_CARRIED  READ in notice_overdue_invoices on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "READ in notice_overdue_invoices on luminous",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"desk.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"READ in notice_overdue_invoices on luminous\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "87b7b50d1a46",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6dc24cf81b94",
+     "name": "queue.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "SIGNAL_UNPERCEIVABLE",
+       "hear_queue_status"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "queue.zayn:7  error  SIGNAL_UNPERCEIVABLE  muted in hear_queue_status on voice\n    Every semantic status a surface declares renders as absence in the medium it declared.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SIGNAL_UNPERCEIVABLE",
+       "severity": "error",
+       "subject": "muted in hear_queue_status on voice",
+       "line": 7,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know"
+       ],
+       "level": 2,
+       "message": "Every semantic status a surface declares renders as absence in the medium it declared."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"queue.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SIGNAL_UNPERCEIVABLE\",\n      \"severity\": \"error\",\n      \"message\": \"Every semantic status a surface declares renders as absence in the medium it declared.\",\n      \"span\": {\n        \"file\": \"queue.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"muted in hear_queue_status on voice\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d0b4a7af5182",
+     "name": "queue.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"queue.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "423fb0b7a410",
+     "name": "batch.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_CANCEL",
+       "submit_batch"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "batch.zayn:5  error  MISSING_CANCEL  submit_batch\n    A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL.\n    Rule 26 · The Back Button is Holy · Article IV · the right to leave\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_CANCEL",
+       "severity": "error",
+       "subject": "submit_batch",
+       "line": 5,
+       "cites": [
+        "rule:26",
+        "article:reversibility",
+        "right:leave"
+       ],
+       "level": 2,
+       "message": "A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"batch.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_CANCEL\",\n      \"severity\": \"error\",\n      \"message\": \"A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL.\",\n      \"span\": {\n        \"file\": \"batch.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:26\",\n        \"article:reversibility\",\n        \"right:leave\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"submit_batch\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1310e5aa9156",
+     "name": "batch.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"batch.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3b680482de3b",
+     "name": "build.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "repair_broken_build"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "repair_broken_build"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "build.zayn:5  error  VERB_NOT_CARRIED  RETRY in repair_broken_build on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nbuild.zayn:5  error  VERB_NOT_CARRIED  CANCEL in repair_broken_build on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "RETRY in repair_broken_build on luminous",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "CANCEL in repair_broken_build on luminous",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"build.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"build.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"RETRY in repair_broken_build on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"build.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"CANCEL in repair_broken_build on luminous\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "dc3a0063e1e2",
+     "name": "build.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "repair_broken_build"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "repair_broken_build"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "build.zayn:9  error  VERB_NOT_CARRIED  RETRY in repair_broken_build on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nbuild.zayn:9  error  VERB_NOT_CARRIED  CANCEL in repair_broken_build on luminous\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "RETRY in repair_broken_build on luminous",
+       "line": 9,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "CANCEL in repair_broken_build on luminous",
+       "line": 9,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"build.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"build.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"RETRY in repair_broken_build on luminous\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"build.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"CANCEL in repair_broken_build on luminous\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "47958397849b",
+     "name": "build-lamp.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"build-lamp.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "afc34344208f",
+     "name": "build-console.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"build-console.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 15,
+   "runnable": 15,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "verb-not-carried.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "got_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "verb-not-carried-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "signal-unperceivable.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SIGNAL_UNPERCEIVABLE"
+     ],
+     "got_ids": [
+      "SIGNAL_UNPERCEIVABLE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "signal-unperceivable-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-medium.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "got_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-machine-cancel.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_CANCEL"
+     ],
+     "got_ids": [
+      "MISSING_CANCEL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-machine-cancel-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-print-promise.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "got_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-print-promise-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -2453,7 +3107,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -2957,7 +3611,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -3544,7 +4198,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -3919,7 +4573,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -4326,7 +4980,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -4335,7 +4989,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -4344,7 +4998,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -4353,7 +5007,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 20:24 UTC+01:00"
+   "ran": "2026-11-23 20:33 UTC+01:00"
   }
  }
 }
