@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 19:54 UTC+01:00",
+  "date": "2026-11-23 20:24 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -594,7 +594,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1139,7 +1139,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1649,7 +1649,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1964,7 +1964,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -2453,7 +2453,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -2957,7 +2957,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -3544,7 +3544,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -3919,7 +3919,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -4326,7 +4326,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -4335,7 +4335,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -4344,7 +4344,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -4353,7 +4353,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 19:54 UTC+01:00"
+   "ran": "2026-11-23 20:24 UTC+01:00"
   }
  }
 }
