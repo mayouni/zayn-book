@@ -126,4 +126,9 @@ stopped them.
   drafted from `research/ch08.md`, run and built into the reader; read by a fresh verifier, a voice reader and a fresh reader
   from the designer's door, and fixed. Memo: `sessions/2026-11-22-phase-1-pilot.md`. **Stopped for the author's verdict on the
   format before a second chapter.**
+- 2026-11-23: the author delegated ("decide on my behalf and continue", DELEGATE-01); the decisions are in `DECISIONS.md`. Part III
+  in progress (ORDER-01: part by part): chapters 6 and 9 drafted from `research/ch06.md` and `research/ch09.md` and run; chapter 7's
+  brief is `research/ch07.md`; then the fresh readers by door for chapters 6 to 9, the fixes, `SITE-LESSONS.md` for Part III, and a
+  memo. Requests and the rulings that wait for the author: `research/REQUESTS.md`. New builder directives: `{{families}}`,
+  `{{levels}}`, `{{article:id}}`, `{{suite:N}}`; a level 3 plate takes `level=3 symbols=<name.json>` and a `symbols` fence.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

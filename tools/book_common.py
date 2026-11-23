@@ -9,7 +9,7 @@ Zayn is never run in its working checkout: other sessions write that tree every 
 commit into .cache/ (git archive, which reads the repository's history and writes nothing in it) and runs there. Every number
 the book prints about the law is read from the snapshot's data files by law_facts(), never typed.
 """
-import hashlib, json, re, subprocess, pathlib, datetime
+import csv, hashlib, json, re, subprocess, pathlib, datetime
 import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -198,20 +198,59 @@ def law_facts(snap):
         "diag.cite_rule": cite_rule,
         "diag.cite_article": cite_article,
         "diag.cite_none": len(diags) - cite_rule - cite_article,
+        "diag.level1": sum(1 for x in diags if x.get("level") == 1),
         "diag.level2": sum(1 for x in diags if x.get("level") == 2),
+        "diag.level3": sum(1 for x in diags if x.get("level") == 3),
+        "diag.level4": sum(1 for x in diags if x.get("level") == 4),
         "contract.version": d["contract"].get("metadata", {}).get("version"),
         "fix.total": len(fixtures) or None,
         "fix.level1": sum(1 for f in fixtures if f.get("level") == 1),
         "fix.level2": sum(1 for f in fixtures if f.get("level") == 2),
         "fix.level3": sum(1 for f in fixtures if f.get("level") == 3),
         "fix.clean": sum(1 for f in fixtures if not f.get("expect_ids")),
+        "fix.twins": sum(1 for f in fixtures if f.get("file", "").endswith("-lawful.zayn")),
+        "fix.unfixtured": len(d["manifest"].get("unfixtured", [])) or None,
         "law.family.action": len(families.get("action", {}).get("verbs", [])) or None,
         "lang.version": m_spec.group(1) if m_spec else None,
         "lang.kinds": len(re.findall(r'"[A-Z_]+"', m_kinds.group(1))) if m_kinds else None,
         "release.version": m_rel.group(1) if m_rel else None,
         "pin.tag": PIN_TAG,
     }
+    facts.update(_record_facts(snap))
     return facts
+
+
+def _record_facts(snap):
+    """Counts read from three records of the snapshot: the list of the differences of the evaluator forged from the Haro
+    declaration, the rows its judge last wrote, and the record the browser proof compares with. A file that is not
+    there gives None, and the page that asks for it fails."""
+    out = {"haro.rows": None, "haro.other_code": None, "haro.not_refused": None, "haro.court_only": None,
+           "haro.judged": None, "proof.fixtures": None, "proof.answers": None, "wasm.bytes": None}
+
+    def rows(path):
+        lines = [l for l in path.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]
+        r = list(csv.reader(lines))
+        return r[0], [x for x in r[1:] if len(x) == len(r[0])]
+
+    twin = snap / "haro" / "twin-expected.csv"
+    if twin.exists():
+        head, body = rows(twin)
+        k = head.index("class")
+        out.update({"haro.rows": len(body), "haro.other_code": sum(1 for x in body if x[k] == "other-code"),
+                    "haro.not_refused": sum(1 for x in body if x[k] == "not-refused"),
+                    "haro.court_only": sum(1 for x in body if x[k] == "court-only")})
+    judged = snap / "haro" / "judge-rows.csv"
+    if judged.exists():
+        out["haro.judged"] = len(rows(judged)[1])
+    proof = snap / "tools" / "zayn" / "wasm-proof.json"
+    if proof.exists():
+        fx = json.loads(proof.read_text(encoding="utf-8")).get("fixtures", [])
+        out["proof.fixtures"] = len(fx) or None
+        out["proof.answers"] = sum(len(f.get("expect") or []) for f in fx) or None
+    wasm = snap / "site" / "zayn.wasm"
+    if wasm.exists():
+        out["wasm.bytes"] = wasm.stat().st_size
+    return out
 
 
 def load_json(name, default):

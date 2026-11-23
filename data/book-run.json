@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 09:29 UTC+01:00",
+  "date": "2026-11-23 09:40 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -29,18 +29,31 @@
    "diag.cite_rule": 20,
    "diag.cite_article": 8,
    "diag.cite_none": 12,
+   "diag.level1": 10,
    "diag.level2": 25,
+   "diag.level3": 4,
+   "diag.level4": 1,
    "contract.version": "1.11",
    "fix.total": 77,
    "fix.level1": 12,
    "fix.level2": 60,
    "fix.level3": 5,
    "fix.clean": 28,
+   "fix.twins": 23,
+   "fix.unfixtured": 3,
    "law.family.action": 4,
    "lang.version": "1.7",
    "lang.kinds": 10,
    "release.version": "0.2.0",
    "pin.tag": "v0.2.0",
+   "haro.rows": 22,
+   "haro.other_code": 9,
+   "haro.not_refused": 10,
+   "haro.court_only": 3,
+   "haro.judged": 73,
+   "proof.fixtures": 77,
+   "proof.answers": 308,
+   "wasm.bytes": 134584,
    "suite.1.pass": 12,
    "suite.1.fail": 0,
    "suite.1.skipped": 65,
@@ -427,7 +440,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:29 UTC+01:00"
+   "ran": "2026-11-23 09:40 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -844,7 +857,264 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 09:29 UTC+01:00"
+   "ran": "2026-11-23 09:40 UTC+01:00"
+  },
+  "en/09-one-verdict-two-verifiers": {
+   "id": "one-verdict-two-verifiers",
+   "blocks": [
+    {
+     "hash": "2f5bc423bd2b",
+     "name": "ledger.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "fb73aef836dd",
+     "name": "ledger.zayn",
+     "level": 3,
+     "symbols": "actors.json",
+     "flags": [],
+     "promise": [
+      [
+       "HIDDEN_AUTHORITY",
+       "post_ledger_entry"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "ledger.zayn:1  error  HIDDEN_AUTHORITY  post_ledger_entry\n    A consequential act names no actor.\n    Rule 83 · Predictable Authority · Article V\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "HIDDEN_AUTHORITY",
+       "severity": "error",
+       "subject": "post_ledger_entry",
+       "line": 1,
+       "cites": [
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 3,
+       "message": "A consequential act names no actor."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"HIDDEN_AUTHORITY\",\n      \"severity\": \"error\",\n      \"message\": \"A consequential act names no actor.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"post_ledger_entry\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "4deaed6c1376",
+     "name": "ledger.zayn",
+     "level": 3,
+     "symbols": "actors.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "63a542677271",
+     "name": "refunds.zayn",
+     "level": 3,
+     "symbols": "desk.json",
+     "flags": [
+      "exercise"
+     ],
+     "promise": [],
+     "stated": false,
+     "verdict": "exercise",
+     "report": "",
+     "diagnostics": []
+    },
+    {
+     "hash": "1cbbb1c2ef1e",
+     "name": "refunds.zayn",
+     "level": 3,
+     "symbols": "desk.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"refunds.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 4,
+   "runnable": 4,
+   "exercises": 1,
+   "court": [
+    {
+     "file": "hidden-authority.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "invisible-state.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "got_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "intent-orphan.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "got_ids": [
+      "INTENT_ORPHAN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unresolved-entity.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "UNRESOLVED_ENTITY"
+     ],
+     "got_ids": [
+      "UNRESOLVED_ENTITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-trust.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "clean-minimal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-intent.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_INTENT"
+     ],
+     "got_ids": [
+      "UNKNOWN_INTENT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unspecified-declaration.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNSPECIFIED_DECLARATION"
+     ],
+     "got_ids": [
+      "UNSPECIFIED_DECLARATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "multiple-violations.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION",
+      "MISSING_UNDO",
+      "SELECT_ACT_COLLAPSE",
+      "TRAPPED_FLOW"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION",
+      "MISSING_UNDO",
+      "SELECT_ACT_COLLAPSE",
+      "TRAPPED_FLOW"
+     ],
+     "pass": true
+    },
+    {
+     "file": "duplicate-field.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "DUPLICATE_FIELD"
+     ],
+     "got_ids": [
+      "DUPLICATE_FIELD"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-undeclared.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "got_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "foreign-pillar-ignored.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 09:40 UTC+01:00"
   }
  }
 }

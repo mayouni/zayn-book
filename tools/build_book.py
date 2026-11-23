@@ -60,6 +60,8 @@ UI = {
     "stage": {"built": "built", "designed": "designed", "next": "next"},
     "plate": "Plate", "illustration": "Illustration", "symbols": "Symbol table", "run_label": "Run",
     "families_h": ["Family", "Its verbs", "What its verbs keep true"],
+    "levels_h": ["Level", "Its name", "What the verifier is given", "What it decides", "Kinds of finding"],
+    "contract_src": "Printed from the verifier's contract, version {v}.",
     "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
     "cited_by": "Cited by", "cited_none": "no diagnostic of the verifier's contract",
@@ -711,6 +713,22 @@ def families_table(law, ui, version):
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
 
 
+def levels_table(law, ui):
+    """The four levels of checking as the contract's data files them, with the kinds of finding at each."""
+    levels = law["contract"].get("levels") or {}
+    if not levels:
+        raise SystemExit("levels: the contract at the pin holds no levels")
+    rows = []
+    for n in sorted(levels, key=int):
+        lv = levels[n]
+        count = sum(1 for d in law["diag_list"] if str(d.get("level")) == str(n))
+        rows.append([f"<strong>{html.escape(str(n))}</strong>", html.escape(lv.get("name", "")), html.escape(lv.get("requires", "")),
+                     html.escape(lv.get("decides", "")), str(count)])
+    v = (law["contract"].get("metadata") or {}).get("version", "null")
+    return (render_table(rows, "book-table levels", ui["levels_h"])
+            + f'<p class="table-src">{html.escape(ui["contract_src"].format(v=v))}</p>')
+
+
 def suite_cell(level, suite, ui, where, errors):
     """The conformance suite's own run at one level, as the snapshot's runner printed it at this build."""
     rec = (suite or {}).get(str(level))
@@ -811,6 +829,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append('<div class="divider">· · ·</div>'); i += 1; continue
         if s == "{{families}}":
             flush(); out.append(families_table(law, ui, version)); i += 1; continue
+        if s == "{{levels}}":
+            flush(); out.append(levels_table(law, ui)); i += 1; continue
         m_card = re.match(r"^\{\{(rule|right|suite|article):([a-z0-9-]+)\}\}$", s)
         if m_card:
             flush()
