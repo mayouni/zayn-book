@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 16:31 UTC+01:00",
+  "date": "2026-11-23 16:46 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -71,6 +71,11 @@
    "law.principles": 3,
    "law.axioms": 4,
    "diag.cite_right": 8,
+   "corpus.records": 489,
+   "corpus.verbatim": 235,
+   "corpus.repeat": 174,
+   "corpus.causes": 13,
+   "corpus.groups": 5,
    "pin.files": 6,
    "pin.agree": 6,
    "pack.files": 12,
@@ -565,7 +570,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 16:31 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1110,7 +1115,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 16:31 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -1620,7 +1625,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 16:31 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -1935,7 +1940,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 16:32 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -2439,7 +2444,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 16:32 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -2814,7 +2819,414 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 16:32 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
+  },
+  "en/19-how-to-write-a-rule": {
+   "id": "how-to-write-a-rule",
+   "blocks": [
+    {
+     "hash": "ee736531d8be",
+     "name": "band.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LANDING_NOT_FIRST",
+       "approach"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "band.zayn:9  error  MENU_LANDING_NOT_FIRST  no entry of approach leads to thinking, its TARGET\n    A section with children does not list its landing surface first among them.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LANDING_NOT_FIRST",
+       "severity": "error",
+       "subject": "no entry of approach leads to thinking, its TARGET",
+       "line": 9,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A section with children does not list its landing surface first among them."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"band.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LANDING_NOT_FIRST\",\n      \"severity\": \"error\",\n      \"message\": \"A section with children does not list its landing surface first among them.\",\n      \"span\": {\n        \"file\": \"band.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"no entry of approach leads to thinking, its TARGET\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "0de26be5a94e",
+     "name": "board.zayn",
+     "level": 3,
+     "symbols": "board.json",
+     "flags": [],
+     "promise": [
+      [
+       "INVISIBLE_STATE",
+       "next_action"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "board.zayn  error  INVISIBLE_STATE  next_action\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INVISIBLE_STATE",
+       "severity": "error",
+       "subject": "next_action",
+       "line": 0,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know",
+        "pattern:invisible-active-filters"
+       ],
+       "level": 3,
+       "message": "The system holds state the operator must know, and no surface declares showing it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"board.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INVISIBLE_STATE\",\n      \"severity\": \"error\",\n      \"message\": \"The system holds state the operator must know, and no surface declares showing it.\",\n      \"span\": {\n        \"file\": \"board.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\",\n        \"pattern:invisible-active-filters\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"next_action\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "0e3a96e8ada5",
+     "name": "board.zayn",
+     "level": 3,
+     "symbols": "board.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"board.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "5daf79507965",
+     "name": "band.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LABEL_REPEATS_PARENT",
+       "landing"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "band.zayn:12  error  MENU_LABEL_REPEATS_PARENT  \"Approach\" of landing repeats \"Approach\" of approach\n    A menu entry's label repeats the label of the entry it sits under.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LABEL_REPEATS_PARENT",
+       "severity": "error",
+       "subject": "\"Approach\" of landing repeats \"Approach\" of approach",
+       "line": 12,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A menu entry's label repeats the label of the entry it sits under."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"band.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LABEL_REPEATS_PARENT\",\n      \"severity\": \"error\",\n      \"message\": \"A menu entry's label repeats the label of the entry it sits under.\",\n      \"span\": {\n        \"file\": \"band.zayn\",\n        \"line\": 12\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"\\\"Approach\\\" of landing repeats \\\"Approach\\\" of approach\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d8407cb71dcc",
+     "name": "band.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"band.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "25e175aad5d7",
+     "name": "menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "802cb5eacd96",
+     "name": "phone.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LABEL_REPEATS_PARENT",
+       "orders_today"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "phone.zayn:11  error  MENU_LABEL_REPEATS_PARENT  \"orders\" of orders_today repeats \"Orders\" of orders\n    A menu entry's label repeats the label of the entry it sits under.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LABEL_REPEATS_PARENT",
+       "severity": "error",
+       "subject": "\"orders\" of orders_today repeats \"Orders\" of orders",
+       "line": 11,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A menu entry's label repeats the label of the entry it sits under."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"phone.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LABEL_REPEATS_PARENT\",\n      \"severity\": \"error\",\n      \"message\": \"A menu entry's label repeats the label of the entry it sits under.\",\n      \"span\": {\n        \"file\": \"phone.zayn\",\n        \"line\": 11\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"\\\"orders\\\" of orders_today repeats \\\"Orders\\\" of orders\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "9064246ea27c",
+     "name": "phone.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"phone.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6d91b4d118ac",
+     "name": "site-menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"site-menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "ec754066e555",
+     "name": "stock.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LABEL_DUPLICATE",
+       "counts"
+      ],
+      [
+       "MENU_LABEL_REPEATS_PARENT",
+       "stock_now"
+      ],
+      [
+       "MENU_LANDING_NOT_FIRST",
+       "stock_now"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "stock.zayn:13  error  MENU_LABEL_REPEATS_PARENT  \"Stock\" of stock_now repeats \"Stock\" of stock\n    A menu entry's label repeats the label of the entry it sits under.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\nstock.zayn:14  error  MENU_LABEL_DUPLICATE  \"The deliveries\" of counts and \"Deliveries\" of deliveries in ENTRIES of stock\n    Two entries at one level of a menu share a label.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\nstock.zayn:9  error  MENU_LANDING_NOT_FIRST  stock_now leads to stock_levels, the TARGET of stock, and is entry 2 of 3\n    A section with children does not list its landing surface first among them.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LABEL_REPEATS_PARENT",
+       "severity": "error",
+       "subject": "\"Stock\" of stock_now repeats \"Stock\" of stock",
+       "line": 13,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A menu entry's label repeats the label of the entry it sits under."
+      },
+      {
+       "code": "MENU_LABEL_DUPLICATE",
+       "severity": "error",
+       "subject": "\"The deliveries\" of counts and \"Deliveries\" of deliveries in ENTRIES of stock",
+       "line": 14,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "Two entries at one level of a menu share a label."
+      },
+      {
+       "code": "MENU_LANDING_NOT_FIRST",
+       "severity": "error",
+       "subject": "stock_now leads to stock_levels, the TARGET of stock, and is entry 2 of 3",
+       "line": 9,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A section with children does not list its landing surface first among them."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"stock.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LABEL_REPEATS_PARENT\",\n      \"severity\": \"error\",\n      \"message\": \"A menu entry's label repeats the label of the entry it sits under.\",\n      \"span\": {\n        \"file\": \"stock.zayn\",\n        \"line\": 13\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"\\\"Stock\\\" of stock_now repeats \\\"Stock\\\" of stock\"\n    },\n    {\n      \"code\": \"MENU_LABEL_DUPLICATE\",\n      \"severity\": \"error\",\n      \"message\": \"Two entries at one level of a menu share a label.\",\n      \"span\": {\n        \"file\": \"stock.zayn\",\n        \"line\": 14\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"\\\"The deliveries\\\" of counts and \\\"Deliveries\\\" of deliveries in ENTRIES of stock\"\n    },\n    {\n      \"code\": \"MENU_LANDING_NOT_FIRST\",\n      \"severity\": \"error\",\n      \"message\": \"A section with children does not list its landing surface first among them.\",\n      \"span\": {\n        \"file\": \"stock.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"stock_now leads to stock_levels, the TARGET of stock, and is entry 2 of 3\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "14f18330f335",
+     "name": "stock.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"stock.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "c3e81caddc42",
+     "name": "stock.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"stock.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 12,
+   "runnable": 12,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "menu-landing-not-first.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "got_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-label-repeats-parent.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "got_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-label-duplicate.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LABEL_DUPLICATE"
+     ],
+     "got_ids": [
+      "MENU_LABEL_DUPLICATE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "invisible-state.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "got_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -2823,7 +3235,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 16:32 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -2832,7 +3244,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 16:32 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -2841,7 +3253,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 16:32 UTC+01:00"
+   "ran": "2026-11-23 16:46 UTC+01:00"
   }
  }
 }

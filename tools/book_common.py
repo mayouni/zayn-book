@@ -297,6 +297,17 @@ def _history_facts(snap, law, rules, diags):
     out["law.principles"] = len((law.get("philosophy") or {}).get("rules") or []) or None
     out["law.axioms"] = sum(1 for a in (law.get("articles") or {}).values() if a.get("axiom")) or None
     out["diag.cite_right"] = sum(1 for d in diags if d.get("rights")) or None
+    # the corpus of corrections, as its data file holds it
+    out.update({"corpus.records": None, "corpus.verbatim": None, "corpus.repeat": None, "corpus.causes": None, "corpus.groups": None})
+    corpus = snap / "doc" / "design" / "corpus" / "corpus.json"
+    if corpus.exists():
+        c = json.loads(corpus.read_text(encoding="utf-8"))
+        recs = c.get("records") or []
+        out.update({"corpus.records": len(recs) or None,
+                    "corpus.verbatim": sum(1 for x in recs if x.get("verbatim")) or None,
+                    "corpus.repeat": sum(1 for x in recs if x.get("repeat")) or None,
+                    "corpus.causes": len(c.get("causes") or []) or None,
+                    "corpus.groups": len(c.get("groups") or []) or None})
     # the files that record which version of the law they were checked against (metadata.constitution)
     pins = []
     for folder in ("conformance", "protocol"):
