@@ -81,3 +81,46 @@ next:
              reader, and send the Zayn session the final title and subtitle for the site and the house
   - author:  confirm the drawing, or say what to move
 ```
+
+```yaml
+by:        zayn book session · claude-fable-5-2 · 2026-11-24 19:57
+
+subject:   the front cover, set again from a study of published covers: three settings, the band recommended
+
+why:       the author, in this session: "it's not professional as a book cover! analyse how other books position visuals
+           and try again until finding a good setting"
+
+did:
+  - looked at fifteen published covers that carry one object and a title (a contact sheet from Open Library's covers);
+    what they share: one axis, most of them centred; the object upright and whole with air around it, or cut boldly by
+    an edge, never tilted to fill room and never under the title; a ground of cream or of a strong colour; a typeface with
+    character, often spaced capitals; the author's name nearly as present as the title
+  - named what the earlier drawings broke: two columns that compete, a jar pushed into a corner, plain white, a light sans
+  - cut the jar out of its own white ground (the ground and the two openings of the handles made transparent, its painted
+    pixels kept), so that it stands on cream or on a colour
+  - drew two rounds in the book's own faces (EB Garamond, Inter) and kept three settings:
+    (A) the band: the jar whole on cream, its foot set into a band of its own dark red that carries the title;
+    (B) classic centred: the title in spaced capitals, the jar upright, the author's name at the foot;
+    (C) the bold crop: the jar large, cut by the right and bottom edges, on a dark ground
+  - sheet: sessions/2026-11-24-cover-and-title/cover-7-settings.jpg (each setting beside it, full size)
+
+state:
+  TITLE-02:   DECIDED by the author -- "Interfaces Under Law", on one line
+  cover:      proposals only; assets/cover/cover.png and the reader unchanged
+
+waiting:
+  - COVER-04: the setting, (A), (B) or (C), and the line under the title -> the author
+             (A) recommended: the title reads at the size of a thumbnail on the house's site, the jar is whole and
+             large, the colour is the jar's own, and each AYOUNI book can take a band from its own figure
+             the line drawn in all three: "UI governance for people and AI agents, using the Zayn language"
+             [asked in this session]   class: perceptual
+             artefact: sessions/2026-11-24-cover-and-title/cover-7-settings.jpg
+
+next:
+  - me:      on his choice, make tools/make_cover.py draw it, write the title block into src/structure.yaml and
+             DECISIONS.md with his words, rebuild, hand the commit to the house desk, and tell the Zayn session the title
+  - desk:    the first two books carry the earlier setting; whether the series follows the new one is the house's row
+
+note:      the tagline "Declare what a user is doing. The law refuses the rest." leaves the front in all three and opens
+           the back cover
+```

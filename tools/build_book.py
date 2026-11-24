@@ -73,6 +73,7 @@ UI = {
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
     "cited_by": "Cited by", "cited_none": "no kind of finding of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
+    "release_h": ["File", "Bytes", "SHA-256", "On this release"], "release_src": "Printed from the release's notes, as they record each file.",
     "cited_none_short": "none", "set_src": "The rules of Set {n}, {t}, with the reason each gives.",
     "diag_h": ["Code", "Level and severity", "The contract's sentence", "What it cites"],
     "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its id", "Its sentence", "Rules that enforce it"],
@@ -98,8 +99,8 @@ UI = {
     "sources_src": "Printed from the book's register of sources, research/FIELD.md.",
     "prev": "← Previous", "next": "Next →",
     "series": "Third of the AYOUNI books",
-    "cover_alt": "Zayn, book cover",
-    "description": "Zayn, UI Governance in the Agentic Era: declare what a user is doing, the law refuses the rest. By Mansour Ayouni. Third of the AYOUNI books.",
+    "cover_alt": "Interfaces Under Law, book cover",
+    "description": "Interfaces Under Law: UI governance for people and AI agents, using the Zayn language. Declare what a user is doing; the law refuses the rest. By Mansour Ayouni. Third of the AYOUNI books.",
     "theme": "Light or dark",
     "zoom_label": "View the cover large", "close_label": "Close",
     "home_label": "AYOUNI Press: home", "home_url": "https://mayouni.github.io/ayouni/",
@@ -175,7 +176,7 @@ FONT_FACES = """@font-face { font-family: 'EB Garamond'; font-style: normal; fon
 def shell_edits(ui):
     return [
         ("html lang", '<html lang="en">', f'<html lang="{ui["lang"]}">'),
-        ("title", "<title>Refinement-Oriented Programming — AYOUNI</title>", "<title>Zayn — AYOUNI</title>"),
+        ("title", "<title>Refinement-Oriented Programming — AYOUNI</title>", "<title>Interfaces Under Law — AYOUNI</title>"),
         ("description",
          '<meta name="description" content="A discipline for software in the agentic era. By Mansour Ayouni. First book from the AYOUNI imprint.">',
          f'<meta name="description" content="{html.escape(ui["description"])}">\n'
@@ -217,7 +218,7 @@ def shell_edits(ui):
          "0%   { background: var(--flash); box-shadow: 0 0 0 6px var(--flash); }\n  100% { background: transparent; box-shadow: 0 0 0 6px var(--flash-0); }"),
         ("colours: print", "body { background: white; font-size: 11pt; }", "body { background: var(--print-bg); font-size: 11pt; }"),
         ("breadcrumb: the book's name", '<a href="#" class="bc-book" id="bcBook">Refinement-Oriented Programming</a>',
-         '<a href="#" class="bc-book" id="bcBook">Zayn</a>'),
+         '<a href="#" class="bc-book" id="bcBook">Interfaces Under Law</a>'),
         ("header: theme",
          '  <div class="hdr-section hdr-right">\n',
          '  <div class="hdr-section hdr-right">\n'
@@ -331,6 +332,8 @@ pre .c-verb{color:var(--code-verb);font-weight:600;}
 .code-cell .ran.nv-exercise::before{content:"\\270E";}
 .code-cell .ran .exit{float:right;font-weight:600;}
 .code-cell .ran-out{border-radius:0;margin:0;border-top:none;}
+.shell-cell pre.ran-out.shell{white-space:pre-wrap;overflow-wrap:anywhere;}
+.shell-cell .sh-cmd{font-weight:600;}
 .code-cell.aux-cell{margin-top:10px;}
 .code-cell.aux-cell pre{border-radius:0 0 10px 10px;}
 .code-cell.run-cell .ran{border-radius:0 0 10px 10px;}
@@ -673,6 +676,24 @@ def code_cell(block, rec, in_words, ui, cover=False):
     return "\n".join(parts)
 
 
+def shell_cell(rec, ui):
+    """Command lines as run by the build: each line, what it printed, and the exit code the run returned, checked against
+    the one the page states."""
+    w = WORDS[ui["lang"]]
+    if rec is None:
+        return f'<p class="ran nv-not-run">{html.escape(w["not-run"].format(why="this command has no run on record"))}</p>'
+    rows = []
+    for r in rec["runs"]:
+        rows.append(f'<span class="sh-cmd">$ {html.escape(r["command"])}</span>')
+        if r["output"]:
+            rows.append(html.escape(r["output"]))
+    v = "kept" if rec["verdict"] == "kept" else "differs"
+    note = w["shell_kept"] if v == "kept" else w["shell_differs"]
+    return ('<div class="code-cell shell-cell"><div class="cell-label">' + html.escape(w["shell_label"]) + "</div>"
+            + '<pre class="ran-out shell"><code>' + chr(10).join(rows) + "</code></pre>"
+            + f'<p class="ran nv-{v}"><span class="exit">{html.escape(w["exit"].format(n=rec["exit"]))}</span>{html.escape(note)}</p></div>')
+
+
 def sketch_html(lines, ui):
     """A sketch of what a user meets, drawn with real words and one ink line; it opens on its label, "Illustration",
     because Zayn checks the declaration and does not draw the screen (the Zayn site's design, DESIGN-SYSTEM.md, `sketch`).
@@ -931,6 +952,39 @@ def sets_table(law, ui, version):
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
 
 
+def release_files(snap, version):
+    """The files of the release, as its notes table them (doc/releases/v<version>.md): name, bytes, sha256, and what was done
+    with each on that release. Nothing is downloaded; the table is the notes'."""
+    if not version:
+        return []
+    f = snap / "doc" / "releases" / f"v{version}.md"
+    if not f.exists():
+        return []
+    out = []
+    for line in f.read_text(encoding="utf-8").split(chr(10)):
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) == 4 and cells[0].startswith("`zayn"):
+            out.append({"file": cells[0].strip("`"), "bytes": cells[1], "sha256": cells[2].strip("`"), "on": cells[3]})
+    return out
+
+
+def release_table(law, ui):
+    rows_in = law.get("release") or []
+    if not rows_in:
+        raise SystemExit("release: the release notes at the pin hold no table of files")
+    def on(text):
+        t = text.replace("built, not run", "built")
+        t = t.replace("RUN: ", "built and run: ")
+        return html.escape(t)
+    rows = []
+    for r in rows_in:
+        h = r["sha256"]
+        hw = "<wbr>".join(h[i:i + 16] for i in range(0, len(h), 16))
+        rows.append([f"<code>{html.escape(r['file'])}</code>", html.escape(r["bytes"]), f"<code>{hw}</code>", on(r["on"])])
+    return (render_table(rows, "book-table", ui["release_h"])
+            + f'<p class="table-src">{html.escape(ui["release_src"])}</p>')
+
+
 def set_rules_table(sid, law, ui, version):
     """The rules of one set of the law, each with its reason, its article, the law's tier word for it, and the kinds of
     finding of the contract that cite it: data of the pin, never a count by tier."""
@@ -1114,6 +1168,7 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
     blocks = (run_rec or {}).get("blocks", [])
     src_blocks = code_blocks(body)
     k_code, k_plate = 0, 0
+    shell_recs, k_shell = (run_rec or {}).get("shell", []), 0
     current, decision_open, in_plate = None, False, False
     number = meta.get("appendix") or meta["number"]
 
@@ -1208,6 +1263,8 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
         m_set = re.match(r"^\{\{set:(\d+)\}\}$", s)
         if m_set:
             flush(); out.append(set_rules_table(m_set.group(1), law, ui, version)); i += 1; continue
+        if s == "{{release}}":
+            flush(); out.append(release_table(law, ui)); i += 1; continue
         if s == "{{tiers}}":
             flush(); out.append(tiers_table(law, ui, version)); i += 1; continue
         m_an = re.match(r"^\{\{anatomy:(\d+)\}\}$", s)
@@ -1253,6 +1310,10 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
                 if not in_plate:
                     errors.append(f"{where}: the declaration '{block.get('name') or k_code}' stands outside a plate")
                 out.append(code_cell(block, rec, in_words, ui, cover=(current == "In your hands")))
+            elif tag == "shell":
+                srec = shell_recs[k_shell] if k_shell < len(shell_recs) else None
+                k_shell += 1
+                out.append(shell_cell(srec, ui))
             elif tag == "sketch":
                 if not in_plate:
                     errors.append(f"{where}: a sketch stands outside a plate")
@@ -1656,6 +1717,7 @@ def main():
     law["media"] = media_facts(snap)[0]
     law["corpus"] = json.loads((snap / "doc" / "design" / "corpus" / "corpus.json").read_text(encoding="utf-8"))
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
+    law["release"] = release_files(snap, (runs.get("run", {}).get("law") or {}).get("release.version"))
     en_src = sources("en")
     errors = []
 
@@ -1688,8 +1750,8 @@ def main():
     (ROOT / "en").mkdir(exist_ok=True)
     (ROOT / "en" / "index.html").write_text(page, encoding="utf-8", newline="\n")
     (ROOT / "index.html").write_text('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
-                                     '<meta http-equiv="refresh" content="0; url=en/index.html"><title>Zayn — AYOUNI</title></head>'
-                                     '<body><a href="en/index.html">Zayn</a></body></html>\n', encoding="utf-8", newline="\n")
+                                     '<meta http-equiv="refresh" content="0; url=en/index.html"><title>Interfaces Under Law — AYOUNI</title></head>'
+                                     '<body><a href="en/index.html">Interfaces Under Law</a></body></html>\n', encoding="utf-8", newline="\n")
     print(f"built {built}: en/index.html ({len(page):,} characters), {len(pages)} page(s)")
     if errors:
         print("BUILD FAILED:\n  " + "\n  ".join(dict.fromkeys(errors)))

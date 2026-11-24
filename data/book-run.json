@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-24 16:39 UTC+01:00",
+  "date": "2026-11-24 22:22 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -120,6 +120,9 @@
    "pack.files": 12,
    "cite.rules": 14,
    "cite.declaration": 13,
+   "site.menu": 57,
+   "site.declared": 8,
+   "site.pairs": 37,
    "gbnf.rules": 29,
    "gbnf.kinds": 10,
    "suite.1.pass": 12,
@@ -436,7 +439,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:39 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:22 UTC+01:00"
   },
   "en/02-what-the-corrections-show": {
    "id": "what-the-corrections-show",
@@ -714,7 +718,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:39 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:22 UTC+01:00"
   },
   "en/06-intent-first": {
    "id": "intent-first",
@@ -1149,7 +1154,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:39 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:22 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1694,7 +1700,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:40 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:22 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -2204,7 +2211,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:40 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:23 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -2519,7 +2527,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:40 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:23 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -3171,7 +3180,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:41 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:23 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -3660,7 +3670,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:41 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:24 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -4164,7 +4175,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:41 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:24 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -4751,7 +4763,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:42 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:24 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -5126,7 +5139,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:42 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:25 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -5533,7 +5547,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:43 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:25 UTC+01:00"
   },
   "en/22-the-ai-agent-under-the-law": {
    "id": "the-ai-agent-under-the-law",
@@ -6024,7 +6039,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:43 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:25 UTC+01:00"
   },
   "en/23-the-ai-agent-as-a-user": {
    "id": "the-ai-agent-as-a-user",
@@ -6461,7 +6477,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:43 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:26 UTC+01:00"
   },
   "en/24-a-grammar-for-generation": {
    "id": "a-grammar-for-generation",
@@ -7606,7 +7623,8 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-24 16:44 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:26 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -7615,7 +7633,8 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-24 16:44 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:26 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -7624,7 +7643,8 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-24 16:44 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:26 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -7633,7 +7653,8 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-24 16:44 UTC+01:00"
+   "shell": [],
+   "ran": "2026-11-24 22:26 UTC+01:00"
   }
  }
 }

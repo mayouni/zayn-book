@@ -68,6 +68,24 @@ def block_hash(text):
     return hashlib.sha1(text.encode("utf-8")).hexdigest()[:12]
 
 
+def shell_blocks(body):
+    """Every ```shell fence of a chapter, in order: command lines that begin with `$ zayn`, then one line `# exit N`, the
+    exit code the page states. The build runs each line in a folder that holds every file the chapter's plates wrote before
+    the fence (the latest text under each name) and its symbol tables, and prints what each line printed."""
+    out = []
+    for m in FENCE.finditer(body):
+        info = m.group(1).strip().split()
+        if not info or info[0].lower() != "shell":
+            continue
+        lines = [l for l in m.group(2).rstrip("\n").split("\n")]
+        cmds = [l.strip()[2:].strip() for l in lines if l.strip().startswith("$ ")]
+        ex = [l for l in lines if re.match(r"^\s*#\s*exit\s+\d+\s*$", l)]
+        out.append({"text": m.group(2).rstrip("\n"), "commands": cmds,
+                    "exit": int(re.findall(r"\d+", ex[-1])[0]) if ex else None,
+                    "hash": block_hash("shell\n" + m.group(2)), "start": m.start(), "end": m.end()})
+    return out
+
+
 def symbol_tables(body):
     """The symbol tables a chapter writes for its level 3 declarations: one ```symbols <name.json> fence each.
     A symbol table is what a declaration cannot know about the system around it: its entities, actors, state, elements."""
@@ -461,6 +479,16 @@ def _history_facts(snap, law, rules, diags):
     # ... and those cited by a diagnostic that a verifier decides from a declaration (levels 1 to 3 of the contract)
     declared = {str(n) for d in diags if int(d.get("level") or 0) <= 3 for n in (d.get("rules") or [])}
     out["cite.declaration"] = len(declared) or None
+    # the Zayn site under its own law: its menu as a declaration, the pages that declare themselves, the declarations the
+    # site's build runs again against what each page prints (site/facts.json, written by tools/site-facts.js)
+    menu = snap / "site" / "menu.zayn"
+    out["site.menu"] = len(re.findall(r"(?m)^\s*DEFINE\s+NAV_GRAPH\b", menu.read_text(encoding="utf-8"))) if menu.exists() else None
+    pages = [snap / "index.html", *sorted((snap / "site").glob("*.html"))]
+    out["site.declared"] = sum(1 for p in pages if p.exists() and "This page, declared" in p.read_text(encoding="utf-8")) or None
+    sf = snap / "site" / "facts.json"
+    out["site.pairs"] = None
+    if sf.exists():
+        out["site.pairs"] = (json.loads(sf.read_text(encoding="utf-8")).get("facts") or {}).get("site.verifierRuns")
     # the grammar for generation (haro/zayn.gbnf): its rules, and the rules that each write one kind of declaration
     out["gbnf.rules"] = out["gbnf.kinds"] = None
     g = snap / "haro" / "zayn.gbnf"

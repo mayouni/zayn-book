@@ -8,13 +8,16 @@ session never pushes.** It commits here by explicit paths and hands each commit 
 asks the author's go and publishes. The house gate (menus, affirmative voice, colophon, font licences) runs on this reader.
 
 ```
-Zayn
-UI Governance in the Agentic Era
+Interfaces Under Law
+UI governance for people and AI agents, using the Zayn language
 Declare what a user is doing. The law refuses the rest.
 ```
 
 **Author:** Mansour Ayouni · **Imprint:** AYOUNI · **Series:** third of the AYOUNI books, after *Softanza* (`../softanza-book/`) and
-*Refinement-Oriented Programming* (`../refinement-book/`). The title block is the author's ruling of 2026-11-21 (`DECISIONS.md`, TITLE-01).
+*Refinement-Oriented Programming* (`../refinement-book/`). The title block is the author's ruling of 2026-11-24 (`DECISIONS.md`, TITLE-02, which replaces TITLE-01 of 2026-11-21): the
+discipline leads, and the language comes in the line under it. The tagline stands on the reader's title page and opens the back
+cover; the front cover carries the title and the line under it (COVER-02). The book's folder, repository and address keep the
+name `zayn`.
 
 ## The contract
 
@@ -162,7 +165,13 @@ stopped them.
   (one set's rules, with reason, article, tier and citing kinds); a promise may carry a count (`//--> 12 SYNTAX_ERROR`); the flag
   `gbnf` on a zayn fence also reads the plate against the grammar for generation (`haro/zayn.gbnf`, compiled by
   `book_common.gbnf_regex`) and prints its answer; keys `gbnf.rules`, `gbnf.kinds`, `grid.machine`. Requests: BOOK-ZAYN-09.
-- Next: Part X, then II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
+- 2026-11-24, evening: the desk published Part IX (a15e4cf). **The author changed the title and chose the cover** (TITLE-02,
+  COVER-02): *Interfaces Under Law*, the bold crop on a dark ground, drawn by `tools/make_cover.py` in the book's own faces
+  with the jar cut out of its ground. The proposals and the study of published covers: `sessions/2026-11-24-cover-and-title.md`.
+  The house's site and the Zayn site carry the old title until their desks follow. Part X (chapters 25 and 26) is drafted,
+  verified and voice-read, its fixes and its six doors to come; the build runs command lines (a `shell` fence) and prints the
+  release's files from its notes (`{{release}}`).
+- Next: Part X's fixes and doors, then II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

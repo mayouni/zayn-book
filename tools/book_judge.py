@@ -76,6 +76,9 @@ WORDS = {
         "grammar": "the grammar for generation, on the same lines without those that state the expected answer: {answer}",
         "grammar_yes": "a sentence of it",
         "grammar_no": "not a sentence of it",
+        "shell_label": "At the command line",
+        "shell_kept": "run: the command returned the exit code this page states",
+        "shell_differs": "run: the command returned another exit code than this page states",
         "in_words": "In words",
     },
 }

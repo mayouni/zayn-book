@@ -7,7 +7,7 @@ page for all books: <https://mayouni.github.io/ayouni/licence/>.
 
 ## Text
 
-The text of *Zayn: UI Governance in the Agentic Era* is released under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+The text of *Interfaces Under Law: UI governance for people and AI agents, using the Zayn language* is released under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
 International License** (`CC BY-NC-ND 4.0`).
 
 You are free to:

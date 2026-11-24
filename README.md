@@ -1,6 +1,6 @@
-# Zayn: the book
+# Interfaces Under Law: the Zayn book
 
-*Zayn · UI Governance in the Agentic Era · Declare what a user is doing. The law refuses the rest.* By Mansour Ayouni. The third of the
+*Interfaces Under Law · UI governance for people and AI agents, using the Zayn language · Declare what a user is doing. The law refuses the rest.* By Mansour Ayouni. The third of the
 AYOUNI books.
 
 This book runs. Every Zayn declaration in it is checked by Zayn's reference verifier at a named commit and judged against the

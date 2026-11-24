@@ -16,7 +16,8 @@ verdict the suite's manifest expects for it (the set of diagnostic ids, compared
 """
 import json, re, shutil, subprocess, sys
 from book_common import (sources, code_blocks, block_hash, snapshot, law_data, law_facts, now, stamp, save_json,
-                         gbnf_regex, CACHE, PIN)
+                         gbnf_regex, shell_blocks, symbol_tables, CACHE, PIN)
+import shlex
 from book_judge import parse, verdict, PROMISE
 
 NODE = shutil.which("node") or "node"
@@ -45,6 +46,7 @@ def run_block(cli, work, k, b, grammar=None):
         return rec
     d = work / f"{k + 1:02d}"
     d.mkdir(parents=True)
+    (d / rec["name"]).parent.mkdir(parents=True, exist_ok=True)
     (d / rec["name"]).write_text(b["text"] + "\n", encoding="utf-8", newline="\n")
     symbols = None
     if b.get("symbols"):
@@ -77,6 +79,31 @@ def run_block(cli, work, k, b, grammar=None):
     rec.update(verdict=v, exit=code2, report=report.rstrip(), diagnostics=diags, envelope=out.rstrip(),
                contract=env.get("contract"))
     return rec
+
+
+def run_shell(cli, work, k, sb, files, tables):
+    """One ```shell fence: each `$ zayn …` line run by the reference command in a folder holding the chapter's files so far.
+    The arguments are split as a shell would split them, and no pattern is expanded: the command reads each as a path."""
+    d = work / f"shell-{k + 1:02d}"
+    d.mkdir(parents=True)
+    for name, text in files.items():
+        (d / name).parent.mkdir(parents=True, exist_ok=True)
+        (d / name).write_text(text + "\n", encoding="utf-8", newline="\n")
+    for name, table in tables.items():
+        (d / name).write_text(table + "\n", encoding="utf-8", newline="\n")
+    parts, last = [], None
+    for c in sb["commands"]:
+        argv = shlex.split(c)
+        if not argv or argv[0] != "zayn":
+            raise SystemExit(f"a shell fence runs the zayn command only: {c}")
+        p = subprocess.run([NODE, str(cli)] + argv[1:], cwd=d, capture_output=True, text=True, encoding="utf-8",
+                           errors="replace", timeout=120)
+        out = ((p.stdout or "") + (p.stderr or "")).replace("\r", "")
+        out = out.replace(str(d) + "\\", "").replace(str(d) + "/", "").replace(str(d), ".")
+        parts.append({"command": c, "output": out.rstrip("\n"), "exit": p.returncode})
+        last = p.returncode
+    kept = sb["exit"] is not None and last == sb["exit"]
+    return {"hash": sb["hash"], "runs": parts, "exit": last, "promise": sb["exit"], "verdict": "kept" if kept else "differs"}
 
 
 def run_court(cli, snap, law, names, work):
@@ -142,20 +169,32 @@ def main():
         key = f"en/{path.stem}"
         work = work_root / path.stem
         t0 = now()
-        records = [run_block(cli, work, k, b, grammar) for k, b in enumerate(code_blocks(body))]
+        cbs = code_blocks(body)
+        records = [run_block(cli, work, k, b, grammar) for k, b in enumerate(cbs)]
+        shells = []
+        tables = symbol_tables(body)
+        for k, sb in enumerate(shell_blocks(body)):
+            files = {}
+            for b in cbs:
+                if b["end"] <= sb["start"] and b.get("name"):
+                    files[b["name"]] = b["text"]
+            shells.append(run_shell(cli, work, k, sb, files, tables))
         court = run_court(cli, snap, law, meta.get("fixtures"), work / "court")
         runnable = [r for r in records if r["verdict"] != "exercise"]
         kept = sum(1 for r in runnable if r["verdict"] == "kept")
         ch = {"id": meta["id"], "blocks": records, "kept": kept, "runnable": len(runnable),
-              "exercises": len(records) - len(runnable), "court": court, "ran": stamp(t0)}
+              "exercises": len(records) - len(runnable), "court": court, "shell": shells, "ran": stamp(t0)}
         result["chapters"][key] = ch
         line = f"{key}: {kept} of {len(runnable)} declarations kept their promise"
         bad_court = [c["file"] for c in court if not c.get("exists") or not c.get("pass")]
         if court:
             line += f"; court: {len(court) - len(bad_court)} of {len(court)} fixtures answer as the manifest expects"
-        if (runnable and kept < len(runnable)) or bad_court:
+        if shells:
+            line += f"; command lines: {sum(1 for s in shells if s['verdict'] == 'kept')} of {len(shells)} as stated"
+        bad_shell = [f"shell {i + 1}" for i, s in enumerate(shells) if s["verdict"] != "kept"]
+        if (runnable and kept < len(runnable)) or bad_court or bad_shell:
             failed.append(key)
-            line += "  <- FAILS: " + ", ".join(sorted({r["verdict"] for r in runnable if r["verdict"] != "kept"}) + bad_court)
+            line += "  <- FAILS: " + ", ".join(sorted({r["verdict"] for r in runnable if r["verdict"] != "kept"}) + bad_court + bad_shell)
         print(line, flush=True)
     bad_suite = [level for level, rec in suite.items() if rec["exit"] != 0]
     if bad_suite:
