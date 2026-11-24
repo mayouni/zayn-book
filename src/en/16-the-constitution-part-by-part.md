@@ -232,7 +232,7 @@ And the law's rules are equal in rank: when two speak of one subject they are re
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 Every table of this page was printed from the law's file at version {{n:law.version}}, and each citation on it comes from a run. What reads the file at that version is the verifier, for the titles and the numerals of a report; the law's reader, for its parts; the Zayn site, for its figures; and the pack, the set of files that a user of the law keeps together, each identified by a fingerprint of its bytes. The highest rule number in a right's list is {{n:right.max}}, and whether a newer rule joins a list is a question for a pass. The law in four layers is a design: a statute above, a core that every interface keeps, a commons that teams add to, and a local layer of their own.
 

@@ -272,7 +272,7 @@ Zayn leads on refusing before the surface exists. A promise the declared medium 
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 The media are data at version {{n:media.version}} of their file. The verifier keeps its own copy of which medium carries which verb, and the suite checks that the copy matches the data before any fixture runs. Each plate of this page was run. Zayn's data records how the screen, sound and voice render each status, and their renderers are in a library of the estate. On a passing medium, such as a voice, whose words do not stay, a user keeps a right by being able to ask again, and the data calls a field to declare that a language change that "deserves its own decision".
 

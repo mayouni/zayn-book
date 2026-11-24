@@ -161,7 +161,7 @@ Zayn leads on keeping the corrections as data. Each one has its words, its date 
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 The corpus is data, and every count of the corpus on this page is read from it at each build; its page in Zayn's repository is rendered from the same file. The verifier refused, on this page, three defects that the corpus records. The checks of the painted page are tools of the repository, and the runs of their first checks are told here as recorded. The design study's amendments, written from the corpus, wait for my ruling before any of them enters the law.
 

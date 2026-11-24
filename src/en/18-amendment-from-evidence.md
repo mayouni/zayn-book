@@ -189,7 +189,7 @@ Both sides know the cost of a pin. A regulation that names version 2.1 goes on n
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 The history told here is data of the law's file at version {{n:law.version}}, and the amendments of versions 3.11, 3.12 and 3.16 were answered on this page by the verifier of release {{n:release.version}}. What was lawful before a version is told from the record: this page runs one verifier, today's. Two rules that touch one subject are reconciled by amending both, and the pair is found by whoever puts them side by side; a rule of precedence, or a check for two rules on one subject, is a question that the docket has filed for me. The evidence behind a rule is of the size its field states: a body of recorded corrections for some, one surface for others, a decision or a check for two, and each rule says which. The law in four layers, with its commons, is a design: it is written, and it waits for my pass, section by section.
 

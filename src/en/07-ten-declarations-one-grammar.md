@@ -291,7 +291,7 @@ And the design tokens name what a declaration leaves to the drawing: colours, di
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 The grammar refuses what this chapter showed: a field, a place, a second copy, a value. It reads the {{n:lang.kinds}} kinds it defines, it reports the words `WIDGET` and `USER` with a warning, and it passes over any other kind as another language's. Appendix B gives the grammar in full, with the form each field takes.
 

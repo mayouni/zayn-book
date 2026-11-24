@@ -14,8 +14,9 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-04 | 2026-11-22 | A flow whose act cannot be undone has no form of its own | **Answered 2026-11-23 09:26**: the four readings confirmed by the Zayn desk and by the Zayn session, on the reference and on the built command. One correction, one addition (below). A ruling on the language waits for the author: LANG-FLOW-REFERENCE-01 |
 | BOOK-ZAYN-05 | 2026-11-22 | A rule's tier and the diagnostics that cite it tell two stories | **Answered 2026-11-23 09:26**: the figures stand, and a count by citation is given (below). Three rulings on the law wait for the author: LAW-TIER-REFUSED-01, LAW-TIER-CHECK-01, LAW-SELECT-CONFIRM-01 |
 | BOOK-ZAYN-06 | 2026-11-23 | Ten findings of Part III's research, parts (a) to (j), below | **Answered 2026-11-23 19:54** (the Zayn session): all ten confirmed at the pin by the Zayn desk, 27 runs on the reference and on the built command, identical; full text in the Zayn repository's `.central/outbox.md`, NOTE of 2026-11-23 19:34. Six rulings go to the author (below). Part (i)'s texts are rewritten in Zayn's `ce58575`, after the pin |
-| BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Filed 2026-11-23**, with Part VII's memo; each part with its runs and its lines in `research/ch16.md` to `ch19.md`, section 12. Three of them are the open questions that chapters 16, 18 and 19 leave to their reader | Routed by the Zayn session to the desk as a read of its own, ZAYN-LAW-BOOK-READ-03 (2026-11-23 19:54)
+| BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Answered 2026-11-24**: all ten parts confirmed by the Zayn desk (its NOTE of 2026-11-24 00:47 in the Zayn repository's outbox), checked by the Zayn session (01:14). Five rows are with the author: LAW-MENU-READINGS-01 (a, b), LAW-CONTRACT-BINDINGS-01 (c, found wider: nine bindings cite an article or a right that the cited rule does not hold), GRID-116-PLACEMENT-01 (d), LAW-CORRECTIONS-3171-01 (e, f, g: a correction pass 3.17.1), LAW-ARTICLE-VII-RECURRING-01 (h). (i): the texts outside the law corrected in the Zayn repository after the pin (d01d322, local); (j) confirmed. Chapter 17's findings, owed to this request, are filed as BOOK-ZAYN-09 (u) | Routed by the Zayn session to the desk as ZAYN-LAW-BOOK-READ-03 (2026-11-23 19:54); none of the five rows ruled yet
 | BOOK-ZAYN-08 | 2026-11-23 | Findings of the research of Parts I and V, in parts, below | **Filed 2026-11-23**, with the memo of Parts I and V; parts added as chapters 1, 2, 12 and 13 are drafted. Two parts are the open questions that chapters 12 and 13 leave to their reader |
+| BOOK-ZAYN-09 | 2026-11-24 | Findings of the research of Part IX, in parts, below | **Filed 2026-11-24**, with the memo of Part IX. Part (a) corrects the confirmation relayed for BOOK-ZAYN-06 (g); three parts are the open questions that chapters 22, 23 and 24 leave to their reader |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -67,6 +68,11 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | LANG-SATISFIES-EMPTY-01 | `SATISFIES` called required and read for presence only (06 (d)) | |
 | LANG-LEVEL3-LAWFUL-01 | the level 3 checks from the lawful side: an actor's name never looked up (06 (e)) | |
 | LANG-RECORD-GAPS-01 | (a) and (b) three clauses of the families' sentences carried by no diagnostic, `MISSING_CANCEL` filed under continuity; (c) which form a decoder writes; (d) where the election of a surface is stated (06 (f), (g), (j)) | |
+| LAW-MENU-READINGS-01 | a section with entries and no `TARGET` under a bar; a child label that begins with its parent's whole label (BOOK-ZAYN-07 (a), (b)) | (a) `MENU_LANDING_NOT_FIRST` refuses it, a reading of the specification; (b) an amendment, 3.18 |
+| LAW-CONTRACT-BINDINGS-01 | a finding's article or right against its rule's (07 (c)) | a check that compares each binding with the law |
+| GRID-116-PLACEMENT-01 | Rule 116 on the grid, after v3.16 (07 (d)) | |
+| LAW-CORRECTIONS-3171-01 | the law's history against itself, the names corrections did not reach, a design note's count (07 (e), (f), (g)) | a correction pass 3.17.1, with four questions only the author answers |
+| LAW-ARTICLE-VII-RECURRING-01 | how "real and recurring" reads for rules that entered before a defect (07 (h)) | |
 
 If they are ruled, they land after the pin; the Zayn session tells the book which release carries them. The six rulings added on 2026-11-23 19:54 each carry the Zayn desk's recommendation, in the outbox note named above.
 
@@ -204,3 +210,93 @@ Found while researching chapters 1, 2, 12 and 13, each probed on the reference v
   for an AI agent on the machine medium.
 - **(f) The hand-set placements** are said to be listed in `coverage-placement.json` and are not; "empty" names two things in
   the record (`research/ch13.md`, findings 5 and 10).
+
+## BOOK-ZAYN-09, in parts (filed 2026-11-24)
+
+Found while researching chapters 22, 23 and 24, each probed on the reference verifier of the pin or counted from its files; the
+book's build checks the flagged plates of chapter 24 against `haro/zayn.gbnf` itself (`tools/book_common.py`, `gbnf_regex`,
+fourteen controls read off the grammar, all as read). A finding against the law or the language is a gift to it.
+
+- **(a) The grammar for generation and the verifier share no file, and the translation runs one way.** Every declaration of
+  `haro/zayn.gbnf` needs `AS` after its name and `RATIONALE` after its body, with lists in small letters; the verifier answers
+  `SYNTAX_ERROR` on any word but `(` after a name, and reads verbs in capitals only. Of the 77 fixtures, none is a sentence of the
+  grammar as written; translated by `translate()` (`haro/judge-zayn-court.js:27-46`), 66 are, and all 77 translations answer
+  `SYNTAX_ERROR` on the verifier (`research/ch24.md`, block 4 and the batch). The translation runs from the language's form to the
+  grammar's, and its output goes to the forged evaluator while the verifier reads the original (`:61-65`, `:73`). **The
+  confirmation relayed for BOOK-ZAYN-06 (g), that the verifier reads a decoder's output after the translation that
+  `haro/judge-zayn-court.js` applies, does not match the code in that direction.** Texts that this bears on:
+  `site/generate.html:112-113`, `:82-87`, `:105-106`; `site/haro.html:157`; `site/tour.html:185`; `index.html:351-360`. Chapter 24
+  says which form each reader accepts, and files which form a decoder writes (LANG-RECORD-GAPS-01 (c)).
+- **(b) After a syntax error, the verifier judges the declaration it kept with no field.** A lawful wizard in the grammar's form
+  gets `TRAPPED_FLOW`, citing Rules 51 and 53 and the right to leave; over the 77 translations, `INTENT_FLOW_NO_SATISFIES` on 28,
+  `ROLE_UNDECLARED` on 13, `TRAPPED_FLOW` on 4, where the contract says of `SYNTAX_ERROR` "no law applies" (`research/ch24.md`,
+  F4). Chapter 24's exercise shows the warning on a flow in the grammar's form. Recovery is outside the suite (`manifest.json:598`).
+- **(c) "33 errors" is one file's count.** The number of `SYNTAX_ERROR` is one plus the words after the name: 8 to 183 over the 77
+  translations, 33 on four of them (`research/ch24.md`, F5).
+- **(d) Smaller differences of the grammar file.** `translate()` leaves names unchanged, so a name in capitals is clean on the
+  verifier and not a sentence once translated; the grammar is written from a second declaration that names language 1.4 (no
+  `LABEL`, `TARGET` or `ENTRIES` on a `NAV_GRAPH`; the contract counted "(37)"; "the 57 fixtures"); a string has no escape;
+  `number` and `stringlist` are used by no rule; the comment at `judge-zayn-court.js:28` names a rewrite of comments where the next
+  line deletes them; the refusal message of `zayn.stzu:1164-1166` describes the language's form (`research/ch24.md`, F6 to F10).
+- **(e) One role per control, and two axes.** `proposal` says who decides; `reversible` and `irreversible` say what can be taken
+  back. A control states one role, so an AI agent's applied match that can be undone, written `reversible`, is clean at level 2
+  with no authority named, and `PROPOSAL_COMMITS` never reads it (`research/ch22.md`, finding 1; `doc/ROLE-DESIGN.md:248-249`
+  foresaw it). Chapter 22's exercise asks it.
+- **(f) One missing actor, two errors, at level 3.** With an `actors` table, a proposal that acts with no actor gets
+  `PROPOSAL_COMMITS` and `HIDDEN_AUTHORITY`, both citing Rule 83, where the contract says they overlap "in spirit and not in
+  reach" (`research/ch22.md`, finding 2).
+- **(g) Set 31 in a design note.** `doc/ROLE-DESIGN.md:247` says that Set 31 has three rules, all `judgment`; the data holds ten,
+  and files 99, 100 and 104 under `machine-later`.
+- **(h) "Agent surface" in two senses, and the machine channel's rules.** `site/beyond.html:146` and `site/conformance.html:167`
+  give Rules 121 and 124 as the only rules the law has for agent surfaces, in a section on `SURFACE_AS machine`; the grid places
+  Rule 104 alone on `machine`, Rule 121 on `visual`, Rule 124 off the grid; `doc/ARCHITECTURE.md:66-68` uses the phrase for the
+  interface through which a person meets an AI agent (`research/ch22.md`, finding 4; `research/ch23.md`, finding 3).
+- **(i) Set 31's evidence.** Rules 97 to 104 carry one evidence sentence, the same in all eight, naming two products of the
+  estate; Article VII asks that a harm be "real and recurring" (adds to BOOK-ZAYN-07 (f), (h)).
+- **(j) Where `ACTOR` may stand.** `doc/language/DECLARATIONS.md:214-215` admits it where `SATISFIES` holds `ACT`; `:38`,
+  `VIOLATIONS.md:271` and the verifier carry it on every kind, and a reading `SCREEN` with an `ACTOR` is clean.
+- **(k) Provenance has no field.** Rule 99 is filed `machine-later`; `PROVENANCE` is `UNKNOWN_FIELD`, and `REPORTS [machine_made]`
+  is accepted as any name and read by nothing, while `site/generate.html:142-143` says what an AI agent produces is marked as
+  machine-made.
+- **(l) "Cite the rules you obeyed."** The loop of `site/generate.html:123` asks the model for its citations, and nothing checks
+  them: a clean run's machine form cites nothing.
+- **(m) Stage words for M5.** `site/conformance.html:166` files the AI-interaction jurisdiction "designed"; `ROADMAP.md:94-100`
+  lists M5 with no item done, and the founding folds its MCP surface into M12. The book carries the MCP surface as next.
+- **(n) One proposal, two parties, one field.** Rule 98 asks for "an authority the declaration names"; `ACTOR` is "who performs
+  the act"; the AI agent that proposed may name itself and the file is clean, and the grammar has no seat for a second party (a
+  list is `UNKNOWN_FIELD`, a second line `DUPLICATE_FIELD`) (`research/ch23.md`, finding 1).
+- **(o) Nothing in a declaration says that its user is an AI agent.** In data and code the machine medium equals the screen: the
+  same six properties, the same carriage, the same verdicts (`research/ch23.md`, finding 2).
+- **(p) The preamble's exception and the right to know.** The preamble keeps for the person every rule that names what is seen,
+  heard, read or felt; `index.html:337` says an AI agent keeps the rights a person has; the verifier raises `INVISIBLE_STATE` for
+  an AI agent on the machine medium under Rule 82, whose word is "perceive". Which of the six rights an AI agent keeps, the record
+  does not say (`research/ch23.md`, finding 4). Chapter 23's exercise asks it.
+- **(q) `INVISIBLE_STATE` cites the pattern of invisible active filters for any state** (`research/ch23.md`, finding 5).
+- **(r) Statuses on the machine medium print "clean"** (kin of BOOK-ZAYN-08 (b)); `zayn.js:61-62` says two channels are listed
+  where `signal.json:197` records three.
+- **(s) A document behind the code.** `doc/THE-SECOND-FOUNDING.md:853-855` says no instrument would refuse a voice flow that
+  mishears, acts and cannot be interrupted or reversed; at the pin the verifier refuses it, citing Rules 16, 79 and 26.
+- **(t) The machine medium in the court.** No fixture puts the authority or state checks under `SURFACE_AS machine`; a pair for
+  `PROPOSAL_COMMITS` there would put chapter 23's contract row in the suite (`research/ch23.md`, finding 9).
+
+- **(u) Chapter 17's findings, owed to BOOK-ZAYN-07** (`research/ch17.md`, section 12, findings 1 to 18). The phrase "the
+  enforcement ladder" names the four tiers on the site and the `machine-later` rules alone in the law's reader (1); `machine` is
+  glossed "the declaration checker refuses it" while 7 of the 11 rules filed under it name another instrument in their `lint` (2);
+  a count by citation has two roads, the `rules` lists and the forbidden patterns a finding cites, which reach Rules 1, 17, 18
+  and 96 besides (3); one finding of the UI audit names Rules 60 and 104 in its tag (4); some checks of the audits and of the
+  site's shell read what a rule legislates and cite no rule (5); for three of the four rules whose `lint` names a declaration
+  lint, the `lint` names another check than the diagnostic that cites the rule, Rule 79's naming a withheld product (6); `--level 4`
+  prints `clean … at level 4` (7, kin of BOOK-ZAYN-06 (a)); the reader's badge says "checked by the UI audit" on all seven `tool`
+  rules (8); the site prints the census of `machine` as a count of refusals (9); "six rules" for the UI audit, which also reads
+  Rule 38 (10); "judgment-tier" said of three rules the data files otherwise (11); who ruled D6 (12, in BOOK-ZAYN-07 (e)); Rule
+  107's road to `machine` (13); the founding's table measured at v3.11 (14); per-level fixture counts and "Fourteen of those 20"
+  (15, the first in BOOK-ZAYN-03); `site/rules.html:144` on v3.16 (16); K22 reads the page while it loads (17); the rights
+  `understand` and `human` are cited by no diagnostic (18).
+
+- **(v) A finding's sentence and its check.** The contract's sentence for `MISSING_UNDO` ("An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.") leaves out the role `irreversible`, under which the check does not fire (`zayn.js:486`); a verifier built from the contract's sentences alone would refuse chapter 22's lawful purge. Found by the builder of tools' door (`research/read/part9-tool-builder.md`).
+
+**Sentences of Part IX that a ruling would change.** LANG-RECORD-GAPS-01 (c): chapter 24's "Which form a decoder is to write, and
+where the step from one form to the other stands, is a question filed for the language", its exercise's closing question, its
+front matter's `next` and the last sentence of its "Where it stands". Part (e), if ruled: chapter 22's exercise and its closing
+question. Part (p), if ruled: chapter 23's closing question. LAW-TIER-REFUSED-01: chapter 22 quotes, at the table of Set 31, the record's glosses of `judgment` and
+`machine-later`, as chapter 17 does; chapters 23 and 24 print the tier word only.

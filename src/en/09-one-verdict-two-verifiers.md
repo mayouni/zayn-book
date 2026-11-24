@@ -156,7 +156,7 @@ And a suite proves agreement. Whether what the verifiers agree on is right is th
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 Two things ran on this page: the reference verifier and the suite's runner, both in the snapshot. The command, its build for the browser and the forged evaluator are told from their own records, each as its record states it. The symbol tables of this chapter were written by hand: a table is an input, and the project around a declaration is where it comes from. And a clean verdict covers the declaration: what it states, at the level asked. The delivered screen is another instrument's to measure, and chapter 10 begins there.
 

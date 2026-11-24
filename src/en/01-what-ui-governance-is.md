@@ -138,7 +138,7 @@ Zayn leads on the moment. A promise that contradicts the act is refused in the d
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 The law is data at version {{n:law.version}}, and every plate of this page was run by the verifier of release {{n:release.version}}. The corpus of corrections is data. The audit of the painted page is a tool of Zayn's repository, and its runs are told in Part VII as recorded. The way a correction becomes a rule is told on the record in chapters 18 and 19, and a way to capture a correction where it is made, in every application, is designed.
 

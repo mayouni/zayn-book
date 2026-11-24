@@ -230,7 +230,7 @@ And WCAG's criterion reaches the page as a user meets it, where a declaration st
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 Every run on this page was made by the verifier's JavaScript reference, at Zayn's release {{n:release.version}}, against the law at version {{n:law.version}}. A refusal covers what a declaration states: on this page, what its fields say of intents, reach, steps, tone and role. The rules it cites say more than a declaration can state, and Part VII sets the law's three instruments side by side: the verifier, the audit of the painted page and a person's judgment. A clean verdict covers the declaration and what it states. Whether the declaration is true of the screen that is delivered is measured on the painted page, in chapter 10.
 

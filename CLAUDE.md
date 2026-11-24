@@ -61,7 +61,8 @@ exit code and the report from the run. A fence's info string holds a file name (
 `exercise` and `envelope`.
 
 **The promise (RUN-01).** `//--> CODE name` for each finding the declaration must get, `//--> clean` for none, at the foot of the
-fence. **Numbers and the law's words (TOKEN-01).** A count is `{{n:key}}` (the keys are in `tools/book_common.py`, `law_facts`);
+fence; `//--> 12 SYNTAX_ERROR` promises the same finding as many times. The flag `gbnf` also reads the plate, without its promise
+lines, against the grammar for generation and prints that answer. **Numbers and the law's words (TOKEN-01).** A count is `{{n:key}}` (the keys are in `tools/book_common.py`, `law_facts`);
 `{{rule:79}}` and `{{right:reverse}}` print a card from the law's data. Never type a count, a rule's title or a right's sentence.
 
 ## The evidence and the run
@@ -111,7 +112,8 @@ stopped them.
 ## Rules that bind
 
 - Stage files by explicit path, never `git add -A`. Commit here, never in the house for this folder. **Never push** (the repository
-  is public: a push publishes). Hand each commit over to the house desk in a memo.
+  is public: a push publishes). Hand each commit over to the house desk in a memo. **Name the tip commit in the memo, and add no
+  commit after it until the desk answers** (the desk, 2026-11-24 00:05: "so what I verify is what he approves").
 - Never move a page beyond `draft`. When the author moves one, send the desk the page id, the stage and his words first.
 - Never background a heavy command. A secret appears only as `$env:NAME`. Every stamp is read from the clock.
 - What the book needs from another repository is a numbered request (`BOOK-ZAYN-01` onward) in a memo and one line in
@@ -155,7 +157,12 @@ stopped them.
   as 141f7ba. New directives: `{{grid}}`, `{{media}}`, `{{causes}}` (from Zayn's data); every exercise ("In your hands") folds its
   answer under a button; tables must fit 375 px (checked in the browser before each hand-over). Chapter 1's opening is the
   author's (`[AUTHOR: the opening]`). Requests: BOOK-ZAYN-06 answered (six rulings with the author), BOOK-ZAYN-08 filed.
-- Next: Parts IX and X, then II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
+- 2026-11-24: the desk published 141f7ba (house pin 64bc8ae). **Part IX (chapters 22, 23 and 24) drafted and run**: the field
+  read at its sources (F-33 to F-47); a verifier and a voice reader per chapter, then six doors. New in the build: `{{set:N}}`
+  (one set's rules, with reason, article, tier and citing kinds); a promise may carry a count (`//--> 12 SYNTAX_ERROR`); the flag
+  `gbnf` on a zayn fence also reads the plate against the grammar for generation (`haro/zayn.gbnf`, compiled by
+  `book_common.gbnf_regex`) and prints its answer; keys `gbnf.rules`, `gbnf.kinds`, `grid.machine`. Requests: BOOK-ZAYN-09.
+- Next: Part X, then II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

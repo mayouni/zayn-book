@@ -222,7 +222,7 @@ Zayn leads on a map that is finite and counted. The verbs are a fixed list, and 
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 The grid on this page is counted at each build from the placement of the rules, the media and the verbs each activity owns, and its figures equal those of the Zayn site. The projection fixtures show that rules which name no medium answer on sound, voice, a program and print as on a screen, and one projection on print is recorded as a gap of projection. The placement is a reading, measured by two readers and ruled on. Each of the {{n:grid.empty}} empty cells is projected onto by a rule that names no medium. A rule for each is for my ruling, after its projection is measured.
 

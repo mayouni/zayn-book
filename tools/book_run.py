@@ -16,8 +16,8 @@ verdict the suite's manifest expects for it (the set of diagnostic ids, compared
 """
 import json, re, shutil, subprocess, sys
 from book_common import (sources, code_blocks, block_hash, snapshot, law_data, law_facts, now, stamp, save_json,
-                         CACHE, PIN)
-from book_judge import parse, verdict
+                         gbnf_regex, CACHE, PIN)
+from book_judge import parse, verdict, PROMISE
 
 NODE = shutil.which("node") or "node"
 
@@ -32,10 +32,14 @@ def check(cli, cwd, name, level, as_json, symbols=None):
     return p.returncode, (p.stdout or "").replace("\r", ""), (p.stderr or "").replace("\r", "")
 
 
-def run_block(cli, work, k, b):
+def run_block(cli, work, k, b, grammar=None):
     promises, stated = parse(b["text"])
     rec = {"hash": b["hash"], "name": b["name"] or f"declaration-{k + 1}.zayn", "level": b["level"],
            "symbols": b.get("symbols"), "flags": b["flags"], "promise": [list(p) for p in promises], "stated": stated}
+    if "gbnf" in b["flags"] and grammar is not None:
+        # the flag asks for the grammar for generation's answer too, on the lines that are not promises
+        bare = "\n".join(l for l in b["text"].replace("\r", "").split("\n") if not PROMISE.match(l)).strip("\n") + "\n"
+        rec["grammar"] = bool(grammar.fullmatch(bare))
     if "exercise" in b["flags"]:
         rec.update(verdict="exercise", report="", diagnostics=[])
         return rec
@@ -122,6 +126,7 @@ def main():
     cli = snap / "tools" / "zayn" / "cli.js"
     law = law_data(snap)
     node_v = subprocess.run([NODE, "--version"], capture_output=True, text=True).stdout.strip() or None
+    grammar = gbnf_regex(snap) if (snap / "haro" / "zayn.gbnf").exists() else None
     started = now()
     result = {"run": {"date": stamp(started), "zayn": prov, "law": law_facts(snap), "node": node_v,
                       "verifier": "tools/zayn/cli.js, the reference verifier, in the snapshot"}, "chapters": {}}
@@ -137,7 +142,7 @@ def main():
         key = f"en/{path.stem}"
         work = work_root / path.stem
         t0 = now()
-        records = [run_block(cli, work, k, b) for k, b in enumerate(code_blocks(body))]
+        records = [run_block(cli, work, k, b, grammar) for k, b in enumerate(code_blocks(body))]
         court = run_court(cli, snap, law, meta.get("fixtures"), work / "court")
         runnable = [r for r in records if r["verdict"] != "exercise"]
         kept = sum(1 for r in runnable if r["verdict"] == "kept")

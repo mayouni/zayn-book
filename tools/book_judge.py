@@ -11,6 +11,7 @@ A promise line is a Zayn comment, so the file runs exactly as the page prints it
     //--> MISSING_UNDO approve_payment     one finding the block promises: its code, then the declaration it is about
     //--> ROLE_UNDECLARED                  a finding the verifier reports on the whole file, with no name
     //--> clean                            the block promises that the verifier finds nothing
+    //--> 10 SYNTAX_ERROR                  the same finding, as many times as the number says (a count before the code)
 
 The verifier's `subject` is the declaration's name for most findings and a phrase for some ("irreversible purge_archive
 declares UNDO"). The promise names the declaration; it is kept when that name is a word of the subject, so the wording of
@@ -35,6 +36,9 @@ def parse(text):
             continue
         if words[0].lower() == "clean":
             clean = True
+            continue
+        if words[0].isdigit() and len(words) > 1:
+            out.extend([(words[1], words[2] if len(words) > 2 else None)] * int(words[0]))
             continue
         out.append((words[0], words[1] if len(words) > 1 else None))
     if clean and out:
@@ -69,6 +73,9 @@ WORDS = {
         "exit": "exit code {n}",
         "report": "The verifier's report",
         "envelope": "The same answer, as a machine reads it",
+        "grammar": "the grammar for generation, on the same lines without those that state the expected answer: {answer}",
+        "grammar_yes": "a sentence of it",
+        "grammar_no": "not a sentence of it",
         "in_words": "In words",
     },
 }

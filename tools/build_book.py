@@ -73,6 +73,7 @@ UI = {
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
     "cited_by": "Cited by", "cited_none": "no kind of finding of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
+    "cited_none_short": "none", "set_src": "The rules of Set {n}, {t}, with the reason each gives.",
     "diag_h": ["Code", "Level and severity", "The contract's sentence", "What it cites"],
     "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its id", "Its sentence", "Rules that enforce it"],
     "forbidden_h": ["Forbidden pattern", "Its id", "Rules it breaks"],
@@ -82,6 +83,7 @@ UI = {
     "sets_h": ["Set", "Its title", "Rules", "Their numbers"],
     "tiers_h": ["Tier, in the law's word", "Rules filed under it", "Cited by a kind of finding the verifier raises", "Named by an audit for a check"],
     "ladder_h": ["Rule", "Tier", "The verifier: kinds of finding that cite it", "The audits: checks that name it"],
+    "set_rules_h": ["Rule, and the reason it gives", "Article, and tier", "Kinds of finding that cite it"],
     "ladder_src": "Counted by citation at this build, from the contract, the verifier's code and the files of the two audits; each audit citation is checked against its file. A citation shows that an instrument reads the rule. Which clauses it reads is said rule by rule in the chapter.",
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
@@ -399,6 +401,8 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .book-table.sources td{word-break:break-word;}
 .book-table.families code{background:none;padding:0;font-family:ui-monospace,'Cascadia Code',Consolas,monospace;font-size:0.92em;}
 .chapter-page p.table-src{font-family:var(--sans);color:var(--soft);margin:-1.1em 0 1.6em;text-indent:0;text-align:left;}
+.book-table .set-why{display:block;color:var(--soft);margin-top:2px;}
+.book-table td code.nb{white-space:nowrap;overflow-wrap:normal;}
 .law-card{border:1px solid var(--rule);border-left:4px solid var(--ink);border-radius:0 8px 8px 0;margin:1.6em 0;padding:12px 18px 12px;background:var(--card-bg);font-family:var(--sans);}
 .law-card .lc-head{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;margin-bottom:6px;}
 .law-card .lc-num{font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--bookmark-text);}
@@ -655,6 +659,9 @@ def code_cell(block, rec, in_words, ui, cover=False):
             if cover:
                 parts.append(f'<details class="cover"><summary>{html.escape(ui["cover"])}</summary>')
             parts.append(f'<p class="ran nv-{v}">{exit_note}{html.escape(text)}</p>')
+            if "grammar" in rec:
+                ans = w["grammar_yes"] if rec["grammar"] else w["grammar_no"]
+                parts.append(f'<p class="ran-sub grammar">{html.escape(w["grammar"].format(answer=ans))}</p>')
             if rec.get("report"):
                 parts.append(f'<pre class="ran-out report"><code>{html.escape(rec["report"])}</code></pre>')
             if "envelope" in block["flags"] and rec.get("envelope"):
@@ -924,6 +931,25 @@ def sets_table(law, ui, version):
             + f'<p class="table-src">{html.escape(ui["law_src"].format(v=version))}</p>')
 
 
+def set_rules_table(sid, law, ui, version):
+    """The rules of one set of the law, each with its reason, its article, the law's tier word for it, and the kinds of
+    finding of the contract that cite it: data of the pin, never a count by tier."""
+    st = law["law"].get(f"set{sid}")
+    if not st:
+        raise SystemExit(f"set table: the law at the pin has no set {sid}")
+    rows = []
+    for num in sorted(_rule_num(r) for r in st.get("rules", [])):
+        r = law["rules"].get(str(num)) or {}
+        art = law["articles"].get(r.get("derived_from") or "", {})
+        citing = [d["id"] for d in law["diag_list"] if str(num) in [str(x) for x in (d.get("rules") or [])]]
+        cited = " ".join("<code>" + html.escape(c).replace("_", "_<wbr>") + "</code>" for c in citing) or html.escape(ui["cited_none_short"])
+        rows.append([f"<strong>{num}</strong> {html.escape(r.get('title', ''))}<br><span class=\"set-why\">{html.escape(r.get('why') or '')}</span>",
+                     html.escape(art.get("numeral", "null")) + f"<br><code class=\"nb\">{html.escape(r.get('enforcement') or 'null')}</code>", cited])
+    title = re.sub(r"^Set \d+:\s*", "", st.get("title", ""))
+    return (render_table(rows, "book-table", ui["set_rules_h"])
+            + f'<p class="table-src">{html.escape(ui["set_src"].format(n=sid, t=title))} {html.escape(ui["law_src"].format(v=version))}</p>')
+
+
 def tiers_table(law, ui, version):
     """The law's own filing of each rule under a tier, beside the count by citation (law["ladder"]): how many rules of
     the tier a kind of finding that the verifier raises cites, and how many an audit names. Counted, never glossed."""
@@ -1179,6 +1205,9 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(grid_table(law, ui)); i += 1; continue
         if s == "{{pins}}":
             flush(); out.append(pins_table(law, ui)); i += 1; continue
+        m_set = re.match(r"^\{\{set:(\d+)\}\}$", s)
+        if m_set:
+            flush(); out.append(set_rules_table(m_set.group(1), law, ui, version)); i += 1; continue
         if s == "{{tiers}}":
             flush(); out.append(tiers_table(law, ui, version)); i += 1; continue
         m_an = re.match(r"^\{\{anatomy:(\d+)\}\}$", s)

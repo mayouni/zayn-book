@@ -223,7 +223,7 @@ And a framework builds the screen. A declaration builds none: a team still draws
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 Starting from intent makes checkable what a declaration states: its verbs, what it keeps within reach, its steps, from the file alone and before anything is drawn. That every element answers to a verb is decided at level 3, when the verifier is given the list of elements. At level 3, an element answers to a verb when a declaration carries its name and satisfies one.
 

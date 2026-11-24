@@ -335,6 +335,7 @@ def grid(snap):
         "grid.visual": sum(1 for r in rules.values() if r["media"] != "any" and "visual" in r["media"]),
         "grid.visualonly": sum(1 for r in rules.values() if r["media"] == ["visual"]),
         "grid.free": sum(1 for r in rules.values() if r["media"] == "any"),
+        "grid.machine": sum(1 for r in rules.values() if r["media"] != "any" and "machine" in r["media"]),
         "grid.named": sum(1 for r in rules.values() if r["media"] != "any" and r["media"] != ["visual"]),
         "grid.norule": sum(1 for md in media if not any(cells[(a, md["id"])]["rules"] for a in acts)),
     }
@@ -460,7 +461,90 @@ def _history_facts(snap, law, rules, diags):
     # ... and those cited by a diagnostic that a verifier decides from a declaration (levels 1 to 3 of the contract)
     declared = {str(n) for d in diags if int(d.get("level") or 0) <= 3 for n in (d.get("rules") or [])}
     out["cite.declaration"] = len(declared) or None
+    # the grammar for generation (haro/zayn.gbnf): its rules, and the rules that each write one kind of declaration
+    out["gbnf.rules"] = out["gbnf.kinds"] = None
+    g = snap / "haro" / "zayn.gbnf"
+    if g.exists():
+        grules = gbnf_rules(g.read_text(encoding="utf-8"))
+        out["gbnf.rules"] = len(grules) or None
+        out["gbnf.kinds"] = sum(1 for k in grules if k.startswith("decl_")) or None
     return out
+
+
+def gbnf_rules(text):
+    """The rules of a GBNF grammar, name to body; a line starting with # is a comment."""
+    rules = {}
+    for line in text.replace("\r", "").split("\n"):
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        m = re.match(r"^([A-Za-z0-9_]+)\s*::=\s*(.*)$", line)
+        if not m:
+            raise ValueError(f"a line of the grammar is not a rule: {line[:60]}")
+        rules[m.group(1)] = m.group(2)
+    return rules
+
+
+def gbnf_regex(snap):
+    """The grammar for generation, compiled into one regular expression that answers whether a text is a sentence of its
+    `root` rule. The file has no recursion, so the translation is exact: a quoted literal, a class in brackets, a group,
+    a rule's name, each followed by *, + or ?, and | between alternatives."""
+    rules = gbnf_rules((snap / "haro" / "zayn.gbnf").read_text(encoding="utf-8"))
+    cache = {}
+
+    def rule(name, stack):
+        if name in cache:
+            return cache[name]
+        if name in stack:
+            raise ValueError("the grammar recurses at " + name)
+        src, pos = rules[name], [0]
+
+        def alt():
+            parts = [seq()]
+            while pos[0] < len(src) and src[pos[0]] == "|":
+                pos[0] += 1
+                parts.append(seq())
+            return "(?:" + "|".join(parts) + ")" if len(parts) > 1 else parts[0]
+
+        def seq():
+            out = ""
+            while True:
+                while pos[0] < len(src) and src[pos[0]] == " ":
+                    pos[0] += 1
+                if pos[0] >= len(src) or src[pos[0]] in "|)":
+                    return out
+                c = src[pos[0]]
+                if c == '"':
+                    j, lit = pos[0] + 1, ""
+                    while src[j] != '"':
+                        if src[j] == "\\":
+                            lit += {"n": "\n", "t": "\t", "r": "\r"}.get(src[j + 1], src[j + 1])
+                            j += 2
+                        else:
+                            lit += src[j]
+                            j += 1
+                    atom, pos[0] = "(?:" + re.escape(lit) + ")", j + 1
+                elif c == "[":
+                    j = pos[0] + 1
+                    while src[j] != "]":
+                        j += 2 if src[j] == "\\" else 1
+                    atom, pos[0] = src[pos[0]:j + 1], j + 1
+                elif c == "(":
+                    pos[0] += 1
+                    atom = "(?:" + alt() + ")"
+                    pos[0] += 1
+                else:
+                    m = re.match(r"[A-Za-z0-9_]+", src[pos[0]:])
+                    atom = "(?:" + rule(m.group(0), stack + [name]) + ")"
+                    pos[0] += len(m.group(0))
+                if pos[0] < len(src) and src[pos[0]] in "*+?":
+                    atom += src[pos[0]]
+                    pos[0] += 1
+                out += atom
+
+        cache[name] = alt()
+        return cache[name]
+
+    return re.compile(rule("root", []))
 
 
 def _record_facts(snap):

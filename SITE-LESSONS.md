@@ -111,3 +111,38 @@ none "not ready"; their items fixed in `6695968`. "Read twice" marks a sentence 
   the machine form now carry the line that produces them.
 - **The house's own rule reached this book's reader the same week** (HOUSE-20, the three menu refusals), and the readers met
   it on the page as a fact of the record.
+
+## Part IX, Under Generation (chapters 22 to 24)
+
+Read on 2026-11-24 by a fresh verifier and a voice reader for each chapter, then by one reader from each of the six doors for the
+three pages in order (`research/verify/ch22.md` to `ch24.md`, `research/voice/`, `research/read/part9-*.md`). Verdicts of the
+doors: "ready after the items above" for every page from every door; none "not ready". Every item below was fixed and the build
+passed. The fixed pages were read a second time on 2026-11-24 from the designer's door and the AI agent's
+(`research/read/part9-designer-2.md`, `part9-ai-agent-2.md`): every page "ready after the items", none "not ready"; their
+items were fixed in the same commit. "Read" marks a sentence that stood in the pages the six doors read; "read twice" one
+that stood in the pages of the second reading; "added after the second reading" one rewritten from it.
+
+| Concept | The sentence | The order | The plate | The stumble, and what repaired it | Read again? | The site page |
+|---|---|---|---|---|---|---|
+| the AI agent as an actor | "An AI agent under the law is an AI agent that the law counts as an actor: named in a declaration as a person who acts is named, and held to the same rules." | The first sentence of chapter 22 | 22.1 and 22.2: the writer and the actor change, the report does not | none quoted; every door restated it in its own words | read | `site/generate.html`, `site/beyond.html`, `index.html` (its section on AI agents) |
+| the numbering of the rules | "Its rules are numbered to 130, because a number taken out of use is never given again." | In the door paragraph, beside the count of rules | none | Five doors: "constitution of 123 rules" beside a table that prints Rule 124 | read twice | every page that prints the count of rules, `site/rules.html` |
+| a tier | "its tier: the word under which the law files the rule, naming what is to check it", then the record's glosses of `judgment` and `machine-later` | At the table of Set 31 | the table of Set 31's rules, from the law's data | Four doors stopped on "the word the law files a rule under, for the instrument the rule is owed", and `judgment` was said nowhere in the part | added after the second reading | `site/rules.html`, the law's reader |
+| the four levels, and the table | "level 1 checks that the file is well formed, level 2 decides what a single declaration states, level 3 adds a table of what the system holds, and level 4 is the painted page"; the command, `zayn check payments.zayn --level 3 --symbols desk.json` | Where a level first appears | 23.4 to 23.6: the same file refused at level 3, silent at level 2, clean once named | The programmer, the tool builder and the AI agent: levels 1 and 4 unsaid, and no page showed how a table reaches the command | added after the second reading | `site/conformance.html`, `site/commands.html` |
+| a proposal and its authority | "`proposal` promises that the control \"commits nothing until an authority accepts\"" | After the role is said | 22.4 to 22.6, and the exercise, where writing the true role turns a pass into a refusal | The programmer: the site's loop "corrects until the declaration is lawful", while the plates reach exit 0 by the role a declaration chooses. Repaired by a sentence after the loop's quotation | read twice | `site/generate.html` (the loop) |
+| a clean that is undecided | "The report has one word for both; a reviewer tells them apart by the medium, whose rendering the data records or leaves open." | After the statement read by a program | 23.5 (level 2, no table) and 23.8 (statuses on the machine medium) | The designer, the decision-maker, the tool builder and the AI agent: a decided clean and an undecided one print the same line. Repaired in prose; the report itself has one word (BOOK-ZAYN-08 (b), BOOK-ZAYN-09 (r)) | read twice | `site/testbench.html`, `site/beyond.html` |
+| a finding's third line | "The third line of each finding lists what the contract binds to that kind of finding: its rule, an article and a right." | After the first report that shows one rule under two articles | 23.7 | The programmer and the AI agent: Rule 82 under Article II, then under Article III | added after the second reading | the pages that print a report (`index.html`, `site/testbench.html`) |
+| the machine form | "This is the form a program reads before the interface exists, an AI model that writes declarations among them." | Beside the first report printed in the machine form | 22.5, 23.2 | The decision-maker: "This is the refusal an AI agent reads" moved the check to the moment the interface is used | read twice | `site/calling.html`, `site/build.html` |
+| two written forms | "So the record keeps two forms of one language: the language's form, which the verifier reads, and the grammar's form, which a decoder held to this file would write." | Before the first plate of chapter 24 | 24.1 and 24.2: the same screen, each form accepted by one reader | The voice reader and the verifier: the grammar "wrote" and a decoder "writes", in the present. Repaired: the grammar allows, a decoder would write. Every door then restated the two forms | read | `site/generate.html`, `site/haro.html`, `index.html` (the drawing of the loop); BOOK-ZAYN-09 (a) |
+| what the grammar refuses | "A misplaced field cannot be written, and the unknown verb stays the verifier's to refuse." | After the unknown verb | 24.3 to 24.8, the grammar's answer printed under each flagged plate | The educator and the programmer: the grammar's refusal of a role was argued from its rule, not run. Repaired by a plate of the role in the grammar's form | read twice | `site/generate.html` (its two examples) |
+| the field's decoder | "The field's decoders read GBNF, the notation of this file; a decoder that holds an AI model to it within Zayn's own loop is next." | In "Where the field leads" | none | The decision-maker and the AI agent: the field's own program reads GBNF, so what is next? | read twice | `site/generate.html` |
+| an exercise's codes | Before the fold, the page says the rule of every code the answer holds | Every "In your hands" | 22.9 to 22.14; 24.9 | Four doors: chapter 22 asked for `DECORATIVE_ANIMATION`, a code untaught before the fold; chapter 24 asked for 24 syntax errors. Repaired: Rule 112 is said before the fold, and chapter 24 asks what the reader expects and why | added after the second reading | `site/testbench.html` |
+
+## What Part IX's readers named, beyond single sentences
+
+- **One word for who writes.** Three pages called the writer of declarations an AI model, an AI agent and "a generator". The
+  book now says AI model for what writes a declaration and AI agent for what acts and uses; the site's pages on generation use
+  both words for one role.
+- **A page runs what it claims.** Every claim of chapter 24 about the grammar now stands under a plate that the build reads
+  against the grammar file.
+- **The command line, once per part.** As in Part VII, the readers asked for the line that produces a level 3 run, and the part
+  now prints it.

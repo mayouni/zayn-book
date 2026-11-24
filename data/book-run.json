@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-23 23:31 UTC+01:00",
+  "date": "2026-11-24 16:39 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -91,6 +91,7 @@
    "grid.visual": 94,
    "grid.visualonly": 89,
    "grid.free": 26,
+   "grid.machine": 1,
    "grid.named": 6,
    "grid.norule": 5,
    "media.total": 10,
@@ -119,6 +120,8 @@
    "pack.files": 12,
    "cite.rules": 14,
    "cite.declaration": 13,
+   "gbnf.rules": 29,
+   "gbnf.kinds": 10,
    "suite.1.pass": 12,
    "suite.1.fail": 0,
    "suite.1.skipped": 65,
@@ -433,7 +436,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:39 UTC+01:00"
   },
   "en/02-what-the-corrections-show": {
    "id": "what-the-corrections-show",
@@ -711,7 +714,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:39 UTC+01:00"
   },
   "en/06-intent-first": {
    "id": "intent-first",
@@ -1146,7 +1149,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:39 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1691,7 +1694,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:40 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -2201,7 +2204,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:40 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -2516,7 +2519,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:40 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -3168,7 +3171,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:41 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -3657,7 +3660,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:31 UTC+01:00"
+   "ran": "2026-11-24 16:41 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -4161,7 +4164,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:32 UTC+01:00"
+   "ran": "2026-11-24 16:41 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -4748,7 +4751,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:32 UTC+01:00"
+   "ran": "2026-11-24 16:42 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -5123,7 +5126,7 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:32 UTC+01:00"
+   "ran": "2026-11-24 16:42 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -5530,7 +5533,2080 @@
      "pass": true
     }
    ],
-   "ran": "2026-11-23 23:32 UTC+01:00"
+   "ran": "2026-11-24 16:43 UTC+01:00"
+  },
+  "en/22-the-ai-agent-under-the-law": {
+   "id": "the-ai-agent-under-the-law",
+   "blocks": [
+    {
+     "hash": "8de7623bd87e",
+     "name": "matches.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "apply_matches"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "matches.zayn:2  error  MISSING_UNDO  apply_matches\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "apply_matches",
+       "line": 2,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"matches.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"matches.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"apply_matches\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "92caf65a178e",
+     "name": "matches.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "apply_matches"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "matches.zayn:2  error  MISSING_UNDO  apply_matches\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "apply_matches",
+       "line": 2,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"matches.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"matches.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"apply_matches\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "2ba90f7ac7c8",
+     "name": "matches.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"matches.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "fc82245b831c",
+     "name": "reconcile.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reconcile.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "5ec4fdac4ff3",
+     "name": "reconcile.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "envelope"
+     ],
+     "promise": [
+      [
+       "PROPOSAL_COMMITS",
+       "suggest_reconciliation"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "reconcile.zayn:4  error  PROPOSAL_COMMITS  proposal suggest_reconciliation acts and names no ACTOR\n    A proposal acts without naming the authority that accepted it.\n    Rule 98 · Proposals, Not Commits · Rule 83 · Predictable Authority · Article V\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "PROPOSAL_COMMITS",
+       "severity": "error",
+       "subject": "proposal suggest_reconciliation acts and names no ACTOR",
+       "line": 4,
+       "cites": [
+        "rule:98",
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 2,
+       "message": "A proposal acts without naming the authority that accepted it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reconcile.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"PROPOSAL_COMMITS\",\n      \"severity\": \"error\",\n      \"message\": \"A proposal acts without naming the authority that accepted it.\",\n      \"span\": {\n        \"file\": \"reconcile.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:98\",\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"proposal suggest_reconciliation acts and names no ACTOR\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "2ca93eb70d61",
+     "name": "reconcile.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reconcile.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "b9147a81d689",
+     "name": "purge.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"purge.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "0c54d2f11424",
+     "name": "purge.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"purge.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "b2eb7e5c9c4b",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "match_nudge"
+      ],
+      [
+       "MISSING_UNDO",
+       "apply_suggested_match"
+      ],
+      [
+       "ROLE_UNDECLARED",
+       null
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "desk.zayn:1  error  MISSING_UNDO  apply_suggested_match\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\ndesk.zayn:6  error  DECORATIVE_ANIMATION  match_nudge\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\ndesk.zayn  warning  ROLE_UNDECLARED  1 INTERACTION, no ROLE\n    A surface declares interactions and gives none of them a role.\n\n2 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "apply_suggested_match",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "match_nudge",
+       "line": 6,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      },
+      {
+       "code": "ROLE_UNDECLARED",
+       "severity": "warning",
+       "subject": "1 INTERACTION, no ROLE",
+       "line": 0,
+       "cites": [],
+       "level": 2,
+       "message": "A surface declares interactions and gives none of them a role."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"desk.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"apply_suggested_match\"\n    },\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"desk.zayn\",\n        \"line\": 6\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"match_nudge\"\n    },\n    {\n      \"code\": \"ROLE_UNDECLARED\",\n      \"severity\": \"warning\",\n      \"message\": \"A surface declares interactions and gives none of them a role.\",\n      \"span\": {\n        \"file\": \"desk.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"1 INTERACTION, no ROLE\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "45e49a6bd8d0",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_UNDECLARED",
+       null
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "desk.zayn  warning  ROLE_UNDECLARED  1 INTERACTION, no ROLE\n    A surface declares interactions and gives none of them a role.\n\n0 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_UNDECLARED",
+       "severity": "warning",
+       "subject": "1 INTERACTION, no ROLE",
+       "line": 0,
+       "cites": [],
+       "level": 2,
+       "message": "A surface declares interactions and gives none of them a role."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_UNDECLARED\",\n      \"severity\": \"warning\",\n      \"message\": \"A surface declares interactions and gives none of them a role.\",\n      \"span\": {\n        \"file\": \"desk.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"1 INTERACTION, no ROLE\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d5856db89a5d",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "PROPOSAL_COMMITS",
+       "apply_suggested_match"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "desk.zayn:4  error  PROPOSAL_COMMITS  proposal apply_suggested_match acts and names no ACTOR\n    A proposal acts without naming the authority that accepted it.\n    Rule 98 · Proposals, Not Commits · Rule 83 · Predictable Authority · Article V\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "PROPOSAL_COMMITS",
+       "severity": "error",
+       "subject": "proposal apply_suggested_match acts and names no ACTOR",
+       "line": 4,
+       "cites": [
+        "rule:98",
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 2,
+       "message": "A proposal acts without naming the authority that accepted it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"PROPOSAL_COMMITS\",\n      \"severity\": \"error\",\n      \"message\": \"A proposal acts without naming the authority that accepted it.\",\n      \"span\": {\n        \"file\": \"desk.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:98\",\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"proposal apply_suggested_match acts and names no ACTOR\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "35fadf521376",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1796c3ef74c4",
+     "name": "desk.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"desk.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "proposal-commits.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "PROPOSAL_COMMITS"
+     ],
+     "got_ids": [
+      "PROPOSAL_COMMITS"
+     ],
+     "pass": true
+    },
+    {
+     "file": "proposal-commits-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "hidden-authority.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-trust.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "role-undeclared.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "got_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-undeclared-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-role.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_ROLE"
+     ],
+     "got_ids": [
+      "UNKNOWN_ROLE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-role-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-24 16:43 UTC+01:00"
+  },
+  "en/23-the-ai-agent-as-a-user": {
+   "id": "the-ai-agent-as-a-user",
+   "blocks": [
+    {
+     "hash": "04a49245efb3",
+     "name": "portal.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "schedule_payment"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "portal.zayn:5  error  MISSING_UNDO  schedule_payment\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "schedule_payment",
+       "line": 5,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"portal.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"portal.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"schedule_payment\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "cfb6329da6e8",
+     "name": "payments.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "envelope"
+     ],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "schedule_payment"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "payments.zayn:5  error  MISSING_UNDO  schedule_payment\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "schedule_payment",
+       "line": 5,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"payments.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"schedule_payment\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "613028f767d0",
+     "name": "users.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNSPECIFIED_DECLARATION",
+       "payables_agent"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "users.zayn:1  warning  UNSPECIFIED_DECLARATION  USER payables_agent\n    A .zayn declaration kind outside the ten this language defines (WIDGET, USER).\n    Article II\n\n0 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNSPECIFIED_DECLARATION",
+       "severity": "warning",
+       "subject": "USER payables_agent",
+       "line": 1,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A .zayn declaration kind outside the ten this language defines (WIDGET, USER)."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"users.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNSPECIFIED_DECLARATION\",\n      \"severity\": \"warning\",\n      \"message\": \"A .zayn declaration kind outside the ten this language defines (WIDGET, USER).\",\n      \"span\": {\n        \"file\": \"users.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"USER payables_agent\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "00348556100e",
+     "name": "payments.zayn",
+     "level": 3,
+     "symbols": "desk.json",
+     "flags": [],
+     "promise": [
+      [
+       "HIDDEN_AUTHORITY",
+       "schedule_payment"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "payments.zayn:5  error  HIDDEN_AUTHORITY  schedule_payment\n    A consequential act names no actor.\n    Rule 83 · Predictable Authority · Article V\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "HIDDEN_AUTHORITY",
+       "severity": "error",
+       "subject": "schedule_payment",
+       "line": 5,
+       "cites": [
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 3,
+       "message": "A consequential act names no actor."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"HIDDEN_AUTHORITY\",\n      \"severity\": \"error\",\n      \"message\": \"A consequential act names no actor.\",\n      \"span\": {\n        \"file\": \"payments.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"schedule_payment\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "62af2e00664c",
+     "name": "payments.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "bade89d85d78",
+     "name": "payments.zayn",
+     "level": 3,
+     "symbols": "desk.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "4e37b84f7ed3",
+     "name": "statement.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "SIGNAL_UNPERCEIVABLE",
+       "review_statement"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "review_statement"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "statement.zayn:5  error  VERB_NOT_CARRIED  ZOOM in review_statement on voice\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nstatement.zayn:7  error  SIGNAL_UNPERCEIVABLE  muted in review_statement on voice\n    Every semantic status a surface declares renders as absence in the medium it declared.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "ZOOM in review_statement on voice",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "SIGNAL_UNPERCEIVABLE",
+       "severity": "error",
+       "subject": "muted in review_statement on voice",
+       "line": 7,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know"
+       ],
+       "level": 2,
+       "message": "Every semantic status a surface declares renders as absence in the medium it declared."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"statement.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"statement.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"ZOOM in review_statement on voice\"\n    },\n    {\n      \"code\": \"SIGNAL_UNPERCEIVABLE\",\n      \"severity\": \"error\",\n      \"message\": \"Every semantic status a surface declares renders as absence in the medium it declared.\",\n      \"span\": {\n        \"file\": \"statement.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"muted in review_statement on voice\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d05a4093feeb",
+     "name": "statement.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"statement.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "613bd36a2b6a",
+     "name": "late.zayn",
+     "level": 3,
+     "symbols": "orders.json",
+     "flags": [],
+     "promise": [
+      [
+       "INVISIBLE_STATE",
+       "result_limit"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "late.zayn  error  INVISIBLE_STATE  result_limit\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INVISIBLE_STATE",
+       "severity": "error",
+       "subject": "result_limit",
+       "line": 0,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know",
+        "pattern:invisible-active-filters"
+       ],
+       "level": 3,
+       "message": "The system holds state the operator must know, and no surface declares showing it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"late.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INVISIBLE_STATE\",\n      \"severity\": \"error\",\n      \"message\": \"The system holds state the operator must know, and no surface declares showing it.\",\n      \"span\": {\n        \"file\": \"late.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\",\n        \"pattern:invisible-active-filters\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"result_limit\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8580fa7b5e31",
+     "name": "late.zayn",
+     "level": 3,
+     "symbols": "orders.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"late.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "missing-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-machine-cancel.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_CANCEL"
+     ],
+     "got_ids": [
+      "MISSING_CANCEL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-machine-cancel-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "hidden-authority.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-trust.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "invisible-state.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "got_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "signal-unperceivable.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SIGNAL_UNPERCEIVABLE"
+     ],
+     "got_ids": [
+      "SIGNAL_UNPERCEIVABLE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "signal-unperceivable-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "verb-not-carried.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "got_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "verb-not-carried-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-24 16:43 UTC+01:00"
+  },
+  "en/24-a-grammar-for-generation": {
+   "id": "a-grammar-for-generation",
+   "blocks": [
+    {
+     "hash": "efc9c96c4247",
+     "name": "orders.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "gbnf"
+     ],
+     "promise": [],
+     "stated": true,
+     "grammar": false,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "e26a34fdbed6",
+     "name": "orders.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "gbnf"
+     ],
+     "promise": [
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ]
+     ],
+     "stated": true,
+     "grammar": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "orders.zayn:1  error  SYNTAX_ERROR  expected ( after SCREEN order_list\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:1  error  SYNTAX_ERROR  unexpected AS\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:1  error  SYNTAX_ERROR  unexpected (\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected SATISFIES\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected [\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected scan\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected filter\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected ]\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:3  error  SYNTAX_ERROR  unexpected )\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:3  error  SYNTAX_ERROR  unexpected RATIONALE\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:3  error  SYNTAX_ERROR  unexpected A clerk scans and filters the orders of the day\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\n\n12 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "expected ( after SCREEN order_list",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected AS",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected (",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected SATISFIES",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected [",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected scan",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected filter",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ]",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected )",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected RATIONALE",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected A clerk scans and filters the orders of the day",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 12,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"expected ( after SCREEN order_list\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected AS\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected (\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected SATISFIES\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected [\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected scan\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected filter\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ]\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected )\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected RATIONALE\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected A clerk scans and filters the orders of the day\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "184b606db8d0",
+     "name": "home.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "gbnf"
+     ],
+     "promise": [
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ]
+     ],
+     "stated": true,
+     "grammar": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "home.zayn:1  error  SYNTAX_ERROR  expected ( after SCREEN order_home\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:1  error  SYNTAX_ERROR  unexpected AS\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:1  error  SYNTAX_ERROR  unexpected (\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:2  error  SYNTAX_ERROR  unexpected SATISFIES\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:2  error  SYNTAX_ERROR  unexpected [\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:2  error  SYNTAX_ERROR  unexpected navigate\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:2  error  SYNTAX_ERROR  unexpected ]\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:3  error  SYNTAX_ERROR  unexpected )\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:3  error  SYNTAX_ERROR  unexpected RATIONALE\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nhome.zayn:3  error  SYNTAX_ERROR  unexpected A clerk opens the order desk\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\n\n10 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "expected ( after SCREEN order_home",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected AS",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected (",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected SATISFIES",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected [",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected navigate",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ]",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected )",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected RATIONALE",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected A clerk opens the order desk",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"home.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 10,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"expected ( after SCREEN order_home\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected AS\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected (\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected SATISFIES\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected [\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected navigate\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ]\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected )\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected RATIONALE\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected A clerk opens the order desk\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "21971eed6128",
+     "name": "home.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_INTENT",
+       "order_home"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "home.zayn:2  error  UNKNOWN_INTENT  NAVIGATE in SATISFIES of order_home\n    A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_INTENT",
+       "severity": "error",
+       "subject": "NAVIGATE in SATISFIES of order_home",
+       "line": 2,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"home.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_INTENT\",\n      \"severity\": \"error\",\n      \"message\": \"A verb in SATISFIES or ALWAYS_REACHABLE is not one of the 22.\",\n      \"span\": {\n        \"file\": \"home.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"NAVIGATE in SATISFIES of order_home\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "48ace02cc8e6",
+     "name": "home.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"home.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "ccf593f1bf88",
+     "name": "orders.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_MISPLACED",
+       "order_list"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "orders.zayn:3  error  ROLE_MISPLACED  ROLE on SCREEN order_list; a role belongs to an INTERACTION\n    ROLE is declared on a kind that is not an INTERACTION.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_MISPLACED",
+       "severity": "error",
+       "subject": "ROLE on SCREEN order_list; a role belongs to an INTERACTION",
+       "line": 3,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "ROLE is declared on a kind that is not an INTERACTION."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_MISPLACED\",\n      \"severity\": \"error\",\n      \"message\": \"ROLE is declared on a kind that is not an INTERACTION.\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"ROLE on SCREEN order_list; a role belongs to an INTERACTION\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d7b1509ffca9",
+     "name": "orders.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "gbnf"
+     ],
+     "promise": [
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ]
+     ],
+     "stated": true,
+     "grammar": false,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "orders.zayn:1  error  SYNTAX_ERROR  expected ( after SCREEN order_list\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:1  error  SYNTAX_ERROR  unexpected AS\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:1  error  SYNTAX_ERROR  unexpected (\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected SATISFIES\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected [\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected scan\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected filter\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected ]\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:2  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:3  error  SYNTAX_ERROR  unexpected ROLE\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:3  error  SYNTAX_ERROR  unexpected inert\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:4  error  SYNTAX_ERROR  unexpected )\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:4  error  SYNTAX_ERROR  unexpected RATIONALE\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\norders.zayn:4  error  SYNTAX_ERROR  unexpected A clerk scans and filters the orders of the day\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\n\n15 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "expected ( after SCREEN order_list",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected AS",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected (",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected SATISFIES",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected [",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected scan",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected filter",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ]",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ROLE",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected inert",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected )",
+       "line": 4,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected RATIONALE",
+       "line": 4,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected A clerk scans and filters the orders of the day",
+       "line": 4,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 15,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"expected ( after SCREEN order_list\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected AS\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected (\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected SATISFIES\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected [\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected scan\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected filter\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ]\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ROLE\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected inert\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected )\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected RATIONALE\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected A clerk scans and filters the orders of the day\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "b1b811ca6c2c",
+     "name": "orders.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8cac1751a032",
+     "name": "release.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [
+      "gbnf"
+     ],
+     "promise": [
+      [
+       "INTENT_FLOW_NO_SATISFIES",
+       "release_order"
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ],
+      [
+       "SYNTAX_ERROR",
+       null
+      ]
+     ],
+     "stated": true,
+     "grammar": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "release.zayn:1  error  SYNTAX_ERROR  expected ( after INTENT_FLOW release_order\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:1  error  SYNTAX_ERROR  unexpected AS\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:1  error  SYNTAX_ERROR  unexpected (\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected SATISFIES\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected [\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected select\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected confirm\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected act\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected ]\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:2  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:3  error  SYNTAX_ERROR  unexpected ALWAYS_REACHABLE\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:3  error  SYNTAX_ERROR  unexpected [\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:3  error  SYNTAX_ERROR  unexpected undo\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:3  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:3  error  SYNTAX_ERROR  unexpected exit\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:3  error  SYNTAX_ERROR  unexpected ]\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:3  error  SYNTAX_ERROR  unexpected ,\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:4  error  SYNTAX_ERROR  unexpected ACTOR\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:4  error  SYNTAX_ERROR  unexpected clerk\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:5  error  SYNTAX_ERROR  unexpected )\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:5  error  SYNTAX_ERROR  unexpected RATIONALE\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:5  error  SYNTAX_ERROR  unexpected A clerk releases an order once it is confirmed\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\nrelease.zayn:1  warning  INTENT_FLOW_NO_SATISFIES  release_order\n    An INTENT_FLOW declares no intents.\n    Article II\n\n24 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "expected ( after INTENT_FLOW release_order",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected AS",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected (",
+       "line": 1,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected SATISFIES",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected [",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected select",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected confirm",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected act",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ]",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 2,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ALWAYS_REACHABLE",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected [",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected undo",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected exit",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ]",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ,",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected ACTOR",
+       "line": 4,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected clerk",
+       "line": 4,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected )",
+       "line": 5,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected RATIONALE",
+       "line": 5,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unexpected A clerk releases an order once it is confirmed",
+       "line": 5,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      },
+      {
+       "code": "INTENT_FLOW_NO_SATISFIES",
+       "severity": "warning",
+       "subject": "release_order",
+       "line": 1,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "An INTENT_FLOW declares no intents."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"release.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 24,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"expected ( after INTENT_FLOW release_order\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected AS\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected (\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected SATISFIES\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected [\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected select\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected confirm\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected act\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ]\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ALWAYS_REACHABLE\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected [\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected undo\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected exit\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ]\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ,\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected ACTOR\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected clerk\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected )\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected RATIONALE\"\n    },\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unexpected A clerk releases an order once it is confirmed\"\n    },\n    {\n      \"code\": \"INTENT_FLOW_NO_SATISFIES\",\n      \"severity\": \"warning\",\n      \"message\": \"An INTENT_FLOW declares no intents.\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"release_order\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "7e15fe5ab293",
+     "name": "release.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_CANCEL",
+       "release_order"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "release.zayn:2  error  MISSING_CANCEL  release_order\n    A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL.\n    Rule 26 · The Back Button is Holy · Article IV · the right to leave\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_CANCEL",
+       "severity": "error",
+       "subject": "release_order",
+       "line": 2,
+       "cites": [
+        "rule:26",
+        "article:reversibility",
+        "right:leave"
+       ],
+       "level": 2,
+       "message": "A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"release.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_CANCEL\",\n      \"severity\": \"error\",\n      \"message\": \"A flow that acts cannot be abandoned: ALWAYS_REACHABLE lacks CANCEL.\",\n      \"span\": {\n        \"file\": \"release.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"rule:26\",\n        \"article:reversibility\",\n        \"right:leave\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"release_order\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "fed905a8e12b",
+     "name": "release.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"release.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "unknown-intent.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_INTENT"
+     ],
+     "got_ids": [
+      "UNKNOWN_INTENT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-misplaced.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_MISPLACED"
+     ],
+     "got_ids": [
+      "ROLE_MISPLACED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "comments-and-formatting.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_CANCEL"
+     ],
+     "got_ids": [
+      "MISSING_CANCEL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "ran": "2026-11-24 16:44 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -5539,7 +7615,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 23:32 UTC+01:00"
+   "ran": "2026-11-24 16:44 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -5548,7 +7624,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 23:32 UTC+01:00"
+   "ran": "2026-11-24 16:44 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -5557,7 +7633,7 @@
    "runnable": 0,
    "exercises": 0,
    "court": [],
-   "ran": "2026-11-23 23:32 UTC+01:00"
+   "ran": "2026-11-24 16:44 UTC+01:00"
   }
  }
 }

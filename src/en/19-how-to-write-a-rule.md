@@ -315,7 +315,7 @@ Zayn's part is the path from a remark. A correction is kept with its words and i
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 Each of the seven steps is shown here on a file of Zayn at release {{n:release.version}}, and every declaration was run. The sections of the first three plates are written for this book from the docket's sentence and from the site's writing rule, and the verifier of this page answers them. The checks on the site's files and on its painted pages are told from the design study, with the counts that it records. The template is this book's: it is assembled from the shapes of the corpus, the docket, the law's file, the grid and the suite, and it is written for a team that keeps its rules in a document of its own.
 

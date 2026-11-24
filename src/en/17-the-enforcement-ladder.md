@@ -264,7 +264,7 @@ Zayn's law leads on saying, for every rule, which instrument it is owed, and on 
 
 ## Where it stands
 
-Built means that it ran on this page or runs in Zayn's repository at the commit named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
+Built means that it ran on this page or runs in Zayn's repository at the release named under the title. Designed means that it is specified, and that its build comes after. Next names the direction.
 
 Every rule of the law is filed under one of {{n:law.tiers}} words, and the file says which. By citation, the verifier's kinds of finding cite {{n:cite.verifier}} rules, each kind with a fixture, and this page ran those it shows. The audit of the painted page names {{n:cite.ui}} rules, and its runs are told here as recorded, with their date, widths and cultures. The checker of a screenshot's facts names {{n:cite.shot}} and runs on its example; the audit of a screenshot as a whole, from the picture to the verdict, is designed. For Rules 130, 79 and 98 this chapter named the clause the verifier reads. A person can judge every rule, and holds alone the rules whose subject no declaration and no measure states, such as Rule 102, which enforces the right to a human.
 
