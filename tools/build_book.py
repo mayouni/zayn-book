@@ -73,7 +73,7 @@ UI = {
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
     "cited_by": "Cited by", "cited_none": "no kind of finding of the verifier's contract",
     "law_src": "Printed from the law's data, version {v}.",
-    "release_h": ["File", "Bytes", "SHA-256", "On this release"], "release_src": "Printed from the release's notes, as they record each file.",
+    "release_h": ["File", "Bytes", "SHA-256", "On this release"], "release_src": "Printed from the release notes; built, and built and run, are this book's words for what the notes record of each file.",
     "cited_none_short": "none", "set_src": "The rules of Set {n}, {t}, with the reason each gives.",
     "diag_h": ["Code", "Level and severity", "The contract's sentence", "What it cites"],
     "diag_none": "nothing", "avoid": "Avoid", "rights_h": ["Right", "Its id", "Its sentence", "Rules that enforce it"],

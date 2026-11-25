@@ -146,3 +146,50 @@ that stood in the pages of the second reading; "added after the second reading" 
   against the grammar file.
 - **The command line, once per part.** As in Part VII, the readers asked for the line that produces a level 3 run, and the part
   now prints it.
+
+## Part X, In Practice (chapters 25 and 26)
+
+Read on 2026-11-24 and 2026-11-25 by a fresh verifier and a voice reader for each chapter, then by one reader from each of the six
+doors for the two pages in order (`research/verify/ch25.md`, `ch26.md`, `research/voice/`, `research/read/part10-*.md`). Verdicts
+of the doors: "ready after the items above" for both pages from every door; none "not ready". Every item below was fixed and the
+build passed. The fixed pages were read a second time on 2026-11-25 from the designer's door and the AI agent's
+(`research/read/part10-designer-2.md`, `part10-ai-agent-2.md`): both pages "ready after the items above" from both, none "not
+ready"; their items were fixed in the same commit. "Read" marks a sentence that stood in the pages the six doors read; "read
+twice" one that stood in the pages of the second reading; "added after the second reading" one rewritten from it.
+
+| Concept | The sentence | The order | The plate | The stumble, and what repaired it | Read again? | The site page |
+|---|---|---|---|---|---|---|
+| the gate's number | "A gate reads one number: 1 when the verifier refused a declaration, 0 when it refused none, even with warnings, and 2 when it could not read what it was given; the build goes on at 0 alone." | The principle of chapter 25 | 25.1 to 25.4, and the command lines for 0 and 2 | none: every door restated the three values without looking | read | `commands.html`, `calling.html` |
+| a silent level 3 | "The silence is the verifier's, and the 0 is the gate's: the report and the machine form of this run are those of a clean file, and a gate reads them as a pass." | After the run at level 3 with no table | 25.5, then `zayn check week.zayn --level 3` | All six doors: "undecidable is silence, never a pass" stood beside a run printed clean, exit 0. Repaired: the page says which of the two speaks, and that a gate at level 3 gets its table on the same line | read twice | `commands.html` (its skipped checks "say so"; BOOK-ZAYN-10 (c)) |
+| one finding in the machine form | "Each finding is one object under `diagnostics`: its `code`, its `severity`, its `message`, its `span`, the file and the line where it stands, and what it `cites`, the rule by its number and the article by its name, which the person's report prints as a numeral." | After the first refusal | 25.1, with `zayn check week.zayn --json`, exit 1 | The tool builder, the programmer and the AI agent: the machine form was shown empty only. Repaired: a refusal printed whole | added after the second reading | `refusal.html` (BOOK-ZAYN-10 (e)) |
+| files judged one by one | "Each file keeps the answer it gets alone: the screens clean, the flows refused." Then: "So a team that gates at level 3 keeps a flow and the screen that shows its state in one file, as the repaired week does, and the gate passes." | After the run over two files | 25.7, 25.8 and their command line; `zayn check week.zayn entry.zayn`, where the warning stays | Four doors: "The two files get the same answer" read as one answer for both; "or reads the refusal with that in mind" left a stopped build no way through | read twice | `adopt.html`, `build.html` (their build steps check several files; BOOK-ZAYN-10 (a)) |
+| level 4 | "Level 4 is the painted page, the page as a browser draws it. The contract places 1 kind of finding there, content that \"reserves no space and shoves the reading when it lands\". Its note gives that kind to the audit of the painted page, a program that measures the page in a browser, which chapter 26 shows." | Where the four levels are said | none; chapter 26's court names the same kind | Four doors: is level 4 the verifier's or the audit's? | added after the second reading | `commands.html`, `audit.html` |
+| two contracts | "The contract is the file that binds each kind of finding to the law and places it at a level; the family's Diagnostic Contract is another file, the shape of a finding." | At the release's editions | the suite's box (two versions) | Five doors read the two files as one until the box printed both | read twice | `conformance.html` |
+| court and family | "Zayn belongs to a family of languages built the same way, each with its own law and its own verifier, which the family calls a court." And: "In this book, the court of a chapter is the fixtures that judge its claims." | The principle; the court | none | Three doors: "court" named a verifier and the fixtures on one page | added after the second reading | `softanza.html` |
+| what the suite compares | "The suite compares the codes a fixture gets with the codes it must get, \"by diagnostic id only — never line numbers, wording or order\"." | Under the suite's box | the box at level 4 | Five doors: two counts of "diagnostics" under one word; the tool builder: sets of codes, or codes with their lines? | read twice | `conformance.html` |
+| the command's verbs | The verbs listed from the first lines of the command's source, and "A verb of the command is the first word after its name" | Before the release | none | The programmer and the tool builder were sent to a source they could not open; two doors read "verb" as the law's verbs | added after the second reading | `commands.html` |
+| how menu labels compare | "Labels compare ignoring case, the spaces around them and a leading \"The\", so \"Invoices\" and \"The invoices\" are one name." | Before the first menu plate | 26.1; the exercise, 26.6 to 26.8 | The AI agent and the tool builder: exact equality only was shown | read twice | the page that tells the site's menu rule |
+| an entry declared nowhere | "An entry that names no declared `NAV_GRAPH` is not judged, since its label is not in the file." | After 26.1 | 26.1, an excerpt whose three families are declared further on | Five doors: three names declared nowhere ran clean, where chapter 25 warns on a flow declared nowhere | added after the second reading | none at the pin (BOOK-ZAYN-10 (f)) |
+| a check shown failing first | "On the pages as they were, the check that no link carries a right arrow counted 29 failures." | Under the three instruments | none; the exercise's defect is the one the registry's check found live | The educator, the programmer and the tool builder: every measure in the chain was a pass | added after the second reading | `design.html` |
+| a failure found, and a page of lacks | "A page states what the work is and does; a failure found stays in the record with its date, as this chapter's chain does." | In What I refused | none | The designer and the decision-maker: GOV.UK keeps its failures public, and the page seemed to hide its own | read twice | every page (the site's rule on writing) |
+| K36's measure | "K36 fails when the editor is under 98 percent of the window either way." | After the remark of 17 November | 26.3, 26.4 | The programmer: the old measure stood in the present tense | added after the second reading | `testbench.html` |
+| a role | The five roles and their promises, in chapter 25's door | Before the first plate of chapter 25 | 25.9 to 25.11; 26.3, 26.4 | The AI agent and the educator: `ROLE reversible` was used before a role was said | read twice | `testbench.html` |
+| an exercise's faults | "Look for three faults: a selection that acts with no step to confirm it, an act with no way back within reach, and a control whose role promises a way back that it does not keep." | Before the fold of chapter 25's exercise | 25.9 | Four doors: two of the three codes were named only in the folded answer; the educator: the repaired flow owes an actor at level 3, now said | read twice | none |
+| a landing page | "An entry with both, a section or a family, has a landing page: the page its own `TARGET` opens." | Before the first menu plate | 26.1, 26.5 | The AI agent, second reading: the rule was given for a section only, and for one entry that leads there | added after the second reading | the page that tells the site's menu rule |
+| the table's keys | "The two checks of this chapter read two of them: `actors` for an act's actor, and `state` for what a surface must show." | Where the table is said | 25.5 | The AI agent, both readings: two keys were shown of four, and which check reads which was left to guess | added after the second reading | `commands.html` |
+
+## What Part X's readers named, beyond single sentences
+
+- **A quoted rule beside a run.** Where the record's sentence and the run seem to disagree ("never a pass", exit 0), the page
+  says which instrument speaks. The site's page on commands quotes the same help line.
+- **One word, one thing.** "Verb" (the command's, the law's), "court" (the family's verifier, the book's fixtures) and "level 4"
+  (the verifier's level, the audit's measure) each named two things; the pages now say which.
+- **What a team requires, in one place.** The decision-maker assembled it from five sections: the gate at a stated level, the
+  table at level 3, the pack pinned and checked. The site's Adopt section is where a commissioner would look for it.
+- **A check shown failing.** The readers trusted the chain once a check was shown failing on the page as it was. The site's
+  pages that tell a check can print its first failing count beside it, as the design system's record does.
+- **Undecided, three ways.** Both second readers: a check of level 3 with no table is silent, a warning lets the build go,
+  and the comparison across media stops it. The page now says that each instrument sets what its number says of what it
+  cannot decide; a site page that tells one of them can say the same.
+- **A page's own act.** The designer, second reading: the testbench declares selecting, comparing and understanding, while its
+  visitor writes; the law's verbs hold none for writing (BOOK-ZAYN-10 (j)).

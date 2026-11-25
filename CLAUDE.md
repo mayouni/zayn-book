@@ -168,10 +168,12 @@ stopped them.
 - 2026-11-24, evening: the desk published Part IX (a15e4cf). **The author changed the title and chose the cover** (TITLE-02,
   COVER-02): *Interfaces Under Law*, the bold crop on a dark ground, drawn by `tools/make_cover.py` in the book's own faces
   with the jar cut out of its ground. The proposals and the study of published covers: `sessions/2026-11-24-cover-and-title.md`.
-  The house's site and the Zayn site carry the old title until their desks follow. Part X (chapters 25 and 26) is drafted,
-  verified and voice-read, its fixes and its six doors to come; the build runs command lines (a `shell` fence) and prints the
-  release's files from its notes (`{{release}}`).
-- Next: Part X's fixes and doors, then II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
+  The house's site and the Zayn site carry the old title until their desks follow. The build runs command lines (a `shell`
+  fence) and prints the release's files from its notes (`{{release}}`). COVER-03: the other books keep their covers.
+- 2026-11-25: the desk published the title and cover (a409018, house 52fa50d). **Part X (chapters 25 and 26) drafted, run and
+  read**: the field at its sources (F-48 to F-59); a verifier and a voice reader per chapter, six doors, then a second reading
+  from the designer's door and the AI agent's; every item fixed. Requests: BOOK-ZAYN-10 (a) to (k). Site lessons: Part X.
+- Next: Parts II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

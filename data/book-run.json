@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-24 22:22 UTC+01:00",
+  "date": "2026-11-25 01:37 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -440,7 +440,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:22 UTC+01:00"
+   "ran": "2026-11-25 01:37 UTC+01:00"
   },
   "en/02-what-the-corrections-show": {
    "id": "what-the-corrections-show",
@@ -719,7 +719,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:22 UTC+01:00"
+   "ran": "2026-11-25 01:37 UTC+01:00"
   },
   "en/06-intent-first": {
    "id": "intent-first",
@@ -1155,7 +1155,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:22 UTC+01:00"
+   "ran": "2026-11-25 01:37 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1701,7 +1701,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:22 UTC+01:00"
+   "ran": "2026-11-25 01:38 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -2212,7 +2212,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:23 UTC+01:00"
+   "ran": "2026-11-25 01:38 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -2528,7 +2528,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:23 UTC+01:00"
+   "ran": "2026-11-25 01:38 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -3181,7 +3181,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:23 UTC+01:00"
+   "ran": "2026-11-25 01:39 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -3671,7 +3671,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:24 UTC+01:00"
+   "ran": "2026-11-25 01:39 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -4176,7 +4176,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:24 UTC+01:00"
+   "ran": "2026-11-25 01:39 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -4764,7 +4764,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:24 UTC+01:00"
+   "ran": "2026-11-25 01:40 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -5140,7 +5140,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:25 UTC+01:00"
+   "ran": "2026-11-25 01:40 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -5548,7 +5548,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:25 UTC+01:00"
+   "ran": "2026-11-25 01:40 UTC+01:00"
   },
   "en/22-the-ai-agent-under-the-law": {
    "id": "the-ai-agent-under-the-law",
@@ -6040,7 +6040,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:25 UTC+01:00"
+   "ran": "2026-11-25 01:41 UTC+01:00"
   },
   "en/23-the-ai-agent-as-a-user": {
    "id": "the-ai-agent-as-a-user",
@@ -6478,7 +6478,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:26 UTC+01:00"
+   "ran": "2026-11-25 01:41 UTC+01:00"
   },
   "en/24-a-grammar-for-generation": {
    "id": "a-grammar-for-generation",
@@ -7624,7 +7624,824 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-24 22:26 UTC+01:00"
+   "ran": "2026-11-25 01:41 UTC+01:00"
+  },
+  "en/25-the-command-and-the-gate": {
+   "id": "the-command-and-the-gate",
+   "blocks": [
+    {
+     "hash": "598b887ddd7d",
+     "name": "week.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "READ_ACT_COLLAPSE",
+       "timesheet_week"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "week.zayn:1  error  READ_ACT_COLLAPSE  timesheet_week\n    A reading surface mutates: SATISFIES holds READ and ACT.\n    Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "READ_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "timesheet_week",
+       "line": 1,
+       "cites": [
+        "rule:16",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A reading surface mutates: SATISFIES holds READ and ACT."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"week.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"READ_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"A reading surface mutates: SATISFIES holds READ and ACT.\",\n      \"span\": {\n        \"file\": \"week.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"timesheet_week\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "304d5b6046a0",
+     "name": "week.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"week.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "2688a2c4612e",
+     "name": "entry.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNRESOLVED_INTENT_FLOW",
+       "week_entry"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "entry.zayn:1  warning  UNRESOLVED_INTENT_FLOW  submit_week referenced by week_entry\n    An INTENT_FLOW reference names no declared flow.\n\n0 error(s), 1 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNRESOLVED_INTENT_FLOW",
+       "severity": "warning",
+       "subject": "submit_week referenced by week_entry",
+       "line": 1,
+       "cites": [],
+       "level": 2,
+       "message": "An INTENT_FLOW reference names no declared flow."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"entry.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 1\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNRESOLVED_INTENT_FLOW\",\n      \"severity\": \"warning\",\n      \"message\": \"An INTENT_FLOW reference names no declared flow.\",\n      \"span\": {\n        \"file\": \"entry.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"submit_week referenced by week_entry\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "9e69aa97f4d8",
+     "name": "broken.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "SYNTAX_ERROR",
+       "timesheet_week"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "broken.zayn:9  error  SYNTAX_ERROR  unclosed declaration SCREEN timesheet_week\n    The source does not parse as DEFINE <KIND> <name> ( field, ... ).\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SYNTAX_ERROR",
+       "severity": "error",
+       "subject": "unclosed declaration SCREEN timesheet_week",
+       "line": 9,
+       "cites": [],
+       "level": 1,
+       "message": "The source does not parse as DEFINE <KIND> <name> ( field, ... )."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"broken.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SYNTAX_ERROR\",\n      \"severity\": \"error\",\n      \"message\": \"The source does not parse as DEFINE <KIND> <name> ( field, ... ).\",\n      \"span\": {\n        \"file\": \"broken.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"unclosed declaration SCREEN timesheet_week\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "c251f55533df",
+     "name": "week.zayn",
+     "level": 3,
+     "symbols": "project.json",
+     "flags": [],
+     "promise": [
+      [
+       "HIDDEN_AUTHORITY",
+       "submit_week"
+      ],
+      [
+       "INVISIBLE_STATE",
+       "week_status"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "week.zayn:5  error  HIDDEN_AUTHORITY  submit_week\n    A consequential act names no actor.\n    Rule 83 · Predictable Authority · Article V\nweek.zayn  error  INVISIBLE_STATE  week_status\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n2 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "HIDDEN_AUTHORITY",
+       "severity": "error",
+       "subject": "submit_week",
+       "line": 5,
+       "cites": [
+        "rule:83",
+        "article:authority"
+       ],
+       "level": 3,
+       "message": "A consequential act names no actor."
+      },
+      {
+       "code": "INVISIBLE_STATE",
+       "severity": "error",
+       "subject": "week_status",
+       "line": 0,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know",
+        "pattern:invisible-active-filters"
+       ],
+       "level": 3,
+       "message": "The system holds state the operator must know, and no surface declares showing it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"week.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"HIDDEN_AUTHORITY\",\n      \"severity\": \"error\",\n      \"message\": \"A consequential act names no actor.\",\n      \"span\": {\n        \"file\": \"week.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:83\",\n        \"article:authority\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"submit_week\"\n    },\n    {\n      \"code\": \"INVISIBLE_STATE\",\n      \"severity\": \"error\",\n      \"message\": \"The system holds state the operator must know, and no surface declares showing it.\",\n      \"span\": {\n        \"file\": \"week.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\",\n        \"pattern:invisible-active-filters\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"week_status\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3965531db5bc",
+     "name": "week.zayn",
+     "level": 3,
+     "symbols": "project.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"week.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8d0d8de1184a",
+     "name": "screens.zayn",
+     "level": 3,
+     "symbols": "project.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"screens.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "4bfa683ec519",
+     "name": "flows.zayn",
+     "level": 3,
+     "symbols": "project.json",
+     "flags": [],
+     "promise": [
+      [
+       "INVISIBLE_STATE",
+       "week_status"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "flows.zayn  error  INVISIBLE_STATE  week_status\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INVISIBLE_STATE",
+       "severity": "error",
+       "subject": "week_status",
+       "line": 0,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know",
+        "pattern:invisible-active-filters"
+       ],
+       "level": 3,
+       "message": "The system holds state the operator must know, and no surface declares showing it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"flows.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INVISIBLE_STATE\",\n      \"severity\": \"error\",\n      \"message\": \"The system holds state the operator must know, and no surface declares showing it.\",\n      \"span\": {\n        \"file\": \"flows.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\",\n        \"pattern:invisible-active-filters\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"week_status\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "39520315283c",
+     "name": "review.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "team_review"
+      ],
+      [
+       "ROLE_PROMISE_BROKEN",
+       "mark_reviewed"
+      ],
+      [
+       "SELECT_ACT_COLLAPSE",
+       "team_review"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "review.zayn:1  error  SELECT_ACT_COLLAPSE  team_review\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\nreview.zayn:1  error  MISSING_UNDO  team_review\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\nreview.zayn:7  error  ROLE_PROMISE_BROKEN  reversible mark_reviewed keeps no reachable UNDO\n    A reversible control keeps no reachable UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "team_review",
+       "line": 1,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      },
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "team_review",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "ROLE_PROMISE_BROKEN",
+       "severity": "error",
+       "subject": "reversible mark_reviewed keeps no reachable UNDO",
+       "line": 7,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "A reversible control keeps no reachable UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"review.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"review.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"team_review\"\n    },\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"review.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"team_review\"\n    },\n    {\n      \"code\": \"ROLE_PROMISE_BROKEN\",\n      \"severity\": \"error\",\n      \"message\": \"A reversible control keeps no reachable UNDO.\",\n      \"span\": {\n        \"file\": \"review.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"reversible mark_reviewed keeps no reachable UNDO\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6a262d5c0a8f",
+     "name": "review.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"review.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "2d71699af0b4",
+     "name": "review.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"review.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "read-act-collapse.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "READ_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "READ_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "read-act-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unresolved-intent-flow.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "UNRESOLVED_INTENT_FLOW"
+     ],
+     "got_ids": [
+      "UNRESOLVED_INTENT_FLOW"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-undeclared.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "got_ids": [
+      "ROLE_UNDECLARED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-undeclared-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "hidden-authority.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "got_ids": [
+      "HIDDEN_AUTHORITY"
+     ],
+     "pass": true
+    },
+    {
+     "file": "invisible-state.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "got_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-promise-broken.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_PROMISE_BROKEN"
+     ],
+     "got_ids": [
+      "ROLE_PROMISE_BROKEN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unexpected-character.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNEXPECTED_CHARACTER"
+     ],
+     "got_ids": [
+      "UNEXPECTED_CHARACTER"
+     ],
+     "pass": true
+    },
+    {
+     "file": "clean-minimal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [
+    {
+     "hash": "be6a9c7ec949",
+     "runs": [
+      {
+       "command": "zayn check week.zayn --json",
+       "output": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"week.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"READ_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"A reading surface mutates: SATISFIES holds READ and ACT.\",\n      \"span\": {\n        \"file\": \"week.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"timesheet_week\"\n    }\n  ]\n}",
+       "exit": 1
+      }
+     ],
+     "exit": 1,
+     "promise": 1,
+     "verdict": "kept"
+    },
+    {
+     "hash": "0fc69334f40c",
+     "runs": [
+      {
+       "command": "zayn check week.zayn --json",
+       "output": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"week.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+       "exit": 0
+      },
+      {
+       "command": "zayn check week.zayn --quiet",
+       "output": "",
+       "exit": 0
+      }
+     ],
+     "exit": 0,
+     "promise": 0,
+     "verdict": "kept"
+    },
+    {
+     "hash": "1025db7816ab",
+     "runs": [
+      {
+       "command": "zayn check week.zayn entry.zayn",
+       "output": "entry.zayn:1  warning  UNRESOLVED_INTENT_FLOW  submit_week referenced by week_entry\n    An INTENT_FLOW reference names no declared flow.\n\n0 error(s), 1 warning(s) across 2 file(s) at level 2",
+       "exit": 0
+      }
+     ],
+     "exit": 0,
+     "promise": 0,
+     "verdict": "kept"
+    },
+    {
+     "hash": "3c3dc8c27161",
+     "runs": [
+      {
+       "command": "zayn check sheet.zayn",
+       "output": "zayn: cannot read sheet.zayn: ENOENT: no such file or directory, open 'sheet.zayn'",
+       "exit": 2
+      }
+     ],
+     "exit": 2,
+     "promise": 2,
+     "verdict": "kept"
+    },
+    {
+     "hash": "54e465e57275",
+     "runs": [
+      {
+       "command": "zayn check week.zayn --level 3",
+       "output": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+       "exit": 0
+      }
+     ],
+     "exit": 0,
+     "promise": 0,
+     "verdict": "kept"
+    },
+    {
+     "hash": "b07fddea0dca",
+     "runs": [
+      {
+       "command": "zayn check screens.zayn flows.zayn --level 3 --symbols project.json",
+       "output": "flows.zayn  error  INVISIBLE_STATE  week_status\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n1 error(s), 0 warning(s) across 2 file(s) at level 3",
+       "exit": 1
+      }
+     ],
+     "exit": 1,
+     "promise": 1,
+     "verdict": "kept"
+    }
+   ],
+   "ran": "2026-11-25 01:41 UTC+01:00"
+  },
+  "en/26-a-site-under-its-own-law": {
+   "id": "a-site-under-its-own-law",
+   "blocks": [
+    {
+     "hash": "7bb56934ccd1",
+     "name": "menu.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"menu.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "c169d0d20c4d",
+     "name": "testbench.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"testbench.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "360e77b55a3b",
+     "name": "testbench.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "maximise_ide"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "testbench.zayn:9  error  ROLE_ACTS_WITHOUT_CONSEQUENCE  navigate maximise_ide satisfies ACT\n    A control promising to change nothing declares that it acts.\n    Rule 119 · A Card Is Not a Button · Rule 112 · Motion Reports, It Never Decorates · Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "severity": "error",
+       "subject": "navigate maximise_ide satisfies ACT",
+       "line": 9,
+       "cites": [
+        "rule:119",
+        "rule:112",
+        "rule:16",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A control promising to change nothing declares that it acts."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"testbench.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_ACTS_WITHOUT_CONSEQUENCE\",\n      \"severity\": \"error\",\n      \"message\": \"A control promising to change nothing declares that it acts.\",\n      \"span\": {\n        \"file\": \"testbench.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:119\",\n        \"rule:112\",\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"navigate maximise_ide satisfies ACT\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "608c26eec3c1",
+     "name": "testbench.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"testbench.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "e805baf497b2",
+     "name": "comparison.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"comparison.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "7acf12a305e7",
+     "name": "law.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"law.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "72e1a3f694bf",
+     "name": "law.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MENU_LABEL_REPEATS_PARENT",
+       "design"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "law.zayn:16  error  MENU_LABEL_REPEATS_PARENT  \"Design system\" of design repeats \"Design system\" of design_family\n    A menu entry's label repeats the label of the entry it sits under.\n    Rule 116 · The Menu Tells the Truth About the Tree · Article III\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MENU_LABEL_REPEATS_PARENT",
+       "severity": "error",
+       "subject": "\"Design system\" of design repeats \"Design system\" of design_family",
+       "line": 16,
+       "cites": [
+        "rule:116",
+        "article:visible"
+       ],
+       "level": 2,
+       "message": "A menu entry's label repeats the label of the entry it sits under."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"law.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MENU_LABEL_REPEATS_PARENT\",\n      \"severity\": \"error\",\n      \"message\": \"A menu entry's label repeats the label of the entry it sits under.\",\n      \"span\": {\n        \"file\": \"law.zayn\",\n        \"line\": 16\n      },\n      \"cites\": [\n        \"rule:116\",\n        \"article:visible\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"\\\"Design system\\\" of design repeats \\\"Design system\\\" of design_family\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8d0c08ba90bf",
+     "name": "law.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"law.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "role-acts-without-consequence.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "got_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-acts-without-consequence-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "menu-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "menu-label-repeats-parent.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "got_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-landing-not-first.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "got_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-label-duplicate.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LABEL_DUPLICATE"
+     ],
+     "got_ids": [
+      "MENU_LABEL_DUPLICATE"
+     ],
+     "pass": true
+    }
+   ],
+   "shell": [],
+   "ran": "2026-11-25 01:42 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -7634,7 +8451,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-24 22:26 UTC+01:00"
+   "ran": "2026-11-25 01:42 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -7644,7 +8461,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-24 22:26 UTC+01:00"
+   "ran": "2026-11-25 01:42 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -7654,7 +8471,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-24 22:26 UTC+01:00"
+   "ran": "2026-11-25 01:42 UTC+01:00"
   }
  }
 }

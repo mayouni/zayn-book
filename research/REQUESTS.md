@@ -17,6 +17,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Answered 2026-11-24**: all ten parts confirmed by the Zayn desk (its NOTE of 2026-11-24 00:47 in the Zayn repository's outbox), checked by the Zayn session (01:14). Five rows are with the author: LAW-MENU-READINGS-01 (a, b), LAW-CONTRACT-BINDINGS-01 (c, found wider: nine bindings cite an article or a right that the cited rule does not hold), GRID-116-PLACEMENT-01 (d), LAW-CORRECTIONS-3171-01 (e, f, g: a correction pass 3.17.1), LAW-ARTICLE-VII-RECURRING-01 (h). (i): the texts outside the law corrected in the Zayn repository after the pin (d01d322, local); (j) confirmed. Chapter 17's findings, owed to this request, are filed as BOOK-ZAYN-09 (u) | Routed by the Zayn session to the desk as ZAYN-LAW-BOOK-READ-03 (2026-11-23 19:54); none of the five rows ruled yet
 | BOOK-ZAYN-08 | 2026-11-23 | Findings of the research of Parts I and V, in parts, below | **Filed 2026-11-23**, with the memo of Parts I and V; parts added as chapters 1, 2, 12 and 13 are drafted. Two parts are the open questions that chapters 12 and 13 leave to their reader |
 | BOOK-ZAYN-09 | 2026-11-24 | Findings of the research of Part IX, in parts, below | **Filed 2026-11-24**, with the memo of Part IX. Part (a) corrects the confirmation relayed for BOOK-ZAYN-06 (g); three parts are the open questions that chapters 22, 23 and 24 leave to their reader |
+| BOOK-ZAYN-10 | 2026-11-24 | Findings of the research of Part X, in parts, below | **Filed 2026-11-24**, with the memo of Part X. Two parts are the open questions that chapters 25 and 26 leave to their reader |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -300,3 +301,53 @@ where the step from one form to the other stands, is a question filed for the la
 front matter's `next` and the last sentence of its "Where it stands". Part (e), if ruled: chapter 22's exercise and its closing
 question. Part (p), if ruled: chapter 23's closing question. LAW-TIER-REFUSED-01: chapter 22 quotes, at the table of Set 31, the record's glosses of `judgment` and
 `machine-later`, as chapter 17 does; chapters 23 and 24 print the tier word only.
+
+## BOOK-ZAYN-10, in parts (filed 2026-11-24)
+
+Found while researching chapters 25 and 26 and in their verifiers' runs, each probed on the reference verifier of the pin or read
+in its files. A finding against the law or the language is a gift to it.
+
+- **(a) What a gate at level 3 reads: one file, or the project's declarations together.** The record's own build steps check
+  several files in one run (`site/adopt.html:149-150`; `site/build.html:166-167`; at level 3, `tools/zayn/README.md:65`). In such a
+  run a reference to a flow declared in another file is a warning, a state that another file shows is refused in each file that
+  does not show it, an element declared in another file is refused the same way, and two files that declare one name pass
+  (`research/ch25.md`, R5, R6; kin of BOOK-ZAYN-06 (c), (e)). Chapter 25 shows the state case and puts the question to its reader.
+- **(b) `--contract` with a missing path changes the exit code, and the two verifiers take two courses.** The reference warns and
+  goes on, and every finding then falls back to an error at level 1 with no citation, so a file with only a warning exits 1
+  (`tools/zayn/cli.js:88-101`, `:158-163`); the Zig command answers 2 (`zig/src/main.zig:224-228`, read). Parity holds no case for
+  `--contract`, an unreadable file or an unreadable table (`tools/zayn/parity.js:346-347`). `tools/zayn/README.md:80-81` says that
+  without the contract the verifier "just cites less".
+- **(c) Level 3 with a misspelt table prints "clean … at level 3"** (kin of LANG-LEVEL-SKIPPED-01): `site/commands.html:116` says the
+  skipped checks "say so"; the run says nothing of a skip.
+- **(d) A gate's run over several files.** One unreadable file among several exits 2 and prints none of the readable files'
+  findings; the command expands no pattern, so a literal `specs/*.zayn` exits 2; an empty file is clean; a file in UTF-16 gives a
+  hundred and more `UNEXPECTED_CHARACTER` errors (`research/ch25.md`, R2, R4, R10).
+- **(e) Texts against the run** (`research/ch25.md`, section 12, items 8 to 17): `site/refusal.html:129-139` shows `--json` printing
+  one finding where the run prints the outer object; `doc/design/BINARY.md:25`, `:131` say `zayn version` prints hashes, which
+  `main.zig:284-296` does not; `doc/diagnostic-contract.md:81-82` "exits non-zero exactly when errors exist" (a read error exits 2);
+  `tools/zayn/README.md:26` "0 clean" (a run with warnings exits 0); `site/commands.html:195` "One entry per refusal" (warnings are
+  entries); `site/calling.html:116-120` prints "refused" for a read error; `site/adopt.html:101-103` and the release's file names;
+  `doc/EVIDENCE-LEDGER.md:287` against the ruling of 2026-08-18; the notes of 0.2.0 name no file for their `check` run.
+- **(f) A page that no menu reaches, and a band's width, pass the verifier.** A declared `NAV_GRAPH` that no `ENTRIES` lists gets no
+  finding, and a band of six or seven entries gets none; the site's build refuses both on its files (`tools/site-shell.js:981-1001`,
+  `:222`). Chapter 26's exercise asks whether a declaration should be able to say that every page it names is reached by a menu.
+- **(g) The audit's widths and the design study's counts.** `tools/ui-audit.html:734-735` says "five widths" and lists six;
+  `doc/design/DESIGN-SYSTEM.md:760` says 32 new checks and 5 extended where its table marks 29 and 8, `:25` 28 checks against 37,
+  `:22` 26 components against 28, `:827` 449 and 160 corrections against 489 and 174 in the corpus; `CORPUS.md:6` "between April and
+  November" where seven records are dated February and March (`research/ch26.md`, section 12, items 1 to 3).
+- **(h) Requests of the corpus carry no `verbatim` field.** E42 to E46 are words of the author kept in quotation marks with no mark
+  either way; the book quotes only records marked verbatim, and tells those five in paraphrase (`research/ch26.md`, item 5).
+- **(i) K36's blind spot, and the fail-first runs of K34 to K37.** The memo says the check "reads the testbench only"; the code and
+  the corpus say it measured the dialog, not the editor; neither the snapshot nor the memos record the failing runs that each new
+  check was ordered to show first (`research/ch26.md`, items 6, 7).
+- **(j) The language and the site's controls.** A layer opened over a page has no kind, and its way out is read on the painted page
+  only: Maximise names Rules 51 and 53, whose diagnostic fires on a multi-step flow (`site/try.js:91`; `zayn.js:493-496`). A
+  `navigate` control that declares `ACT` and keeps no `UNDO` gets two findings for one defect, where the specification scoped
+  `ROLE_PROMISE_BROKEN` away from `MISSING_UNDO` as noise (`doc/language/VIOLATIONS.md:347-350`). The law's verbs hold none for
+  entering or editing text, which the testbench's page names as its visitor's act (`site/testbench.html:157`). A heading of a page
+  has no form of its own in a menu (`research/ch26.md`, items 8 to 12, 14).
+- **(k) "This page, declared" stands on eight pages**, the redesigned ones; the ruling it comes from asks for every page (corpus
+  Z261), and no check of the build requires it. Chapter 26 gives it as designed.
+
+**Sentences of Part X that a ruling would change.** Part (a), if ruled: chapter 25's last paragraph of *What a team chooses*. Part
+(f), if ruled: chapter 26's closing question.
