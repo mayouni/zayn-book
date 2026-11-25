@@ -21,7 +21,7 @@ Softanza book's own `FORMAT.md` did for the Refinement book. This file is that r
 **Not taken in phase 1, and when each comes:** `book_guards.py` (this book's court is the conformance suite, run by `book_run.py`);
 `book_audit.py` and `release.py` (phase 4, with the first verified part); `book_schema.py`, the status page and the agents' files
 (`book.json`, `llms-book.txt`, `agents/`: phase 5); `print_book.py` and `epub_book.py` (phase 6, the press edition); `check_fr.py`
-(a French edition, if ruled); `make_back` of the cover tool (when the author gives the back cover's two lines).
+(a French edition, if ruled). The back cover is drawn by `make_back` of the cover tool and turns in the reader (BACK-01).
 
 ## What is the same as the first two books
 

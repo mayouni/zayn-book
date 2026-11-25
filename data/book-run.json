@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-25 01:37 UTC+01:00",
+  "date": "2026-11-25 11:39 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -440,7 +440,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:37 UTC+01:00"
+   "ran": "2026-11-25 11:39 UTC+01:00"
   },
   "en/02-what-the-corrections-show": {
    "id": "what-the-corrections-show",
@@ -719,7 +719,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:37 UTC+01:00"
+   "ran": "2026-11-25 11:39 UTC+01:00"
   },
   "en/06-intent-first": {
    "id": "intent-first",
@@ -1155,7 +1155,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:37 UTC+01:00"
+   "ran": "2026-11-25 11:39 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1701,7 +1701,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:38 UTC+01:00"
+   "ran": "2026-11-25 11:39 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -2212,7 +2212,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:38 UTC+01:00"
+   "ran": "2026-11-25 11:40 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -2528,7 +2528,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:38 UTC+01:00"
+   "ran": "2026-11-25 11:40 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -3181,7 +3181,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:39 UTC+01:00"
+   "ran": "2026-11-25 11:40 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -3671,7 +3671,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:39 UTC+01:00"
+   "ran": "2026-11-25 11:41 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -4176,7 +4176,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:39 UTC+01:00"
+   "ran": "2026-11-25 11:41 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -4764,7 +4764,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:40 UTC+01:00"
+   "ran": "2026-11-25 11:42 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -5140,7 +5140,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:40 UTC+01:00"
+   "ran": "2026-11-25 11:42 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -5548,7 +5548,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:40 UTC+01:00"
+   "ran": "2026-11-25 11:42 UTC+01:00"
   },
   "en/22-the-ai-agent-under-the-law": {
    "id": "the-ai-agent-under-the-law",
@@ -6040,7 +6040,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:41 UTC+01:00"
+   "ran": "2026-11-25 11:42 UTC+01:00"
   },
   "en/23-the-ai-agent-as-a-user": {
    "id": "the-ai-agent-as-a-user",
@@ -6478,7 +6478,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:41 UTC+01:00"
+   "ran": "2026-11-25 11:43 UTC+01:00"
   },
   "en/24-a-grammar-for-generation": {
    "id": "a-grammar-for-generation",
@@ -7624,7 +7624,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:41 UTC+01:00"
+   "ran": "2026-11-25 11:43 UTC+01:00"
   },
   "en/25-the-command-and-the-gate": {
    "id": "the-command-and-the-gate",
@@ -8183,7 +8183,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-25 01:41 UTC+01:00"
+   "ran": "2026-11-25 11:44 UTC+01:00"
   },
   "en/26-a-site-under-its-own-law": {
    "id": "a-site-under-its-own-law",
@@ -8441,7 +8441,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 01:42 UTC+01:00"
+   "ran": "2026-11-25 11:44 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -8451,7 +8451,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-25 01:42 UTC+01:00"
+   "ran": "2026-11-25 11:44 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -8461,7 +8461,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-25 01:42 UTC+01:00"
+   "ran": "2026-11-25 11:44 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -8471,7 +8471,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-25 01:42 UTC+01:00"
+   "ran": "2026-11-25 11:44 UTC+01:00"
   }
  }
 }

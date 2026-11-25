@@ -14,6 +14,30 @@ tagline: Declare what a user is doing. The law refuses the rest.
 author: Mansour Ayouni
 series: Third of the AYOUNI books
 
+# The back cover (DECISIONS.md BACK-01), drawn by tools/make_cover.py. The tagline opens it (TITLE-02), alone: the author
+# ruled no second line (2026-11-25).
+back_line: ""
+# The description (the author, 2026-11-25): the book is about UI governance and a language that enforces it as a compiler
+# does, as part of the AI governance stack of Softanza; it opens on the problem in two sentences and does not tell the
+# author's own corrections. Made of the book's sentences (chapters 1, 22 and 25; the readers of READER-01) and of the
+# author's words of that day; every count is read from data/book-run.json ({{n:key}}); **...** is bold; '## ' a label.
+back_blurb:
+  - "AI models now draw interfaces, and AI agents use them. A model repeats the habits of the interfaces it learned from, at machine speed and under any instruction, and a remark corrects one page, once."
+  - "**This book is about UI governance: holding an interface to rules.** The rules it keeps toward its user, the instrument that checks each rule, the moment it checks, and the way the rules change."
+  - "## What Zayn does"
+  - "**Zayn enforces those rules the way a compiler enforces a language.** An interface is declared: a declaration says what a user is doing on a surface. The verifier checks it against a law of {{n:law.rules}} rules kept as data, and refuses what breaks one; the build stops on the refusal, whoever wrote the declaration, a person or an AI model. Zayn is the interface layer of the AI governance stack of Softanza, the governed software platform."
+  - "## Who it is for"
+  - "Whoever answers for an interface that AI models draw and AI agents use: the designer who does not program, who reads first, then the programmer, the decision-maker who commissions software, the builder of tools, the educator, and the AI agent that reads the book as data."
+back_runs: "Every declaration in this book was run, and the verifier's answer is printed under it."
+# The author (as on the first book's back cover, COVER-07 there): his portrait (assets/cover/source/author.png) and the facts
+# of his own author note of 2020; the last sentence is the first book's (he designed Softanza) and this book's (the rulings
+# of the law are his, chapters 1 to 26).
+back_author_note: "He wrote his first program at ten, with pen and paper, in Regueb, a village in the centre of Tunisia that had no electricity. Programming then took him from Tunisia to Niger and to Canada, building software for law offices, banks and nuclear waste management, and leading teams of three cultures. He designed Softanza, and he rules the changes to Zayn's law."
+back_category: "User interfaces · AI governance"
+back_licence: "Proof copy · CC BY-NC-ND 4.0"
+back_free: "Free to read, in every form"
+back_url: "https://mayouni.github.io/ayouni/books/zayn/en/"
+
 # The back cover: its two lines are the author's to give (contract K-1); its description is made of the book's own
 # sentences, taken once the chapters are read. Nothing is written here before then.
 back_cover: []

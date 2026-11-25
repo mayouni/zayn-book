@@ -16,7 +16,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-06 | 2026-11-23 | Ten findings of Part III's research, parts (a) to (j), below | **Answered 2026-11-23 19:54** (the Zayn session): all ten confirmed at the pin by the Zayn desk, 27 runs on the reference and on the built command, identical; full text in the Zayn repository's `.central/outbox.md`, NOTE of 2026-11-23 19:34. Six rulings go to the author (below). Part (i)'s texts are rewritten in Zayn's `ce58575`, after the pin |
 | BOOK-ZAYN-07 | 2026-11-23 | Findings of Part VII's research and of Part III's second readings, in parts, below | **Answered 2026-11-24**: all ten parts confirmed by the Zayn desk (its NOTE of 2026-11-24 00:47 in the Zayn repository's outbox), checked by the Zayn session (01:14). Five rows are with the author: LAW-MENU-READINGS-01 (a, b), LAW-CONTRACT-BINDINGS-01 (c, found wider: nine bindings cite an article or a right that the cited rule does not hold), GRID-116-PLACEMENT-01 (d), LAW-CORRECTIONS-3171-01 (e, f, g: a correction pass 3.17.1), LAW-ARTICLE-VII-RECURRING-01 (h). (i): the texts outside the law corrected in the Zayn repository after the pin (d01d322, local); (j) confirmed. Chapter 17's findings, owed to this request, are filed as BOOK-ZAYN-09 (u) | Routed by the Zayn session to the desk as ZAYN-LAW-BOOK-READ-03 (2026-11-23 19:54); none of the five rows ruled yet
 | BOOK-ZAYN-08 | 2026-11-23 | Findings of the research of Parts I and V, in parts, below | **Filed 2026-11-23**, with the memo of Parts I and V; parts added as chapters 1, 2, 12 and 13 are drafted. Two parts are the open questions that chapters 12 and 13 leave to their reader |
-| BOOK-ZAYN-09 | 2026-11-24 | Findings of the research of Part IX, in parts, below | **Filed 2026-11-24**, with the memo of Part IX. Part (a) corrects the confirmation relayed for BOOK-ZAYN-06 (g); three parts are the open questions that chapters 22, 23 and 24 leave to their reader |
+| BOOK-ZAYN-09 | 2026-11-24 | Findings of the research of Part IX, in parts, below | **Answered 2026-11-25**: the Zayn desk's NOTE of 2026-11-25 07:58 (the Zayn repository's outbox, lines 5718 to 5944), checked by the Zayn session against the code. (a) confirmed: the confirmation relayed for BOOK-ZAYN-06 (g) was wrong and is withdrawn. `haro/judge-zayn-court.js` translates from the `.zayn` form to the grammar's, and its output feeds the forged court alone; the verifier reads the original; nothing translates the other way. The desk's probe: 0 of 77 fixtures are sentences of the grammar, 66 of 77 translations are, and the verifier answers `SYNTAX_ERROR` on all 77 translations. The desk withdraws its recommendation for LANG-RECORD-GAPS-01 (c), which rested on the withdrawn line. The other 21 parts are confirmed as stated; of (c), "33 errors" stands in no tracked file of the repository, the desk's own count on one probe file. Texts corrected after the pin, local commits on d01d322, not pushed: 1408405 (a: the pages say which form each reader reads, held by a check FORMS_SAID that found 4 problems before the fix and 0 after), 7e32c0e (h, m, u 8 and 10), 45da235 (g, s, u 15 and 17), 02be560 (r's comments). Ten new rows go to the author, and five parts join rows already with him (table below). The sentences of Part IX that hang on a ruling stay as they are until he rules | Routed by the Zayn session to the desk as ZAYN-LAW-BOOK-READ-04 (2026-11-24 23:30); none of the rows ruled yet |
 | BOOK-ZAYN-10 | 2026-11-24 | Findings of the research of Part X, in parts, below | **Filed 2026-11-24**, with the memo of Part X. Two parts are the open questions that chapters 25 and 26 leave to their reader |
 
 ## What the answers say, and what the book checked at its own pin
@@ -59,21 +59,31 @@ and with who gave it; the book checks what it can check itself, read only, and s
 
 | Id (the Zayn session's) | What it would settle | Recommended there |
 |---|---|---|
-| LAW-TIER-REFUSED-01 | what a tier means, and what the site prints | the tier keeps the docket's meaning, and each rule gains a field naming what refuses it today |
+| LAW-TIER-REFUSED-01 | what a tier means, and what the site prints (09 (u) 1, 2, 9, 11 and 13 join it) | the tier keeps the docket's meaning, and each rule gains a field naming what refuses it today |
 | LAW-TIER-CHECK-01 | a check that a tier and the instruments agree | |
 | LAW-SELECT-CONFIRM-01 | Rule 16's text, and the meaning of `CONFIRM` in the specification | |
 | LANG-FLOW-REFERENCE-01 | a reference may name a `WIZARD`; `MISSING_UNDO` reads `ROLE` on an `INTERACTION` only | |
-| LANG-LEVEL-SKIPPED-01 | what a run prints when a level 3 check has no table (BOOK-ZAYN-06 (a)) | |
+| LANG-LEVEL-SKIPPED-01 | what a run prints when a level 3 check has no table (BOOK-ZAYN-06 (a)) (09 (u) 7 and (r)'s statuses join it) | |
 | LANG-FOREIGN-KIND-01 | a misspelt kind of Zayn, beside another language's kinds, which the verifier ignores by the ruling of 2026-10-31 (06 (b)) | |
 | LANG-TRACE-01 | an element traced through `INTENT_FLOW`; the fixture `clean-full.zayn` answers `INTENT_ORPHAN payment_form` at level 3 with that element listed (06 (c)) | |
 | LANG-SATISFIES-EMPTY-01 | `SATISFIES` called required and read for presence only (06 (d)) | |
 | LANG-LEVEL3-LAWFUL-01 | the level 3 checks from the lawful side: an actor's name never looked up (06 (e)) | |
-| LANG-RECORD-GAPS-01 | (a) and (b) three clauses of the families' sentences carried by no diagnostic, `MISSING_CANCEL` filed under continuity; (c) which form a decoder writes; (d) where the election of a surface is stated (06 (f), (g), (j)) | |
+| LANG-RECORD-GAPS-01 | (a) and (b) three clauses of the families' sentences carried by no diagnostic, `MISSING_CANCEL` filed under continuity; (c) which form a decoder writes; (d) where the election of a surface is stated (06 (f), (g), (j)) |(c), since 2026-11-25: a decoder grammar of the `.zayn` form, written from the verifier's own tables; the alternatives are a translator from the grammar's form into the `.zayn` form, or a verifier that reads both forms (language 1.8). The earlier recommendation is withdrawn with the line it rested on |
 | LAW-MENU-READINGS-01 | a section with entries and no `TARGET` under a bar; a child label that begins with its parent's whole label (BOOK-ZAYN-07 (a), (b)) | (a) `MENU_LANDING_NOT_FIRST` refuses it, a reading of the specification; (b) an amendment, 3.18 |
-| LAW-CONTRACT-BINDINGS-01 | a finding's article or right against its rule's (07 (c)) | a check that compares each binding with the law |
+| LAW-CONTRACT-BINDINGS-01 | a finding's article or right against its rule's (07 (c)) (09 (u) 18 joins it) | a check that compares each binding with the law |
 | GRID-116-PLACEMENT-01 | Rule 116 on the grid, after v3.16 (07 (d)) | |
-| LAW-CORRECTIONS-3171-01 | the law's history against itself, the names corrections did not reach, a design note's count (07 (e), (f), (g)) | a correction pass 3.17.1, with four questions only the author answers |
-| LAW-ARTICLE-VII-RECURRING-01 | how "real and recurring" reads for rules that entered before a defect (07 (h)) | |
+| LAW-CORRECTIONS-3171-01 | the law's history against itself, the names corrections did not reach, a design note's count (07 (e), (f), (g)) (09 (u) 6 and 12 join it) | a correction pass 3.17.1, with four questions only the author answers |
+| LAW-ARTICLE-VII-RECURRING-01 | how "real and recurring" reads for rules that entered before a defect (07 (h)) | | (09 (i) joins it)
+| LANG-SYNTAX-RECOVERY-01 | after a syntax error, the verifier judges the declaration it kept with no field (09 (b)) |  |
+| LANG-GRAMMAR-FILE-01 | the smaller differences of the grammar for generation against the language (09 (d)) |  |
+| LANG-ROLE-AXES-01 | one role per control, and two axes in the roles (09 (e)) |  |
+| LANG-AUTHORITY-OVERLAP-01 | one missing actor gives two errors at level 3 (09 (f)) |  |
+| LANG-ACTOR-SEAT-01 | where `ACTOR` may stand (09 (j)) |  |
+| LANG-AGENT-PARTIES-01 | provenance with no field; one proposal, two parties, one field; nothing says that a user is an AI agent (09 (k), (n), (o)) |  |
+| LAW-AGENT-RIGHTS-01 | the preamble's exception and the right to know; `INVISIBLE_STATE` citing the pattern of active filters for any state (09 (p), (q)) |  |
+| LANG-CITES-OBEYED-01 | "cite the rules you obeyed" (09 (l)) |  |
+| SUITE-MACHINE-PAIR-01 | the machine medium in the court (09 (t)) |  |
+| LANG-MISSING-UNDO-SENTENCE-01 | a finding's sentence against its check (09 (v)) |  |
 
 If they are ruled, they land after the pin; the Zayn session tells the book which release carries them. The six rulings added on 2026-11-23 19:54 each carry the Zayn desk's recommendation, in the outbox note named above.
 

@@ -9,10 +9,13 @@ it and the two openings of its handles are made transparent, so that it stands o
 are scaled and nothing else: never redrawn, regenerated or recoloured. The pixels of its outline that were mixed with the
 white ground are unmixed, so that no pale fringe shows on a dark ground.
 
-The back cover waits: its two lines are the author's to give, and its description is made of the book's own sentences.
-The tagline of the title block opens it.
+The back (assets/cover/back.png) is drawn on the same ground, in the same faces and on the same column (BACK-01). The tagline
+of the title block opens it (TITLE-02), alone, as the author ruled; its description is made of the book's own
+sentences (src/structure.yaml, back_*), never new prose; then the author, the imprint, the free reader's address with its QR
+code (decoded and checked), the shelf and the licence. It fails rather than let two blocks touch.
 
-    python tools/make_cover.py
+    python tools/make_cover.py                      the front and the back
+    python tools/make_cover.py --back-lines DIR     one back for each candidate second line (back_line_candidates), if any
 """
 import hashlib
 import io
@@ -191,5 +194,194 @@ def make():
           f"{len(boxes)} lines of type, none on the jar")
 
 
+BACK = ROOT / "assets" / "cover" / "back.png"
+DIM = (206, 200, 188)                   # the back's body text: the cream, one step quieter, so that the bold reads
+RULE = (70, 72, 82)                     # the hairline above the imprint
+BODY_SIZES = (27, 26, 25, 24, 23, 22)   # logical px: the description takes the largest that fits every candidate line
+
+
+def spaced_lines(d, x, y, text, fnt, fill, tracking, maxw):
+    """Small capitals tracked, wrapped to maxw; returns the y under the last line."""
+    words, line = text.split(), ""
+    for w in words:
+        t = (line + " " + w).strip()
+        if text_width(t, fnt, tracking) <= maxw * K or not line:
+            line = t
+        else:
+            draw_text(d, x, y, line, fnt, fill, tracking)
+            y += round(fnt.size / K * 1.55)
+            line = w
+    draw_text(d, x, y, line, fnt, fill, tracking)
+    return y + round(fnt.size / K * 1.55)
+
+
+def rich(d, x, y, text, size, maxw, fill, bold_fill, lead=1.45, write=True):
+    """A paragraph with **bold** runs, wrapped to maxw at logical size; the bold is the face thickened, as the reader does.
+    Returns the y under it."""
+    fnt = font("garamond", size)
+    runs, bold = [], False
+    for part in text.split("**"):
+        runs += [(w, bold) for w in part.split()]
+        bold = not bold
+    space = fnt.getlength(" ")
+    lines, cur, width = [], [], 0.0
+    for w, b in runs:
+        wl = fnt.getlength(w) + (2 if b else 0)
+        if cur and width + space + wl > maxw * K:
+            lines.append(cur)
+            cur, width = [], 0.0
+        width += (space if cur else 0) + wl
+        cur.append((w, b))
+    lines.append(cur)
+    for ln in lines:
+        x0 = x * K
+        for i, (w, b) in enumerate(ln):
+            if write:
+                d.text((x0, y * K), w, font=fnt, fill=bold_fill if b else fill, stroke_width=1 if b else 0,
+                       stroke_fill=bold_fill if b else None)
+            x0 += fnt.getlength(w) + (2 if b else 0) + space
+        y += round(size * lead)
+    return y
+
+
+def qr_code(url, size):
+    """The free reader's address as a QR code, module by module, dark on cream with its quiet zone, then read back."""
+    import cv2
+    import segno
+    q = segno.make(url, error="m", micro=False)
+    m = [list(r) for r in q.matrix]
+    n, quiet = len(m), 4
+    cell = (size * K) // (n + 2 * quiet)
+    im = Image.new("RGB", (cell * (n + 2 * quiet),) * 2, CREAM)
+    dq = ImageDraw.Draw(im)
+    for r, row in enumerate(m):
+        for c, v in enumerate(row):
+            if v:
+                x0, y0 = (c + quiet) * cell, (r + quiet) * cell
+                dq.rectangle((x0, y0, x0 + cell - 1, y0 + cell - 1), fill=GROUND)
+    got, _, _ = cv2.QRCodeDetector().detectAndDecode(np.asarray(im.convert("L")))
+    if got != url:
+        raise SystemExit(f"the back cover: the QR code reads {got!r}, not {url!r}")
+    return im
+
+
+def portrait(size):
+    """The author's portrait (assets/cover/source/author.png, from his own press material) as a disc, never enlarged."""
+    ph = Image.open(SRC / "author.png").convert("RGB")
+    side = min(ph.size)
+    px = round(size * K)
+    if px > side:
+        raise SystemExit(f"the back cover: the portrait would be enlarged ({side} px to {px} px)")
+    ph = ph.crop(((ph.width - side) // 2, (ph.height - side) // 2, (ph.width + side) // 2, (ph.height + side) // 2))
+    ph = ph.resize((px, px), Image.LANCZOS)
+    big = Image.new("L", (px * 4, px * 4), 0)
+    ImageDraw.Draw(big).ellipse((0, 0, px * 4 - 1, px * 4 - 1), fill=255)
+    return ph, big.resize((px, px), Image.LANCZOS)
+
+
+def facts(text):
+    """{{n:key}} in a back cover's text, read from the book's last run (data/book-run.json): no count is typed."""
+    import json
+    import re
+    law = json.loads((ROOT / "data" / "book-run.json").read_text(encoding="utf-8"))["run"]["law"]
+
+    def one(m):
+        if m.group(1) not in law:
+            raise SystemExit(f"the back cover names {m.group(1)}, which data/book-run.json does not hold")
+        return str(law[m.group(1)])
+    return re.sub(r"\{\{n:([\w.]+)\}\}", one, text)
+
+
+def make_back(st, line, out, body, write=True):
+    """The back cover with `line` as the author's second line, its description at `body` px, written to `out`; returns
+    the free space above the author (negative: it overflows)."""
+    back = Image.new("RGB", (W, H), GROUND)
+    d = ImageDraw.Draw(back)
+    right = LW - LEFT
+    tw = right - LEFT
+
+    y = spaced_lines(d, LEFT, 72, f"{st['title']} · {st['subtitle']}".upper(), font("inter", 14), QUIET, 0.16, tw)
+    y += 16
+    for sentence in st["tagline"].replace(". ", ".\n").split("\n"):
+        draw_text(d, LEFT - 3, y, sentence, font("garamond", 60), CREAM)
+        y += 70
+    y += 8
+    for ln in (wrap(line, font("garamond-i", 30), tw) if line else []):
+        draw_text(d, LEFT, y, ln, font("garamond-i", 30), OCHRE)
+        y += 39
+    y += 22 if line else 14
+    d.rectangle((LEFT * K, y * K, (LEFT + 64) * K, (y + 4) * K), fill=OCHRE)
+    y += 34
+
+    for para in st["back_blurb"]:
+        if para.startswith("## "):
+            y += 6
+            draw_text(d, LEFT, y, para[3:].upper(), font("inter", 14), OCHRE, tracking=0.16)
+            y += 30
+        else:
+            y = rich(d, LEFT, y, facts(para), body, tw, DIM, CREAM) + round(body / 2)
+    draw_text(d, LEFT, y + 2, st["back_runs"], font("inter", 17), CREAM)
+    end_blurb = y + 30
+
+    band = 1176                                     # the hairline above the imprint
+    top = band - 186                                # the author's block
+    if not write or end_blurb > top - 24:
+        return top - 24 - end_blurb
+    ph, mask = portrait(118)
+    back.paste(ph, (LEFT * K, top * K), mask)
+    tx = LEFT + 118 + 30
+    draw_text(d, tx, top + 4, st["author"].upper(), font("inter", 16), CREAM, tracking=0.2)
+    note_end = rich(d, tx, top + 36, st["back_author_note"], 18, right - tx, DIM, CREAM, lead=1.42)
+    if note_end > band - 16:
+        raise SystemExit(f"the back cover: the author's note runs into the imprint ({note_end - (band - 16)} px too long)")
+
+    d.rectangle((LEFT * K, band * K, right * K, band * K + 1), fill=RULE)
+    lg = logo(150, CREAM)
+    back.paste(lg, (LEFT * K, (band + 34) * K), lg)
+    draw_text(d, LEFT, band + 34 + round(lg.height / K) + 16, st["series"].upper(), font("inter", 14), QUIET, tracking=0.2)
+
+    qr = qr_code(st["back_url"], 140)
+    back.paste(qr, (right * K - qr.width, (band + 22) * K))
+    host, path = st["back_url"].split("://", 1)[1].split("/", 2)[0:2], st["back_url"].split("://", 1)[1].split("/", 2)[2]
+    qx = right - round(qr.width / K) - 22
+    f1, f2 = font("inter", 19), font("inter", 15)
+    for i, (s, f, c) in enumerate(((st["back_free"], f1, CREAM), ("/".join(host) + "/", f2, QUIET), (path, f2, QUIET))):
+        draw_text(d, qx - round(f.getlength(s) / K), band + 40 + (0, 36, 60)[i], s, f, c)
+
+    foot = 1378
+    fc = font("inter", 14)
+    cat = st["back_category"].upper()
+    lic = st["back_licence"].upper()
+    draw_text(d, LEFT, foot, cat, fc, QUIET, tracking=0.12)
+    lw = text_width(lic, fc, 0.12) / K
+    draw_text(d, right - round(lw), foot, lic, fc, QUIET, tracking=0.12)
+    if LEFT + text_width(cat, fc, 0.12) / K > right - lw - 30:
+        raise SystemExit("the back cover: the shelf and the licence touch")
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    back.save(out)
+    print("wrote", out, back.size, f"body {body} px, {top - 24 - end_blurb} px free above the author")
+    return top - 24 - end_blurb
+
+
+def make_backs(st, out_dir=None):
+    """One description size for every candidate line, the largest at which each fits, so that the backs compare."""
+    lines = st.get("back_line_candidates") or [st.get("back_line", "")]
+    for body in BODY_SIZES:
+        if all(make_back(st, ln, None, body, write=False) >= 0 for ln in lines):
+            break
+    else:
+        raise SystemExit(f"the back cover's description does not fit at {BODY_SIZES[-1]} px: shorten it in src/structure.yaml")
+    if out_dir is None:
+        make_back(st, st["back_line"], BACK, body)
+        return
+    for i, line in enumerate(lines, 1):
+        make_back(st, line, Path(out_dir) / f"back-{i}.png", body)
+
+
 if __name__ == "__main__":
-    sys.exit(make())
+    if "--back-lines" in sys.argv:
+        st = yaml.safe_load((ROOT / "src" / "structure.yaml").read_text(encoding="utf-8"))
+        sys.exit(make_backs(st, sys.argv[sys.argv.index("--back-lines") + 1]))
+    make()
+    sys.exit(make_backs(yaml.safe_load((ROOT / "src" / "structure.yaml").read_text(encoding="utf-8"))))

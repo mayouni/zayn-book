@@ -173,6 +173,9 @@ stopped them.
 - 2026-11-25: the desk published the title and cover (a409018, house 52fa50d). **Part X (chapters 25 and 26) drafted, run and
   read**: the field at its sources (F-48 to F-59); a verifier and a voice reader per chapter, six doors, then a second reading
   from the designer's door and the AI agent's; every item fixed. Requests: BOOK-ZAYN-10 (a) to (k). Site lessons: Part X.
+  The desk published it (a6daf3e, house f45b430). **The back cover** (BACK-01): drawn by `make_back` of the cover tool, the
+  tagline alone at its top as the author ruled, the text on UI governance and Zayn's place in Softanza; the reader turns
+  the cover. BOOK-ZAYN-09 answered by the Zayn desk and recorded.
 - Next: Parts II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.

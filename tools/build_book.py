@@ -103,6 +103,8 @@ UI = {
     "description": "Interfaces Under Law: UI governance for people and AI agents, using the Zayn language. Declare what a user is doing; the law refuses the rest. By Mansour Ayouni. Third of the AYOUNI books.",
     "theme": "Light or dark",
     "zoom_label": "View the cover large", "close_label": "Close",
+    "back_alt": "Interfaces Under Law, back cover", "flip_label": "Turn the cover over", "side_group": "Cover",
+    "side_front": "Front", "side_back": "Back",
     "home_label": "AYOUNI Press: home", "home_url": "https://mayouni.github.io/ayouni/",
     # the open book (house OPEN-BOOK.md, lines 27 and 28): the invitation and the colophon line, word for word
     "invite": "If this book is useful to your organisation, I work with organisations on its subjects: paper copies in quantity, workshops and training, talks, consulting and the building of solutions. Write to ",
@@ -426,12 +428,19 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .hero-cover{flex-direction:column;align-items:center;}
 .cover-wrap{position:relative;display:block;width:100%;line-height:0;}
 @media (max-width: 900px){.cover-wrap{max-width:280px;margin:0 auto;}}
+.cover-flip{perspective:2200px;cursor:pointer;border-radius:2px;}
+.cover-flip:focus-visible{outline:3px solid var(--ink);outline-offset:6px;}
+.cover-inner{position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,.7,.2,1);}
+.cover-flip.is-back .cover-inner{transform:rotateY(180deg);}
+.cover-face{backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.cover-face.cover-back{position:absolute;top:0;left:0;width:100%;height:100%;transform:rotateY(180deg);}
+@media (prefers-reduced-motion: reduce){.cover-inner{transition:none;}}
 .cover-zoom{position:absolute;right:14px;bottom:14px;width:46px;height:46px;border-radius:50%;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:zoom-in;padding:0;box-shadow:0 2px 10px var(--shadow-soft);}
 .cover-zoom svg{width:22px;height:22px;}
 .cover-zoom:hover{background:var(--ink);color:var(--paper);}
 .cover-lightbox{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;background:var(--scrim);display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;}
 .cover-lightbox[hidden]{display:none;}
-.cover-lightbox img{max-width:calc(100vw - 48px);max-height:calc(100vh - 112px);width:auto;height:auto;background:var(--paper);box-shadow:0 8px 40px var(--shadow-cover);}
+.cover-lightbox img{cursor:pointer;max-width:calc(100vw - 48px);max-height:calc(100vh - 112px);width:auto;height:auto;background:var(--paper);box-shadow:0 8px 40px var(--shadow-cover);}
 .cover-close{position:absolute;top:14px;right:18px;width:46px;height:46px;border-radius:50%;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);font-size:28px;line-height:1;cursor:pointer;padding:0;}
 .the-invite{margin:3.2em 0 1em;padding:1.6em 0 0;border-top:1px solid var(--rule);}
 .the-invite p{text-indent:0;text-align:left;hyphens:none;}
@@ -440,11 +449,13 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .the-invite .invite-more,.the-invite .colophon-line{font-family:var(--sans);color:var(--soft);line-height:1.5;}
 .sidebar-link.is-absent .sl-text{font-style:italic;}
 .sidebar-link.is-absent:hover .sl-text{font-weight:400;}
-.spine-switch{display:inline-flex;border:1px solid var(--rule-strong);border-radius:20px;overflow:hidden;margin:0 0 8px;}
-.spine-opt{font-family:var(--sans);font-size:15px;font-weight:600;border:0;background:var(--paper);color:var(--ink);padding:9px 16px;cursor:pointer;line-height:1.2;}
-.spine-opt + .spine-opt{border-left:1px solid var(--rule-strong);}
-.spine-opt:hover{background:var(--hover-bg);}
-.spine-opt[aria-pressed="true"]{background:var(--ink);color:var(--paper);cursor:default;}
+.spine-switch,.cover-sides{display:inline-flex;border:1px solid var(--rule-strong);border-radius:20px;overflow:hidden;margin:0 0 8px;}
+.spine-opt,.cover-side{font-family:var(--sans);font-size:15px;font-weight:600;border:0;background:var(--paper);color:var(--ink);padding:9px 16px;cursor:pointer;line-height:1.2;}
+.spine-opt + .spine-opt,.cover-side + .cover-side{border-left:1px solid var(--rule-strong);}
+.spine-opt:hover,.cover-side:hover{background:var(--hover-bg);}
+.spine-opt[aria-pressed="true"],.cover-side[aria-pressed="true"]{background:var(--ink);color:var(--paper);cursor:default;}
+.cover-sides{margin:18px auto 0;}
+.lb-sides{margin:0;box-shadow:0 2px 10px var(--shadow-soft);}
 body.spine-only .sidebar-link:not(.is-spine),body.spine-only .chapter-card:not(.is-spine),body.spine-only .ce-row:not(.is-spine){display:none;}
 .chapter-card.is-spine .card-bookmark{background:var(--ink);}
 
@@ -466,7 +477,7 @@ body.vm-list .overview-contents{margin-top:24px;}
 }
 @media print {
   .plate, .court, .decision, .law-card { break-inside: avoid; }
-  .spine-switch, .cover-zoom, #btnTheme { display: none !important; }
+  .spine-switch, .cover-sides, .cover-zoom, #btnTheme { display: none !important; }
   body.spine-only .sidebar-link, body.spine-only .chapter-card, body.spine-only .ce-row { display: initial; }
 }
 """
@@ -1413,27 +1424,56 @@ def check_shape(body, meta, where, errors):
 
 
 # ============================================================================ the cover
-COVER_ZOOM_JS = ("(function(){var w=document.querySelector('.cover-wrap'),z=document.querySelector('.cover-zoom'),lb=document.getElementById('coverLightbox');"
-    "if(!w||!z||!lb)return;var src=w.querySelector('img'),big=lb.querySelector('img'),x=lb.querySelector('.cover-close');"
-    "function open(){big.src=src.src;big.alt=src.alt;lb.hidden=false;document.body.style.overflow='hidden';x.focus();}"
+COVER_ZOOM_JS = ("(function(){var f=document.querySelector('.cover-flip'),z=document.querySelector('.cover-zoom'),lb=document.getElementById('coverLightbox');"
+    "if(!f||!z||!lb)return;var fr=f.querySelector('.cover-front'),bk=f.querySelector('.cover-back');var faces={front:fr.querySelector('img'),back:bk&&bk.querySelector('img')};"
+    "var big=lb.querySelector('img'),x=lb.querySelector('.cover-close'),side='front';"
+    "function show(){big.src=faces[side].src;big.alt=faces[side].alt;}"
+    "function set(s){if(!faces[s])return;side=s;f.classList.toggle('is-back',s==='back');fr.setAttribute('aria-hidden',s==='back'?'true':'false');"
+    "if(bk)bk.setAttribute('aria-hidden',s==='back'?'false':'true');"
+    "document.querySelectorAll('.cover-side').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.side===s?'true':'false');});if(!lb.hidden)show();}"
+    "function turn(){set(side==='front'?'back':'front');}"
+    "f.addEventListener('click',turn);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();turn();}});"
+    "document.querySelectorAll('.cover-side').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();set(b.dataset.side);});});"
+    "function open(){show();lb.hidden=false;document.body.style.overflow='hidden';x.focus();}"
     "function close(){lb.hidden=true;big.removeAttribute('src');document.body.style.overflow='';z.focus();}"
-    "z.addEventListener('click',function(e){e.stopPropagation();open();});"
+    "z.addEventListener('click',function(e){e.stopPropagation();open();});big.addEventListener('click',function(e){e.stopPropagation();turn();});"
     "lb.addEventListener('click',function(e){if(e.target===lb||e.target===x)close();});"
-    "document.addEventListener('keydown',function(e){if(!lb.hidden&&e.key==='Escape')close();});})();")
+    "document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft'||e.key==='ArrowRight')turn();});})();")
+
+
+def cover_face(path, alt):
+    """One face of the cover, embedded so the reader stays one file."""
+    import base64, io
+    from PIL import Image
+    buf = io.BytesIO()
+    Image.open(path).convert("RGB").save(buf, "JPEG", quality=86, optimize=True)
+    data = base64.b64encode(buf.getvalue()).decode("ascii")
+    return (f'<img class="cover-img" src="data:image/jpeg;base64,{data}" width="1097" height="1434" '
+            f'alt="{html.escape(alt)}">')
+
+
+BACK_PNG = ROOT / "assets" / "cover" / "back.png"
 
 
 def cover_html(ui):
-    """The front cover, embedded so the reader stays one file."""
-    import base64, io
-    from PIL import Image
+    """The cover, front and back (BACK-01): a click turns it over, as in the series' readers."""
     img = ROOT / "assets" / "cover" / "cover.png"
     if not img.exists():
         raise SystemExit("assets/cover/cover.png does not exist: run python tools/make_cover.py")
-    buf = io.BytesIO()
-    Image.open(img).convert("RGB").save(buf, "JPEG", quality=86, optimize=True)
-    data = base64.b64encode(buf.getvalue()).decode("ascii")
-    return (f'<img class="cover-img" src="data:image/jpeg;base64,{data}" width="1097" height="1434" '
-            f'alt="{html.escape(ui["cover_alt"])}">')
+    front = f'<div class="cover-face cover-front" aria-hidden="false">{cover_face(img, ui["cover_alt"])}</div>'
+    rear = (f'<div class="cover-face cover-back" aria-hidden="true">{cover_face(BACK_PNG, ui["back_alt"])}</div>'
+            if BACK_PNG.exists() else "")
+    return (f'<div class="cover-flip" role="button" tabindex="0" aria-label="{html.escape(ui["flip_label"])}">'
+            f'<div class="cover-inner">{front}{rear}</div></div>')
+
+
+def cover_sides(ui, extra=""):
+    """The two sides, both named, the one in view pressed."""
+    if not BACK_PNG.exists():
+        return ""
+    return (f'<div class="cover-sides{extra}" role="group" aria-label="{html.escape(ui["side_group"])}">'
+            f'<button type="button" class="cover-side" data-side="front" aria-pressed="true">{html.escape(ui["side_front"])}</button>'
+            f'<button type="button" class="cover-side" data-side="back" aria-pressed="false">{html.escape(ui["side_back"])}</button></div>')
 
 
 # ============================================================================ the names gate
@@ -1628,8 +1668,9 @@ def render_reader(st, pages, runs, stale_keys):
 <section class="book-hero">
 <div class="hero-cover">
 <div class="cover-wrap">{cover_html(ui)}<button type="button" class="cover-zoom" aria-label="{html.escape(ui["zoom_label"])}" title="{html.escape(ui["zoom_label"])}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/><line x1="10.5" y1="7.5" x2="10.5" y2="13.5"/><line x1="7.5" y1="10.5" x2="13.5" y2="10.5"/></svg></button></div>
+{cover_sides(ui)}
 </div>
-<div class="cover-lightbox" id="coverLightbox" role="dialog" aria-modal="true" aria-label="{html.escape(ui["zoom_label"])}" hidden><button type="button" class="cover-close" aria-label="{html.escape(ui["close_label"])}">&times;</button><img alt="{html.escape(ui["cover_alt"])}"></div>
+<div class="cover-lightbox" id="coverLightbox" role="dialog" aria-modal="true" aria-label="{html.escape(ui["zoom_label"])}" hidden><button type="button" class="cover-close" aria-label="{html.escape(ui["close_label"])}">&times;</button><img alt="{html.escape(ui["cover_alt"])}">{cover_sides(ui, " lb-sides")}</div>
 <script>{COVER_ZOOM_JS}</script>
 <div class="hero-info">
 <p class="hero-series">{html.escape(st["series"])}</p>
