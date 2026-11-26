@@ -176,7 +176,11 @@ stopped them.
   The desk published it (a6daf3e, house f45b430). **The back cover** (BACK-01): drawn by `make_back` of the cover tool, the
   tagline alone at its top as the author ruled, the text on UI governance and Zayn's place in Softanza; the reader turns
   the cover. BOOK-ZAYN-09 answered by the Zayn desk and recorded.
-- Next: Parts II, IV, VI and VIII; the second reading of Parts I and V. For each chapter:
+- 2026-11-25 and 26: **Part II (chapters 3, 4 and 5) drafted, run and read**: the field at its sources (F-60 to F-70), the
+  road-sign treaty read in its registered text (`research/ch05-treaty.md`: the author's "crash evidence", "literacy" and "sixty
+  years" are stated at the size the text carries); a verifier and a voice reader per chapter, six doors, then a second reading from
+  the designer's door and the AI agent's; every item fixed. Requests: BOOK-ZAYN-11 (a) to (l). Site lessons: Part II.
+- Next: Parts IV, VI and VIII; the second reading of Parts I and V. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

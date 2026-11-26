@@ -193,3 +193,36 @@ twice" one that stood in the pages of the second reading; "added after the secon
   cannot decide; a site page that tells one of them can say the same.
 - **A page's own act.** The designer, second reading: the testbench declares selecting, comparing and understanding, while its
   visitor writes; the law's verbs hold none for writing (BOOK-ZAYN-10 (j)).
+
+## Part II, The Heritage (chapters 3 to 5)
+
+Read on 2026-11-25 by a fresh verifier and a voice reader for each chapter, then by one reader from each of the six doors for the
+three pages in order (`research/verify/ch03.md` to `ch05.md`, `research/voice/`, `research/read/part2-*.md`). Verdicts of the
+doors: "ready after the items above" for every page from every door; none "not ready". Every item was fixed and the build passed.
+The fixed pages were read a second time from the designer's door and the AI agent's (`part2-designer-2.md`, `part2-ai-agent-2.md`):
+every page "ready after the items above", none "not ready"; their items were fixed in the same commit. The words of the table
+are those of Part X's.
+
+| Concept | The sentence | The order | The plate | The stumble, and what repaired it | Read again? | The site page |
+|---|---|---|---|---|---|---|
+| a finding's article | "The article on a finding's line is the diagnostic's own, set in the contract, and it can differ from the article the rule sits under: Rule 82 sits under Article III." | After the first refusal on a sign | 5.1; chapter 3's first plate prints Rule 82 with Article III | All six doors: Rule 82 under Article III in one chapter, Article II in the next | added after the six doors; read twice | `refusal.html`, `rules.html` (BOOK-ZAYN-11 (h)) |
+| a tier and a refusal | "The tier names the instrument the law owes the whole rule [...] A finding refuses the part of a rule that a declaration states." Then: "That holds whatever the rule's tier." | After the map of the field | 3.5 (Rule 16, `judgment`), the court's `missing-cancel` (Rule 26, `machine-later`) | Five doors: rules filed `judgment` or `machine-later` are refused by the verifier on the same page | added after the second reading | `rules.html` (LAW-TIER-REFUSED-01) |
+| the `lint` entry | "In the law's data such a rule carries an entry named `lint` [...] Each entry opens with a head, the name of an instrument, followed by what it reads." | The law names its instruments | none | Four doors: "the field is `lint`" read "field" as the discipline of three chapters | read twice | `rules.html`, the page that prints a rule |
+| level 4 | "The verifier holds no rendered surface, so at level 4 it runs every check it holds, and each reads the declaration." | Before the run at level 4 | 4.5 and `zayn check notice.zayn --level 4`, exit 0 | The decision-maker and the AI agent: "clean at level 4 keeps the law" claimed more than the verifier checks; the designer, second reading: "requires a rendered surface" beside a run without one | added after the second reading | `commands.html` (BOOK-ZAYN-11 (b)) |
+| a role that may not act | "A control that promises `inert` or `navigate` may not act: both promise that what is true stays as it is." | Where roles are said | 4.3, 4.4 and the exercise | The AI agent, second reading: a tile that navigates was refused with the message "change nothing" | added after the second reading | `testbench.html` (BOOK-ZAYN-11 (k)) |
+| the levels add up | "Each level adds to the one below. Level 1 reads the file's grammar and words; level 2 adds the checks that need nothing but the file; level 3 adds the checks that need the table." | Before the first plate of chapter 3 | 3.1 and `zayn check orders.zayn --level 3 --symbols orders.json`, exit 1 | The tool builder and the AI agent: level 1 was never said; `UNKNOWN_SIGNAL` sat at level 1 in the court and ran at level 2 | added after the six doors; read twice | `commands.html` |
+| a sign's verbs | "A medium carries the law's verbs [...] natively, at a cost, or not at all; at a cost means degraded, as when an act done in parallel becomes serial." | A sign in Zayn's data | 5.1 to 5.4 | The designer, second reading: "at a cost" was never said | added after the second reading | `channels.html` |
+| a closed list on a sign | "On a sign the verifier checks the meaning as a word of the list and decides nothing about how it is perceived." | After the placard that carries danger | 5.6, 5.7 | The AI agent, second reading: what does clean mean on a medium that carries the signal "in principle"? | added after the second reading | `channels.html` |
+| the treaty at its size | "It is a closed vocabulary where it prescribes, and a system that every other sign must conform to." | The principle of chapter 5 | none | The verifier: "crash evidence", "literacy" and "sixty years" are not in the text of 1968; stated as experiments, the driver who cannot read the inscription, and since 1968 | read twice | the page that cites road signage |
+
+## What Part II's readers named, beyond single sentences
+
+- **One citation, two articles.** Every door stopped on it. A site page that prints a finding's citation can say once that the
+  article is the diagnostic's, and the rule's own article sits in the law.
+- **What a tier promises.** The tier reads as "what refuses this rule today"; the docket says it is the instrument owed. The site's
+  page on rules prints the tier beside each rule; one sentence there would carry the docket's meaning (LAW-TIER-REFUSED-01).
+- **Which declarations a check reads.** The programmer, the tool builder and the AI agent: a control that acts with no cancel runs
+  clean, where a flow with no cancel is refused. A check's page can name the kinds it reads (`INTENT_FLOW` and `WIZARD` for
+  `MISSING_CANCEL`).
+- **What a commissioner requires.** The decision-maker, again: a run at level 3 with the table supplied, the audit for the
+  painted page, and the field's own instruments for the rest; the site's Adopt section is where it would be read in one place.

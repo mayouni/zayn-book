@@ -18,6 +18,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-08 | 2026-11-23 | Findings of the research of Parts I and V, in parts, below | **Filed 2026-11-23**, with the memo of Parts I and V; parts added as chapters 1, 2, 12 and 13 are drafted. Two parts are the open questions that chapters 12 and 13 leave to their reader |
 | BOOK-ZAYN-09 | 2026-11-24 | Findings of the research of Part IX, in parts, below | **Answered 2026-11-25**: the Zayn desk's NOTE of 2026-11-25 07:58 (the Zayn repository's outbox, lines 5718 to 5944), checked by the Zayn session against the code. (a) confirmed: the confirmation relayed for BOOK-ZAYN-06 (g) was wrong and is withdrawn. `haro/judge-zayn-court.js` translates from the `.zayn` form to the grammar's, and its output feeds the forged court alone; the verifier reads the original; nothing translates the other way. The desk's probe: 0 of 77 fixtures are sentences of the grammar, 66 of 77 translations are, and the verifier answers `SYNTAX_ERROR` on all 77 translations. The desk withdraws its recommendation for LANG-RECORD-GAPS-01 (c), which rested on the withdrawn line. The other 21 parts are confirmed as stated; of (c), "33 errors" stands in no tracked file of the repository, the desk's own count on one probe file. Texts corrected after the pin, local commits on d01d322, not pushed: 1408405 (a: the pages say which form each reader reads, held by a check FORMS_SAID that found 4 problems before the fix and 0 after), 7e32c0e (h, m, u 8 and 10), 45da235 (g, s, u 15 and 17), 02be560 (r's comments). Ten new rows go to the author, and five parts join rows already with him (table below). The sentences of Part IX that hang on a ruling stay as they are until he rules | Routed by the Zayn session to the desk as ZAYN-LAW-BOOK-READ-04 (2026-11-24 23:30); none of the rows ruled yet |
 | BOOK-ZAYN-10 | 2026-11-24 | Findings of the research of Part X, in parts, below | **Filed 2026-11-24**, with the memo of Part X. Two parts are the open questions that chapters 25 and 26 leave to their reader |
+| BOOK-ZAYN-11 | 2026-11-26 | Findings of the research and the readings of Part II, in parts, below | **Filed 2026-11-26**, with the memo of Part II |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -361,3 +362,43 @@ in its files. A finding against the law or the language is a gift to it.
 
 **Sentences of Part X that a ruling would change.** Part (a), if ruled: chapter 25's last paragraph of *What a team chooses*. Part
 (f), if ruled: chapter 26's closing question.
+
+## BOOK-ZAYN-11, in parts (filed 2026-11-26)
+
+Found while researching chapters 3, 4 and 5, in their verifiers' reports and in the readings of the six doors, each read in the
+files of the pin or run on its reference verifier. A finding against the law or the language is a gift to it.
+
+- **(a) Lint heads that name an instrument the pin does not hold.** `constitution/rules.json` gives an `html lint` head to Rules 1,
+  38, 60, 80, 107 and 127, and a `manifest lint` head to Rule 44; no `.js` or `.py` file of the pin holds either. The docket says a
+  tier "is not a claim that the check runs today" (`doc/AMENDMENT-DOCKET.md:591-592`); the `lint` head carries no such word.
+  Chapter 4 says "names [...] owed to read". A field saying whether the named instrument is built would let a page say it.
+- **(b) `--level 4` prints "clean — 1 file(s), 0 violations at level 4"** (`tools/zayn/cli.js:225`) while the language's table says
+  level 4 "requires a rendered surface" (`doc/language/README.md:128`) and the verifier holds none. Two doors read the line as a
+  pass at level 4. Chapter 4 now says the verifier runs every check it holds there. Kin of BOOK-ZAYN-10 (c).
+- **(c) One measure, two names.** The contract's `LAYOUT_DISPLACEMENT` (Rule 38) and the audit's check K22 LAYOUT_STILL measure
+  the same displacement; no file of the pin joins the two names.
+- **(d) Two target sizes.** Rule 19 asks "a minimum hit area of 44x44 pixels" for buttons in business apps (`machine-later`); Rule
+  69 asks "a minimum height of 48px" on a touch surface (`judgment`); the audit's K17 cites WCAG 2.5.8 (24 by 24 CSS pixels). Which
+  governs where, is the law's to say.
+- **(e) No fixture on `signage`.** The suite proves `VERB_NOT_CARRIED` on print; a pair on signage (`SATISFIES [ACT]` refused,
+  `[DISCOVER, LOCATE, UNDERSTAND]` clean) would prove chapter 5's claim in the court. The book runs it on its page.
+- **(f) The statute tier is in documents only.** `doc/THE-SECOND-FOUNDING.md` designs a tier where "the external standard outranks
+  this constitution" in physical media; the law's data holds no field for it.
+- **(g) `ALWAYS_REACHABLE [EXIT]` on a sign is refused** (`VERB_NOT_CARRIED`). Chapter 5's exercise rests on it: the sign serves
+  `LOCATE`, and `EXIT` is the user's intent to leave a flow. If the law means a sign may never promise the way out, a sentence of
+  the specification could say so.
+- **(h) A finding's article and its rule's.** `VERB_NOT_CARRIED` cites Rule 82 and Article II (`conformance/violations.json`,
+  `articles: ["intent"]`); Rule 82 derives from `visible`, Article III. All six doors stopped on it. Chapter 5 now says that the
+  article is the diagnostic's; the site's pages that print a citation could say it once.
+- **(i) The roadmap and the docket on Rule 118.** `ROADMAP.md:75-77` says the second founding "records the strongest support Rule
+  118 has ever had"; the docket's C-2 holds that "nothing is written into `rules.json` until the IEC 60073 / ISO 3864 / ISO 7010
+  editions are read and clauses recorded" (`doc/AMENDMENT-DOCKET.md:40`). Chapter 5 states the commission and its gate.
+- **(j) Tiers against today's refusals.** Rule 26 is `machine-later` and `MISSING_CANCEL` refuses it today; Rules 16 and 51 are
+  `judgment` and refused in part. Five doors stopped on it. Joins LAW-TIER-REFUSED-01.
+- **(k) `ROLE_ACTS_WITHOUT_CONSEQUENCE` says "A control promising to change nothing declares that it acts" for `ROLE navigate`
+  too.** The contract's reason puts `inert` and `navigate` in one class; the message names only the first. The AI agent stopped on it.
+- **(l) Which declarations a check reads.** `MISSING_CANCEL` reads flows (`INTENT_FLOW`, `WIZARD`); an `INTERACTION` that acts with no
+  `CANCEL` runs clean. Three doors asked where this is said; the contract's entry could name the kinds each check reads.
+
+**Sentences of Part II that a ruling would change.** Part (a): chapter 4's *The law names its instruments*. Part (d): chapter 3's
+*Where the painted page judges*. Part (g): chapter 5's exercise. Part (j): chapter 3's paragraph on a tier and a refusal.

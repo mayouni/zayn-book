@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-25 11:39 UTC+01:00",
+  "date": "2026-11-26 00:52 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -440,7 +440,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:39 UTC+01:00"
+   "ran": "2026-11-26 00:52 UTC+01:00"
   },
   "en/02-what-the-corrections-show": {
    "id": "what-the-corrections-show",
@@ -719,7 +719,1246 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:39 UTC+01:00"
+   "ran": "2026-11-26 00:52 UTC+01:00"
+  },
+  "en/03-what-the-field-wrote": {
+   "id": "what-the-field-wrote",
+   "blocks": [
+    {
+     "hash": "560d1510655b",
+     "name": "orders.zayn",
+     "level": 3,
+     "symbols": "orders.json",
+     "flags": [],
+     "promise": [
+      [
+       "INVISIBLE_STATE",
+       "active_filter"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "orders.zayn  error  INVISIBLE_STATE  active_filter\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "INVISIBLE_STATE",
+       "severity": "error",
+       "subject": "active_filter",
+       "line": 0,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know",
+        "pattern:invisible-active-filters"
+       ],
+       "level": 3,
+       "message": "The system holds state the operator must know, and no surface declares showing it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"INVISIBLE_STATE\",\n      \"severity\": \"error\",\n      \"message\": \"The system holds state the operator must know, and no surface declares showing it.\",\n      \"span\": {\n        \"file\": \"orders.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\",\n        \"pattern:invisible-active-filters\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"active_filter\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "240f77129a3e",
+     "name": "orders.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "afab93440d08",
+     "name": "orders.zayn",
+     "level": 3,
+     "symbols": "orders.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"orders.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "871631ce2746",
+     "name": "ledger.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "post_entry"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "ledger.zayn:1  error  MISSING_UNDO  post_entry\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "post_entry",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"ledger.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"post_entry\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "e2406e0f904a",
+     "name": "ledger.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"ledger.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "7f0af5a3e0b2",
+     "name": "pay.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "SELECT_ACT_COLLAPSE",
+       "pick_and_pay"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "pay.zayn:1  error  SELECT_ACT_COLLAPSE  pick_and_pay\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "pick_and_pay",
+       "line": 1,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"pay.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"pay.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"pick_and_pay\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "232dafea47b3",
+     "name": "pay.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"pay.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "1bb0a262cfc6",
+     "name": "overdue.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_SIGNAL",
+       "overdue_invoices"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "overdue.zayn:3  error  UNKNOWN_SIGNAL  critical in SIGNALS of overdue_invoices\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "critical in SIGNALS of overdue_invoices",
+       "line": 3,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"overdue.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"overdue.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"critical in SIGNALS of overdue_invoices\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "4723c639104a",
+     "name": "overdue.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"overdue.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "53f9ca1bad1f",
+     "name": "targets.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_FIELD",
+       "TARGET_SIZE"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "targets.zayn:3  error  UNKNOWN_FIELD  TARGET_SIZE\n    A field name is not one the grammar defines in the form it is written.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_FIELD",
+       "severity": "error",
+       "subject": "TARGET_SIZE",
+       "line": 3,
+       "cites": [],
+       "level": 1,
+       "message": "A field name is not one the grammar defines in the form it is written."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"targets.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_FIELD\",\n      \"severity\": \"error\",\n      \"message\": \"A field name is not one the grammar defines in the form it is written.\",\n      \"span\": {\n        \"file\": \"targets.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"TARGET_SIZE\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "deff937fc5a6",
+     "name": "targets.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"targets.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "9e52928d4adf",
+     "name": "invoices.zayn",
+     "level": 3,
+     "symbols": "orders.json",
+     "flags": [],
+     "promise": [
+      [
+       "INVISIBLE_STATE",
+       "active_filter"
+      ],
+      [
+       "MISSING_UNDO",
+       "pay_invoice"
+      ],
+      [
+       "SELECT_ACT_COLLAPSE",
+       "pay_invoice"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:6  error  SELECT_ACT_COLLAPSE  pay_invoice\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\ninvoices.zayn:6  error  MISSING_UNDO  pay_invoice\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\ninvoices.zayn  error  INVISIBLE_STATE  active_filter\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n3 error(s), 0 warning(s) across 1 file(s) at level 3",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "pay_invoice",
+       "line": 6,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      },
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "pay_invoice",
+       "line": 6,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "INVISIBLE_STATE",
+       "severity": "error",
+       "subject": "active_filter",
+       "line": 0,
+       "cites": [
+        "rule:82",
+        "article:visible",
+        "right:know",
+        "pattern:invisible-active-filters"
+       ],
+       "level": 3,
+       "message": "The system holds state the operator must know, and no surface declares showing it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 6\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"pay_invoice\"\n    },\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 6\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"pay_invoice\"\n    },\n    {\n      \"code\": \"INVISIBLE_STATE\",\n      \"severity\": \"error\",\n      \"message\": \"The system holds state the operator must know, and no surface declares showing it.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 0\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:visible\",\n        \"right:know\",\n        \"pattern:invisible-active-filters\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 3,\n      \"subject\": \"active_filter\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "99830af5f5d2",
+     "name": "invoices.zayn",
+     "level": 3,
+     "symbols": "orders.json",
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 3 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 3,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 13,
+   "runnable": 13,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "invisible-state.zayn",
+     "exists": true,
+     "level": 3,
+     "expect_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "got_ids": [
+      "INVISIBLE_STATE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "select-act-collapse.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "select-act-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "got_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_CANCEL"
+     ],
+     "got_ids": [
+      "MISSING_CANCEL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-cancel-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [
+    {
+     "hash": "fd436ef2051a",
+     "runs": [
+      {
+       "command": "zayn check orders.zayn --level 3 --symbols orders.json",
+       "output": "orders.zayn  error  INVISIBLE_STATE  active_filter\n    The system holds state the operator must know, and no surface declares showing it.\n    Rule 82 · Perceivable State · Article III · the right to know\n\n1 error(s), 0 warning(s) across 1 file(s) at level 3",
+       "exit": 1
+      }
+     ],
+     "exit": 1,
+     "promise": 1,
+     "verdict": "kept"
+    }
+   ],
+   "ran": "2026-11-26 00:53 UTC+01:00"
+  },
+  "en/04-the-instruments-of-the-field": {
+   "id": "the-instruments-of-the-field",
+   "blocks": [
+    {
+     "hash": "c439b35511b5",
+     "name": "checkout.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "SELECT_ACT_COLLAPSE",
+       "pick_and_pay"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "checkout.zayn:5  error  SELECT_ACT_COLLAPSE  pick_and_pay\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "pick_and_pay",
+       "line": 5,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"checkout.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"checkout.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"pick_and_pay\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "74d0ddf70a4e",
+     "name": "checkout.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"checkout.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "65446d9629d2",
+     "name": "cards.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "overdue_card"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "cards.zayn:9  error  ROLE_ACTS_WITHOUT_CONSEQUENCE  inert overdue_card satisfies ACT\n    A control promising to change nothing declares that it acts.\n    Rule 119 · A Card Is Not a Button · Rule 112 · Motion Reports, It Never Decorates · Rule 16 · Intentional Clicks · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "severity": "error",
+       "subject": "inert overdue_card satisfies ACT",
+       "line": 9,
+       "cites": [
+        "rule:119",
+        "rule:112",
+        "rule:16",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A control promising to change nothing declares that it acts."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"cards.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"ROLE_ACTS_WITHOUT_CONSEQUENCE\",\n      \"severity\": \"error\",\n      \"message\": \"A control promising to change nothing declares that it acts.\",\n      \"span\": {\n        \"file\": \"cards.zayn\",\n        \"line\": 9\n      },\n      \"cites\": [\n        \"rule:119\",\n        \"rule:112\",\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"inert overdue_card satisfies ACT\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "983a498a802c",
+     "name": "cards.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"cards.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8f11a12686b2",
+     "name": "notice.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"notice.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "f2db92e43fca",
+     "name": "tile.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "project_tile"
+      ],
+      [
+       "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "project_tile"
+      ],
+      [
+       "SELECT_ACT_COLLAPSE",
+       "project_tile"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "tile.zayn:1  error  SELECT_ACT_COLLAPSE  project_tile\n    Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\n    Rule 16 · Intentional Clicks · Article II\ntile.zayn:1  error  MISSING_UNDO  project_tile\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\ntile.zayn:3  error  ROLE_ACTS_WITHOUT_CONSEQUENCE  navigate project_tile satisfies ACT\n    A control promising to change nothing declares that it acts.\n    Rule 119 · A Card Is Not a Button · Rule 112 · Motion Reports, It Never Decorates · Rule 16 · Intentional Clicks · Article II\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "SELECT_ACT_COLLAPSE",
+       "severity": "error",
+       "subject": "project_tile",
+       "line": 1,
+       "cites": [
+        "rule:16",
+        "article:intent",
+        "pattern:select-silently-acts"
+       ],
+       "level": 2,
+       "message": "Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM."
+      },
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "project_tile",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      },
+      {
+       "code": "ROLE_ACTS_WITHOUT_CONSEQUENCE",
+       "severity": "error",
+       "subject": "navigate project_tile satisfies ACT",
+       "line": 3,
+       "cites": [
+        "rule:119",
+        "rule:112",
+        "rule:16",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A control promising to change nothing declares that it acts."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"tile.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"SELECT_ACT_COLLAPSE\",\n      \"severity\": \"error\",\n      \"message\": \"Selection has become execution: SATISFIES holds SELECT and ACT without CONFIRM.\",\n      \"span\": {\n        \"file\": \"tile.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:16\",\n        \"article:intent\",\n        \"pattern:select-silently-acts\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"project_tile\"\n    },\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"tile.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"project_tile\"\n    },\n    {\n      \"code\": \"ROLE_ACTS_WITHOUT_CONSEQUENCE\",\n      \"severity\": \"error\",\n      \"message\": \"A control promising to change nothing declares that it acts.\",\n      \"span\": {\n        \"file\": \"tile.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"rule:119\",\n        \"rule:112\",\n        \"rule:16\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"navigate project_tile satisfies ACT\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "eaa98a7631b0",
+     "name": "tile.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"tile.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "7a34d32a7e6d",
+     "name": "tile.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"tile.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "select-act-collapse.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "select-act-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-decide.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "got_ids": [
+      "SELECT_ACT_COLLAPSE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-acts-without-consequence.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "got_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-acts-without-consequence-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-visual-understand.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "got_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [
+    {
+     "hash": "390066fa176f",
+     "runs": [
+      {
+       "command": "zayn check notice.zayn --level 4",
+       "output": "clean — 1 file(s), 0 violations at level 4 against Zayn v3.17",
+       "exit": 0
+      }
+     ],
+     "exit": 0,
+     "promise": 0,
+     "verdict": "kept"
+    }
+   ],
+   "ran": "2026-11-26 00:53 UTC+01:00"
+  },
+  "en/05-the-road-sign": {
+   "id": "the-road-sign",
+   "blocks": [
+    {
+     "hash": "61127e7f81f0",
+     "name": "sign-acts.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "open_the_gate"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "open_the_gate"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "open_the_gate"
+      ],
+      [
+       "VERB_NOT_CARRIED",
+       "open_the_gate"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "sign-acts.zayn:5  error  VERB_NOT_CARRIED  ACT in open_the_gate on signage\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nsign-acts.zayn:5  error  VERB_NOT_CARRIED  UNDO in open_the_gate on signage\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nsign-acts.zayn:5  error  VERB_NOT_CARRIED  CANCEL in open_the_gate on signage\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\nsign-acts.zayn:5  error  VERB_NOT_CARRIED  EXIT in open_the_gate on signage\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n4 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "ACT in open_the_gate on signage",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "UNDO in open_the_gate on signage",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "CANCEL in open_the_gate on signage",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      },
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "EXIT in open_the_gate on signage",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"sign-acts.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 4,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"sign-acts.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"ACT in open_the_gate on signage\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"sign-acts.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"UNDO in open_the_gate on signage\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"sign-acts.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"CANCEL in open_the_gate on signage\"\n    },\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"sign-acts.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"EXIT in open_the_gate on signage\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "67f5fa30bdc0",
+     "name": "sign-finds.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"sign-finds.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "7b23ee73a5a5",
+     "name": "sign-read.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "warn_of_hazard"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "sign-read.zayn:5  error  VERB_NOT_CARRIED  READ in warn_of_hazard on signage\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "READ in warn_of_hazard on signage",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"sign-read.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"sign-read.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"READ in warn_of_hazard on signage\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d9f3ab39fbe6",
+     "name": "print-read.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"print-read.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "a12b39f5bf8e",
+     "name": "road-medium.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_MEDIUM",
+       "junction_sign"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "road-medium.zayn:1  error  UNKNOWN_MEDIUM  road_sign on junction_sign\n    SURFACE_AS names a medium outside the ten this language defines.\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_MEDIUM",
+       "severity": "error",
+       "subject": "road_sign on junction_sign",
+       "line": 1,
+       "cites": [],
+       "level": 2,
+       "message": "SURFACE_AS names a medium outside the ten this language defines."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"road-medium.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_MEDIUM\",\n      \"severity\": \"error\",\n      \"message\": \"SURFACE_AS names a medium outside the ten this language defines.\",\n      \"span\": {\n        \"file\": \"road-medium.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"road_sign on junction_sign\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "9963efe05c63",
+     "name": "road-medium.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"road-medium.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "2d59f09def84",
+     "name": "sign-signals.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"sign-signals.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "eb7a07e6ecd3",
+     "name": "sign-critical.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_SIGNAL",
+       "warn_of_hazard"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "sign-critical.zayn:7  error  UNKNOWN_SIGNAL  critical in SIGNALS of warn_of_hazard\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "critical in SIGNALS of warn_of_hazard",
+       "line": 7,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"sign-critical.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"sign-critical.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"critical in SIGNALS of warn_of_hazard\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6ac91f7e8efb",
+     "name": "exit-sign.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VERB_NOT_CARRIED",
+       "way_out"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "exit-sign.zayn:5  error  VERB_NOT_CARRIED  EXIT in way_out on signage\n    A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\n    Rule 82 · Perceivable State · Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VERB_NOT_CARRIED",
+       "severity": "error",
+       "subject": "EXIT in way_out on signage",
+       "line": 5,
+       "cites": [
+        "rule:82",
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"exit-sign.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VERB_NOT_CARRIED\",\n      \"severity\": \"error\",\n      \"message\": \"A declaration satisfies, or promises to keep reachable, an intent the declared medium cannot carry at all.\",\n      \"span\": {\n        \"file\": \"exit-sign.zayn\",\n        \"line\": 5\n      },\n      \"cites\": [\n        \"rule:82\",\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"EXIT in way_out on signage\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "c777ea5ae19c",
+     "name": "exit-sign.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"exit-sign.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 10,
+   "runnable": 10,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "verb-not-carried.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "got_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "verb-not-carried-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "projection-print-promise.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "got_ids": [
+      "VERB_NOT_CARRIED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "projection-print-promise-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-medium.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "got_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-medium-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "got_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [],
+   "ran": "2026-11-26 00:53 UTC+01:00"
   },
   "en/06-intent-first": {
    "id": "intent-first",
@@ -1155,7 +2394,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:39 UTC+01:00"
+   "ran": "2026-11-26 00:54 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -1701,7 +2940,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:39 UTC+01:00"
+   "ran": "2026-11-26 00:54 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -2212,7 +3451,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:40 UTC+01:00"
+   "ran": "2026-11-26 00:54 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -2528,7 +3767,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:40 UTC+01:00"
+   "ran": "2026-11-26 00:55 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -3181,7 +4420,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:40 UTC+01:00"
+   "ran": "2026-11-26 00:55 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -3671,7 +4910,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:41 UTC+01:00"
+   "ran": "2026-11-26 00:55 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -4176,7 +5415,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:41 UTC+01:00"
+   "ran": "2026-11-26 00:56 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -4764,7 +6003,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:42 UTC+01:00"
+   "ran": "2026-11-26 00:56 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -5140,7 +6379,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:42 UTC+01:00"
+   "ran": "2026-11-26 00:56 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -5548,7 +6787,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:42 UTC+01:00"
+   "ran": "2026-11-26 00:57 UTC+01:00"
   },
   "en/22-the-ai-agent-under-the-law": {
    "id": "the-ai-agent-under-the-law",
@@ -6040,7 +7279,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:42 UTC+01:00"
+   "ran": "2026-11-26 00:57 UTC+01:00"
   },
   "en/23-the-ai-agent-as-a-user": {
    "id": "the-ai-agent-as-a-user",
@@ -6478,7 +7717,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:43 UTC+01:00"
+   "ran": "2026-11-26 00:57 UTC+01:00"
   },
   "en/24-a-grammar-for-generation": {
    "id": "a-grammar-for-generation",
@@ -7624,7 +8863,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:43 UTC+01:00"
+   "ran": "2026-11-26 00:57 UTC+01:00"
   },
   "en/25-the-command-and-the-gate": {
    "id": "the-command-and-the-gate",
@@ -8183,7 +9422,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-25 11:44 UTC+01:00"
+   "ran": "2026-11-26 00:58 UTC+01:00"
   },
   "en/26-a-site-under-its-own-law": {
    "id": "a-site-under-its-own-law",
@@ -8441,7 +9680,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-25 11:44 UTC+01:00"
+   "ran": "2026-11-26 00:58 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -8451,7 +9690,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-25 11:44 UTC+01:00"
+   "ran": "2026-11-26 00:58 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -8461,7 +9700,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-25 11:44 UTC+01:00"
+   "ran": "2026-11-26 00:58 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -8471,7 +9710,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-25 11:44 UTC+01:00"
+   "ran": "2026-11-26 00:58 UTC+01:00"
   }
  }
 }

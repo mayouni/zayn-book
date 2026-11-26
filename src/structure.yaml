@@ -38,10 +38,6 @@ back_licence: "Proof copy · CC BY-NC-ND 4.0"
 back_free: "Free to read, in every form"
 back_url: "https://mayouni.github.io/ayouni/books/zayn/en/"
 
-# The back cover: its two lines are the author's to give (contract K-1); its description is made of the book's own
-# sentences, taken once the chapters are read. Nothing is written here before then.
-back_cover: []
-
 # The spine: one chapter from each of Parts I, III, VII, IX and X, readable alone (proposed).
 spine: [1, 8, 17, 22, 26]
 
