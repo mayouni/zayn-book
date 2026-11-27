@@ -180,7 +180,13 @@ stopped them.
   road-sign treaty read in its registered text (`research/ch05-treaty.md`: the author's "crash evidence", "literacy" and "sixty
   years" are stated at the size the text carries); a verifier and a voice reader per chapter, six doors, then a second reading from
   the designer's door and the AI agent's; every item fixed. Requests: BOOK-ZAYN-11 (a) to (l). Site lessons: Part II.
-- Next: Parts IV, VI and VIII; the second reading of Parts I and V. For each chapter:
+  The desk published it on the author's "Yes, publish" (d110e83, house 6ea9ab6).
+- 2026-11-26 and 27: **Part IV (chapters 10 and 11) drafted, run and read**: the field at its sources (F-71 to F-73, F-80 to F-83);
+  a verifier per chapter and a voice reader, six doors, then a second reading from the designer's door and the AI agent's; every
+  item fixed. New tokens: `audit.checks`, `audit.paint`, `audit.files`, `audit.widths`, `lang.expression`, `lang.roles`,
+  `diag.role`, `diag.signal`, `diag.declared`, `signal.values`. Chapter 11 carries each stratum's stage from the code (two
+  built as the proposal's fields), where the contract calls the strata designed. Requests: BOOK-ZAYN-12 (a) to (m).
+- Next: Parts VI and VIII; the second reading of Parts I and V. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

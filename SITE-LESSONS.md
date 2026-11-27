@@ -226,3 +226,35 @@ are those of Part X's.
   `MISSING_CANCEL`).
 - **What a commissioner requires.** The decision-maker, again: a run at level 3 with the table supplied, the audit for the
   painted page, and the field's own instruments for the rest; the site's Adopt section is where it would be read in one place.
+
+## Part IV, The Expression (chapters 10 and 11)
+
+Read on 2026-11-26 and 27 by a fresh verifier for each chapter and a voice reader for both, then by one reader from each of the six
+doors for the two pages in order (`research/verify/ch10.md`, `ch11.md`, `research/voice/`, `research/read/part4-*.md`). Verdicts of
+the doors: "ready after the items above" for every page from every door; none "not ready". Every item was fixed and the build
+passed. The fixed pages were read a second time from the designer's door and the AI agent's (`part4-designer-2.md`,
+`part4-ai-agent-2.md`): every page "ready after the items above", none "not ready"; their items were fixed in the same commit.
+
+| Concept | The sentence | The order | The plate | The stumble, and what repaired it | Read again? | The site page |
+|---|---|---|---|---|---|---|
+| one declaration, two drawings | "Clean again, and it must be. The declaration says that an undo is within reach, and the drawing put it in a menu." | After the clean approval | 10.1 and 10.2, one file, two sketches | The voice reader: "seven rules" counted the ledger's faults, which touch nine rule numbers; now "the seven faults the record names" | read twice | `refusal.html`, `why.html` |
+| one rule, two halves | "That an undo exists is the half of Rule 79 that a declaration states [...] The declaration says it is within reach, and the drawing decides how far the hand must go." | Before the audit | 10.3 to 10.5 | none | read twice | `refusal.html` |
+| three codes for the undo | "One defect gets one finding. Here `ACT` is declared, so the finding is `MISSING_UNDO`. A reversible control that declares only a selection [...] gets `ROLE_PROMISE_BROKEN` instead" | After the refused approve control | 10.3; the exercise for `IRREVERSIBLE_CLAIMS_UNDO` | Four doors, then both second readers: the contract's line for `ROLE_PROMISE_BROKEN` fits a plate that gets `MISSING_UNDO` | added after the six doors; read twice | `diagnostics.html` (BOOK-ZAYN-12 (l)) |
+| level 4 in plain words | "Level 2 needs the file alone, level 3 a table of what the system knows, level 4 a painted page." | Before the run at level 4 | `zayn check payments.zayn --level 4`, exit 0 | The designer and the programmer: "the checks it holds" said nothing a reader could picture | added after the six doors; read twice | `commands.html` (BOOK-ZAYN-12 (a)) |
+| what reads the drawing | "Zayn's own design system numbers its checks K01 to K37 [...] The audit's larger mode runs 32 of them on the painted page" | What reads the drawing | the table of checks by what they read | The verifier: the audit runs 32, the site's build reads the other five; the voice reader: "each fault has a reader" was larger than the page | read twice | `audit.html` (BOOK-ZAYN-12 (c), (d)) |
+| the rule numbers | "its rules are numbered to 130, because a number taken out of use is never given again" | The door paragraph of each chapter | none | All six doors: "123 rules" beside Rules 125 and 129 | added after the six doors; read twice | every page that counts the rules |
+| a stratum's stage | "Two are the proposal's fields, built with their own refusals; three are carried by other fields of the language, with their own checks; and tempo is held in the law." | The opening of chapter 11 | 11.1 to 11.8; the table of strata | The verifier: structure's menu levels came after the proposal, not before; the second readers: chapter 10 called the strata designed | read twice | the page that tells the strata (BOOK-ZAYN-12 (e)) |
+| the closed lists on the page | the five statuses of Rule 118 with their meanings; the five tones | Before the exercise | 11.1, 11.2 and the purge | Five doors: the exercise asked for a tone the page never listed | added after the six doors; read twice | `language.html` |
+| the binding rule's reach | "The verifier binds it today on its two expression fields, `SIGNALS` and `ROLE`; the older fields of a feedback answer to their own checks." | The principle of chapter 11 | 11.5, 11.6 | The AI agent, second reading: a clean feedback with tone and no intent seemed to break the rule | added after the second reading | the page that tells the strata (BOOK-ZAYN-12 (g), (h)) |
+
+## What Part IV's readers named, beyond single sentences
+
+- **Who checks a supplier's drawing.** The decision-maker: the audit reads Zayn's own site. The page now says that a declaration
+  can be required of a supplier and refused by the verifier, and the drawing answers to the instruments of the painted page the
+  project adopts and to a person's review; the site's Adopt section is where it would be read in one place.
+- **A role names a consequence.** Every door kept "a `button` may archive, delete or do nothing" against the field's roles; a site
+  page on `ROLE` can say it in that sentence.
+- **What conformance compares.** The tool builder: a finding's line moves between the field and the `DEFINE`; the court compares
+  codes. One sentence in the contract would let a second implementation pass on its first run (BOOK-ZAYN-12 (m)).
+- **The stage of the strata.** The founding's status lines say nothing of the strata is built, while the verifier holds two; a page
+  that cites the proposal can give each stratum its stage, as chapter 11's table does (BOOK-ZAYN-12 (e)).

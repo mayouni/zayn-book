@@ -19,6 +19,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-09 | 2026-11-24 | Findings of the research of Part IX, in parts, below | **Answered 2026-11-25**: the Zayn desk's NOTE of 2026-11-25 07:58 (the Zayn repository's outbox, lines 5718 to 5944), checked by the Zayn session against the code. (a) confirmed: the confirmation relayed for BOOK-ZAYN-06 (g) was wrong and is withdrawn. `haro/judge-zayn-court.js` translates from the `.zayn` form to the grammar's, and its output feeds the forged court alone; the verifier reads the original; nothing translates the other way. The desk's probe: 0 of 77 fixtures are sentences of the grammar, 66 of 77 translations are, and the verifier answers `SYNTAX_ERROR` on all 77 translations. The desk withdraws its recommendation for LANG-RECORD-GAPS-01 (c), which rested on the withdrawn line. The other 21 parts are confirmed as stated; of (c), "33 errors" stands in no tracked file of the repository, the desk's own count on one probe file. Texts corrected after the pin, local commits on d01d322, not pushed: 1408405 (a: the pages say which form each reader reads, held by a check FORMS_SAID that found 4 problems before the fix and 0 after), 7e32c0e (h, m, u 8 and 10), 45da235 (g, s, u 15 and 17), 02be560 (r's comments). Ten new rows go to the author, and five parts join rows already with him (table below). The sentences of Part IX that hang on a ruling stay as they are until he rules | Routed by the Zayn session to the desk as ZAYN-LAW-BOOK-READ-04 (2026-11-24 23:30); none of the rows ruled yet |
 | BOOK-ZAYN-10 | 2026-11-24 | Findings of the research of Part X, in parts, below | **Filed 2026-11-24**, with the memo of Part X. Two parts are the open questions that chapters 25 and 26 leave to their reader |
 | BOOK-ZAYN-11 | 2026-11-26 | Findings of the research and the readings of Part II, in parts, below | **Filed 2026-11-26**, with the memo of Part II |
+| BOOK-ZAYN-12 | 2026-11-27 | Findings of the research and the readings of Part IV, in parts, below | **Filed 2026-11-27**, with the memo of Part IV |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -402,3 +403,42 @@ files of the pin or run on its reference verifier. A finding against the law or 
 
 **Sentences of Part II that a ruling would change.** Part (a): chapter 4's *The law names its instruments*. Part (d): chapter 3's
 *Where the painted page judges*. Part (g): chapter 5's exercise. Part (j): chapter 3's paragraph on a tier and a refusal.
+
+## BOOK-ZAYN-12, in parts (filed 2026-11-27)
+
+Found while researching chapters 10 and 11, in their verifiers' reports and in the readings of the six doors, each read in the
+files of the pin or run on its reference verifier. A finding against the law or the language is a gift to it.
+
+- **(a) "clean … at level 4" with no symbol table.** The level-3 fixture `invisible-state.zayn`, run `--level 4` with no
+  `--symbols`, prints "clean — 1 file(s), 0 violations at level 4" and exits 0; with the manifest's table it is refused
+  `INVISIBLE_STATE`. The README says "undecidable is silence, never a pass" (`tools/zayn/README.md:61`). A summary that names the
+  checks a run could not feed would say it. Sharpens BOOK-ZAYN-11 (b).
+- **(b) The two payment surfaces of ledger A3.** "fixtures written and run 2026-08-12" (`doc/EVIDENCE-LEDGER.md:35`), `verified`;
+  no folder of the pin holds them, and the run was on the law and language of 3.7.3, before `ROLE` and `SIGNALS`. Keeping the pair
+  (perhaps in `examples/`) or dating the row to the language it was measured on would let a page show them. Chapter 10 tells the
+  case as recorded and runs today's declaration.
+- **(c) The audit's findings cite causes, not rules.** Of the distinct finding tags of `tools/ui-audit.html`, one names a rule
+  (`[K01 TYPE_SCALE; Rule 105]`, `:850`). Extends BOOK-ZAYN-11 (c).
+- **(d) No check reads where an undo sits**, though Rule 79's avoid list names "Undo buried in menus" and the design system's
+  `notice` asks for "a visible grace period" (`doc/design/DESIGN-SYSTEM.md:665`). Chapter 10 gives it to a person.
+- **(e) The founding's status lines lag the code.** `doc/THE-SECOND-FOUNDING.md:933-934` ("nothing is implemented … none is
+  written") and `:835`; `doc/SECOND-FOUNDING-PLAN.md:236,512` ("Grammar not built"). The grammar, contract and verifier hold
+  `SIGNALS` and `ROLE` (`tools/zayn/zayn.js:75`). Chapter 11 carries the stage from the code.
+- **(f) The founding sources TEMPO and MOTION from two rules on other subjects**: Rule 100 (`:520`) and Rule 19 (`:58`). Rule 100
+  is about business numbers quoted from the record, Rule 19 about hit areas and modals. The same kind of finding the role design
+  made for Set 13 (`doc/ROLE-DESIGN.md:30-54`).
+- **(g) `EXPRESSION_ORPHAN`'s `decidable_from` lists `SIGNALS` only** (`conformance/violations.json:311`); the verifier raises it for
+  `ROLE` (run in chapter 11, `open.zayn`).
+- **(h) `MOTION` is named among the expression fields** (`doc/language/DECLARATIONS.md:309-311`) and is no expression field of the
+  verifier; a `FEEDBACK` with motion and no `SATISFIES` gets `DECORATIVE_ANIMATION` alone, and any word is accepted as its value.
+- **(i) The role design contradicts itself** on `CONFIRM_ON_REVERSIBLE`: withdrawn at `doc/ROLE-DESIGN.md:127`, "the one that pays
+  for the stratum" at `:168`; ledger Q6 marks that claim `verified` (`doc/EVIDENCE-LEDGER.md:305`).
+- **(j) A stale note.** `ROLE_MISPLACED`'s note says `TONE` and `PERSPECTIVE` "are ignored today when they appear on the wrong kind"
+  (`conformance/violations.json:356`; `tools/zayn/zayn.js:525-527`); since language 1.4 they raise `FIELD_MISPLACED`.
+- **(k) `DENSITY`**, a word of the founding's STRUCTURE, is a field no check reads; the record does not say whether it is to be
+  closed.
+- **(l) Three codes for the undo.** Four of six doors read `MISSING_UNDO` and `ROLE_PROMISE_BROKEN` as two codes for one shape.
+  The contract scopes them apart (`ACT` declared or not; `violations.json:382`), and `IRREVERSIBLE_CLAIMS_UNDO` is their mirror. One
+  sentence in the contract's preface stating which fires when would serve a second implementation.
+- **(m) The line a finding is reported on** moves between the field's line and the `DEFINE` line, and the court compares codes;
+  the tool builder's door asks the contract to say which, so a second implementation knows what conformance compares.

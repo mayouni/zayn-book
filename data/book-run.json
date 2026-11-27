@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-26 00:52 UTC+01:00",
+  "date": "2026-11-27 09:26 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -125,6 +125,16 @@
    "site.pairs": 37,
    "gbnf.rules": 29,
    "gbnf.kinds": 10,
+   "audit.checks": 37,
+   "audit.paint": 32,
+   "audit.files": 5,
+   "audit.widths": 6,
+   "lang.expression": 2,
+   "lang.roles": 5,
+   "diag.role": 7,
+   "diag.signal": 3,
+   "signal.values": 5,
+   "diag.declared": 39,
    "suite.1.pass": 12,
    "suite.1.fail": 0,
    "suite.1.skipped": 65,
@@ -440,7 +450,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:52 UTC+01:00"
+   "ran": "2026-11-27 09:26 UTC+01:00"
   },
   "en/02-what-the-corrections-show": {
    "id": "what-the-corrections-show",
@@ -719,7 +729,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:52 UTC+01:00"
+   "ran": "2026-11-27 09:26 UTC+01:00"
   },
   "en/03-what-the-field-wrote": {
    "id": "what-the-field-wrote",
@@ -1216,7 +1226,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-26 00:53 UTC+01:00"
+   "ran": "2026-11-27 09:26 UTC+01:00"
   },
   "en/04-the-instruments-of-the-field": {
    "id": "the-instruments-of-the-field",
@@ -1551,7 +1561,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-26 00:53 UTC+01:00"
+   "ran": "2026-11-27 09:27 UTC+01:00"
   },
   "en/05-the-road-sign": {
    "id": "the-road-sign",
@@ -1958,7 +1968,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:53 UTC+01:00"
+   "ran": "2026-11-27 09:27 UTC+01:00"
   },
   "en/06-intent-first": {
    "id": "intent-first",
@@ -2394,7 +2404,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:54 UTC+01:00"
+   "ran": "2026-11-27 09:27 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -2940,7 +2950,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:54 UTC+01:00"
+   "ran": "2026-11-27 09:28 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -3451,7 +3461,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:54 UTC+01:00"
+   "ran": "2026-11-27 09:28 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -3767,7 +3777,747 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:55 UTC+01:00"
+   "ran": "2026-11-27 09:28 UTC+01:00"
+  },
+  "en/10-what-a-declaration-cannot-see": {
+   "id": "what-a-declaration-cannot-see",
+   "blocks": [
+    {
+     "hash": "de2cc199c610",
+     "name": "payments.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "de2cc199c610",
+     "name": "payments.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"payments.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "eeddff520ec2",
+     "name": "approve.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "MISSING_UNDO",
+       "approve_payment"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "approve.zayn:1  error  MISSING_UNDO  approve_payment\n    An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "MISSING_UNDO",
+       "severity": "error",
+       "subject": "approve_payment",
+       "line": 1,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"approve.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"MISSING_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An act declares no way back: SATISFIES holds ACT, ALWAYS_REACHABLE lacks UNDO.\",\n      \"span\": {\n        \"file\": \"approve.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"approve_payment\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "425ae6d15522",
+     "name": "approve.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"approve.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "f7703fbbe4e4",
+     "name": "card.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"card.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "f7995cac0b64",
+     "name": "send.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "IRREVERSIBLE_CLAIMS_UNDO",
+       "send_payment"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "send.zayn:4  error  IRREVERSIBLE_CLAIMS_UNDO  irreversible send_payment declares UNDO\n    An irreversible control declares an UNDO it cannot honour.\n    Rule 79 · The Undo Covenant · Article IV · the right to reverse\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "IRREVERSIBLE_CLAIMS_UNDO",
+       "severity": "error",
+       "subject": "irreversible send_payment declares UNDO",
+       "line": 4,
+       "cites": [
+        "rule:79",
+        "article:reversibility",
+        "right:reverse"
+       ],
+       "level": 2,
+       "message": "An irreversible control declares an UNDO it cannot honour."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"send.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"IRREVERSIBLE_CLAIMS_UNDO\",\n      \"severity\": \"error\",\n      \"message\": \"An irreversible control declares an UNDO it cannot honour.\",\n      \"span\": {\n        \"file\": \"send.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"rule:79\",\n        \"article:reversibility\",\n        \"right:reverse\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"irreversible send_payment declares UNDO\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "30e92d3abde9",
+     "name": "send.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"send.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "40ad02abed3f",
+     "name": "send.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"send.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 8,
+   "runnable": 8,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "missing-undo.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MISSING_UNDO"
+     ],
+     "got_ids": [
+      "MISSING_UNDO"
+     ],
+     "pass": true
+    },
+    {
+     "file": "missing-undo-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "role-acts-without-consequence.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "got_ids": [
+      "ROLE_ACTS_WITHOUT_CONSEQUENCE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "role-acts-without-consequence-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "menu-landing-not-first.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "got_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "got_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [
+    {
+     "hash": "b47d81929d9f",
+     "runs": [
+      {
+       "command": "zayn check payments.zayn --level 4",
+       "output": "clean — 1 file(s), 0 violations at level 4 against Zayn v3.17",
+       "exit": 0
+      }
+     ],
+     "exit": 0,
+     "promise": 0,
+     "verdict": "kept"
+    }
+   ],
+   "ran": "2026-11-27 09:29 UTC+01:00"
+  },
+  "en/11-the-strata-of-expression": {
+   "id": "the-strata-of-expression",
+   "blocks": [
+    {
+     "hash": "915bdcb5000c",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_SIGNAL",
+       "overdue_invoices"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:3  error  UNKNOWN_SIGNAL  red in SIGNALS of overdue_invoices\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "red in SIGNALS of overdue_invoices",
+       "line": 3,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"red in SIGNALS of overdue_invoices\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "4723c639104a",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8679de6a824e",
+     "name": "archive.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_ROLE",
+       "archive_invoice"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "archive.zayn:4  error  UNKNOWN_ROLE  button on archive_invoice\n    A ROLE value is not one of the five promises this language defines.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_ROLE",
+       "severity": "error",
+       "subject": "button on archive_invoice",
+       "line": 4,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A ROLE value is not one of the five promises this language defines."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"archive.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_ROLE\",\n      \"severity\": \"error\",\n      \"message\": \"A ROLE value is not one of the five promises this language defines.\",\n      \"span\": {\n        \"file\": \"archive.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"button on archive_invoice\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3ec7d493aecb",
+     "name": "archive.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"archive.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3c43cca947e5",
+     "name": "open.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "EXPRESSION_ORPHAN",
+       "open_invoice"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "open.zayn:2  error  EXPRESSION_ORPHAN  ROLE on open_invoice traces to no intent\n    An expression field is declared on a declaration that satisfies no intent.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "EXPRESSION_ORPHAN",
+       "severity": "error",
+       "subject": "ROLE on open_invoice traces to no intent",
+       "line": 2,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "An expression field is declared on a declaration that satisfies no intent."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"open.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"EXPRESSION_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"An expression field is declared on a declaration that satisfies no intent.\",\n      \"span\": {\n        \"file\": \"open.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"ROLE on open_invoice traces to no intent\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "95e688c65695",
+     "name": "open.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"open.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "561b65f4bc9d",
+     "name": "saved.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "row_saved"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "saved.zayn:1  error  DECORATIVE_ANIMATION  row_saved\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "row_saved",
+       "line": 1,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"saved.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"saved.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"row_saved\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "d05b68b1319f",
+     "name": "saved.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"saved.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "b5c6efceb8e0",
+     "name": "purge.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "purge_done"
+      ],
+      [
+       "INVALID_TONE",
+       "purge_done"
+      ],
+      [
+       "UNKNOWN_ROLE",
+       "purge_archive"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "purge.zayn:4  error  UNKNOWN_ROLE  danger_button on purge_archive\n    A ROLE value is not one of the five promises this language defines.\n    Article II\npurge.zayn:7  error  INVALID_TONE  danger on purge_done\n    TONE outside its enumeration.\npurge.zayn:7  error  DECORATIVE_ANIMATION  purge_done\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_ROLE",
+       "severity": "error",
+       "subject": "danger_button on purge_archive",
+       "line": 4,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 1,
+       "message": "A ROLE value is not one of the five promises this language defines."
+      },
+      {
+       "code": "INVALID_TONE",
+       "severity": "error",
+       "subject": "danger on purge_done",
+       "line": 7,
+       "cites": [],
+       "level": 2,
+       "message": "TONE outside its enumeration."
+      },
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "purge_done",
+       "line": 7,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"purge.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_ROLE\",\n      \"severity\": \"error\",\n      \"message\": \"A ROLE value is not one of the five promises this language defines.\",\n      \"span\": {\n        \"file\": \"purge.zayn\",\n        \"line\": 4\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"danger_button on purge_archive\"\n    },\n    {\n      \"code\": \"INVALID_TONE\",\n      \"severity\": \"error\",\n      \"message\": \"TONE outside its enumeration.\",\n      \"span\": {\n        \"file\": \"purge.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"danger on purge_done\"\n    },\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"purge.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"purge_done\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "27a876b93b6b",
+     "name": "purge.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"purge.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6a57e475f164",
+     "name": "purge.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"purge.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 11,
+   "runnable": 11,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "unknown-signal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "got_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "expression-orphan.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "EXPRESSION_ORPHAN"
+     ],
+     "got_ids": [
+      "EXPRESSION_ORPHAN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "expression-orphan-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-role.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_ROLE"
+     ],
+     "got_ids": [
+      "UNKNOWN_ROLE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-role-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "role-promise-broken.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "ROLE_PROMISE_BROKEN"
+     ],
+     "got_ids": [
+      "ROLE_PROMISE_BROKEN"
+     ],
+     "pass": true
+    },
+    {
+     "file": "decorative-animation.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "decorative-animation-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "invalid-tone.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "INVALID_TONE"
+     ],
+     "got_ids": [
+      "INVALID_TONE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-landing-not-first.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "got_ids": [
+      "MENU_LANDING_NOT_FIRST"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [],
+   "ran": "2026-11-27 09:29 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -4420,7 +5170,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:55 UTC+01:00"
+   "ran": "2026-11-27 09:29 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -4910,7 +5660,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:55 UTC+01:00"
+   "ran": "2026-11-27 09:30 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -5415,7 +6165,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:56 UTC+01:00"
+   "ran": "2026-11-27 09:30 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -6003,7 +6753,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:56 UTC+01:00"
+   "ran": "2026-11-27 09:30 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -6379,7 +7129,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:56 UTC+01:00"
+   "ran": "2026-11-27 09:31 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -6787,7 +7537,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:57 UTC+01:00"
+   "ran": "2026-11-27 09:31 UTC+01:00"
   },
   "en/22-the-ai-agent-under-the-law": {
    "id": "the-ai-agent-under-the-law",
@@ -7279,7 +8029,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:57 UTC+01:00"
+   "ran": "2026-11-27 09:31 UTC+01:00"
   },
   "en/23-the-ai-agent-as-a-user": {
    "id": "the-ai-agent-as-a-user",
@@ -7717,7 +8467,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:57 UTC+01:00"
+   "ran": "2026-11-27 09:32 UTC+01:00"
   },
   "en/24-a-grammar-for-generation": {
    "id": "a-grammar-for-generation",
@@ -8863,7 +9613,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:57 UTC+01:00"
+   "ran": "2026-11-27 09:32 UTC+01:00"
   },
   "en/25-the-command-and-the-gate": {
    "id": "the-command-and-the-gate",
@@ -9422,7 +10172,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-26 00:58 UTC+01:00"
+   "ran": "2026-11-27 09:32 UTC+01:00"
   },
   "en/26-a-site-under-its-own-law": {
    "id": "a-site-under-its-own-law",
@@ -9680,7 +10430,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-26 00:58 UTC+01:00"
+   "ran": "2026-11-27 09:33 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -9690,7 +10440,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-26 00:58 UTC+01:00"
+   "ran": "2026-11-27 09:33 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -9700,7 +10450,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-26 00:58 UTC+01:00"
+   "ran": "2026-11-27 09:33 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -9710,7 +10460,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-26 00:58 UTC+01:00"
+   "ran": "2026-11-27 09:33 UTC+01:00"
   }
  }
 }

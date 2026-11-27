@@ -262,7 +262,34 @@ def law_facts(snap):
     }
     facts.update(_record_facts(snap))
     facts.update(_history_facts(snap, law, rules, diags))
+    facts.update(_expression_facts(snap, diags))
     return facts
+
+
+def _expression_facts(snap, diags):
+    """Part IV: the audit's numbered checks (the rows of doc/design/DESIGN-SYSTEM.md section 7, and the keys of SYS_CHECKS in
+    tools/ui-audit.html, the ones run on the painted page) and its widths; the verifier's expression fields and roles
+    (tools/zayn/zayn.js); the kinds of finding decided from ROLE and from SIGNALS (the contract's decidable_from)."""
+    ds = (snap / "doc" / "design" / "DESIGN-SYSTEM.md").read_text(encoding="utf-8")
+    ui = (snap / "tools" / "ui-audit.html").read_text(encoding="utf-8")
+    zj = (snap / "tools" / "zayn" / "zayn.js").read_text(encoding="utf-8")
+    rows = set(re.findall(r"(?m)^\|\s*(K\d\d)\s", ds))
+    m_chk = re.search(r"const SYS_CHECKS = \{(.*?)\};", ui, re.S)
+    paint = set(re.findall(r"(K\d\d):", m_chk.group(1))) if m_chk else set()
+    m_w = re.search(r"const SYS_WIDTHS = \[(.*?)\]", ui)
+    m_e = re.search(r"const EXPRESSION_KEYS = \[(.*?)\]", zj)
+    m_r = re.search(r"const ROLES = new Set\(\[(.*?)\]\)", zj)
+
+    def from_field(f):
+        return sum(1 for x in diags if any(str(v).split(".")[0] == f for v in (x.get("decidable_from") or []))) or None
+    return {"audit.checks": len(rows) or None, "audit.paint": len(paint) or None,
+            "audit.files": len(rows - paint) or None,
+            "audit.widths": len(re.findall(r"\d+", m_w.group(1))) if m_w else None,
+            "lang.expression": len(re.findall(r"'([A-Z_]+)'", m_e.group(1))) if m_e else None,
+            "lang.roles": len(re.findall(r"'([a-z_]+)'", m_r.group(1))) if m_r else None,
+            "diag.role": from_field("ROLE"), "diag.signal": from_field("SIGNALS"),
+            "signal.values": len(json.loads((snap / "conformance" / "signal.json").read_text(encoding="utf-8")).get("values") or []) or None,
+            "diag.declared": (len(diags) - sum(1 for x in diags if x.get("level") == 4)) or None}
 
 
 def pin_files(snap):
