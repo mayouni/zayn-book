@@ -25,7 +25,7 @@ its last run; a court fixture is missing or answers otherwise than the suite's m
 the fixed headings, or holds a declaration outside a plate or without its "In words" line; a token cannot be read; a colour
 sits outside the variables; the type scale is out of order. It still writes the page first, so the failure can be seen.
 """
-import html, json, re, subprocess, sys
+import html, json, os, re, subprocess, sys
 from book_common import (media_facts, grid, ladder, pin_files, ROOT, sources, structure, code_blocks, block_hash, load_json, now, stamp, snapshot, law_data,
                          closed_lists, fields_by_kind, GH_BLOB, PIN_TAG)
 from book_judge import WORDS
@@ -67,7 +67,7 @@ UI = {
     "levels_h": ["Level", "Its name", "What the verifier is given", "What it decides", "Kinds of finding"],
     "lists_h": ["Field", "On", "The values it admits, and no others"],
     "fields_h": ["Kind", "The fields it carries, beyond those every kind carries"], "fields_none": "none of its own",
-    "spec_src": "Printed from the language specification, version {v}.",
+    "spec_src": "Printed from the language specification, version {v} (doc/language/DECLARATIONS.md and VIOLATIONS.md).",
     "contract_src": "Printed from the verifier's contract, version {v}.",
     "suite_ran": "run at this build by the suite's own runner, in the snapshot of Zayn",
     "rule": "Rule", "article": "Article", "set": "Set", "tier": "Tier", "why": "Why", "right_label": "A right of the user",
@@ -88,12 +88,23 @@ UI = {
     "ladder_src": "Counted by citation at this build, from the contract, the verifier's code and the files of the two audits; each audit citation is checked against its file. A citation shows that an instrument reads the rule. Which clauses it reads is said rule by rule in the chapter.",
     "inst_ui": "painted page", "inst_shot": "screenshot",
     "anatomy_h": ["Field, as the file names it", "What this rule holds"],
-    "grid_h0": "Medium", "grid_legend": "The columns are the activities of the user: {legend}.", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns.",
+    "grid_h0": "Medium", "grid_legend": "The columns are the activities of the user: {legend}.", "grid_closed": "closed", "grid_src": "Counted at this build from the placement of the rules (doc/design/coverage-placement.json), the media (conformance/media.json) and the verbs each activity owns (doc/design/coverage-count.js). A number is the count of rules placed on the cell; closed means that the medium carries none of the verbs the activity owns. Perceive and trust own no verbs, so their cells are never closed.",
     "causes_h": ["Group", "Cause, the default that produced the defect", "Corrections", "Name an earlier one, and the share"],
     "causes_src": "Counted at this build from Zayn's corpus of corrections (doc/design/corpus/corpus.json): for each cause, the corrections filed under it, and those that name an earlier correction of the same defect, with their share.",
     "media_h": ["Medium", "What it is", "Verbs carried fully, at a cost, not at all", "May carry a surface alone"],
     "media_src": "Printed from Zayn's data of the media (conformance/media.json): for each medium, how many of the law's verbs it carries, carries at a cost, or does not carry at all.",
     "yes": "yes", "no": "no",
+    "grammar_src": "Printed from the language's grammar at the pin (doc/language/GRAMMAR.md), its notation blocks as written; the prose between them stays in the specification.",
+    "checks_h": ["Check", "What it reads", "It fails when", "Causes", "Read on"],
+    "checks_paint": "the painted page", "checks_files": "the site's files",
+    "checks_src": "Printed from the table of checks of Zayn's design system at the pin (doc/design/DESIGN-SYSTEM.md, section 7), and, for where each is read, from the list of checks the audit runs on the painted page (tools/ui-audit.html, SYS_CHECKS). The causes are the letters of the corpus of corrections, as chapter 2 gives them.",
+    "acts_h": ["Activity", "The verbs it owns"],
+    "acts_src": "Printed from the map of verbs to activities that Zayn's grid is counted from (doc/design/coverage-count.js).",
+    "carriage_h": ["Medium", "Carries at a cost", "Does not carry"],
+    "carriage_none": "none",
+    "carriage_src": "Printed from Zayn's data of the media (conformance/media.json), each verb resolved as Zayn's cross-medium tool resolves it; a verb not listed in a row is carried fully.",
+    "bookdata_h": ["Page", "Declarations run, kept", "Court fixtures, answering", "Command lines"],
+    "bookdata_src": "Printed from this build's record of its run (data/book-run.json): for each page, the declarations it shows and the court of fixtures it names, each run against the verifier of the release at this build.",
     "pins_h": ["A data file of Zayn", "The version of the law it records"],
     "pins_src": "Read from each file at the version of Zayn this book reads.",
     "sources_src": "Printed from the book's register of sources, research/FIELD.md.",
@@ -108,7 +119,7 @@ UI = {
     "home_label": "AYOUNI Press: home", "home_url": "https://mayouni.github.io/ayouni/",
     # the open book (house OPEN-BOOK.md, lines 27 and 28): the invitation and the colophon line, word for word
     "invite": "If this book is useful to your organisation, I work with organisations on its subjects: paper copies in quantity, workshops and training, talks, consulting and the building of solutions. Write to ",
-    "invite_mail": "kalidianow@gmail.com", "offer_link": "How these books are offered",
+    "offer_link": "How these books are offered",
     "colophon": "Copyright © 2026 Mansour Ayouni. Free to read and share under CC BY-NC-ND 4.0; code under the MIT licence.",
     "offer_url": "https://mayouni.github.io/ayouni/offer/", "licence_url": "https://mayouni.github.io/ayouni/licence/",
     "pdf_public": "../book.pdf", "pdf_local": "../print/zayn-en.pdf",
@@ -408,6 +419,10 @@ pre.numbered .cl.cited{background:var(--code-cited);border-left-color:var(--code
 .chapter-page p.table-src{font-family:var(--sans);color:var(--soft);margin:-1.1em 0 1.6em;text-indent:0;text-align:left;}
 .book-table .set-why{display:block;color:var(--soft);margin-top:2px;}
 .book-table td code.nb{white-space:nowrap;overflow-wrap:normal;}
+.check-list{list-style:none;padding:0;margin:1.4em 0;font-family:var(--sans);font-size:0.8em;line-height:1.5;}
+.check-list li{border-top:1px solid var(--rule);padding:0.6em 0;}
+.check-list li p{margin:0.2em 0;}
+.check-list code{overflow-wrap:anywhere;}
 .law-card{border:1px solid var(--rule);border-left:4px solid var(--ink);border-radius:0 8px 8px 0;margin:1.6em 0;padding:12px 18px 12px;background:var(--card-bg);font-family:var(--sans);}
 .law-card .lc-head{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;margin-bottom:6px;}
 .law-card .lc-num{font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--bookmark-text);}
@@ -1121,6 +1136,92 @@ def causes_table(law, ui):
             + f'<p class="table-src">{html.escape(ui["causes_src"])}</p>')
 
 
+def grammar_blocks(law, ui):
+    """Appendix B: the grammar's notation blocks, each under the heading of its section, as the specification writes them."""
+    text = (law["snap"] / "doc" / "language" / "GRAMMAR.md").read_text(encoding="utf-8").replace("\r\n", "\n")
+    out, head = [], ""
+    for m in re.finditer(r"(?ms)^## ([^\n]+)$|^```ebnf\n(.*?)^```", text):
+        if m.group(1):
+            head = re.sub(r"^\d+\.\s*", "", m.group(1).strip())
+        elif m.group(2):
+            out.append(f'<h4 class="subsubsection-h">{html.escape(head)}</h4>'
+                       f'<pre class="grammar"><code>{html.escape(m.group(2).rstrip())}</code></pre>')
+    if not out:
+        raise SystemExit("grammar: the specification at the pin holds no notation block")
+    return "\n".join(out) + f'<p class="table-src">{html.escape(ui["grammar_src"])}</p>'
+
+
+def checks_table(law, ui):
+    """Appendix D: the numbered checks of the painted page, as the design system tables them, and where each is read."""
+    snap = law["snap"]
+    ds = (snap / "doc" / "design" / "DESIGN-SYSTEM.md").read_text(encoding="utf-8")
+    ua = (snap / "tools" / "ui-audit.html").read_text(encoding="utf-8")
+    m = re.search(r"const SYS_CHECKS = \{(.*?)\};", ua, re.S)
+    paint = set(re.findall(r"(K\d\d):", m.group(1))) if m else set()
+    rows = []
+    for line in ds.splitlines():
+        r = re.match(r"^\|\s*(K\d\d)\s+([A-Z_]+)\s*\|(.*)\|\s*$", line)
+        if not r:
+            continue
+        cells = [re.sub(r"\s*\([A-Z]+(?:-[A-Z0-9]+)+\)", "", c.strip()) for c in r.group(3).split("|")]
+        if len(cells) < 3:
+            continue
+        where = ui["checks_paint"] if r.group(1) in paint else ui["checks_files"]
+        rows.append(f'<li><p><strong><code>{html.escape(r.group(1))} {html.escape(r.group(2))}</code></strong> '
+                    f'<span class="set-why">{html.escape(ui["checks_h"][4])}: {html.escape(where)} · {html.escape(ui["checks_h"][3])}: {html.escape(cells[2])}</span></p>'
+                    f'<p>{html.escape(ui["checks_h"][1])}: {inline(cells[0])}. {html.escape(ui["checks_h"][2])}: {inline(cells[1])}.</p></li>')
+    if not rows:
+        raise SystemExit("checks: the design system at the pin tables no check")
+    return '<ul class="check-list">' + "".join(rows) + f'</ul><p class="table-src">{html.escape(ui["checks_src"])}</p>'
+
+
+def acts_table(law, ui):
+    """Appendix E: the verbs each activity of the user owns, from the map the grid is counted from."""
+    src = (law["snap"] / "doc" / "design" / "coverage-count.js").read_text(encoding="utf-8")
+    m = re.search(r"const VERBS = \{(.*?)\};", src, re.S)
+    verbs = {k: re.findall(r"'([A-Z]+)'", v) for k, v in re.findall(r"(\w+):\s*\[(.*?)\]", m.group(1), re.S)} if m else {}
+    rows = [[html.escape(a), " ".join(f"<code>{html.escape(v)}</code>" for v in vs)] for a, vs in verbs.items()]
+    if not rows:
+        raise SystemExit("acts: the map of verbs to activities could not be read at the pin")
+    return render_table(rows, "book-table families", ui["acts_h"]) + f'<p class="table-src">{html.escape(ui["acts_src"])}</p>'
+
+
+def carriage_table(law, ui):
+    """Appendix E: for each medium, the verbs it carries at a cost and the verbs it does not carry."""
+    rows = []
+    for r in law.get("media") or []:
+        def of(kind):
+            vs = [v for v, k in r["kinds"].items() if k == kind]
+            return " ".join(f"<code>{html.escape(v)}</code>" for v in vs) if vs else html.escape(ui["carriage_none"])
+        rows.append(f"<li><p><strong><code>{html.escape(r['id'])}</code></strong></p>"
+                    f"<p>{html.escape(ui['carriage_h'][1])}: {of('degraded')}.</p><p>{html.escape(ui['carriage_h'][2])}: {of('absent')}.</p></li>")
+    if not rows:
+        raise SystemExit("carriage: no medium read at the pin")
+    return '<ul class="check-list">' + "".join(rows) + f'</ul><p class="table-src">{html.escape(ui["carriage_src"])}</p>'
+
+
+def bookdata_table(law, ui):
+    """Appendix H: this build's own record, page by page."""
+    chapters = (law.get("runs") or {}).get("chapters") or {}
+    rows = []
+    for key, r in chapters.items():
+        court = r.get("court") or []
+        if not r.get("runnable") and not court:
+            continue
+        shell = r.get("shell") or []
+        stem = key.split('/')[-1]
+        m_ch = re.match(r"^(\d+)-", stem)
+        m_ap = re.match(r"^a(\d+)-", stem)
+        label = (f"{ui['chapter']} {int(m_ch.group(1))}" if m_ch else f"{ui['appendix']} {chr(64 + int(m_ap.group(1)))}" if m_ap else stem)
+        rows.append([html.escape(label),
+                     f'{r.get("runnable", 0)}, {r.get("kept", 0)}',
+                     f'{len(court)}, {sum(1 for c in court if c.get("pass"))}',
+                     str(len(shell)) if shell else "0"])
+    if not rows:
+        raise SystemExit("bookdata: the build's record holds no page")
+    return render_table(rows, "book-table families", ui["bookdata_h"]) + f'<p class="table-src">{html.escape(ui["bookdata_src"])}</p>'
+
+
 def pins_table(law, ui):
     rows = [[f"<code>{html.escape(p)}</code>", html.escape(v)] for p, v in law.get("pins") or []]
     if not rows:
@@ -1271,6 +1372,11 @@ def convert_body(body, meta, ui, run_rec, law, version, errors, where, suite=Non
             flush(); out.append(grid_table(law, ui)); i += 1; continue
         if s == "{{pins}}":
             flush(); out.append(pins_table(law, ui)); i += 1; continue
+        if s in ("{{grammar}}", "{{checks}}", "{{acts}}", "{{carriage}}", "{{bookdata}}"):
+            flush()
+            fn = {"{{grammar}}": grammar_blocks, "{{checks}}": checks_table, "{{acts}}": acts_table,
+                  "{{carriage}}": carriage_table, "{{bookdata}}": bookdata_table}[s]
+            out.append(fn(law, ui)); i += 1; continue
         m_set = re.match(r"^\{\{set:(\d+)\}\}$", s)
         if m_set:
             flush(); out.append(set_rules_table(m_set.group(1), law, ui, version)); i += 1; continue
@@ -1573,11 +1679,27 @@ def proof_html(p, runs, ui, stale):
     return out
 
 
+def invite_mail():
+    """The invitation's address, which the author sets himself in the environment variable AYOUNI_INVITE_MAIL; the
+    script holds no address. On Windows a variable set for the user after the session began is read from the registry."""
+    v = os.environ.get("AYOUNI_INVITE_MAIL", "").strip()
+    if not v and sys.platform == "win32":
+        try:
+            import winreg
+            with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as k:
+                v = str(winreg.QueryValueEx(k, "AYOUNI_INVITE_MAIL")[0]).strip()
+        except OSError:
+            v = ""
+    if not v:
+        raise SystemExit("the invitation's address is not set: set the environment variable AYOUNI_INVITE_MAIL")
+    return v
+
+
 def the_invitation(ui):
     """The open book's standing invitation to organisations and the colophon line, once, at the end of the reader
     (house OPEN-BOOK.md, lines 27 and 28): word for word, no payment."""
     col = html.escape(ui["colophon"]).replace("CC BY-NC-ND 4.0", f'<a href="{ui["licence_url"]}">CC BY-NC-ND 4.0</a>')
-    mail = ui["invite_mail"]
+    mail = html.escape(invite_mail())
     return (f'<section class="the-invite"><p class="invite-line">{html.escape(ui["invite"])}<a href="mailto:{mail}">{mail}</a>.</p>'
             f'<p class="invite-more"><a href="{ui["offer_url"]}">{html.escape(ui["offer_link"])}</a></p>'
             f'<p class="colophon-line">{col}</p></section>\n')
@@ -1759,6 +1881,7 @@ def main():
     law["corpus"] = json.loads((snap / "doc" / "design" / "corpus" / "corpus.json").read_text(encoding="utf-8"))
     law["spec_version"] = (runs.get("run", {}).get("law") or {}).get("lang.version")
     law["release"] = release_files(snap, (runs.get("run", {}).get("law") or {}).get("release.version"))
+    law["snap"], law["runs"] = snap, runs
     en_src = sources("en")
     errors = []
 

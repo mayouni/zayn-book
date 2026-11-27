@@ -191,8 +191,13 @@ stopped them.
   (designer, AI agent) and fixed. Field: F-90 to F-92, F-95 to F-102, F-105 to F-108. New tokens: `culture.tokens`,
   `site.cultures`, `corpus.relays`, `corpus.candidates`, `corpus.law_cited`, `corpus.law_rules`, `law.above104`. A command the
   build cannot run (the pack's check, `--contract`) is told as this book's dated research run. Requests: BOOK-ZAYN-13 (a) to (k).
-- Next: every part is drafted and read; the preface (his), the appendices still to write (B, D, E, G, H), and the author's
-  `[AUTHOR: ...]` stakes. For each chapter:
+  The desk published it on the author's "Yes, publish" (3db7c05, house eac4828).
+- 2026-11-27, night: **the appendices B, D, E, G and H written**: B, D, E and H generated from the pin by new directives
+  (`{{grammar}}`, `{{checks}}`, `{{acts}}`, `{{carriage}}`, `{{bookdata}}`), G the glossary by hand; read by a verifier and the AI
+  agent's door, every item fixed. **The build holds no e-mail address**: the invitation's address is read from the environment
+  variable `AYOUNI_INVITE_MAIL` (set by the author's word for his user account; on Windows read from the registry if the session
+  began before it was set). A build without it stops and says so.
+- Next: the preface (his) and the author's `[AUTHOR: ...]` stakes. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.
