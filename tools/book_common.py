@@ -282,7 +282,12 @@ def _expression_facts(snap, diags):
 
     def from_field(f):
         return sum(1 for x in diags if any(str(v).split(".")[0] == f for v in (x.get("decidable_from") or []))) or None
-    return {"audit.checks": len(rows) or None, "audit.paint": len(paint) or None,
+    css = (snap / "site" / "stz.css").read_text(encoding="utf-8")
+    m_g = re.search(r'\[data-vibe="guardian"\]\s*\{(.*?)\}', css, re.S)
+    m_c = re.search(r"const SYS_CULTURES = \[(.*?)\];", ui, re.S)
+    return {"culture.tokens": len(set(re.findall(r"(--[\w-]+)\s*:", m_g.group(1)))) if m_g else None,
+            "site.cultures": len(re.findall(r"\['\w+',\s*'\w+'\]", m_c.group(1))) if m_c else None,
+            "audit.checks": len(rows) or None, "audit.paint": len(paint) or None,
             "audit.files": len(rows - paint) or None,
             "audit.widths": len(re.findall(r"\d+", m_w.group(1))) if m_w else None,
             "lang.expression": len(re.findall(r"'([A-Z_]+)'", m_e.group(1))) if m_e else None,
@@ -480,6 +485,18 @@ def _history_facts(snap, law, rules, diags):
                     "corpus.oneday": sum(1 for x in recs if str(x.get("date") or "").startswith("2026-11-09")) or None,
                     "corpus.verbatim_repeat": sum(1 for x in recs if x.get("verbatim") is True and x.get("repeat") is True) or None,
                     "corpus.ruled": sum(1 for x in recs if x.get("ruling")) or None})
+        # chapter 20: relays (`also`), candidates kept apart, and the records whose `ruling` names a rule above 104
+        cited = {}
+        for x in recs:
+            for grp in re.findall(r"Rules? ([0-9][0-9 ,/and]*)", str(x.get("ruling") or "")):
+                for num in re.findall(r"\d+", grp):
+                    if int(num) > 104:
+                        cited.setdefault(x.get("n"), set()).add(int(num))
+        out.update({"corpus.relays": sum(len(x.get("also") or []) for x in recs) or None,
+                    "corpus.candidates": len(c.get("candidates") or []) or None,
+                    "corpus.law_cited": len(cited) or None,
+                    "corpus.law_rules": len(set().union(*cited.values())) if cited else None,
+                    "law.above104": sum(1 for r in rules if int(r["number"]) > 104) or None})
     # the files that record which version of the law they were checked against (metadata.constitution)
     pins = []
     for folder in ("conformance", "protocol"):

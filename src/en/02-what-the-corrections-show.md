@@ -30,7 +30,7 @@ Zayn's design study, a document that reads the corpus and proposes changes to th
 
 ## The corpus, counted
 
-The corpus is the file of my corrections: one data file, from which a page of Zayn's repository, the store of its files, is rendered. It holds {{n:corpus.records}} corrections of something a person sees, touches or hears, made in {{n:corpus.projects}} projects. Each record has the remark, in my words or in a session's paraphrase, the page or file, the date where the source gives one, what was wrong, what was asked, and the cause. {{n:corpus.verbatim}} keep my words as I typed them. {{n:corpus.repeat}} name an earlier correction of the same defect, and {{n:corpus.verbatim_repeat}} do both. On one day alone, 9 November 2026, I made {{n:corpus.oneday}}.
+The corpus is the file of my corrections: one data file, from which a page of Zayn's repository, the store of its files, is rendered. It holds {{n:corpus.records}} corrections of something a person sees, touches or hears, made in {{n:corpus.projects}} projects. Each record has the remark, in my words or in a session's paraphrase. It has the page or file, the date where the source gives one, what was wrong, what was asked, and the cause. {{n:corpus.verbatim}} keep my words as I typed them. {{n:corpus.repeat}} name an earlier correction of the same defect, and {{n:corpus.verbatim_repeat}} do both. On one day alone, 9 November 2026, I made {{n:corpus.oneday}}.
 
 The words say it before the counts do. "I told you a thousand times", on text set too small, in September. And on 9 November at half past three: "the same issue of text and space and bad line cuts AGAIN and AGAIN and AGAIN!!!!!!!!!!" The remark comes back because the default does.
 
@@ -38,7 +38,7 @@ Each correction is filed under a cause, and each cause is a default. The design 
 
 {{causes}}
 
-Read the last column: for each cause, the share of its corrections that name an earlier one. The causes with the largest share are those a person's eye judges first: the size of type, the width of a block, the balance of a line. By count, the words written for the writer come back most often, because they are the largest cause. On 15 August 2026, of cards brought back on small screens, I said to an AI model, as the corpus keeps my words: "This is the power of dogmatic influence you got from your training data." These are the defaults a generator carries from the interfaces it learned from.
+Read the last column: for each cause, the share of its corrections that name an earlier one. The causes with the largest share are those a person's eye judges first: the size of type, the width of a block, the balance of a line. By count, the words written for the writer come back most often, because they are the largest cause. On 15 August 2026 I spoke to an AI model of cards brought back on small screens. The corpus keeps my words: "This is the power of dogmatic influence you got from your training data." These are the defaults a generator carries from the interfaces it learned from.
 
 ## Three chains
 
@@ -48,7 +48,7 @@ A chain is a defect that a repair moved somewhere else. Here are three, each on 
 
 **A news-watching site of mine, 9 November 2026.** At 12:43: "use the wider space of the page ... we are in a sort of workstation site, not a tight textual web site". The repair stretched the cards. At one o'clock: "making best use of the space does not mean creating divs as large as this making the text hardly readable". Each correction had one bound, and the repair went past it on the other side.
 
-**The photograph of the Zayn site, 14 November 2026.** A review that I had asked for found the front page's first screen spent on its photograph, and its repair moved the photograph off that screen. My remark: "(b) I never asked you to remove the photo or to move it in the bottom of ther page!!!!" That remark became a check of the painted page, K32, which fails when the front page's first screen paints no photograph. The audit is a page of Zayn's repository that measures another page in a browser. Its recorded find for K32 was in the audit itself, and the audit's code says so: "found by K32 and K33 on the front page, 2026-11-15". One remark, one check, and the check found a defect the next day.
+**The photograph of the Zayn site, 14 November 2026.** A review that I had asked for found the front page's first screen spent on its photograph, and its repair moved the photograph off that screen. My remark: "(b) I never asked you to remove the photo or to move it in the bottom of ther page!!!!" That remark became a check of the painted page, K32, which fails when the front page's first screen paints no photograph. The audit is a page of Zayn's repository that measures another page in a browser. The audit's code records what the check then found: "found by K32 and K33 on the front page, 2026-11-15". K33 is the check that reads whether each image has loaded. One remark, one check, and the check found a defect on the front page the next day.
 
 The design study puts what the chains share in one sentence: "A correction stored as a symptom does not stop the defect; it moves it." Stored as its cause, a correction can become a rule, and some can be declared.
 
@@ -111,7 +111,7 @@ DEFINE SCREEN people_chart (
 In words: The same chart, and it shows the active filter.
 :::
 
-Clean. Other corrections belong to a person. On 10 November 2026 I wrote of the Zayn site's menu: "Use and Try are very simular lettting the navigation be cofusing." A `NAV_GRAPH` states an entry of a menu, and its `LABEL` is the name the menu shows.
+Clean. Other corrections belong to a person. On 10 November 2026 I wrote of the Zayn site's menu: "Use and Try are very simular lettting the navigation be cofusing." A `NAV_GRAPH` states a menu or one of its entries, and its `LABEL` is the name the menu shows.
 
 ::: plate Two labels a user confuses
 ```zayn menu.zayn
@@ -133,7 +133,7 @@ Clean. The verifier refuses two entries that carry one label, and two labels tha
 
 The Zayn site was built by AI models under the law it publishes, and I corrected it remark by remark. On 5 November 2026 I asked that every remark be kept: "ALL THSE REMARKS MUST BE DOCUMENTED TO BE INCLUDED IN THE CONSTITUION". Each remark of that pass went into the docket, the file where changes to the law are ruled, with its defect, its repair and the check that now holds it.
 
-The audit's first checks were written from the corpus's causes, and each of the later ones names the remark or the ruling it was written for. The design study records two full runs of the first checks on the site, before and after its stylesheet changed: "38 pages, five widths, both cultures: 380 renders each", read on 10 November 2026. And it records what no check replaces: "No counter can say the site reads well; the Principal looks at it in both cultures". The Principal is the record's word for me. The checks count, and I read.
+The audit's first checks were written from the corpus's causes, and each of the later ones names the remark or the ruling it was written for. The design study records two full runs of the first checks on the site, before and after its stylesheet changed: "38 pages, five widths, both cultures: 380 renders each", read on 10 November 2026. A culture is one of the site's two ways of drawing itself, Modern and Retro, and a render is one drawing of one page at one width in one culture. And it records what no check replaces: "No counter can say the site reads well; the Principal looks at it in both cultures". The Principal is the record's word for me. The checks count, and I read.
 
 ## What I refused
 
@@ -155,7 +155,7 @@ The court of a chapter is what proves it. In this chapter it is Zayn's conforman
 
 The field leads on the person. Its heuristics are applied by a reviewer, and its engines leave to a person what they cannot decide. The corpus agrees: its corrections are a person's, and the design study keeps a person's look as the last check of the site.
 
-The field leads on measuring the painted page, where these defects are seen. The ledger, the dated list of what the project found, records a test of 12 August 2026: two payment surfaces "differing by seven broken laws" were the same declaration, and both ran clean. The record answers with the audit of the painted page, whose later checks were each written from a remark or a ruling. And a culture that moves smoothly passes the verifier once it names a state that its motion reports: the check asks that motion report, and a person judges whether it does.
+The field leads on measuring the painted page, where these defects are seen. The ledger, the dated list of what the project found, records a test of 12 August 2026. Two drawings of one payment, one of them breaking seven rules of the law, "differing by seven broken laws", were the same declaration, and both ran clean; chapter 10 draws them. The record answers with the audit of the painted page, whose later checks were each written from a remark or a ruling. And a culture that moves smoothly passes the verifier once it names, in `REPORTS`, a state that its motion reports: the check asks that motion report, and a person judges whether it does.
 
 Zayn leads on keeping the corrections as data. Each one has its words, its date and its cause, so a team can count which default comes back, write the rule that names it, and check every case.
 
@@ -195,7 +195,7 @@ DEFINE INTERACTION stop_server (
 In words: An operator confirms, the server stops, and the control says that this cannot be taken back.
 :::
 
-Clean, and untrue. A control that says it cannot be taken back owes no undo, so the refusal goes; the first correction asked that the server can be started again. The second asked that the question be asked in place, where the button was, and not in the browser's box; `CONFIRM` names the user's act of confirming, whatever draws it. Write the form the record asks for. Try before you read on.
+Clean, and untrue. A control that says it cannot be taken back owes no undo: the verifier lifts `MISSING_UNDO` for the role `irreversible`, so the refusal goes; the first correction asked that the server can be started again. The second asked that the question be asked in place, where the button was, and not in the browser's box; `CONFIRM` names the user's act of confirming, whatever draws it. Write the form the record asks for. Try before you read on.
 
 ::: plate A stop that can be undone
 ```zayn server.zayn

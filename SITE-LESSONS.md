@@ -258,3 +258,49 @@ passed. The fixed pages were read a second time from the designer's door and the
   codes. One sentence in the contract would let a second implementation pass on its first run (BOOK-ZAYN-12 (m)).
 - **The stage of the strata.** The founding's status lines say nothing of the strata is built, while the verifier holds two; a page
   that cites the proposal can give each stratum its stage, as chapter 11's table does (BOOK-ZAYN-12 (e)).
+
+## Part VI, The Readers (chapters 14 and 15)
+
+Read on 2026-11-27 by a fresh verifier for each chapter and a voice reader for both, then by one reader from each of the six doors
+for the two pages in order (`research/verify/ch14.md`, `ch15.md`, `research/voice/`, `research/read/part6-*.md`). Verdicts of the
+doors: "ready after the items above" for every page from every door; none "not ready". Every item was fixed and the build passed.
+The fixed pages were read a second time from the designer's door and the AI agent's (`part6-designer-2.md`, `part6-ai-agent-2.md`):
+every page "ready after the items above"; their items were fixed in the same commit.
+
+- **A culture never takes away what is kept within reach.** Every door stopped on a principle wider than the check: a culture may
+  hide a verb nobody guarantees. The site's exhibit says the vibe "has no freedom over *what* the screen shows"; one sentence on the
+  site could give the check's size (BOOK-ZAYN-13 (a), (b)).
+- **The check reads one file.** Three doors asked for it beside the plate; a team that keeps its cultures apart from its screens
+  passes in silence. The site's page on cultures is where a team would read it.
+- **Rule 112, two halves.** Five doors: the verifier cites Rule 112 and the page called it a person's to judge. The page now says
+  the verifier checks that a motion reports, and a person whether its way of moving fits.
+- **Statuses and the quiet family.** The two chapters counted Rule 118's colours two ways; both now say five statuses, `muted`
+  among them, and one quiet style for everything with no urgency.
+- **Meaning, not colour.** Every door kept "A declaration cannot carry one culture's reading of a colour, because it cannot carry a
+  colour." The flag menu, clean and forbidden, was the plate the decision-maker named as the clearest split between machine and
+  person.
+
+## Part VIII, The Commons (chapters 20 and 21)
+
+Read on 2026-11-27 by a fresh verifier for each chapter and a voice reader for both, then by one reader from each of the six doors
+(`research/verify/ch20.md`, `ch21.md`, `research/voice/`, `research/read/part8-*.md`). Verdicts: "ready after the items above" for
+every page from every door; none "not ready". Every item was fixed and the build passed.
+
+- **One word, two things: "tier".** Every door: chapter 20 used it for `machine-later`, chapter 21 for core, commons and local.
+  Chapter 20 now says "the law's word for a rule that a machine is to check once the instrument is built"; the site's page on rules
+  may want the same care.
+- **When a feedback is refused.** Four doors asked for the exact condition of `DECORATIVE_ANIMATION`: a `TONE` or a `MOTION` with
+  nothing in `REPORTS`, the names taken as written. The contract's page could state it in one line.
+- **What a buyer requires.** The decision-maker: a team's contract can loosen a finding; the page now says a buyer requires the
+  pinned contract and the pack's check with the report (BOOK-ZAYN-13 (i)).
+- **Records as data.** The tool builder asked for the corpus's fields and file named where a second tool would read them; the site's
+  corpus page is where they belong.
+
+## Parts I and V, second reading
+
+Read again on 2026-11-27 from the designer's door and the AI agent's (`research/read/part1-5-designer-2.md`, `part1-5-ai-agent-2.md`):
+chapters 1, 2 and 13 "ready after the items above", chapter 12 "ready". Fixed: the five roles defined at first use, with the rule
+that `inert` and `navigate` may not act; the article on a finding's line said to be the kind's own; "seven broken laws" told as two
+drawings of one payment; K33 named; a culture and a render defined; a broken sentence of chapter 12. Left for the site and the
+record: the 22 verbs printed with their activity and each medium's verbs, which the AI agent asked for (a directive would serve
+both the book and the site), and the line a finding's report points at, which varies by kind (BOOK-ZAYN-12 (m)).

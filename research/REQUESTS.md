@@ -20,6 +20,7 @@ and with who gave it; the book checks what it can check itself, read only, and s
 | BOOK-ZAYN-10 | 2026-11-24 | Findings of the research of Part X, in parts, below | **Filed 2026-11-24**, with the memo of Part X. Two parts are the open questions that chapters 25 and 26 leave to their reader |
 | BOOK-ZAYN-11 | 2026-11-26 | Findings of the research and the readings of Part II, in parts, below | **Filed 2026-11-26**, with the memo of Part II |
 | BOOK-ZAYN-12 | 2026-11-27 | Findings of the research and the readings of Part IV, in parts, below | **Filed 2026-11-27**, with the memo of Part IV |
+| BOOK-ZAYN-13 | 2026-11-27 | Findings of the research and the readings of Parts VI and VIII, in parts, below | **Filed 2026-11-27**, with the memo of Parts VI and VIII |
 
 ## What the answers say, and what the book checked at its own pin
 
@@ -442,3 +443,31 @@ files of the pin or run on its reference verifier. A finding against the law or 
   sentence in the contract's preface stating which fires when would serve a second implementation.
 - **(m) The line a finding is reported on** moves between the field's line and the `DEFINE` line, and the court compares codes;
   the tool builder's door asks the contract to say which, so a second implementation knows what conformance compares.
+
+## BOOK-ZAYN-13, in parts (filed 2026-11-27)
+
+Found while researching chapters 14, 15, 20 and 21, in their verifiers' reports and in the readings of the doors, each read in the
+files of the pin or run on its reference verifier. A finding against the law or the language is a gift to it.
+
+- **(a) `VIBE_STRIPS_RIGHT` reads one file.** The guarantees are collected per file (`tools/zayn/zayn.js:402-403`); a flow in one
+  file and a culture hiding its `UNDO` in another, checked together, answer clean. The language says "another declaration
+  guarantees" (`doc/language/DECLARATIONS.md:200`). Chapter 14 tells a team to keep its cultures in the flow's file.
+- **(b) No lawful twin for `VIBE_STRIPS_RIGHT`** in the suite (`conformance/manifest.json`); chapter 14's repaired plate is a
+  candidate.
+- **(c) What a culture may set, three ways**: the exhibit (density, "the medium itself", `site/vibes.html:155-156`), the design
+  system (colours, font, radius, shadow, measure), and the law's `vibes` notes (Rule 6's ratios, Rule 65's font scale).
+- **(d) A-7's condition named twice**: "effective when `stzSense` can serve it" (`doc/AMENDMENT-DOCKET.md:48`) and "when
+  `stzCulture` can serve it" (`:364-365`); the law: "once a meaning-to-rendering path exists" (`constitution/rules.json:1742`).
+- **(e) The founding's inversion example** (red for gain) uses words Rule 118 does not define (`doc/THE-SECOND-FOUNDING.md:394-397`).
+- **(f) Ledger E4 uncorrected** ("None of the 15 forbidden patterns is cultural", `doc/EVIDENCE-LEDGER.md:90`); the law holds 17.
+- **(g) The README's sentence on the rules above 104** (`README.md:13`) is wider than their `evidence` fields: twelve cite the
+  author's remarks on the framework's own site, the others a product's practice, a sibling's decision, a measurement or a design
+  made ahead of the defect.
+- **(h) `repeat`**: three values (`true`, `false`, the empty string on 47 records), and it marks a source that names an earlier
+  correction, not a recurrence; 16 records are neither verbatim nor marked `[paraphrase]`.
+- **(i) A team's contract loosens the core.** `--contract` with `VIBE_STRIPS_RIGHT` lowered to a warning, or moved to level 3,
+  turns a refusal into a pass; the suite compares codes only (`conformance/manifest.json:9`). Request: the pack's check, or the
+  verifier, compares a supplied contract with the pinned one, as the supremacy rule designs ("stricter … never looser").
+- **(j) The clean line names the contract's version** (`tools/zayn/cli.js:224`): a contract saying 9.9 prints "against Zayn v9.9"
+  while the law read is 3.17.
+- **(k) The site and the pack's guide show `zayn pack --check`**; the reference verifier answers `check` only (`cli.js:154`).

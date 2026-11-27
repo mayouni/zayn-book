@@ -42,7 +42,7 @@ Why does a defect come back? The front page of Zayn's repository, the store of i
 
 This book answers with three moves, and each is shown once here.
 
-**Declare what a user is doing.** A declaration states the user's intent and each control's promise, and says nothing of shape or colour. An `INTERACTION` is one control. `SATISFIES` lists what the user does with it, and `ALWAYS_REACHABLE` what the user can always get to, such as undo. `ROLE` is the control's promise, one of five: `inert`, `navigate`, `reversible`, `irreversible` and `proposal`. `inert` promises that acting on it changes nothing. Here is a dashboard with two totals.
+**Declare what a user is doing.** A declaration states the user's intent and each control's promise, and says nothing of shape or colour. An `INTERACTION` is one control. `SATISFIES` lists what the user does with it, and `ALWAYS_REACHABLE` what the user can always get to, such as undo. `ROLE` is the control's promise, one of five: `inert`, `navigate`, `reversible`, `irreversible` and `proposal`. `inert` promises that acting on it changes nothing; `navigate`, that it changes what is shown, never what is true; `reversible`, that what it changes can be taken back; `irreversible`, that it cannot, so it owes no undo; and `proposal`, that it advises and commits nothing until an authority accepts it. A control that promises `inert` or `navigate` and declares that it acts is refused. Here is a dashboard with two totals.
 
 ::: plate Two totals, and one of them acts
 ```zayn dashboard.zayn
@@ -61,7 +61,7 @@ DEFINE INTERACTION overdue_total (
 In words: A dashboard shows two totals. The user reads the revenue, and both totals promise only to inform. Touching the overdue total does something, which can be undone.
 :::
 
-**Hold it to the law.** Refused! The overdue total promises to inform and declares that it acts. The report's third line cites the rules that the contract, the file binding each kind of finding to the law, gives this kind: a card that acts (Rule 119), motion that changes nothing (Rule 112) and a click that acts unasked (Rule 16). It also cites Article II: an article is one of the law's {{n:law.articles}} statements of principle, and every rule derives from one. The report ends on the level, here 2: the verifier was given the file alone. Level 3 gives it more, what the system holds, in a small file named on the command line, and chapter 9 gives the four levels. To run a file yourself: `zayn check dashboard.zayn`; the Zayn site's testbench runs it in a browser. Rule 119 was written from this defect, a tile that looks like information and behaves like a button, corrected in the interface of a banking product in April 2026. Here the verifier refuses it before anything is drawn. The repair gives the act a control of its own.
+**Hold it to the law.** Refused! The overdue total promises to inform and declares that it acts. The report's third line cites the rules that the contract, the file binding each kind of finding to the law, gives this kind: a card that acts (Rule 119), the acts that change only what is shown (Rule 112) and a click that acts unasked (Rule 16). It also cites Article II: an article is one of the law's {{n:law.articles}} statements of principle, and every rule derives from one. The article on a finding's line is the one this kind of finding enforces, set in the contract; a cited rule may derive from another. The report ends on the level, here 2: the verifier was given the file alone. Level 3 gives it more, what the system holds, in a small file named on the command line, and chapter 9 gives the four levels. To run a file yourself: `zayn check dashboard.zayn`; the Zayn site's testbench runs it in a browser. Rule 119 was written from this defect, a tile that looks like information and behaves like a button, corrected in the interface of a banking product in April 2026. Here the verifier refuses it before anything is drawn. The repair gives the act a control of its own.
 
 ::: plate The act, given a control of its own
 ```zayn dashboard.zayn
@@ -132,7 +132,7 @@ The field leads on the person. The Zayn site says it of itself: "The law judges 
 
 The field leads on regulation. Its criteria are named by a regulation of the United States, with dates of compliance. Zayn's law is a body of rules for teams and their tools.
 
-The field leads on the painted page, where the corrections of the corpus are seen. The ledger, the dated list of what the project found, records a test of 12 August 2026, made before a control could state its promise: two payment surfaces "differing by seven broken laws" were the same declaration, and both ran clean. Zayn's answer is a second instrument on the painted page, and a person.
+The field leads on the painted page, where the corrections of the corpus are seen. The ledger, the dated list of what the project found, records a test of 12 August 2026, made before a control could state its promise: two drawings of one payment, one of them breaking seven rules of the law, "differing by seven broken laws", were the same declaration, and both ran clean. Zayn's answer is a second instrument on the painted page, and a person.
 
 Zayn leads on the moment. A promise that contradicts the act is refused in the declaration, before a pixel exists, whoever the user is, and the refusal names its rule.
 

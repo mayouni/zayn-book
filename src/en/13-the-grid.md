@@ -26,7 +26,7 @@ Each source was read on 23 November 2026, and Appendix F lists them. So the fiel
 
 ## The principle
 
-**A cell holds a rule when a rule is written for it, so every empty cell shows where the law is projected today and where its next rule will stand.**
+**A cell holds a rule when a rule is written for it, and every empty cell shows where the law is projected today and where its next rule will stand.**
 
 To project a rule is to apply a rule that names no medium in one medium. The grid's page on the Zayn site says what an empty cell is: "an empty cell is a visible gap in the law, not a hidden one". The design document behind the page counts only the rules written for a cell, and gives the reason: a rule's projection into a cell is "a claim that the rule *can* be projected there". So the count shows what is written, and every empty cell stays in view.
 
@@ -204,7 +204,7 @@ Clean, and print has no time in which to fade. The design document records it as
 
 **The design document refused to count a projection as coverage.** A rule that names no medium is projected onto every empty cell of its activity, and the count leaves those cells empty, so that each stays in view.
 
-**The design document keeps back rule text** for haptic, luminous, signage, spatial and terminal, until a product that ships in one of them is named.
+**The design document keeps back rule text** for haptic, luminous, signage, spatial and terminal, until a product that ships in one of them is named; for touch, chapter 12 gives the law's own condition, the devices' evidence.
 
 [AUTHOR: the stake of this chapter, in your words: why an empty cell is shown on the public page, and what a team should do with one.]
 

@@ -186,7 +186,13 @@ stopped them.
   item fixed. New tokens: `audit.checks`, `audit.paint`, `audit.files`, `audit.widths`, `lang.expression`, `lang.roles`,
   `diag.role`, `diag.signal`, `diag.declared`, `signal.values`. Chapter 11 carries each stratum's stage from the code (two
   built as the proposal's fields), where the contract calls the strata designed. Requests: BOOK-ZAYN-12 (a) to (m).
-- Next: Parts VI and VIII; the second reading of Parts I and V. For each chapter:
+  The desk published it on the author's "Yes, publish" (60b3a9e, house 3be16e1).
+- 2026-11-27: **Parts VI and VIII (chapters 14, 15, 20, 21) drafted, run and read**, and **Parts I and V read a second time**
+  (designer, AI agent) and fixed. Field: F-90 to F-92, F-95 to F-102, F-105 to F-108. New tokens: `culture.tokens`,
+  `site.cultures`, `corpus.relays`, `corpus.candidates`, `corpus.law_cited`, `corpus.law_rules`, `law.above104`. A command the
+  build cannot run (the pack's check, `--contract`) is told as this book's dated research run. Requests: BOOK-ZAYN-13 (a) to (k).
+- Next: every part is drafted and read; the preface (his), the appendices still to write (B, D, E, G, H), and the author's
+  `[AUTHOR: ...]` stakes. For each chapter:
   `research/BRIEF.md` to a research session, the draft, `python tools/build_book.py`, the lint, a fresh verifier and a voice
   reader, then the six doors for the part with `research/READER-BRIEF.md` and `python tools/as_read.py`.
 - Session notes: `sessions/YYYY-MM-DD-topic.md`.

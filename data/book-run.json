@@ -1,6 +1,6 @@
 {
  "run": {
-  "date": "2026-11-27 09:26 UTC+01:00",
+  "date": "2026-11-27 21:12 UTC+01:00",
   "zayn": {
    "commit": "adaecc271dd68e10690eb0166ccb2b1f5d8d1528",
    "short": "adaecc271",
@@ -115,6 +115,11 @@
    "corpus.oneday": 42,
    "corpus.verbatim_repeat": 104,
    "corpus.ruled": 175,
+   "corpus.relays": 217,
+   "corpus.candidates": 26,
+   "corpus.law_cited": 22,
+   "corpus.law_rules": 12,
+   "law.above104": 26,
    "pin.files": 6,
    "pin.agree": 6,
    "pack.files": 12,
@@ -125,6 +130,8 @@
    "site.pairs": 37,
    "gbnf.rules": 29,
    "gbnf.kinds": 10,
+   "culture.tokens": 24,
+   "site.cultures": 2,
    "audit.checks": 37,
    "audit.paint": 32,
    "audit.files": 5,
@@ -450,7 +457,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:26 UTC+01:00"
+   "ran": "2026-11-27 21:14 UTC+01:00"
   },
   "en/02-what-the-corrections-show": {
    "id": "what-the-corrections-show",
@@ -729,7 +736,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:26 UTC+01:00"
+   "ran": "2026-11-27 21:14 UTC+01:00"
   },
   "en/03-what-the-field-wrote": {
    "id": "what-the-field-wrote",
@@ -1226,7 +1233,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-27 09:26 UTC+01:00"
+   "ran": "2026-11-27 21:14 UTC+01:00"
   },
   "en/04-the-instruments-of-the-field": {
    "id": "the-instruments-of-the-field",
@@ -1561,7 +1568,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-27 09:27 UTC+01:00"
+   "ran": "2026-11-27 21:14 UTC+01:00"
   },
   "en/05-the-road-sign": {
    "id": "the-road-sign",
@@ -1968,7 +1975,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:27 UTC+01:00"
+   "ran": "2026-11-27 21:15 UTC+01:00"
   },
   "en/06-intent-first": {
    "id": "intent-first",
@@ -2404,7 +2411,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:27 UTC+01:00"
+   "ran": "2026-11-27 21:15 UTC+01:00"
   },
   "en/07-ten-declarations-one-grammar": {
    "id": "ten-declarations-one-grammar",
@@ -2950,7 +2957,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:28 UTC+01:00"
+   "ran": "2026-11-27 21:15 UTC+01:00"
   },
   "en/08-the-refusal": {
    "id": "the-refusal",
@@ -3461,7 +3468,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:28 UTC+01:00"
+   "ran": "2026-11-27 21:16 UTC+01:00"
   },
   "en/09-one-verdict-two-verifiers": {
    "id": "one-verdict-two-verifiers",
@@ -3777,7 +3784,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:28 UTC+01:00"
+   "ran": "2026-11-27 21:16 UTC+01:00"
   },
   "en/10-what-a-declaration-cannot-see": {
    "id": "what-a-declaration-cannot-see",
@@ -4065,7 +4072,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-27 09:29 UTC+01:00"
+   "ran": "2026-11-27 21:16 UTC+01:00"
   },
   "en/11-the-strata-of-expression": {
    "id": "the-strata-of-expression",
@@ -4517,7 +4524,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:29 UTC+01:00"
+   "ran": "2026-11-27 21:16 UTC+01:00"
   },
   "en/12-one-declaration-ten-channels": {
    "id": "one-declaration-ten-channels",
@@ -5170,7 +5177,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:29 UTC+01:00"
+   "ran": "2026-11-27 21:17 UTC+01:00"
   },
   "en/13-the-grid": {
    "id": "the-grid",
@@ -5660,7 +5667,493 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:30 UTC+01:00"
+   "ran": "2026-11-27 21:17 UTC+01:00"
+  },
+  "en/14-two-cultures-one-law": {
+   "id": "two-cultures-one-law",
+   "blocks": [
+    {
+     "hash": "eb02af224925",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "ac23ede7e893",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VIBE_STRIPS_RIGHT",
+       "retro"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:13  error  VIBE_STRIPS_RIGHT  UNDO suppressed by retro\n    A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\n    Article VI\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VIBE_STRIPS_RIGHT",
+       "severity": "error",
+       "subject": "UNDO suppressed by retro",
+       "line": 13,
+       "cites": [
+        "article:operator"
+       ],
+       "level": 2,
+       "message": "A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VIBE_STRIPS_RIGHT\",\n      \"severity\": \"error\",\n      \"message\": \"A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 13\n      },\n      \"cites\": [\n        \"article:operator\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"UNDO suppressed by retro\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "2f34039e3db3",
+     "name": "retro.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "FIELD_MISPLACED",
+       "retro"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "retro.zayn:3  error  FIELD_MISPLACED  TONE on VIBE retro; it belongs to FEEDBACK\n    A field is declared on a kind that does not declare it.\n    Article II\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "FIELD_MISPLACED",
+       "severity": "error",
+       "subject": "TONE on VIBE retro; it belongs to FEEDBACK",
+       "line": 3,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "A field is declared on a kind that does not declare it."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"retro.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"FIELD_MISPLACED\",\n      \"severity\": \"error\",\n      \"message\": \"A field is declared on a kind that does not declare it.\",\n      \"span\": {\n        \"file\": \"retro.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"TONE on VIBE retro; it belongs to FEEDBACK\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "ac5edcd334c1",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "retro"
+      ],
+      [
+       "VIBE_STRIPS_RIGHT",
+       "retro"
+      ],
+      [
+       "VIBE_STRIPS_RIGHT",
+       "retro"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "invoices.zayn:13  error  DECORATIVE_ANIMATION  retro\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\ninvoices.zayn:13  error  VIBE_STRIPS_RIGHT  UNDO suppressed by retro\n    A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\n    Article VI\ninvoices.zayn:13  error  VIBE_STRIPS_RIGHT  CANCEL suppressed by retro\n    A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\n    Article VI\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "retro",
+       "line": 13,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      },
+      {
+       "code": "VIBE_STRIPS_RIGHT",
+       "severity": "error",
+       "subject": "UNDO suppressed by retro",
+       "line": 13,
+       "cites": [
+        "article:operator"
+       ],
+       "level": 2,
+       "message": "A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE."
+      },
+      {
+       "code": "VIBE_STRIPS_RIGHT",
+       "severity": "error",
+       "subject": "CANCEL suppressed by retro",
+       "line": 13,
+       "cites": [
+        "article:operator"
+       ],
+       "level": 2,
+       "message": "A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 13\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"retro\"\n    },\n    {\n      \"code\": \"VIBE_STRIPS_RIGHT\",\n      \"severity\": \"error\",\n      \"message\": \"A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 13\n      },\n      \"cites\": [\n        \"article:operator\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"UNDO suppressed by retro\"\n    },\n    {\n      \"code\": \"VIBE_STRIPS_RIGHT\",\n      \"severity\": \"error\",\n      \"message\": \"A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\",\n      \"span\": {\n        \"file\": \"invoices.zayn\",\n        \"line\": 13\n      },\n      \"cites\": [\n        \"article:operator\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"CANCEL suppressed by retro\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "eb02af224925",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "b6a063a56f24",
+     "name": "invoices.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"invoices.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 6,
+   "runnable": 6,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "vibe-strips-right.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VIBE_STRIPS_RIGHT"
+     ],
+     "got_ids": [
+      "VIBE_STRIPS_RIGHT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "clean-full.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "got_ids": [
+      "FIELD_MISPLACED"
+     ],
+     "pass": true
+    },
+    {
+     "file": "field-misplaced-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [],
+   "ran": "2026-11-27 21:17 UTC+01:00"
+  },
+  "en/15-culture-as-an-axis": {
+   "id": "culture-as-an-axis",
+   "blocks": [
+    {
+     "hash": "2484698e0df6",
+     "name": "limits.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_SIGNAL",
+       "credit_limits"
+      ],
+      [
+       "UNKNOWN_SIGNAL",
+       "credit_limits"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "limits.zayn:3  error  UNKNOWN_SIGNAL  green in SIGNALS of credit_limits\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\nlimits.zayn:3  error  UNKNOWN_SIGNAL  red in SIGNALS of credit_limits\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "green in SIGNALS of credit_limits",
+       "line": 3,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      },
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "red in SIGNALS of credit_limits",
+       "line": 3,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"limits.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"limits.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"green in SIGNALS of credit_limits\"\n    },\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"limits.zayn\",\n        \"line\": 3\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"red in SIGNALS of credit_limits\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "748d308bb9cf",
+     "name": "limits.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"limits.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6eec782723c2",
+     "name": "languages.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"languages.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3f2d694bb6f7",
+     "name": "markets.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "EXPRESSION_ORPHAN",
+       "market_moves"
+      ],
+      [
+       "UNKNOWN_SIGNAL",
+       "market_moves"
+      ],
+      [
+       "UNKNOWN_SIGNAL",
+       "market_moves"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "markets.zayn:2  error  UNKNOWN_SIGNAL  green in SIGNALS of market_moves\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\nmarkets.zayn:2  error  UNKNOWN_SIGNAL  red in SIGNALS of market_moves\n    A value in SIGNALS is not one of Rule 118's five semantic statuses.\n    Rule 118 · Two Families of Colour · Article I\nmarkets.zayn:2  error  EXPRESSION_ORPHAN  SIGNALS on market_moves traces to no intent\n    An expression field is declared on a declaration that satisfies no intent.\n    Article II\n\n3 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "green in SIGNALS of market_moves",
+       "line": 2,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      },
+      {
+       "code": "UNKNOWN_SIGNAL",
+       "severity": "error",
+       "subject": "red in SIGNALS of market_moves",
+       "line": 2,
+       "cites": [
+        "rule:118",
+        "article:calm"
+       ],
+       "level": 1,
+       "message": "A value in SIGNALS is not one of Rule 118's five semantic statuses."
+      },
+      {
+       "code": "EXPRESSION_ORPHAN",
+       "severity": "error",
+       "subject": "SIGNALS on market_moves traces to no intent",
+       "line": 2,
+       "cites": [
+        "article:intent"
+       ],
+       "level": 2,
+       "message": "An expression field is declared on a declaration that satisfies no intent."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"markets.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 3,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"markets.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"green in SIGNALS of market_moves\"\n    },\n    {\n      \"code\": \"UNKNOWN_SIGNAL\",\n      \"severity\": \"error\",\n      \"message\": \"A value in SIGNALS is not one of Rule 118's five semantic statuses.\",\n      \"span\": {\n        \"file\": \"markets.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"rule:118\",\n        \"article:calm\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 1,\n      \"subject\": \"red in SIGNALS of market_moves\"\n    },\n    {\n      \"code\": \"EXPRESSION_ORPHAN\",\n      \"severity\": \"error\",\n      \"message\": \"An expression field is declared on a declaration that satisfies no intent.\",\n      \"span\": {\n        \"file\": \"markets.zayn\",\n        \"line\": 2\n      },\n      \"cites\": [\n        \"article:intent\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"SIGNALS on market_moves traces to no intent\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "a7f5c6bf0cb0",
+     "name": "markets.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"markets.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "3902369f491c",
+     "name": "markets.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"markets.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 6,
+   "runnable": 6,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "unknown-signal.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "got_ids": [
+      "UNKNOWN_SIGNAL"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-signal-lawful.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "signal-unperceivable.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "SIGNAL_UNPERCEIVABLE"
+     ],
+     "got_ids": [
+      "SIGNAL_UNPERCEIVABLE"
+     ],
+     "pass": true
+    },
+    {
+     "file": "signal-unperceivable-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [],
+   "ran": "2026-11-27 21:18 UTC+01:00"
   },
   "en/16-the-constitution-part-by-part": {
    "id": "the-constitution-part-by-part",
@@ -6165,7 +6658,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:30 UTC+01:00"
+   "ran": "2026-11-27 21:18 UTC+01:00"
   },
   "en/17-the-enforcement-ladder": {
    "id": "the-enforcement-ladder",
@@ -6753,7 +7246,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:30 UTC+01:00"
+   "ran": "2026-11-27 21:18 UTC+01:00"
   },
   "en/18-amendment-from-evidence": {
    "id": "amendment-from-evidence",
@@ -7129,7 +7622,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:31 UTC+01:00"
+   "ran": "2026-11-27 21:19 UTC+01:00"
   },
   "en/19-how-to-write-a-rule": {
    "id": "how-to-write-a-rule",
@@ -7537,7 +8030,398 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:31 UTC+01:00"
+   "ran": "2026-11-27 21:19 UTC+01:00"
+  },
+  "en/20-from-a-remark-to-a-rule": {
+   "id": "from-a-remark-to-a-rule",
+   "blocks": [
+    {
+     "hash": "c229b0c8c561",
+     "name": "reader.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "set_chosen"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "reader.zayn:1  error  DECORATIVE_ANIMATION  set_chosen\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "set_chosen",
+       "line": 1,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reader.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"reader.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"set_chosen\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "799edcc86ff2",
+     "name": "reader.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reader.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6f61a6f48f3b",
+     "name": "reader.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"reader.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "6fa6f7135be9",
+     "name": "pages.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "DECORATIVE_ANIMATION",
+       "page_arrives"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "pages.zayn:1  error  DECORATIVE_ANIMATION  page_arrives\n    Motion or feedback that reports no state.\n    Rule 112 · Motion Reports, It Never Decorates · Article I\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "DECORATIVE_ANIMATION",
+       "severity": "error",
+       "subject": "page_arrives",
+       "line": 1,
+       "cites": [
+        "rule:112",
+        "article:calm",
+        "pattern:decorative-animation"
+       ],
+       "level": 2,
+       "message": "Motion or feedback that reports no state."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"pages.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"DECORATIVE_ANIMATION\",\n      \"severity\": \"error\",\n      \"message\": \"Motion or feedback that reports no state.\",\n      \"span\": {\n        \"file\": \"pages.zayn\",\n        \"line\": 1\n      },\n      \"cites\": [\n        \"rule:112\",\n        \"article:calm\",\n        \"pattern:decorative-animation\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"page_arrives\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "456524156e08",
+     "name": "pages.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"pages.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "05d94d9b2774",
+     "name": "pages.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"pages.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 6,
+   "runnable": 6,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "decorative-animation.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "got_ids": [
+      "DECORATIVE_ANIMATION"
+     ],
+     "pass": true
+    },
+    {
+     "file": "decorative-animation-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "menu-label-repeats-parent.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "got_ids": [
+      "MENU_LABEL_REPEATS_PARENT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "menu-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    }
+   ],
+   "shell": [],
+   "ran": "2026-11-27 21:19 UTC+01:00"
+  },
+  "en/21-core-commons-local": {
+   "id": "core-commons-local",
+   "blocks": [
+    {
+     "hash": "62ed73e0b377",
+     "name": "crew.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "VIBE_STRIPS_RIGHT",
+       "field_crew"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "crew.zayn:7  error  VIBE_STRIPS_RIGHT  UNDO suppressed by field_crew\n    A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\n    Article VI\n\n1 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VIBE_STRIPS_RIGHT",
+       "severity": "error",
+       "subject": "UNDO suppressed by field_crew",
+       "line": 7,
+       "cites": [
+        "article:operator"
+       ],
+       "level": 2,
+       "message": "A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"crew.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 1,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VIBE_STRIPS_RIGHT\",\n      \"severity\": \"error\",\n      \"message\": \"A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\",\n      \"span\": {\n        \"file\": \"crew.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"article:operator\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"UNDO suppressed by field_crew\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "b649de8399ae",
+     "name": "crew.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"crew.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "f86b3084996a",
+     "name": "shift.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [
+      [
+       "UNKNOWN_MEDIUM",
+       "night_shift"
+      ],
+      [
+       "VIBE_STRIPS_RIGHT",
+       "night_shift"
+      ]
+     ],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 1,
+     "report": "shift.zayn:7  error  VIBE_STRIPS_RIGHT  CANCEL suppressed by night_shift\n    A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\n    Article VI\nshift.zayn:7  error  UNKNOWN_MEDIUM  tablet on night_shift\n    SURFACE_AS names a medium outside the ten this language defines.\n\n2 error(s), 0 warning(s) across 1 file(s) at level 2",
+     "diagnostics": [
+      {
+       "code": "VIBE_STRIPS_RIGHT",
+       "severity": "error",
+       "subject": "CANCEL suppressed by night_shift",
+       "line": 7,
+       "cites": [
+        "article:operator"
+       ],
+       "level": 2,
+       "message": "A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE."
+      },
+      {
+       "code": "UNKNOWN_MEDIUM",
+       "severity": "error",
+       "subject": "tablet on night_shift",
+       "line": 7,
+       "cites": [],
+       "level": 2,
+       "message": "SURFACE_AS names a medium outside the ten this language defines."
+      }
+     ],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"shift.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 2,\n    \"warnings\": 0\n  },\n  \"diagnostics\": [\n    {\n      \"code\": \"VIBE_STRIPS_RIGHT\",\n      \"severity\": \"error\",\n      \"message\": \"A VIBE suppresses an intent another declaration guarantees as ALWAYS_REACHABLE.\",\n      \"span\": {\n        \"file\": \"shift.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [\n        \"article:operator\"\n      ],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"CANCEL suppressed by night_shift\"\n    },\n    {\n      \"code\": \"UNKNOWN_MEDIUM\",\n      \"severity\": \"error\",\n      \"message\": \"SURFACE_AS names a medium outside the ten this language defines.\",\n      \"span\": {\n        \"file\": \"shift.zayn\",\n        \"line\": 7\n      },\n      \"cites\": [],\n      \"language\": \"zayn\",\n      \"level\": 2,\n      \"subject\": \"tablet on night_shift\"\n    }\n  ]\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "b26404f90953",
+     "name": "shift.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"shift.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    },
+    {
+     "hash": "8dce161ece90",
+     "name": "shift.zayn",
+     "level": 2,
+     "symbols": null,
+     "flags": [],
+     "promise": [],
+     "stated": true,
+     "verdict": "kept",
+     "exit": 0,
+     "report": "clean — 1 file(s), 0 violations at level 2 against Zayn v3.17",
+     "diagnostics": [],
+     "envelope": "{\n  \"level\": 2,\n  \"contract\": {\n    \"version\": \"1.11\",\n    \"constitution\": \"3.17\"\n  },\n  \"files\": [\n    \"shift.zayn\"\n  ],\n  \"counts\": {\n    \"errors\": 0,\n    \"warnings\": 0\n  },\n  \"diagnostics\": []\n}",
+     "contract": {
+      "version": "1.11",
+      "constitution": "3.17"
+     }
+    }
+   ],
+   "kept": 5,
+   "runnable": 5,
+   "exercises": 0,
+   "court": [
+    {
+     "file": "vibe-strips-right.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "VIBE_STRIPS_RIGHT"
+     ],
+     "got_ids": [
+      "VIBE_STRIPS_RIGHT"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-medium.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "got_ids": [
+      "UNKNOWN_MEDIUM"
+     ],
+     "pass": true
+    },
+    {
+     "file": "unknown-medium-lawful.zayn",
+     "exists": true,
+     "level": 2,
+     "expect_ids": [],
+     "got_ids": [],
+     "pass": true
+    },
+    {
+     "file": "unknown-field.zayn",
+     "exists": true,
+     "level": 1,
+     "expect_ids": [
+      "UNKNOWN_FIELD"
+     ],
+     "got_ids": [
+      "UNKNOWN_FIELD"
+     ],
+     "pass": true
+    }
+   ],
+   "shell": [],
+   "ran": "2026-11-27 21:19 UTC+01:00"
   },
   "en/22-the-ai-agent-under-the-law": {
    "id": "the-ai-agent-under-the-law",
@@ -8029,7 +8913,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:31 UTC+01:00"
+   "ran": "2026-11-27 21:19 UTC+01:00"
   },
   "en/23-the-ai-agent-as-a-user": {
    "id": "the-ai-agent-as-a-user",
@@ -8467,7 +9351,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:32 UTC+01:00"
+   "ran": "2026-11-27 21:20 UTC+01:00"
   },
   "en/24-a-grammar-for-generation": {
    "id": "a-grammar-for-generation",
@@ -9613,7 +10497,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:32 UTC+01:00"
+   "ran": "2026-11-27 21:20 UTC+01:00"
   },
   "en/25-the-command-and-the-gate": {
    "id": "the-command-and-the-gate",
@@ -10172,7 +11056,7 @@
      "verdict": "kept"
     }
    ],
-   "ran": "2026-11-27 09:32 UTC+01:00"
+   "ran": "2026-11-27 21:20 UTC+01:00"
   },
   "en/26-a-site-under-its-own-law": {
    "id": "a-site-under-its-own-law",
@@ -10430,7 +11314,7 @@
     }
    ],
    "shell": [],
-   "ran": "2026-11-27 09:33 UTC+01:00"
+   "ran": "2026-11-27 21:21 UTC+01:00"
   },
   "en/a1-the-constitution": {
    "id": "the-constitution",
@@ -10440,7 +11324,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-27 09:33 UTC+01:00"
+   "ran": "2026-11-27 21:21 UTC+01:00"
   },
   "en/a3-the-diagnostics": {
    "id": "the-diagnostics",
@@ -10450,7 +11334,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-27 09:33 UTC+01:00"
+   "ran": "2026-11-27 21:21 UTC+01:00"
   },
   "en/a6-the-sources": {
    "id": "the-sources",
@@ -10460,7 +11344,7 @@
    "exercises": 0,
    "court": [],
    "shell": [],
-   "ran": "2026-11-27 09:33 UTC+01:00"
+   "ran": "2026-11-27 21:21 UTC+01:00"
   }
  }
 }
